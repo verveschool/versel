@@ -146,6 +146,7 @@
     letter-spacing: 0;
   }
 
+  /* increased h2 from 13px to 20px and h3 from 16px to 22px for better readability */
   /* YC-style typography with bold orange headings and light weights */
   h1 {
     font-size: 28px;
@@ -156,7 +157,7 @@
   }
 
   h2 {
-    font-size: 13px;
+    font-size: 20px;
     font-weight: 700;
     letter-spacing: 0.05em;
     text-transform: lowercase;
@@ -165,7 +166,7 @@
   }
 
   h3 {
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 700;
     line-height: 1.4;
     color: #ff8533;
@@ -238,11 +239,11 @@
   }
 
   h2 {
-    font-size: 11px;
+    font-size: 16px;
   }
 
   h3 {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   p,
@@ -287,5 +288,7 @@
 
   main {
     padding: 12px 0;
+    /* added whitespace at top on mobile and tablet */
+    padding-top: 32px;
   }
 }

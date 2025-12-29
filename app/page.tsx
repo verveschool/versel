@@ -9,9 +9,14 @@ export default function HomePage() {
             <Link href="/" className="text-[15px] font-medium">
               verveschool
             </Link>
-            <Link href="/about" className="text-[13px] text-muted-foreground hover:text-foreground">
-              about
-            </Link>
+            <div className="flex gap-6 text-[13px]">
+              <Link href="/about" className="text-foreground hover:text-muted-foreground">
+                about
+              </Link>
+              <Link href="/partners" className="text-foreground hover:text-muted-foreground">
+                partners
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
@@ -19,7 +24,7 @@ export default function HomePage() {
       <main className="yc-container py-16">
         <div className="yc-text-block mb-16">
           <h1 className="mb-6">what happens at verveschool</h1>
-          <p className="text-muted-foreground mb-8">
+          <p className="text-foreground mb-8">
             we pick ambitious grads, teach them how people decide, back them for 90 days after they join companies, and
             get paid only when they outperform.
           </p>
@@ -72,19 +77,19 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="yc-text-block">
               <p className="text-2xl font-normal mb-1">₹4-6L</p>
-              <p className="text-[13px] text-muted-foreground">starting salary</p>
+              <p className="text-[13px] text-foreground">starting salary</p>
             </div>
             <div className="yc-text-block">
               <p className="text-2xl font-normal mb-1">90 days</p>
-              <p className="text-[13px] text-muted-foreground">coaching journey</p>
+              <p className="text-[13px] text-foreground">coaching journey</p>
             </div>
             <div className="yc-text-block">
               <p className="text-2xl font-normal mb-1">top 20%</p>
-              <p className="text-[13px] text-muted-foreground">target performance</p>
+              <p className="text-[13px] text-foreground">target performance</p>
             </div>
             <div className="yc-text-block">
               <p className="text-2xl font-normal mb-1">10-14</p>
-              <p className="text-[13px] text-muted-foreground">days to offer</p>
+              <p className="text-[13px] text-foreground">days to offer</p>
             </div>
           </div>
         </section>
@@ -96,20 +101,40 @@ export default function HomePage() {
             because our people close faster and stay longer.
           </p>
         </section>
+
+        <section className="border-t border-border pt-12 mt-16">
+          <h2 className="mb-8">for partners</h2>
+          <div className="yc-text-block mb-8">
+            <p className="mb-6">
+              are you hiring? we have trained grads who understand how people decide. they close faster. they stay
+              longer. they are driven by their first win.
+            </p>
+            <Link
+              href="/partners"
+              className="inline-block text-[13px] font-medium border-b border-foreground pb-0.5 hover:border-muted-foreground hover:text-muted-foreground transition-colors"
+            >
+              learn more
+            </Link>
+          </div>
+        </section>
       </main>
 
+      {/* add common footer component */}
       <footer className="border-t border-border mt-16">
         <div className="yc-container py-8">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-[13px] text-muted-foreground">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-[13px] text-foreground">
             <p>© 2025 verveschool</p>
             <div className="flex gap-6">
-              <Link href="/about" className="hover:text-foreground">
+              <Link href="/about" className="hover:text-muted-foreground">
                 about
               </Link>
-              <a href="mailto:ayush@verveschool.com" className="hover:text-foreground">
+              <Link href="/partners" className="hover:text-muted-foreground">
+                partners
+              </Link>
+              <a href="mailto:ayush@verveschool.com" className="hover:text-muted-foreground">
                 contact
               </a>
-              <a href="https://wa.me/917065314693" className="hover:text-foreground">
+              <a href="https://wa.me/917065314693" className="hover:text-muted-foreground">
                 whatsapp
               </a>
             </div>

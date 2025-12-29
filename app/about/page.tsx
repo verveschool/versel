@@ -55,7 +55,7 @@ export default function AboutPage() {
 
       <div className="flex flex-col md:flex-row">
         {/* Main content */}
-        <main className="yc-container py-20 flex-1 md:py-20">
+        <main className="yc-container py-20 flex-1 md:py-20 md:pt-20 pt-8">
           {/* Header */}
           <div className="mb-24">
             <h1 className="mb-4">what happens at verveschool 🧡</h1>
@@ -475,6 +475,29 @@ export default function AboutPage() {
           </ul>
         </aside>
       </div>
+
+      {/* Footer */}
+      <footer className="border-t border-border mt-16">
+        <div className="yc-container py-8">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-[13px] text-foreground">
+            <p>© 2025 verveschool</p>
+            <div className="flex gap-6">
+              <Link href="/about" className="hover:text-muted-foreground">
+                about
+              </Link>
+              <Link href="/partners" className="hover:text-muted-foreground">
+                partners
+              </Link>
+              <a href="mailto:ayush@verveschool.com" className="hover:text-muted-foreground">
+                contact
+              </a>
+              <a href="https://wa.me/917065314693" className="hover:text-muted-foreground">
+                whatsapp
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
