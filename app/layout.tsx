@@ -23,8 +23,8 @@ const sourceSerif = Source_Serif_4({
 })
 
 export const metadata: Metadata = {
-  title: "Verveschool - Break into EdTech Sales",
-  description: "Land your dream EdTech sales role with zero upfront fees.",
+  title: "sales talent fund | verveschool🧡",
+  description: "verveschool is a sales talent fund sponsored by hiring partners. hire high-performance sales talent selected and trained by mafia managers. ending the hire-hope-fire cycle.",
   icons: {
     icon: "/icon.svg",
   },
