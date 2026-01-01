@@ -23,7 +23,7 @@ const sourceSerif = Source_Serif_4({
 })
 
 export const metadata: Metadata = {
-  title: "sales talent fund | verveschool🧡",
+  title: "sales talent fund | verveschool 🧡",
   description: "verveschool is a sales talent fund backed by hiring partners. we scout, train, and place bda at growth-stage startups. sales performance is backed by replacement guarantees.",
   icons: {
     icon: "/icon.svg",
