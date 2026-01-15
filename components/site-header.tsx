@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation"
 
 export function SiteHeader() {
   const pathname = usePathname()
-  const isHome = pathname === "/"
 
   return (
     <nav className="border-b border-border sticky top-0 bg-background/95 backdrop-blur z-40">
@@ -25,19 +24,14 @@ export function SiteHeader() {
             </Link>
           </div>
 
-          {/* mobile nav */}
-          <div className="md:hidden text-[13px] font-medium">
-             {!isHome && (
-               <Link href={pathname} className="capitalize">
-                 {pathname.replace('/', '')}
-               </Link>
-             )}
-             {isHome && (
-               <div className="flex gap-4">
-                 <Link href="/about">about</Link>
-                 <Link href="/partners">partners</Link>
-               </div>
-             )}
+          {/* mobile nav - always show all links */}
+          <div className="md:hidden flex gap-4 text-[13px] font-medium">
+            <Link href="/about" className="text-foreground hover:text-primary transition-colors">
+              about
+            </Link>
+            <Link href="/partners" className="text-foreground hover:text-primary transition-colors">
+              partners
+            </Link>
           </div>
         </div>
       </div>
