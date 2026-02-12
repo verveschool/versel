@@ -4,94 +4,53 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Core: warm off-white background */
-  --background: #f5f5ee;
-  --foreground: #000000;
-
-  /* Cards and surfaces */
-  --card: hsl(0 0% 100%);
-  --card-foreground: #000000;
-  --popover: hsl(0 0% 100%);
-  --popover-foreground: #000000;
-
-  /* Primary: YC orange */
-  --primary: #ff8533;
+  /* Color System: 4 colors (Y Combinator-inspired clean aesthetic) */
+  /* Primary: Deep dark for headings & accent */
+  --primary: #1a1a1a;
   --primary-foreground: #ffffff;
 
-  /* Secondary */
-  --secondary: hsl(0 0% 96.1%);
-  --secondary-foreground: #000000;
+  /* Accent: YC orange for CTAs */
+  --accent: #ff8533;
+  --accent-foreground: #ffffff;
 
-  /* Muted: for secondary text - now pure black instead of grey */
-  --muted: hsl(0 0% 96.1%);
-  --muted-foreground: #000000;
+  /* Neutral: Light background */
+  --background: #fafaf9;
+  --foreground: #1a1a1a;
+  --secondary: #f5f5f4;
+  --secondary-foreground: #1a1a1a;
+  --muted: #a3a3a3;
+  --muted-foreground: #1a1a1a;
 
-  /* Accent */
-  --accent: hsl(0 0% 96.1%);
-  --accent-foreground: #000000;
+  /* Cards and surfaces */
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
 
   /* Destructive */
   --destructive: hsl(0 84.2% 60.2%);
   --destructive-foreground: #ffffff;
 
-  /* Borders: subtle */
-  --border: hsl(0 0% 89.8%);
-  --input: hsl(0 0% 89.8%);
+  /* Borders & inputs */
+  --border: #e7e5e4;
+  --input: #f5f5f4;
   --ring: #ff8533;
 
-  /* No rounded corners - sharp and clean */
-  --radius: 0;
+  /* Radius: 6px for subtle softness */
+  --radius: 6px;
 
-  /* Charts */
-  --chart-1: #ff8533;
-  --chart-2: hsl(12 76% 61%);
-  --chart-3: hsl(25 83% 53%);
-  --chart-4: hsl(349 89% 60%);
-  --chart-5: hsl(320 65% 52%);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  /* Sidebar (unused but for compatibility) */
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1a1a1a;
+  --sidebar-primary: #1a1a1a;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ff8533;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e7e5e4;
+  --sidebar-ring: #ff8533;
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
-}
+
 
 @theme inline {
   --font-sans: "Inter", "Inter Fallback";
@@ -115,11 +74,6 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -142,77 +96,100 @@
   body {
     @apply bg-background text-foreground;
     font-size: 16px;
-    line-height: 1.7;
-    letter-spacing: 0;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
   }
 
-  /* increased h2 from 13px to 20px and h3 from 16px to 22px for better readability */
-  /* YC-style typography with bold orange headings and light weights */
+  /* Premium Y Combinator-style typography */
   h1 {
-    font-size: 28px;
+    font-size: 48px;
     font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.3;
-    color: #ff8533;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    color: var(--primary);
+    margin-bottom: 24px;
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 32px;
     font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: lowercase;
-    color: #ff8533;
-    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    color: var(--primary);
+    margin-bottom: 24px;
   }
 
   h3 {
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 1.4;
-    color: #ff8533;
-    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    color: var(--primary);
+    margin-bottom: 16px;
   }
 
-  p,
+  p {
+    font-weight: 400;
+    color: var(--foreground);
+    line-height: 1.7;
+  }
+
   li,
   span {
     font-weight: 400;
-    color: #000000;
+    color: var(--foreground);
   }
 
   strong,
   b {
-    font-weight: 700;
+    font-weight: 600;
   }
 
   a {
-    font-weight: 400;
-    color: #000000;
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 200ms ease;
   }
 
-  /* Full page width container with generous padding */
+  a:hover {
+    color: var(--primary);
+  }
+
+  /* Container with responsive padding */
   .yc-container {
-    max-width: 1400px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 0 80px;
+    padding: 0 24px;
   }
 
-  /* Individual text blocks maintain readable width but larger */
+  @media (min-width: 768px) {
+    .yc-container {
+      padding: 0 48px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .yc-container {
+      padding: 0 64px;
+    }
+  }
+
+  /* Text block constraints for readability */
   .yc-text-block {
-    max-width: 580px;
+    max-width: 600px;
   }
 
-  /* Narrow text blocks for tighter column layouts */
   .yc-text-narrow {
     max-width: 500px;
   }
 
-  /* Section spacing for proper breathing room */
+  /* Section spacing */
   .yc-section {
     margin-bottom: 80px;
   }
 
-  /* YC list style */
+  /* Clean list styling */
   ul {
     list-style: none;
     padding-left: 0;
@@ -220,26 +197,28 @@
 
   ul li {
     position: relative;
-    padding-left: 16px;
-    margin-bottom: 8px;
+    padding-left: 24px;
+    margin-bottom: 12px;
   }
 
   ul li::before {
-    content: "•";
+    content: "→";
     position: absolute;
     left: 0;
-    color: #000000;
+    color: var(--accent);
+    font-weight: 600;
   }
 }
 
 @media (max-width: 768px) {
-  /* mobile responsive typography */
   h1 {
-    font-size: 22px;
+    font-size: 32px;
+    line-height: 1.2;
   }
 
   h2 {
-    font-size: 16px;
+    font-size: 24px;
+    line-height: 1.25;
   }
 
   h3 {
@@ -249,46 +228,28 @@
   p,
   li,
   span {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.6;
   }
 
-  /* reduced padding on mobile */
-  .yc-container {
-    padding: 0 16px;
-  }
-
-  /* single column layout on mobile */
-  .yc-text-block {
-    max-width: 100%;
-  }
-
+  .yc-text-block,
   .yc-text-narrow {
     max-width: 100%;
   }
 
   .yc-section {
-    margin-bottom: 48px;
+    margin-bottom: 56px;
   }
 
-  /* stack grid columns on mobile */
   .grid {
     grid-template-columns: 1fr !important;
-    gap: 24px !important;
   }
 
-  /* reduce image padding on mobile */
-  .mb-24 {
-    margin-bottom: 16px;
+  ul li {
+    padding-left: 20px;
   }
 
-  nav {
-    padding: 12px 0;
-  }
-
-  main {
-    padding: 12px 0;
-    /* added whitespace at top on mobile and tablet */
-    padding-top: 32px;
+  ul li::before {
+    font-size: 14px;
   }
 }

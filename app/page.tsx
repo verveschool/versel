@@ -1,146 +1,165 @@
 import Link from "next/link"
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen">
-      <nav className="border-b border-border">
-        <div className="yc-container py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="text-[15px] font-medium">
-              verveschool
-            </Link>
-            <div className="flex gap-6 text-[13px]">
-              <Link href="/about" className="text-foreground hover:text-muted-foreground">
-                about
+    <div className="min-h-screen flex flex-col">
+      <SiteHeader />
+
+      <main className="flex-1">
+        {/* Hero Section */}
+        <section className="yc-container py-24 md:py-32 lg:py-40">
+          <div className="max-w-3xl mb-12">
+            <h1 className="mb-8">
+              Pick ambitious grads. Train them. Back them for 90 days. Get paid only when they outperform.
+            </h1>
+            <p className="text-lg text-muted mb-10 leading-relaxed">
+              We've built a machine for talent that works. We find early-career sales talent with drive, teach them buyer psychology, and place them in growth-stage startups with aligned incentives. No upfront fees. Just pure results.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/about"
+                className="px-8 py-3 bg-accent text-accent-foreground font-semibold rounded hover:opacity-90 transition-opacity text-center"
+              >
+                Learn more
               </Link>
-              <Link href="/partners" className="text-foreground hover:text-muted-foreground">
-                partners
+              <Link
+                href="/partners"
+                className="px-8 py-3 border-2 border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition-colors text-center"
+              >
+                For hiring partners
               </Link>
             </div>
           </div>
-        </div>
-      </nav>
+        </section>
 
-      <main className="yc-container py-16">
-        <div className="yc-text-block mb-16">
-          <h1 className="mb-6">what happens at verveschool</h1>
-          <p className="text-foreground mb-8">
-            we pick ambitious grads, teach them how people decide, back them for 90 days after they join companies, and
-            get paid only when they outperform.
-          </p>
-          <Link
-            href="/about"
-            className="inline-block text-[13px] font-medium border-b border-foreground pb-0.5 hover:border-muted-foreground hover:text-muted-foreground transition-colors"
-          >
-            read more
-          </Link>
-        </div>
+        {/* The Problem */}
+        <section className="yc-container py-20 border-t border-border">
+          <div className="mb-16">
+            <h2 className="mb-12">The problem</h2>
+            <div className="grid md:grid-cols-2 gap-12">
+              <div>
+                <p className="text-lg leading-relaxed mb-6">
+                  <strong>For candidates:</strong> You graduated. You send resumes into the void. You interview and feel like begging. The whole experience feels broken.
+                </p>
+              </div>
+              <div>
+                <p className="text-lg leading-relaxed mb-6">
+                  <strong>For companies:</strong> You cannot find grads who understand how people think. You hire wrong. You burn cash. You waste time. The cost per wrong hire reaches ₹3-5L.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        <div className="grid md:grid-cols-2 gap-16 mb-16">
-          <section className="yc-text-block">
-            <h2 className="mb-4">the problem</h2>
-            <p>
-              you graduated. you send resumes into the void. you interview and feel like begging. companies cannot find
-              grads who understand how people think. they hire wrong. they burn cash. they waste time.
-            </p>
-          </section>
+        {/* The Model */}
+        <section className="yc-container py-20 border-t border-border">
+          <h2 className="mb-12">The model: aligned incentives</h2>
+          <div className="grid md:grid-cols-3 gap-12">
+            <div>
+              <h3 className="text-xl font-bold mb-4 text-accent">For candidates</h3>
+              <ul className="space-y-3 text-foreground">
+                <li>No upfront fees</li>
+                <li>Training fully sponsored by hiring partner</li>
+                <li>90 days of hands-on coaching</li>
+                <li>Personal bet from us on your success</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-4 text-accent">For partners</h3>
+              <ul className="space-y-3 text-foreground">
+                <li>Pre-vetted, trained talent</li>
+                <li>90-day performance guarantee</li>
+                <li>Ongoing support during ramp-up</li>
+                <li>Pay only when they perform</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-4 text-accent">Why we win</h3>
+              <p className="text-foreground leading-relaxed">
+                Our incentives are perfectly aligned. We only win when you win. We don't take upfront fees. We take payment only when you survive and perform.
+              </p>
+            </div>
+          </div>
+        </section>
 
-          <section className="yc-text-block">
-            <h2 className="mb-4">the model</h2>
-            <p>
-              companies pay us. you pay nothing. your training is sponsored entirely by the company that hires you. we
-              do not take upfront fees. we take payment only when you survive and perform.
-            </p>
-          </section>
-        </div>
+        {/* Why Sales */}
+        <section className="yc-container py-20 border-t border-border">
+          <h2 className="mb-12">Why sales matters</h2>
+          <div className="grid md:grid-cols-2 gap-12 max-w-3xl">
+            <div>
+              <p className="text-lg leading-relaxed">
+                Sales is the only performance arena where a recent grad can test their actual ceiling within months.
+              </p>
+            </div>
+            <div>
+              <p className="text-lg leading-relaxed">
+                In most jobs you get feedback quarterly. In sales you get feedback daily. You know exactly where you stand.
+              </p>
+            </div>
+          </div>
+        </section>
 
-        <div className="grid md:grid-cols-2 gap-16 mb-16">
-          <section className="yc-text-block">
-            <h2 className="mb-4">why sales</h2>
-            <p>
-              sales is the only performance arena where a recent grad can test their actual ceiling within months. in
-              most jobs you get feedback quarterly. in sales you get feedback daily.
-            </p>
-          </section>
-
-          <section className="yc-text-block">
-            <h2 className="mb-4">the journey</h2>
-            <p>
-              talent scout call. same day mock. ceo review. company interviews. 90 day coaching. we stay until you are
-              at minimum top 20 percent in your team.
-            </p>
-          </section>
-        </div>
-
-        <section className="border-t border-border pt-12 mb-16">
-          <h2 className="mb-8">by the numbers</h2>
+        {/* By the Numbers */}
+        <section className="yc-container py-20 border-t border-border">
+          <h2 className="mb-12">By the numbers</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="yc-text-block">
-              <p className="text-2xl font-normal mb-1">₹4-6L</p>
-              <p className="text-[13px] text-foreground">starting salary</p>
+            <div>
+              <p className="text-4xl font-bold text-accent mb-3">₹4-6L</p>
+              <p className="text-sm text-muted">Starting salary</p>
             </div>
-            <div className="yc-text-block">
-              <p className="text-2xl font-normal mb-1">90 days</p>
-              <p className="text-[13px] text-foreground">coaching journey</p>
+            <div>
+              <p className="text-4xl font-bold text-accent mb-3">90</p>
+              <p className="text-sm text-muted">Days of coaching</p>
             </div>
-            <div className="yc-text-block">
-              <p className="text-2xl font-normal mb-1">top 20%</p>
-              <p className="text-[13px] text-foreground">target performance</p>
+            <div>
+              <p className="text-4xl font-bold text-accent mb-3">20%</p>
+              <p className="text-sm text-muted">Target performance tier</p>
             </div>
-            <div className="yc-text-block">
-              <p className="text-2xl font-normal mb-1">10-14</p>
-              <p className="text-[13px] text-foreground">days to offer</p>
+            <div>
+              <p className="text-4xl font-bold text-accent mb-3">10-14</p>
+              <p className="text-sm text-muted">Days to offer</p>
             </div>
           </div>
         </section>
 
-        <section className="border-t border-border pt-12">
-          <h2 className="mb-8">backed by</h2>
-          <p className="yc-text-block">
-            crio.do, skill lync, brightchamps, upgrad, almabetter, academically. these companies believe in this model
-            because our people close faster and stay longer.
+        {/* Partners */}
+        <section className="yc-container py-20 border-t border-border">
+          <h2 className="mb-12">Our partners</h2>
+          <p className="text-lg text-foreground mb-6 max-w-3xl">
+            Crio.do, Skill Lync, BrightChamps, Upgrad, AlmaBetter, and Academically trust our model because our people close faster, stay longer, and are driven by their first win.
           </p>
         </section>
 
-        <section className="border-t border-border pt-12 mt-16">
-          <h2 className="mb-8">for partners</h2>
-          <div className="yc-text-block mb-8">
-            <p className="mb-6">
-              are you hiring? we have trained grads who understand how people decide. they close faster. they stay
-              longer. they are driven by their first win.
+        {/* CTA Section */}
+        <section className="yc-container py-20 border-t border-border">
+          <div className="bg-secondary rounded-lg p-12 md:p-16 text-center">
+            <h2 className="mb-6">Ready to get started?</h2>
+            <p className="text-lg text-foreground mb-10 max-w-2xl mx-auto">
+              Whether you're an ambitious grad or a hiring partner, we'd love to talk.
             </p>
-            <Link
-              href="/partners"
-              className="inline-block text-[13px] font-medium border-b border-foreground pb-0.5 hover:border-muted-foreground hover:text-muted-foreground transition-colors"
-            >
-              learn more
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="mailto:ayush@verveschool.com"
+                className="px-8 py-3 bg-accent text-accent-foreground font-semibold rounded hover:opacity-90 transition-opacity"
+              >
+                Get in touch
+              </a>
+              <a
+                href="https://wa.me/917065314693"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3 border-2 border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition-colors"
+              >
+                WhatsApp us
+              </a>
+            </div>
           </div>
         </section>
       </main>
 
-      {/* add common footer component */}
-      <footer className="border-t border-border mt-16">
-        <div className="yc-container py-8">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-[13px] text-foreground">
-            <p>© 2025 verveschool</p>
-            <div className="flex gap-6">
-              <Link href="/about" className="hover:text-muted-foreground">
-                about
-              </Link>
-              <Link href="/partners" className="hover:text-muted-foreground">
-                partners
-              </Link>
-              <a href="mailto:ayush@verveschool.com" className="hover:text-muted-foreground">
-                contact
-              </a>
-              <a href="https://wa.me/917065314693" className="hover:text-muted-foreground">
-                whatsapp
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   )
 }

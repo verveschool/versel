@@ -6,35 +6,64 @@ import { usePathname } from "next/navigation"
 export function SiteHeader() {
   const pathname = usePathname()
 
-  return (
-    <nav className="border-b border-border sticky top-0 bg-background/95 backdrop-blur z-40">
-      <div className="yc-container py-4">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="text-[15px] font-medium hover:text-primary transition-colors">
-            verveschool
-          </Link>
-          
-          {/* desktop nav */}
-          <div className="hidden md:flex gap-6 text-[13px]">
-            <Link href="/about" className="text-foreground hover:text-muted-foreground transition-colors">
-              about
-            </Link>
-            <Link href="/partners" className="text-foreground hover:text-muted-foreground transition-colors">
-              partners
-            </Link>
-          </div>
+  const isActive = (href: string) => pathname === href
 
-          {/* mobile nav - always show all links */}
-          <div className="md:hidden flex gap-4 text-[13px] font-medium">
-            <Link href="/about" className="text-foreground hover:text-primary transition-colors">
-              about
-            </Link>
-            <Link href="/partners" className="text-foreground hover:text-primary transition-colors">
-              partners
-            </Link>
-          </div>
+  return (
+    <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm">
+      <div className="yc-container flex items-center justify-between py-5">
+        <Link 
+          href="/" 
+          className="text-lg font-bold text-primary hover:text-accent transition-colors"
+        >
+          verveschool
+        </Link>
+        
+        <nav className="hidden md:flex gap-8">
+          <Link 
+            href="/about"
+            className={`text-sm font-medium transition-colors ${
+              isActive("/about")
+                ? "text-accent"
+                : "text-foreground hover:text-accent"
+            }`}
+          >
+            about
+          </Link>
+          <Link 
+            href="/partners"
+            className={`text-sm font-medium transition-colors ${
+              isActive("/partners")
+                ? "text-accent"
+                : "text-foreground hover:text-accent"
+            }`}
+          >
+            partners
+          </Link>
+        </nav>
+
+        <div className="md:hidden flex gap-4">
+          <Link 
+            href="/about"
+            className={`text-sm font-medium transition-colors ${
+              isActive("/about")
+                ? "text-accent"
+                : "text-foreground hover:text-accent"
+            }`}
+          >
+            about
+          </Link>
+          <Link 
+            href="/partners"
+            className={`text-sm font-medium transition-colors ${
+              isActive("/partners")
+                ? "text-accent"
+                : "text-foreground hover:text-accent"
+            }`}
+          >
+            partners
+          </Link>
         </div>
       </div>
-    </nav>
+    </header>
   )
 }

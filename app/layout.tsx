@@ -2,7 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
-import { Inter, Geist_Mono, Source_Serif_4 } from 'next/font/google'
+import { Inter, Geist_Mono } from 'next/font/google'
 
 const inter = Inter({
   subsets: ["latin"],
@@ -13,12 +13,6 @@ const inter = Inter({
 const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
-  display: "swap",
-})
-
-const sourceSerif = Source_Serif_4({
-  subsets: ["latin"],
-  variable: "--font-serif",
   display: "swap",
 })
 
@@ -37,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${geistMono.variable} ${sourceSerif.variable} font-sans antialiased bg-background text-foreground`}>
+      <body className={`${inter.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground`}>
         {children}
         <Analytics />
       </body>
