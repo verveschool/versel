@@ -209,7 +209,7 @@ export default function PartnersPage() {
           </section>
 
           <div className="mt-20 pt-12 border-t border-border text-[13px]">
-            <p>© 2025 verveschool 🧡</p>
+            <p>© 2025 verveschool </p>
           </div>
         </main>
 
