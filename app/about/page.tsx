@@ -58,7 +58,7 @@ export default function AboutPage() {
         <main className="yc-container py-20 flex-1 md:py-20 md:pt-20 pt-8">
           {/* Header */}
           <div className="mb-24">
-            <h1 className="mb-4">what happens at verveschool 🧡</h1>
+            <h1 className="mb-4">what happens at verveschool </h1>
             <p className="text-[14px]">verveschool.com/about</p>
           </div>
 
