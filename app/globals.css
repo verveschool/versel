@@ -238,3 +238,49 @@
     grid-template-columns: 1fr !important;
   }
 }
+
+@layer components {
+  .essay-prose {
+    color: rgba(247, 240, 223, 0.78);
+    font-family: var(--font-serif);
+    font-size: 1.18rem;
+    line-height: 1.9;
+  }
+
+  .essay-prose p {
+    margin: 0 0 1.6rem;
+  }
+
+  .essay-prose h2 {
+    margin: 3.5rem 0 1rem;
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+  }
+
+  .essay-prose h3 {
+    margin: 2.5rem 0 0.8rem;
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  .essay-prose ul {
+    margin: 0 0 1.8rem;
+  }
+
+  .essay-prose li {
+    margin-bottom: 0.7rem;
+    padding-left: 1.4rem;
+  }
+
+  .essay-prose blockquote {
+    margin: 2.4rem 0;
+    border-left: 2px solid var(--primary);
+    padding-left: 1.5rem;
+    color: rgba(247, 240, 223, 0.9);
+    font-style: italic;
+  }
+}
