@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { formatWritingDate, getAllWriting } from "@/lib/writing"
 
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
 export const metadata: Metadata = {
   title: "Writing | verveschool",
   description: "Long-form notes from verveschool on sales hiring, early-career talent, ramp, and partner operating systems.",
@@ -18,27 +20,7 @@ export default function WritingPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(127,139,153,0.18),_transparent_32%),linear-gradient(180deg,_#050608_0%,_#0b0f14_52%,_#050608_100%)]" />
-
-      <nav className="border-b border-white/10 bg-black/30 backdrop-blur-xl">
-        <div className="yc-container py-5">
-          <div className="flex items-center justify-between gap-6">
-            <Link href="/" className="text-[15px] font-semibold tracking-[0.22em] text-white uppercase">
-              verveschool
-            </Link>
-            <div className="flex items-center gap-6 text-[13px] text-white/70">
-              <Link href="/about" className="transition-colors hover:text-white">
-                about
-              </Link>
-              <Link href="/partners" className="transition-colors hover:text-white">
-                partners
-              </Link>
-              <Link href="/writing" className="text-white transition-colors hover:text-white">
-                writing
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <SiteHeader />
 
       <main className="yc-container py-20">
         <section className="max-w-4xl">
@@ -96,6 +78,8 @@ export default function WritingPage() {
           </Link>
         </section>
       </main>
+
+      <SiteFooter />
     </div>
   )
 }

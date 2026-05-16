@@ -1,17 +1,19 @@
 "use client"
 
+import { SiteFooter } from "@/components/site-footer"
+import { SiteHeader } from "@/components/site-header"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
 type PartnerVisualVariant = "risk" | "signal" | "filter" | "process" | "guarantee" | "focus"
 
 const visualDetails: Record<PartnerVisualVariant, { eyebrow: string; title: string; metric: string }> = {
-  risk: { eyebrow: "risk map", title: "missed target compounds", metric: "90d" },
-  signal: { eyebrow: "signal gap", title: "confidence is not conversion", metric: "4x" },
-  filter: { eyebrow: "candidate filter", title: "signal before polish", metric: "1:8" },
-  process: { eyebrow: "selection pressure", title: "tasks reveal floor readiness", metric: "5" },
-  guarantee: { eyebrow: "aligned incentive", title: "replacement risk monitored", metric: "net 30" },
-  focus: { eyebrow: "partner fit", title: "fewer interviews, more signal", metric: "tier 1" },
+  risk: { eyebrow: "Risk Map", title: "Missed target compounds", metric: "90d" },
+  signal: { eyebrow: "Signal Gap", title: "Confidence is not conversion", metric: "4x" },
+  filter: { eyebrow: "Candidate Filter", title: "Signal before polish", metric: "1:8" },
+  process: { eyebrow: "Selection Pressure", title: "Tasks reveal floor readiness", metric: "5" },
+  guarantee: { eyebrow: "Aligned Incentive", title: "Replacement risk monitored", metric: "net 30" },
+  focus: { eyebrow: "Partner Fit", title: "Fewer interviews, more signal", metric: "tier 1" },
 }
 
 function PartnerVisual({ variant }: { variant: PartnerVisualVariant }) {
@@ -78,25 +80,14 @@ export default function PartnersPage() {
   return (
     <div className="min-h-screen">
       {/* Navigation */}
-      <nav className="border-b border-border sticky top-0 bg-background/95 backdrop-blur z-40">
-        <div className="yc-container py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="text-[15px] font-medium">
-              verveschool
-            </Link>
-            <Link href="/partners" className="text-[13px] font-medium md:hidden">
-              partners
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <SiteHeader />
 
       <div className="flex flex-col md:flex-row">
         {/* Main content */}
         <main className="yc-container py-20 flex-1 md:py-20 md:pt-20 pt-8">
           {/* Header */}
           <div className="mb-24">
-            <h1 className="mb-4">a filtered sales-talent pipeline with a replacement guarantee</h1>
+            <h1 className="mb-4">A Filtered Sales-Talent Pipeline With a Replacement Guarantee</h1>
             <p className="text-[14px]">verveschool.com/partners</p>
           </div>
 
@@ -143,7 +134,7 @@ export default function PartnersPage() {
             <div className="yc-text-block mb-12">
               <p className="mb-6">we source english fluent gen z sales talent for specific partner mandates.</p>
               <p className="mb-6">
-                resumes are not the product. filtered signal is. we screen for hunger, focus, listening quality,
+                Resumes are not the product. Filtered signal is. We screen for hunger, focus, listening quality,
                 feedback absorption, recovery after rejection, and the ability to stay precise under pressure.
               </p>
               <p className="mb-6">
@@ -236,7 +227,7 @@ export default function PartnersPage() {
                 more signal, we can build the pipeline around your hiring bar.
               </p>
               <p>
-                you bring the mandate. we bring filtered candidates, selection pressure, post-joining support, and a
+                You bring the mandate. We bring filtered candidates, selection pressure, post-joining support, and a
                 replacement guarantee.
               </p>
             </div>
@@ -266,7 +257,7 @@ export default function PartnersPage() {
 
         {/* Table of Contents */}
         <aside className="hidden md:block sticky top-20 pt-20 pb-20 px-6 h-screen overflow-y-auto flex-shrink-0 border-l border-border">
-          <div className="text-[12px] font-medium text-muted-foreground mb-4">on this page</div>
+          <div className="text-[12px] font-medium text-muted-foreground mb-4">On this page</div>
           <ul className="space-y-2">
             {sections.map((section) => (
               <li key={section}>
@@ -286,32 +277,7 @@ export default function PartnersPage() {
           </ul>
         </aside>
       </div>
-
-      {/* Common Footer */}
-      <footer className="border-t border-border mt-16">
-        <div className="yc-container py-8">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-[13px] text-foreground">
-            <p>© 2025 verveschool</p>
-            <div className="flex gap-6">
-              <Link href="/about" className="hover:text-muted-foreground">
-                about
-              </Link>
-              <Link href="/partners" className="hover:text-muted-foreground">
-                partners
-              </Link>
-              <Link href="/writing" className="hover:text-muted-foreground">
-                writing
-              </Link>
-              <a href="mailto:ayush@verveschool.com" className="hover:text-muted-foreground">
-                contact
-              </a>
-              <a href="https://wa.me/917065314693" className="hover:text-muted-foreground">
-                whatsapp
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   )
 }
