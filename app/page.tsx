@@ -1,3 +1,4 @@
+import { SiteHeader } from "@/components/site-header"
 import Link from "next/link"
 
 const filterSteps = [
@@ -37,29 +38,7 @@ export default function HomePage() {
     <div className="min-h-screen overflow-hidden bg-background text-foreground">
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(215,178,103,0.2),_transparent_34%),radial-gradient(circle_at_80%_10%,_rgba(255,255,255,0.08),_transparent_24%),linear-gradient(180deg,_#070707_0%,_#0d0b08_54%,_#050505_100%)]" />
 
-      <nav className="border-b border-white/10 bg-black/30 backdrop-blur-xl">
-        <div className="yc-container py-5">
-          <div className="flex items-center justify-between gap-6">
-            <Link href="/" className="text-[15px] font-semibold tracking-[0.22em] text-white uppercase">
-              verveschool
-            </Link>
-            <div className="flex items-center gap-6 text-[13px] text-white/70">
-              <Link href="/about" className="transition-colors hover:text-white">
-                about
-              </Link>
-              <Link href="/partners" className="transition-colors hover:text-white">
-                partners
-              </Link>
-              <Link href="/people" className="transition-colors hover:text-white">
-                people
-              </Link>
-              <Link href="/writing" className="transition-colors hover:text-white">
-                writing
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <SiteHeader />
 
       <main className="yc-container">
         <section className="grid min-h-[78vh] items-center gap-12 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:py-28">

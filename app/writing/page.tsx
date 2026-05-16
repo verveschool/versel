@@ -1,3 +1,4 @@
+import { SiteHeader } from "@/components/site-header"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { formatWritingDate, getAllWriting } from "@/lib/writing"
@@ -19,26 +20,7 @@ export default function WritingPage() {
     <div className="min-h-screen bg-background text-foreground">
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(215,178,103,0.18),_transparent_32%),linear-gradient(180deg,_#070707_0%,_#0d0b08_52%,_#050505_100%)]" />
 
-      <nav className="border-b border-white/10 bg-black/30 backdrop-blur-xl">
-        <div className="yc-container py-5">
-          <div className="flex items-center justify-between gap-6">
-            <Link href="/" className="text-[15px] font-semibold tracking-[0.22em] text-white uppercase">
-              verveschool
-            </Link>
-            <div className="flex items-center gap-6 text-[13px] text-white/70">
-              <Link href="/about" className="transition-colors hover:text-white">
-                about
-              </Link>
-              <Link href="/partners" className="transition-colors hover:text-white">
-                partners
-              </Link>
-              <Link href="/writing" className="text-white transition-colors hover:text-white">
-                writing
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <SiteHeader />
 
       <main className="yc-container py-20">
         <section className="max-w-4xl">
