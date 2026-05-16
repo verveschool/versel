@@ -1,5 +1,7 @@
 import Link from "next/link"
 
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
 const selectedPeople = [
   {
     name: "Aarav M.",
@@ -51,30 +53,7 @@ export default function PeoplePage() {
   return (
     <div className="min-h-screen overflow-hidden bg-background text-foreground">
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_18%_0%,_rgba(127,139,153,0.18),_transparent_32%),radial-gradient(circle_at_90%_18%,_rgba(255,255,255,0.07),_transparent_25%),linear-gradient(180deg,_#050608_0%,_#0b0f14_58%,_#050608_100%)]" />
-
-      <nav className="border-b border-white/10 bg-black/35 backdrop-blur-xl">
-        <div className="yc-container py-5">
-          <div className="flex items-center justify-between gap-6">
-            <Link href="/" className="text-[15px] font-semibold uppercase tracking-[0.22em] text-white">
-              verveschool
-            </Link>
-            <div className="flex items-center gap-6 text-[13px] text-white/70">
-              <Link href="/about" className="transition-colors hover:text-white">
-                about
-              </Link>
-              <Link href="/partners" className="transition-colors hover:text-white">
-                partners
-              </Link>
-              <Link href="/people" className="text-white transition-colors hover:text-white">
-                people
-              </Link>
-              <Link href="/writing" className="transition-colors hover:text-white">
-                writing
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <SiteHeader />
 
       <main className="yc-container">
         <section className="grid gap-12 py-20 md:py-28 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
@@ -174,6 +153,8 @@ export default function PeoplePage() {
           </div>
         </section>
       </main>
+
+      <SiteFooter />
     </div>
   )
 }

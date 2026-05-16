@@ -4,53 +4,61 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 const navLinks = [
-  { href: "/about", label: "about" },
-  { href: "/partners", label: "partners" },
-  { href: "/people", label: "people" },
+  { href: "/partners", label: "Partners" },
+  { href: "/people", label: "People" },
+  { href: "/writing", label: "Writing" },
+  { href: "/book", label: "Book" },
+  { href: "/about", label: "About" },
 ]
+
+function isActivePath(pathname: string, href: string) {
+  return pathname === href || pathname.startsWith(`${href}/`)
+}
 
 export function SiteHeader() {
   const pathname = usePathname()
 
   return (
-    <nav className="border-b border-border sticky top-0 bg-background/95 backdrop-blur z-40">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur-xl">
       <div className="yc-container py-4">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="inline-flex items-center hover:opacity-80 transition-opacity">
+        <nav className="flex items-center justify-between gap-6" aria-label="Primary navigation">
+          <Link href="/" className="inline-flex items-center transition-opacity hover:opacity-75" aria-label="verveschool home">
             <img src="/verveschool-logo.svg" alt="verveschool" className="h-8 w-auto" />
           </Link>
 
-          {/* desktop nav */}
-          <div className="hidden md:flex gap-6 text-[13px]">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`transition-colors ${
-                  pathname === link.href ? "text-primary" : "text-foreground hover:text-muted-foreground"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div className="hidden items-center gap-6 text-[13px] text-foreground/62 md:flex">
+            {navLinks.map((link) => {
+              const active = isActivePath(pathname, link.href)
+
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`transition-colors hover:text-foreground ${active ? "text-foreground" : "text-foreground/62"}`}
+                >
+                  {link.label}
+                </Link>
+              )
+            })}
           </div>
 
-          {/* mobile nav - always show all links */}
-          <div className="md:hidden flex gap-4 text-[13px] font-medium">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`transition-colors ${
-                  pathname === link.href ? "text-primary" : "text-foreground hover:text-primary"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div className="flex items-center gap-4 text-[12px] text-foreground/68 md:hidden">
+            {navLinks.slice(0, 4).map((link) => {
+              const active = isActivePath(pathname, link.href)
+
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`transition-colors hover:text-foreground ${active ? "text-foreground" : "text-foreground/68"}`}
+                >
+                  {link.label}
+                </Link>
+              )
+            })}
           </div>
-        </div>
+        </nav>
       </div>
-    </nav>
+    </header>
   )
 }

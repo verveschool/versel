@@ -1,74 +1,53 @@
 import Link from "next/link"
 
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
 const filterSteps = [
-  "source ambitious early-career operators before the market can price them",
-  "pressure-test voice, follow-through, coachability, and speed to clarity",
-  "put only the sharpest through partner-specific sales simulations",
-  "keep post-start signal flowing so hiring teams know who is compounding",
+  "Source ambitious early-career operators before the market can price them",
+  "Pressure-test voice, follow-through, coachability, and speed to clarity",
+  "Put only the sharpest through partner-specific sales simulations",
+  "Keep post-start signal flowing so hiring teams know who is compounding",
 ]
 
 const selectedPeople = [
   {
     label: "01",
-    title: "the closer",
+    title: "The Closer",
     copy: "calm under pressure, direct on money, and able to move a stranger from doubt to decision without sounding rehearsed.",
   },
   {
     label: "02",
-    title: "the prospector",
+    title: "The Prospector",
     copy: "high-activity, low-ego, and comfortable turning cold lists into booked conversations with daily consistency.",
   },
   {
     label: "03",
-    title: "the account builder",
+    title: "The Account Builder",
     copy: "patient enough to listen, commercial enough to qualify, and disciplined enough to protect pipeline quality.",
   },
 ]
 
 const metrics = [
-  { value: "10-14", label: "days to shortlist" },
-  { value: "90", label: "day replacement window" },
-  { value: "0", label: "upfront candidate fees" },
-  { value: "1", label: "standard: hire for outcomes" },
+  { value: "10-14", label: "Days to shortlist" },
+  { value: "90", label: "Day replacement window" },
+  { value: "0", label: "Upfront candidate fees" },
+  { value: "1", label: "Standard: hire for outcomes" },
 ]
 
 export default function HomePage() {
   return (
     <div className="min-h-screen overflow-hidden bg-background text-foreground">
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(127,139,153,0.2),_transparent_34%),radial-gradient(circle_at_80%_10%,_rgba(255,255,255,0.08),_transparent_24%),linear-gradient(180deg,_#050608_0%,_#0b0f14_54%,_#050608_100%)]" />
-
-      <nav className="border-b border-white/10 bg-black/30 backdrop-blur-xl">
-        <div className="yc-container py-5">
-          <div className="flex items-center justify-between gap-6">
-            <Link href="/" className="text-[15px] font-semibold tracking-[0.22em] text-white uppercase">
-              verveschool
-            </Link>
-            <div className="flex items-center gap-6 text-[13px] text-white/70">
-              <Link href="/about" className="transition-colors hover:text-white">
-                about
-              </Link>
-              <Link href="/partners" className="transition-colors hover:text-white">
-                partners
-              </Link>
-              <Link href="/people" className="transition-colors hover:text-white">
-                people
-              </Link>
-              <Link href="/writing" className="transition-colors hover:text-white">
-                writing
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <SiteHeader />
 
       <main className="yc-container">
         <section className="grid min-h-[78vh] items-center gap-12 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:py-28">
           <div>
             <h1 className="max-w-5xl text-5xl font-semibold leading-[0.95] tracking-[-0.055em] text-white md:text-7xl lg:text-8xl">
-              the world moves for those who do
+              The World Moves for Those Who Do
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-white/72 md:text-xl md:leading-9">
-              verveschool finds, tests, and backs early-career sales talent for hiring partners who cannot afford another
+              Verveschool finds, tests, and backs early-career sales talent for hiring partners who cannot afford another
               charming interview that turns into a weak pipeline.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -76,13 +55,13 @@ export default function HomePage() {
                 href="/partners"
                 className="inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:bg-[#c5d3e0]"
               >
-                hire through the filter
+                Hire Through the Filter
               </Link>
               <a
                 href="mailto:ayush@verveschool.com"
                 className="inline-flex items-center justify-center border border-white/20 px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-white transition hover:border-white hover:bg-white/10"
               >
-                talk to us
+                Talk to Us
               </a>
             </div>
           </div>
@@ -167,7 +146,7 @@ export default function HomePage() {
         <section className="py-16 md:py-24">
           <div className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
-              <p className="section-kicker">selected people</p>
+              <p className="section-kicker">Selected People</p>
               <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-white md:text-5xl">
                 the candidates we let through look different in motion.
               </h2>
@@ -180,7 +159,7 @@ export default function HomePage() {
                 href="/people"
                 className="inline-flex text-[12px] font-semibold uppercase tracking-[0.2em] text-primary transition-colors hover:text-white"
               >
-                view selected people
+                View Selected People
               </Link>
             </div>
           </div>
@@ -218,36 +197,7 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-
-      <footer className="border-t border-white/10">
-        <div className="yc-container py-8">
-          <div className="flex flex-col items-start justify-between gap-4 text-[13px] text-white/55 md:flex-row md:items-center">
-            <p>© 2025 verveschool</p>
-            <div className="flex flex-wrap gap-6">
-              <Link href="/about" className="transition-colors hover:text-white">
-                about
-              </Link>
-              <Link href="/partners" className="transition-colors hover:text-white">
-                partners
-              </Link>
-              <Link href="/people" className="transition-colors hover:text-white">
-                people
-              </Link>
-              <a href="mailto:ayush@verveschool.com" className="transition-colors hover:text-white">
-                contact
-              </a>
-              <a
-                href="https://wa.me/917065314693"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-colors hover:text-white"
-              >
-                whatsapp
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   )
 }
