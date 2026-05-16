@@ -3,15 +3,15 @@ import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 export const metadata: Metadata = {
-  title: "Sales Talent Filter | verveschool",
-  description: "Verveschool filters, tests, and backs early-career sales talent for hiring partners who need sharper signal, faster shortlists, and replacement-backed confidence.",
+  title: "VerveSchool",
+  description: "VerveSchool filters, tests, and backs early-career sales talent for hiring partners who need sharper signal, faster shortlists, and replacement-backed confidence.",
   icons: {
     icon: [
-      { url: "/icon.svg", type: "image/svg+xml" },
-      { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)", type: "image/png", sizes: "32x32" },
-      { url: "/icon-dark-32x32.png", media: "(prefers-color-scheme: dark)", type: "image/png", sizes: "32x32" },
+      { url: "/verveschool-logo.svg", type: "image/svg+xml" },
+      { url: "/verveschool-logo.png", media: "(prefers-color-scheme: light)", type: "image/png", sizes: "32x32" },
+      { url: "/verveschool-logo.png", media: "(prefers-color-scheme: dark)", type: "image/png", sizes: "32x32" },
     ],
-    apple: "/apple-icon.png",
+    apple: "/verveschool-logo.png",
   },
 }
 
