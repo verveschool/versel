@@ -2,7 +2,47 @@
 
 import Link from "next/link"
 import { useState, useEffect } from "react"
-import Image from "next/image"
+
+type PartnerVisualVariant = "risk" | "signal" | "filter" | "process" | "guarantee" | "focus"
+
+const visualDetails: Record<PartnerVisualVariant, { eyebrow: string; title: string; metric: string }> = {
+  risk: { eyebrow: "risk map", title: "missed target compounds", metric: "90d" },
+  signal: { eyebrow: "signal gap", title: "confidence is not conversion", metric: "4x" },
+  filter: { eyebrow: "candidate filter", title: "signal before polish", metric: "1:8" },
+  process: { eyebrow: "selection pressure", title: "tasks reveal floor readiness", metric: "5" },
+  guarantee: { eyebrow: "aligned incentive", title: "replacement risk monitored", metric: "net 30" },
+  focus: { eyebrow: "partner fit", title: "fewer interviews, more signal", metric: "tier 1" },
+}
+
+function PartnerVisual({ variant }: { variant: PartnerVisualVariant }) {
+  const detail = visualDetails[variant]
+
+  return (
+    <div
+      aria-label={`${detail.eyebrow}: ${detail.title}`}
+      role="img"
+      className="relative mb-8 h-[400px] w-full overflow-hidden border border-border bg-card"
+    >
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_22%_24%,rgba(255,59,31,0.38),transparent_30%),radial-gradient(circle_at_78%_18%,rgba(255,176,0,0.28),transparent_24%),linear-gradient(135deg,rgba(255,122,24,0.18),transparent_45%),#080808]" />
+      <div className="absolute inset-x-8 top-8 flex items-center justify-between text-[11px] font-bold uppercase tracking-[0.28em] text-foreground/60">
+        <span>{detail.eyebrow}</span>
+        <span>{detail.metric}</span>
+      </div>
+      <div className="absolute inset-x-8 bottom-8 z-10 max-w-[520px]">
+        <div className="mb-5 h-px w-24 bg-primary" />
+        <p className="text-[clamp(1.8rem,4vw,4.4rem)] font-extrabold leading-[0.9] tracking-[-0.06em] text-foreground">
+          {detail.title}
+        </p>
+      </div>
+      <div className="absolute left-[10%] top-[34%] h-36 w-20 rounded-t-full border border-foreground/15 bg-background/70 shadow-[0_0_80px_rgba(255,59,31,0.22)]" />
+      <div className="absolute left-[26%] top-[42%] h-44 w-24 rounded-t-full border border-foreground/10 bg-background/45" />
+      <div className="absolute right-[10%] top-[30%] h-52 w-28 rounded-t-full border border-primary/30 bg-primary/15 shadow-[0_0_110px_rgba(255,122,24,0.32)]" />
+      <div className="absolute inset-y-0 right-1/3 w-px bg-foreground/10" />
+      <div className="absolute inset-x-0 top-1/2 h-px bg-foreground/10" />
+      <div className="absolute -bottom-24 -right-20 h-64 w-64 rounded-full bg-accent/20 blur-3xl" />
+    </div>
+  )
+}
 
 export default function PartnersPage() {
   const [activeSection, setActiveSection] = useState("")
@@ -75,9 +115,7 @@ export default function PartnersPage() {
                   sales signal first, then stay accountable after joining.
                 </p>
               </div>
-              <div className="relative w-full h-[400px] mb-8">
-                <Image src="/hiring-challenge-illustration.jpg" alt="sales hiring risk" fill className="object-cover" />
-              </div>
+              <PartnerVisual variant="risk" />
             </div>
           </section>
 
@@ -96,9 +134,7 @@ export default function PartnersPage() {
               </p>
               <p>that is the gap we are built to close.</p>
             </div>
-            <div className="relative w-full h-[400px] mb-8">
-              <Image src="/signal-gap-illustration.jpg" alt="bad sales hire signal gap" fill className="object-cover" />
-            </div>
+            <PartnerVisual variant="signal" />
           </section>
 
           {/* Signal Filtering */}
@@ -116,14 +152,7 @@ export default function PartnersPage() {
               </p>
               <p>you see a smaller pool because the weak signal has already been removed.</p>
             </div>
-            <div className="relative w-full h-[400px] mb-8">
-              <Image
-                src="/approach-illustration.jpg"
-                alt="filtered sales talent pipeline"
-                fill
-                className="object-cover"
-              />
-            </div>
+            <PartnerVisual variant="filter" />
           </section>
 
           {/* Selection Pressure */}
@@ -160,14 +189,7 @@ export default function PartnersPage() {
                 tighten talk tracks, and identify replacement risk early.
               </p>
             </div>
-            <div className="relative w-full h-[400px] mb-8">
-              <Image
-                src="/process-illustration.jpg"
-                alt="sales candidate selection pressure"
-                fill
-                className="object-cover"
-              />
-            </div>
+            <PartnerVisual variant="process" />
           </section>
 
           {/* Replacement Guarantee */}
@@ -201,14 +223,7 @@ export default function PartnersPage() {
                 </p>
               </div>
             </div>
-            <div className="relative w-full h-[400px] mb-8">
-              <Image
-                src="/guarantee-illustration.jpg"
-                alt="sales hire replacement guarantee"
-                fill
-                className="object-cover"
-              />
-            </div>
+            <PartnerVisual variant="guarantee" />
           </section>
 
           {/* Partner Fit */}
@@ -225,14 +240,7 @@ export default function PartnersPage() {
                 replacement guarantee.
               </p>
             </div>
-            <div className="relative w-full h-[400px] mb-8">
-              <Image
-                src="/focus-illustration.jpg"
-                alt="partners who need filtered sales talent"
-                fill
-                className="object-cover"
-              />
-            </div>
+            <PartnerVisual variant="focus" />
           </section>
 
           {/* Next Steps */}
