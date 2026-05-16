@@ -83,7 +83,7 @@ export default function AboutPage() {
               We are a filter for people who move before the world agrees with them.
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-foreground/68 md:text-xl md:leading-9">
-              Verveschool is not a course company. It is a selection system for early-career sales talent and the hiring partners who need conviction before they make another expensive bet.
+              Verveschool is a selection system for early-career sales talent and the hiring partners who need conviction before they make another expensive bet.
             </p>
           </section>
 
