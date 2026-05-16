@@ -32,8 +32,8 @@ export default function BookPage() {
               <Link href="/partners" className="transition-colors hover:text-white">
                 partners
               </Link>
-              <Link href="/essays" className="transition-colors hover:text-white">
-                essays
+              <Link href="/writing" className="transition-colors hover:text-white">
+                writing
               </Link>
               <Link href="/book" className="text-white transition-colors hover:text-white">
                 book

@@ -1,7 +1,7 @@
 import fs from "node:fs"
 import path from "node:path"
 
-export type EssayFrontmatter = {
+export type WritingFrontmatter = {
   title: string
   description: string
   date: string
@@ -9,19 +9,19 @@ export type EssayFrontmatter = {
   author: string
 }
 
-export type Essay = EssayFrontmatter & {
+export type Writing = WritingFrontmatter & {
   slug: string
   content: string
   readingTime: string
 }
 
-const essaysDirectory = path.join(process.cwd(), "content", "essays")
+const writingDirectory = path.join(process.cwd(), "content", "essays")
 
-function parseFrontmatter(source: string): { frontmatter: EssayFrontmatter; content: string } {
+function parseFrontmatter(source: string): { frontmatter: WritingFrontmatter; content: string } {
   const match = source.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/)
 
   if (!match) {
-    throw new Error("Essay files must begin with frontmatter.")
+    throw new Error("Writing files must begin with frontmatter.")
   }
 
   const frontmatter = match[1].split("\n").reduce<Record<string, string>>((fields, line) => {
@@ -50,7 +50,7 @@ function parseFrontmatter(source: string): { frontmatter: EssayFrontmatter; cont
   }
 
   return {
-    frontmatter: frontmatter as EssayFrontmatter,
+    frontmatter: frontmatter as WritingFrontmatter,
     content: match[2].trim(),
   }
 }
@@ -62,19 +62,19 @@ function calculateReadingTime(content: string): string {
   return `${minutes} min read`
 }
 
-export function getEssaySlugs(): string[] {
-  if (!fs.existsSync(essaysDirectory)) {
+export function getWritingSlugs(): string[] {
+  if (!fs.existsSync(writingDirectory)) {
     return []
   }
 
   return fs
-    .readdirSync(essaysDirectory)
+    .readdirSync(writingDirectory)
     .filter((fileName) => fileName.endsWith(".md"))
     .map((fileName) => fileName.replace(/\.md$/, ""))
 }
 
-export function getEssayBySlug(slug: string): Essay {
-  const fullPath = path.join(essaysDirectory, `${slug}.md`)
+export function getWritingBySlug(slug: string): Writing {
+  const fullPath = path.join(writingDirectory, `${slug}.md`)
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { frontmatter, content } = parseFrontmatter(fileContents)
 
@@ -86,13 +86,13 @@ export function getEssayBySlug(slug: string): Essay {
   }
 }
 
-export function getAllEssays(): Essay[] {
-  return getEssaySlugs()
-    .map((slug) => getEssayBySlug(slug))
+export function getAllWriting(): Writing[] {
+  return getWritingSlugs()
+    .map((slug) => getWritingBySlug(slug))
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }
 
-export function formatEssayDate(date: string): string {
+export function formatWritingDate(date: string): string {
   return new Intl.DateTimeFormat("en", {
     month: "long",
     day: "numeric",

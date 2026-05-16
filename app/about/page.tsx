@@ -488,8 +488,8 @@ export default function AboutPage() {
               <Link href="/partners" className="hover:text-muted-foreground">
                 partners
               </Link>
-              <Link href="/essays" className="hover:text-muted-foreground">
-                essays
+              <Link href="/writing" className="hover:text-muted-foreground">
+                writing
               </Link>
               <a href="mailto:ayush@verveschool.com" className="hover:text-muted-foreground">
                 contact
