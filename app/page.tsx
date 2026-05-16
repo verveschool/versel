@@ -53,8 +53,8 @@ export default function HomePage() {
               <Link href="/people" className="transition-colors hover:text-white">
                 people
               </Link>
-              <Link href="/essays" className="transition-colors hover:text-white">
-                essays
+              <Link href="/writing" className="transition-colors hover:text-white">
+                writing
               </Link>
             </div>
           </div>
