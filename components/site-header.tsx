@@ -3,6 +3,12 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
+const navLinks = [
+  { href: "/about", label: "about" },
+  { href: "/partners", label: "partners" },
+  { href: "/people", label: "people" },
+]
+
 export function SiteHeader() {
   const pathname = usePathname()
 
@@ -13,25 +19,35 @@ export function SiteHeader() {
           <Link href="/" className="text-[15px] font-medium hover:text-primary transition-colors">
             verveschool
           </Link>
-          
+
           {/* desktop nav */}
           <div className="hidden md:flex gap-6 text-[13px]">
-            <Link href="/about" className="text-foreground hover:text-muted-foreground transition-colors">
-              about
-            </Link>
-            <Link href="/partners" className="text-foreground hover:text-muted-foreground transition-colors">
-              partners
-            </Link>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`transition-colors ${
+                  pathname === link.href ? "text-primary" : "text-foreground hover:text-muted-foreground"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           {/* mobile nav - always show all links */}
           <div className="md:hidden flex gap-4 text-[13px] font-medium">
-            <Link href="/about" className="text-foreground hover:text-primary transition-colors">
-              about
-            </Link>
-            <Link href="/partners" className="text-foreground hover:text-primary transition-colors">
-              partners
-            </Link>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`transition-colors ${
+                  pathname === link.href ? "text-primary" : "text-foreground hover:text-primary"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
