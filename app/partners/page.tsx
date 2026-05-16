@@ -2,7 +2,6 @@
 
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
-import Link from "next/link"
 import { useState, useEffect } from "react"
 
 type PartnerVisualVariant = "risk" | "signal" | "filter" | "process" | "guarantee" | "focus"
@@ -82,12 +81,13 @@ export default function PartnersPage() {
       {/* Navigation */}
       <SiteHeader />
 
-<div className="mb-24">
-  <h1 className="mb-4 text-6xl font-bold leading-tight tracking-tight">
-    A Filtered Sales-Talent Pipeline With a Replacement Guarantee
-  </h1>
-</div>
-
+      <div className="flex flex-col md:flex-row">
+        <main className="yc-container flex-1 py-16 md:py-24">
+          <div className="mb-24">
+            <h1 className="mb-4 text-6xl font-bold leading-tight tracking-tight">
+              A Filtered Sales-Talent Pipeline With a Replacement Guarantee
+            </h1>
+          </div>
 
           {/* Hiring Risk */}
           <section data-section="hiring-risk" className="yc-section">
