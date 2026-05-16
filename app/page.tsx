@@ -50,6 +50,9 @@ export default function HomePage() {
               <Link href="/partners" className="transition-colors hover:text-white">
                 partners
               </Link>
+              <Link href="/people" className="transition-colors hover:text-white">
+                people
+              </Link>
               <Link href="/essays" className="transition-colors hover:text-white">
                 essays
               </Link>
@@ -172,9 +175,17 @@ export default function HomePage() {
                 the candidates we let through look different in motion.
               </h2>
             </div>
-            <p className="max-w-md text-base leading-7 text-white/58">
-              Not a bench. Not a batch. Specific people selected for specific partner mandates.
-            </p>
+            <div className="max-w-md space-y-5">
+              <p className="text-base leading-7 text-white/58">
+                Not a bench. Not a batch. Specific people selected for specific partner mandates.
+              </p>
+              <Link
+                href="/people"
+                className="inline-flex text-[12px] font-semibold uppercase tracking-[0.2em] text-primary transition-colors hover:text-white"
+              >
+                view selected people
+              </Link>
+            </div>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
             {selectedPeople.map((person) => (
@@ -221,6 +232,9 @@ export default function HomePage() {
               </Link>
               <Link href="/partners" className="transition-colors hover:text-white">
                 partners
+              </Link>
+              <Link href="/people" className="transition-colors hover:text-white">
+                people
               </Link>
               <a href="mailto:ayush@verveschool.com" className="transition-colors hover:text-white">
                 contact
