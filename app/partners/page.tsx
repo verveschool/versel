@@ -6,12 +6,12 @@ import { useState, useEffect } from "react"
 type PartnerVisualVariant = "risk" | "signal" | "filter" | "process" | "guarantee" | "focus"
 
 const visualDetails: Record<PartnerVisualVariant, { eyebrow: string; title: string; metric: string }> = {
-  risk: { eyebrow: "risk map", title: "missed target compounds", metric: "90d" },
-  signal: { eyebrow: "signal gap", title: "confidence is not conversion", metric: "4x" },
-  filter: { eyebrow: "candidate filter", title: "signal before polish", metric: "1:8" },
-  process: { eyebrow: "selection pressure", title: "tasks reveal floor readiness", metric: "5" },
-  guarantee: { eyebrow: "aligned incentive", title: "replacement risk monitored", metric: "net 30" },
-  focus: { eyebrow: "partner fit", title: "fewer interviews, more signal", metric: "tier 1" },
+  risk: { eyebrow: "Risk Map", title: "Missed Target Compounds", metric: "90d" },
+  signal: { eyebrow: "Signal Gap", title: "Confidence Is Not Conversion", metric: "4x" },
+  filter: { eyebrow: "Candidate Filter", title: "Signal Before Polish", metric: "1:8" },
+  process: { eyebrow: "Selection Pressure", title: "Tasks Reveal Floor Readiness", metric: "5" },
+  guarantee: { eyebrow: "Aligned Incentive", title: "Replacement Risk Monitored", metric: "net 30" },
+  focus: { eyebrow: "Partner Fit", title: "Fewer Interviews, More Signal", metric: "tier 1" },
 }
 
 function PartnerVisual({ variant }: { variant: PartnerVisualVariant }) {
@@ -85,7 +85,7 @@ export default function PartnersPage() {
               verveschool
             </Link>
             <Link href="/partners" className="text-[13px] font-medium md:hidden">
-              partners
+              Partners
             </Link>
           </div>
         </div>
@@ -96,13 +96,13 @@ export default function PartnersPage() {
         <main className="yc-container py-20 flex-1 md:py-20 md:pt-20 pt-8">
           {/* Header */}
           <div className="mb-24">
-            <h1 className="mb-4">a filtered sales-talent pipeline with a replacement guarantee</h1>
+            <h1 className="mb-4">A Filtered Sales-Talent Pipeline with a Replacement Guarantee</h1>
             <p className="text-[14px]">verveschool.com/partners</p>
           </div>
 
           {/* Hiring Risk */}
           <section data-section="hiring-risk" className="yc-section">
-            <h2>sales hiring is risk transfer</h2>
+            <h2>Sales Hiring Is Risk Transfer</h2>
             <div className="grid grid-cols-2 gap-16 mb-12">
               <div className="yc-text-block">
                 <p className="mb-6">every sales hire looks cheaper before they miss target.</p>
@@ -121,7 +121,7 @@ export default function PartnersPage() {
 
           {/* Bad Hires */}
           <section data-section="bad-hires" className="yc-section">
-            <h2>bad sales hires hide in plain sight</h2>
+            <h2>Bad Sales Hires Hide in Plain Sight</h2>
             <div className="yc-text-block mb-12">
               <p className="mb-6">they interview well. they sound confident. they understand the role on paper.</p>
               <p className="mb-6">
@@ -139,7 +139,7 @@ export default function PartnersPage() {
 
           {/* Signal Filtering */}
           <section data-section="signal-filtering" className="yc-section">
-            <h2>we filter for signal before polish</h2>
+            <h2>We Filter for Signal Before Polish</h2>
             <div className="yc-text-block mb-12">
               <p className="mb-6">we source english fluent gen z sales talent for specific partner mandates.</p>
               <p className="mb-6">
@@ -157,33 +157,33 @@ export default function PartnersPage() {
 
           {/* Selection Pressure */}
           <section data-section="selection-pressure" className="yc-section">
-            <h2>selection pressure creates the shortlist</h2>
+            <h2>Selection Pressure Creates the Shortlist</h2>
             <div className="yc-text-block mb-8">
-              <h3 className="mb-8">1. mandate-led scouting</h3>
+              <h3 className="mb-8">1. Mandate-Led Scouting</h3>
               <p className="mb-12">
                 we do not hand you a generic bench. we hunt against your role, city, compensation, language needs, and
                 sales motion.
               </p>
 
-              <h3 className="mb-8">2. founder screen</h3>
+              <h3 className="mb-8">2. Founder Screen</h3>
               <p className="mb-12">
                 faraz arif (co-founder, 9+ years exp) personally screens every candidate for the traits interviews
                 usually miss: persistence, clarity, humility, and recovery.
               </p>
 
-              <h3 className="mb-8">3. pressure tasks</h3>
+              <h3 className="mb-8">3. Pressure Tasks</h3>
               <p className="mb-12">
                 candidates are tested through realistic sales situations: objection handling, follow up discipline,
                 call thinking, and response to direct feedback.
               </p>
 
-              <h3 className="mb-8">4. partner calibration</h3>
+              <h3 className="mb-8">4. Partner Calibration</h3>
               <p className="mb-12">
                 we map the final shortlist to your product, buyer, targets, and floor reality so you are choosing from
                 candidates who fit the actual job, not a generic sales profile.
               </p>
 
-              <h3 className="mb-8">5. post-joining support</h3>
+              <h3 className="mb-8">5. Post-Joining Support</h3>
               <p>
                 training and coaching are operational support for the guarantee. once a hire starts, we review calls,
                 tighten talk tracks, and identify replacement risk early.
@@ -194,29 +194,29 @@ export default function PartnersPage() {
 
           {/* Replacement Guarantee */}
           <section data-section="replacement-guarantee" className="yc-section">
-            <h2>the replacement guarantee changes the incentive</h2>
+            <h2>The Replacement Guarantee Changes the Incentive</h2>
             <div className="grid grid-cols-2 gap-16 mb-12">
               <div className="yc-text-block">
-                <h3>90 day replacement guarantee</h3>
+                <h3>90-Day Replacement Guarantee</h3>
                 <p className="mt-4">
                   if the hire does not perform, we replace them. the pipeline is accountable after the offer letter, not
                   just before it.
                 </p>
               </div>
               <div>
-                <h3>aligned payment terms</h3>
+                <h3>Aligned Payment Terms</h3>
                 <p className="mt-4">net 30 terms keep incentives tied to real partner outcomes, not resume delivery.</p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-16 mb-12">
               <div className="yc-text-block">
-                <h3>risk monitoring</h3>
+                <h3>Risk Monitoring</h3>
                 <p className="mt-4">
                   we look for early warning signs in activity, call quality, follow up habits, and feedback response.
                 </p>
               </div>
               <div>
-                <h3>targeted coaching</h3>
+                <h3>Targeted Coaching</h3>
                 <p className="mt-4">
                   coaching exists to protect the guarantee: sharper scripts, better questions, cleaner pacing, and faster
                   correction when performance drifts.
@@ -228,7 +228,7 @@ export default function PartnersPage() {
 
           {/* Partner Fit */}
           <section data-section="partner-fit" className="yc-section">
-            <h2>built for partners who cannot afford mis-hires</h2>
+            <h2>Built for Partners Who Cannot Afford Mis-Hires</h2>
             <div className="yc-text-block mb-12">
               <p className="mb-6">we work best where one wrong sales hire has a visible cost.</p>
               <p className="mb-6">
@@ -245,7 +245,7 @@ export default function PartnersPage() {
 
           {/* Next Steps */}
           <section data-section="next-steps" className="yc-section">
-            <h2>partner with verveschool</h2>
+            <h2>Partner with Verveschool</h2>
             <div className="yc-text-block mb-12">
               <p className="mb-6">
                 if you want a tighter sales hiring funnel with accountability after joining, send us the role and the
@@ -266,7 +266,7 @@ export default function PartnersPage() {
 
         {/* Table of Contents */}
         <aside className="hidden md:block sticky top-20 pt-20 pb-20 px-6 h-screen overflow-y-auto flex-shrink-0 border-l border-border">
-          <div className="text-[12px] font-medium text-muted-foreground mb-4">on this page</div>
+          <div className="text-[12px] font-medium text-muted-foreground mb-4">On This Page</div>
           <ul className="space-y-2">
             {sections.map((section) => (
               <li key={section}>
@@ -279,7 +279,9 @@ export default function PartnersPage() {
                     activeSection === section ? "font-bold text-primary" : "text-foreground"
                   }`}
                 >
-                  {section.replace(/-/g, " ")}
+                  {section
+                    .replace(/-/g, " ")
+                    .replace(/\b\w/g, (letter) => letter.toUpperCase())}
                 </button>
               </li>
             ))}
@@ -294,19 +296,19 @@ export default function PartnersPage() {
             <p>© 2025 verveschool</p>
             <div className="flex gap-6">
               <Link href="/about" className="hover:text-muted-foreground">
-                about
+                About
               </Link>
               <Link href="/partners" className="hover:text-muted-foreground">
-                partners
+                Partners
               </Link>
               <Link href="/writing" className="hover:text-muted-foreground">
-                writing
+                Writing
               </Link>
               <a href="mailto:ayush@verveschool.com" className="hover:text-muted-foreground">
-                contact
+                Contact
               </a>
               <a href="https://wa.me/917065314693" className="hover:text-muted-foreground">
-                whatsapp
+                WhatsApp
               </a>
             </div>
           </div>

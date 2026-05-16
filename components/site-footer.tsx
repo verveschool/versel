@@ -8,16 +8,16 @@ export function SiteFooter() {
           <p>© 2025 verveschool</p>
           <div className="flex gap-6 flex-wrap">
             <Link href="/about" className="hover:text-muted-foreground transition-colors">
-              about
+              About
             </Link>
             <Link href="/partners" className="hover:text-muted-foreground transition-colors">
-              partners
+              Partners
             </Link>
             <a href="mailto:ayush@verveschool.com" className="hover:text-muted-foreground transition-colors">
-              contact
+              Contact
             </a>
             <a href="https://wa.me/917065314693" target="_blank" rel="noopener noreferrer" className="hover:text-muted-foreground transition-colors">
-              whatsapp
+              WhatsApp
             </a>
           </div>
         </div>

@@ -60,16 +60,16 @@ export default function PeoplePage() {
             </Link>
             <div className="flex items-center gap-6 text-[13px] text-white/70">
               <Link href="/about" className="transition-colors hover:text-white">
-                about
+                About
               </Link>
               <Link href="/partners" className="transition-colors hover:text-white">
-                partners
+                Partners
               </Link>
               <Link href="/people" className="text-white transition-colors hover:text-white">
-                people
+                People
               </Link>
               <Link href="/writing" className="transition-colors hover:text-white">
-                writing
+                Writing
               </Link>
             </div>
           </div>
@@ -79,9 +79,9 @@ export default function PeoplePage() {
       <main className="yc-container">
         <section className="grid gap-12 py-20 md:py-28 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
           <div>
-            <p className="section-kicker">selected people</p>
+            <p className="section-kicker">Selected People</p>
             <h1 className="mt-5 max-w-5xl text-6xl font-semibold leading-[0.95] tracking-[-0.075em] text-white md:text-8xl lg:text-9xl">
-              people who do, not people who perform polish.
+              People who do, not people who perform polish.
             </h1>
           </div>
           <div className="border border-white/12 bg-white/[0.04] p-7 shadow-2xl shadow-black/40 backdrop-blur">
@@ -102,7 +102,7 @@ export default function PeoplePage() {
         <section className="border-y border-white/10 py-16 md:py-20">
           <div className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
-              <p className="section-kicker">current board</p>
+              <p className="section-kicker">Current Board</p>
               <h2 className="mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.04em] text-white md:text-5xl">
                 names, signal, and where each person currently sits.
               </h2>
@@ -155,7 +155,7 @@ export default function PeoplePage() {
 
         <section className="grid gap-10 py-16 md:py-24 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="section-kicker">for partners</p>
+            <p className="section-kicker">For Partners</p>
             <h2 className="mt-4 text-5xl font-semibold leading-none tracking-[-0.06em] text-white md:text-7xl">
               ask for signal, not a pile of resumes.
             </h2>
@@ -169,7 +169,7 @@ export default function PeoplePage() {
               href="/partners"
               className="mt-8 inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:bg-[#f4d18a]"
             >
-              hire selected people
+              Hire Selected People
             </Link>
           </div>
         </section>

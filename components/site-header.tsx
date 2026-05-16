@@ -4,9 +4,9 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 const navLinks = [
-  { href: "/about", label: "about" },
-  { href: "/partners", label: "partners" },
-  { href: "/people", label: "people" },
+  { href: "/about", label: "About" },
+  { href: "/partners", label: "Partners" },
+  { href: "/people", label: "People" },
 ]
 
 export function SiteHeader() {

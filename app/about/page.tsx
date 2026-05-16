@@ -5,53 +5,53 @@ import { useState, useEffect } from "react";
 
 const editorialPanels = {
   overview: {
-    eyebrow: "program overview",
-    headline: "from selected to dangerous",
+    eyebrow: "Program Overview",
+    headline: "From Selected to Dangerous",
     body: "a quiet operating system for the first 90 days: sharper language, tighter calls, and daily feedback loops.",
     metric: "90",
-    label: "days",
+    label: "Days",
   },
   problem: {
-    eyebrow: "the broken market",
-    headline: "resumes disappear. wrong hires compound.",
+    eyebrow: "The Broken Market",
+    headline: "Resumes Disappear. Wrong Hires Compound.",
     body: "two sides of the same failure: candidates look replaceable, companies keep betting on signals that do not predict performance.",
     metric: "₹3–5L",
-    label: "wrong-hire cost",
+    label: "Wrong-Hire Cost",
   },
   model: {
-    eyebrow: "aligned incentives",
-    headline: "you pay nothing. performance pays us.",
+    eyebrow: "Aligned Incentives",
+    headline: "You Pay Nothing. Performance Pays Us.",
     body: "the model stays honest because the outcome is shared: selection, coaching, and survival all point in one direction.",
     metric: "0",
-    label: "upfront fee",
+    label: "Upfront Fee",
   },
   selection: {
-    eyebrow: "selection process",
-    headline: "scout. mock. review. interview.",
+    eyebrow: "Selection Process",
+    headline: "Scout. Mock. Review. Interview.",
     body: "a narrow funnel built for speed and signal, not certificates, waiting rooms, or fake hope.",
     metric: "48h",
-    label: "ceo review",
+    label: "CEO Review",
   },
   journey: {
-    eyebrow: "coaching arc",
-    headline: "language, pattern, execution",
+    eyebrow: "Coaching Arc",
+    headline: "Language, Pattern, Execution",
     body: "the first calls are not left to chance: scripts are built, recordings are studied, and every loop gets sharper.",
     metric: "1",
-    label: "call loop daily",
+    label: "Call Loop Daily",
   },
   teaching: {
-    eyebrow: "what we teach",
-    headline: "diagnose before you persuade",
+    eyebrow: "What We Teach",
+    headline: "Diagnose Before You Persuade",
     body: "consultative sales, frame control, and objection handling without performance theater.",
     metric: "3",
-    label: "core muscles",
+    label: "Core Muscles",
   },
   proof: {
-    eyebrow: "proof",
-    headline: "quiet candidates, visible outcomes",
+    eyebrow: "Proof",
+    headline: "Quiet Candidates, Visible Outcomes",
     body: "the point is not loud confidence. the point is controlled conversations that turn into offers, closures, and momentum.",
     metric: "top 20%",
-    label: "target pace",
+    label: "Target Pace",
   },
 };
 
@@ -142,7 +142,7 @@ export default function AboutPage() {
               verveschool
             </Link>
             <Link href="/about" className="text-[13px] font-medium md:hidden">
-              about
+              About
             </Link>
           </div>
         </div>
@@ -153,13 +153,13 @@ export default function AboutPage() {
         <main className="yc-container py-20 flex-1 md:py-20 md:pt-20 pt-8">
           {/* Header */}
           <div className="mb-24">
-            <h1 className="mb-4">what happens at verveschool </h1>
+            <h1 className="mb-4">What Happens at Verveschool</h1>
             <p className="text-[14px]">verveschool.com/about</p>
           </div>
 
           {/* Introduction */}
           <section className="yc-section" data-section="introduction">
-            <h2>introduction</h2>
+            <h2>Introduction</h2>
             <div className="yc-text-block">
               <p>
                 people often ask us what happens at verveschool. here is an
@@ -173,7 +173,7 @@ export default function AboutPage() {
 
           {/* The Problem - full width text */}
           <section className="yc-section" data-section="the-problem">
-            <h2>the problem</h2>
+            <h2>The Problem</h2>
             <div className="grid grid-cols-2 gap-20 mb-16">
               <div>
                 <p className="mb-6">
@@ -202,7 +202,7 @@ export default function AboutPage() {
 
           {/* The Model */}
           <section className="yc-section" data-section="the-model">
-            <h2>the model</h2>
+            <h2>The Model</h2>
             <div className="grid grid-cols-2 gap-20">
               <div>
                 <p className="mb-6">companies pay us. you pay nothing.</p>
@@ -225,7 +225,7 @@ export default function AboutPage() {
 
           {/* What We Do */}
           <section className="yc-section" data-section="what-we-do">
-            <h2>what we do</h2>
+            <h2>What We Do</h2>
             <div className="grid grid-cols-2 gap-20">
               <div>
                 <p className="mb-6">
@@ -247,11 +247,11 @@ export default function AboutPage() {
 
           {/* Selection Process */}
           <section className="yc-section" data-section="selection-process">
-            <h2>selection process</h2>
+            <h2>Selection Process</h2>
             <div className="space-y-20">
               <div className="grid grid-cols-2 gap-16">
                 <div>
-                  <h3>1. scout call (15 min)</h3>
+                  <h3>1. Scout Call (15 Min)</h3>
                   <p className="mb-4">
                     a talent scout from our team usually bhushan kawale or zubia
                     shah finds your profile and calls you directly. this is your
@@ -269,7 +269,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div>
-                  <h3>2. same day mock (30 min)</h3>
+                  <h3>2. Same-Day Mock (30 Min)</h3>
                   <p className="mb-4">
                     right after that first call, the scout schedules a short
                     mock for the same evening. it is 10 minutes, run by the same
@@ -288,7 +288,7 @@ export default function AboutPage() {
 
               <div className="grid grid-cols-2 gap-16">
                 <div>
-                  <h3>3. ceo review (48 hours)</h3>
+                  <h3>3. CEO Review (48 Hours)</h3>
                   <p>
                     the next day, profiles that passed are forwarded to ayush
                     duggal, cofounder and ceo. he reviews your notes and cv,
@@ -299,7 +299,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div>
-                  <h3>4. company interviews</h3>
+                  <h3>4. Company Interviews</h3>
                   <p className="mb-4">
                     after that, your profile goes to the hiring partner. usually
                     this means interviews over the next 1-2 days, online.
@@ -323,11 +323,11 @@ export default function AboutPage() {
 
           {/* Journey Structure */}
           <section className="yc-section" data-section="journey-structure">
-            <h2>journey structure (90 days)</h2>
+            <h2>Journey Structure (90 Days)</h2>
             <div className="space-y-20">
               <div className="grid grid-cols-2 gap-16">
                 <div>
-                  <h3>week 1: language wiring</h3>
+                  <h3>Week 1: Language Wiring</h3>
                   <p className="mb-4">
                     you typically get 10 days between offer and your first day
                     in the office. this is your relocation window. you move, you
@@ -350,7 +350,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div>
-                  <h3>weeks 2-4: pattern spotting</h3>
+                  <h3>Weeks 2-4: Pattern Spotting</h3>
                   <p className="mb-4">
                     your first 10 days inside the company are usually product
                     training. you learn features, pricing, process, crm tools.
@@ -377,7 +377,7 @@ export default function AboutPage() {
 
               <div className="grid grid-cols-2 gap-16">
                 <div>
-                  <h3>weeks 5-12: daily execution</h3>
+                  <h3>Weeks 5-12: Daily Execution</h3>
                   <p className="mb-4">
                     as soon as you start making calls, the feedback loop
                     tightens. every day, you send your best call recording to
@@ -402,7 +402,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div>
-                  <h3>beyond 90 days</h3>
+                  <h3>Beyond 90 Days</h3>
                   <p className="mb-4">
                     the formal 90 day coaching ends. but you never lose access.
                     you are in the alumni group. you can call ayush any time.
@@ -425,7 +425,7 @@ export default function AboutPage() {
 
           {/* Why Sales Matters */}
           <section className="yc-section" data-section="why-sales-matters">
-            <h2>why sales matters right now</h2>
+            <h2>Why Sales Matters Right Now</h2>
             <div className="grid grid-cols-2 gap-20">
               <div>
                 <p className="mb-6">
@@ -450,11 +450,11 @@ export default function AboutPage() {
 
           {/* What We Teach */}
           <section className="yc-section" data-section="what-we-teach">
-            <h2>what we teach</h2>
+            <h2>What We Teach</h2>
             <div className="space-y-20">
               <div className="grid grid-cols-2 gap-16">
                 <div>
-                  <h3>consultative sales</h3>
+                  <h3>Consultative Sales</h3>
                   <p>
                     selling is not talking fast. selling is seeing the world
                     from the other side of the table. once you grasp why people
@@ -464,7 +464,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div>
-                  <h3>frame control</h3>
+                  <h3>Frame Control</h3>
                   <p className="mb-4">
                     most candidates interview like beggars. "please give me a
                     chance. i am a hard worker. i will learn fast." that is low
@@ -482,7 +482,7 @@ export default function AboutPage() {
 
               <div className="grid grid-cols-2 gap-16">
                 <div>
-                  <h3>the pendulum framework</h3>
+                  <h3>The Pendulum Framework</h3>
                   <p className="mb-4">
                     most people pitch in straight lines. buyers decide in
                     stories. the pendulum fixes that.
@@ -506,7 +506,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div>
-                  <h3>objection handling</h3>
+                  <h3>Objection Handling</h3>
                   <p className="mb-4">
                     every objection is a hidden question. your job is not to
                     overcome the objection. your job is to answer the hidden
@@ -527,11 +527,11 @@ export default function AboutPage() {
 
           {/* Proof */}
           <section className="yc-section" data-section="proof">
-            <h2>proof</h2>
+            <h2>Proof</h2>
             <div className="space-y-16">
               <div className="grid grid-cols-2 gap-16">
                 <div>
-                  <h3>lalit yadav</h3>
+                  <h3>Lalit Yadav</h3>
                   <p>
                     stuck in cs limbo for 2 years. sending resumes. getting
                     ghosted. felt like nothing was moving. learned how to run
@@ -541,7 +541,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div>
-                  <h3>vansh negi</h3>
+                  <h3>Vansh Negi</h3>
                   <p>
                     poly sci grad who thought sales was only for loud people.
                     loud rooms scared him. discovered sales is psychology, not
@@ -553,7 +553,7 @@ export default function AboutPage() {
 
               <div className="grid grid-cols-2 gap-16">
                 <div>
-                  <h3>jyotsna raj</h3>
+                  <h3>Jyotsna Raj</h3>
                   <p>
                     wanted stability but thought it was luck or contacts.
                     reached stability through calls, closures, and action
@@ -562,7 +562,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div>
-                  <h3>bobby k j</h3>
+                  <h3>Bobby K J</h3>
                   <p>
                     engineering grad with a 1 year gap. joined verveschool.
                     cleared crio training in 30 days. hit ₹89,000 in month 1 and
@@ -577,7 +577,7 @@ export default function AboutPage() {
 
           {/* Why This Matters */}
           <section className="yc-section" data-section="why-this-matters">
-            <h2>why this actually matters</h2>
+            <h2>Why This Actually Matters</h2>
             <div className="space-y-6">
               <p>
                 most career programs are scams dressed in certificates. you pay
@@ -601,7 +601,7 @@ export default function AboutPage() {
 
           {/* Contact */}
           <section className="yc-section" data-section="contact">
-            <h2>contact</h2>
+            <h2>Contact</h2>
             <div className="yc-text-block">
               <p>for inquiries: contact@verveschool.com</p>
             </div>
@@ -610,7 +610,7 @@ export default function AboutPage() {
 
         <aside className="hidden md:block sticky top-20 pt-20 pb-20 px-6 h-screen overflow-y-auto flex-shrink-0 border-l border-border">
           <div className="text-[12px] font-medium text-muted-foreground mb-4">
-            on this page
+            On This Page
           </div>
           <ul className="space-y-2">
             {sections.map((section) => (
@@ -628,7 +628,10 @@ export default function AboutPage() {
                       : "text-foreground"
                   }`}
                 >
-                  {section.replace(/-/g, " ")}
+                  {section
+                    .replace(/-/g, " ")
+                    .replace(/\b\w/g, (letter) => letter.toUpperCase())
+                    .replace(/Ceo/g, "CEO")}
                 </button>
               </li>
             ))}
@@ -643,25 +646,25 @@ export default function AboutPage() {
             <p>© 2025 verveschool</p>
             <div className="flex gap-6">
               <Link href="/about" className="hover:text-muted-foreground">
-                about
+                About
               </Link>
               <Link href="/partners" className="hover:text-muted-foreground">
-                partners
+                Partners
               </Link>
               <Link href="/writing" className="hover:text-muted-foreground">
-                writing
+                Writing
               </Link>
               <a
                 href="mailto:ayush@verveschool.com"
                 className="hover:text-muted-foreground"
               >
-                contact
+                Contact
               </a>
               <a
                 href="https://wa.me/917065314693"
                 className="hover:text-muted-foreground"
               >
-                whatsapp
+                WhatsApp
               </a>
             </div>
           </div>

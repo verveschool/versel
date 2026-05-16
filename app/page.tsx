@@ -10,26 +10,26 @@ const filterSteps = [
 const selectedPeople = [
   {
     label: "01",
-    title: "the closer",
+    title: "The Closer",
     copy: "calm under pressure, direct on money, and able to move a stranger from doubt to decision without sounding rehearsed.",
   },
   {
     label: "02",
-    title: "the prospector",
+    title: "The Prospector",
     copy: "high-activity, low-ego, and comfortable turning cold lists into booked conversations with daily consistency.",
   },
   {
     label: "03",
-    title: "the account builder",
+    title: "The Account Builder",
     copy: "patient enough to listen, commercial enough to qualify, and disciplined enough to protect pipeline quality.",
   },
 ]
 
 const metrics = [
-  { value: "10-14", label: "days to shortlist" },
-  { value: "90", label: "day replacement window" },
-  { value: "0", label: "upfront candidate fees" },
-  { value: "1", label: "standard: hire for outcomes" },
+  { value: "10-14", label: "Days to Shortlist" },
+  { value: "90", label: "Day Replacement Window" },
+  { value: "0", label: "Upfront Candidate Fees" },
+  { value: "1", label: "Standard: Hire for Outcomes" },
 ]
 
 export default function HomePage() {
@@ -45,16 +45,16 @@ export default function HomePage() {
             </Link>
             <div className="flex items-center gap-6 text-[13px] text-white/70">
               <Link href="/about" className="transition-colors hover:text-white">
-                about
+                About
               </Link>
               <Link href="/partners" className="transition-colors hover:text-white">
-                partners
+                Partners
               </Link>
               <Link href="/people" className="transition-colors hover:text-white">
-                people
+                People
               </Link>
               <Link href="/writing" className="transition-colors hover:text-white">
-                writing
+                Writing
               </Link>
             </div>
           </div>
@@ -68,7 +68,7 @@ export default function HomePage() {
               sales talent filtering system
             </p>
             <h1 className="max-w-5xl text-6xl font-semibold leading-[0.95] tracking-[-0.075em] text-white md:text-8xl lg:text-9xl">
-              the world moves for those who do
+              The World Moves for Those Who Do
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-white/72 md:text-xl md:leading-9">
               verveschool finds, tests, and backs early-career sales talent for hiring partners who cannot afford another
@@ -79,13 +79,13 @@ export default function HomePage() {
                 href="/partners"
                 className="inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:bg-[#f4d18a]"
               >
-                hire through the filter
+                Hire Through the Filter
               </Link>
               <a
                 href="mailto:ayush@verveschool.com"
                 className="inline-flex items-center justify-center border border-white/20 px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-white transition hover:border-white hover:bg-white/10"
               >
-                talk to us
+                Talk to Us
               </a>
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function HomePage() {
         <section className="border-y border-white/10 py-16 md:py-24">
           <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
             <div>
-              <p className="section-kicker">the hiring problem</p>
+              <p className="section-kicker">The Hiring Problem</p>
               <h2 className="mt-4 max-w-xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
                 sales hiring is noisy when everyone can perform confidence for forty minutes.
               </h2>
@@ -131,7 +131,7 @@ export default function HomePage() {
 
         <section className="grid gap-12 py-16 md:py-24 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <div>
-            <p className="section-kicker">the filter</p>
+            <p className="section-kicker">The Filter</p>
             <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
               we are not a classroom. we are a sorting mechanism.
             </h2>
@@ -153,7 +153,7 @@ export default function HomePage() {
         <section className="border-y border-white/10 py-16 md:py-24">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-20">
             <div>
-              <p className="section-kicker">replacement guarantee</p>
+              <p className="section-kicker">Replacement Guarantee</p>
               <h2 className="mt-4 text-5xl font-semibold leading-none tracking-[-0.06em] text-white md:text-7xl">
                 if the person does not perform, we replace them.
               </h2>
@@ -170,7 +170,7 @@ export default function HomePage() {
         <section className="py-16 md:py-24">
           <div className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
-              <p className="section-kicker">selected people</p>
+              <p className="section-kicker">Selected People</p>
               <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-white md:text-5xl">
                 the candidates we let through look different in motion.
               </h2>
@@ -183,7 +183,7 @@ export default function HomePage() {
                 href="/people"
                 className="inline-flex text-[12px] font-semibold uppercase tracking-[0.2em] text-primary transition-colors hover:text-white"
               >
-                view selected people
+                View Selected People
               </Link>
             </div>
           </div>
@@ -201,7 +201,7 @@ export default function HomePage() {
         <section className="mb-20 border border-white/12 bg-white/[0.04] p-8 md:p-12 lg:p-16">
           <div className="grid gap-10 lg:grid-cols-[1fr_0.72fr] lg:items-center">
             <div>
-              <p className="section-kicker">partner CTA</p>
+              <p className="section-kicker">Partner CTA</p>
               <h2 className="mt-4 max-w-3xl text-5xl font-semibold leading-none tracking-[-0.06em] text-white md:text-7xl">
                 stop interviewing hope. start hiring signal.
               </h2>
@@ -215,7 +215,7 @@ export default function HomePage() {
                 href="/partners"
                 className="mt-8 inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:bg-[#f4d18a]"
               >
-                become a hiring partner
+                Become a Hiring Partner
               </Link>
             </div>
           </div>
@@ -228,16 +228,16 @@ export default function HomePage() {
             <p>© 2025 verveschool</p>
             <div className="flex flex-wrap gap-6">
               <Link href="/about" className="transition-colors hover:text-white">
-                about
+                About
               </Link>
               <Link href="/partners" className="transition-colors hover:text-white">
-                partners
+                Partners
               </Link>
               <Link href="/people" className="transition-colors hover:text-white">
-                people
+                People
               </Link>
               <a href="mailto:ayush@verveschool.com" className="transition-colors hover:text-white">
-                contact
+                Contact
               </a>
               <a
                 href="https://wa.me/917065314693"
@@ -245,7 +245,7 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-white"
               >
-                whatsapp
+                WhatsApp
               </a>
             </div>
           </div>
