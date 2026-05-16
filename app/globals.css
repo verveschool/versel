@@ -259,6 +259,12 @@
     letter-spacing: -0.04em;
   }
 
+
+  .book-prose {
+    font-size: clamp(1.16rem, 1.4vw, 1.32rem);
+    line-height: 1.95;
+  }
+
   .essay-prose h3 {
     margin: 2.5rem 0 0.8rem;
     font-family: var(--font-serif);
