@@ -63,11 +63,11 @@ function EditorialPanel({ panel }: { panel: EditorialPanelKey }) {
   return (
     <div className="mb-24 overflow-hidden border border-border bg-card">
       <div className="relative min-h-[360px] p-6 sm:p-8 md:p-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,rgba(255,59,31,0.28),transparent_28%),radial-gradient(circle_at_82%_18%,rgba(255,122,24,0.2),transparent_24%),linear-gradient(135deg,rgba(255,247,236,0.08),transparent_38%)]" />
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-[linear-gradient(180deg,transparent,rgba(3,3,3,0.92))]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,rgba(219,231,243,0.28),transparent_28%),radial-gradient(circle_at_82%_18%,rgba(127,139,153,0.2),transparent_24%),linear-gradient(135deg,rgba(244,247,251,0.08),transparent_38%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-[linear-gradient(180deg,transparent,rgba(5,6,8,0.92))]" />
         <div className="absolute left-[10%] top-[22%] h-44 w-24 rounded-t-full bg-foreground/10 blur-[1px]" />
         <div className="absolute left-[13%] top-[17%] h-12 w-12 rounded-full bg-foreground/15" />
-        <div className="absolute bottom-10 right-[12%] h-52 w-32 rounded-t-full border border-foreground/15 bg-background/45 shadow-[0_0_80px_rgba(255,59,31,0.16)]" />
+        <div className="absolute bottom-10 right-[12%] h-52 w-32 rounded-t-full border border-foreground/15 bg-background/45 shadow-[0_0_80px_rgba(219,231,243,0.14)]" />
         <div className="absolute bottom-28 right-[16%] h-16 w-16 rounded-full border border-foreground/20 bg-background/70" />
         <div className="absolute inset-y-8 left-1/2 hidden w-px bg-foreground/10 md:block" />
         <div className="absolute left-8 right-8 top-1/2 h-px bg-foreground/10" />

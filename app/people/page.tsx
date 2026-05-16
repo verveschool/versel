@@ -50,7 +50,7 @@ const selectionSignals = [
 export default function PeoplePage() {
   return (
     <div className="min-h-screen overflow-hidden bg-background text-foreground">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_18%_0%,_rgba(215,178,103,0.18),_transparent_32%),radial-gradient(circle_at_90%_18%,_rgba(255,255,255,0.07),_transparent_25%),linear-gradient(180deg,_#050505_0%,_#0d0b08_58%,_#030303_100%)]" />
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_18%_0%,_rgba(127,139,153,0.18),_transparent_32%),radial-gradient(circle_at_90%_18%,_rgba(255,255,255,0.07),_transparent_25%),linear-gradient(180deg,_#050608_0%,_#0b0f14_58%,_#050608_100%)]" />
 
       <nav className="border-b border-white/10 bg-black/35 backdrop-blur-xl">
         <div className="yc-container py-5">
@@ -120,7 +120,7 @@ export default function PeoplePage() {
                 className="group border border-white/10 bg-white/[0.035] p-6 transition hover:border-primary/50 hover:bg-white/[0.055]"
               >
                 <div className="flex items-start justify-between gap-5">
-                  <div className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden border border-white/10 bg-[radial-gradient(circle_at_50%_30%,_rgba(247,240,223,0.22),_transparent_30%),linear-gradient(180deg,_rgba(215,178,103,0.22),_rgba(255,255,255,0.04))]">
+                  <div className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden border border-white/10 bg-[radial-gradient(circle_at_50%_30%,_rgba(244,247,251,0.18),_transparent_30%),linear-gradient(180deg,_rgba(127,139,153,0.22),_rgba(255,255,255,0.04))]">
                     {person.image ? (
                       <img
                         src={person.image}
@@ -167,7 +167,7 @@ export default function PeoplePage() {
             </p>
             <Link
               href="/partners"
-              className="mt-8 inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:bg-[#f4d18a]"
+              className="mt-8 inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:bg-[#c5d3e0]"
             >
               hire selected people
             </Link>
