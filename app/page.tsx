@@ -44,10 +44,10 @@ export default function HomePage() {
         <section className="grid min-h-[78vh] items-center gap-12 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:py-28">
           <div>
             <h1 className="max-w-5xl text-5xl font-semibold leading-[0.95] tracking-[-0.055em] text-white md:text-7xl lg:text-8xl">
-              The World Moves for Those Who Do
+              The world moves for those who do.
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-white/72 md:text-xl md:leading-9">
-              Verveschool finds, tests, and backs early-career sales talent for hiring partners who cannot afford another
+              VerveSchool finds, tests, and backs early-career sales talent for hiring partners who cannot afford another
               charming interview that turns into a weak pipeline.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -55,13 +55,13 @@ export default function HomePage() {
                 href="/partners"
                 className="inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:bg-[#c5d3e0]"
               >
-                Hire Through the Filter
+                Hire through the filter
               </Link>
               <a
-                href="mailto:ayush@verveschool.com"
+                href="mailto:talent@verveschool.com"
                 className="inline-flex items-center justify-center border border-white/20 px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-white transition hover:border-white hover:bg-white/10"
               >
-                Talk to Us
+                Talk to us
               </a>
             </div>
           </div>
