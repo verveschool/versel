@@ -36,7 +36,7 @@ export default function BookPage() {
                 Writing
               </Link>
               <Link href="/book" className="text-white transition-colors hover:text-white">
-                Book
+                book
               </Link>
             </div>
           </div>
@@ -46,7 +46,7 @@ export default function BookPage() {
       <main className="yc-container py-20">
         <section className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
           <div>
-            <p className="section-kicker mb-6">Serialized Book</p>
+            <p className="section-kicker mb-6">serialized book</p>
             <h1 className="mb-6 max-w-4xl font-serif text-5xl leading-[1.04] tracking-[-0.045em] text-white md:text-7xl">
               {book.title}
             </h1>
@@ -65,7 +65,7 @@ export default function BookPage() {
 
         <section className="my-20 grid gap-12 border-y border-white/10 py-14 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
-            <p className="section-kicker mb-4">Introduction</p>
+            <p className="section-kicker mb-4">introduction</p>
             <h2 className="font-serif text-4xl leading-tight tracking-[-0.03em] text-white">Read as a system, not a stack of posts.</h2>
           </div>
           <MarkdownContent content={book.introduction} className="book-prose" />
@@ -74,7 +74,7 @@ export default function BookPage() {
         <section>
           <div className="mb-8 flex items-end justify-between gap-6">
             <div>
-              <p className="section-kicker mb-4">Chapters</p>
+              <p className="section-kicker mb-4">chapters</p>
               <h2 className="font-serif text-4xl tracking-[-0.03em] text-white">Start the serial.</h2>
             </div>
             {chapters[0] ? (
@@ -103,13 +103,13 @@ export default function BookPage() {
         </section>
 
         <section className="mt-20 border border-primary/30 bg-primary/10 p-8">
-          <p className="section-kicker mb-4">For Teams</p>
+          <p className="section-kicker mb-4">for teams</p>
           <h2 className="mb-4 font-serif text-3xl tracking-[-0.02em] text-white">Turn the reading into a partner conversation.</h2>
           <p className="mb-6 max-w-2xl text-white/70">
             If the book maps to a problem inside your revenue team, use the partner page to start a more specific calibration loop.
           </p>
           <Link href="/partners" className="text-sm font-semibold uppercase tracking-[0.24em] text-primary transition-colors hover:text-white">
-            Become a Hiring Partner →
+            become a hiring partner →
           </Link>
         </section>
       </main>

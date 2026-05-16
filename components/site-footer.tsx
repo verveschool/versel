@@ -14,10 +14,10 @@ export function SiteFooter() {
               Partners
             </Link>
             <a href="mailto:ayush@verveschool.com" className="hover:text-muted-foreground transition-colors">
-              Contact
+              contact
             </a>
             <a href="https://wa.me/917065314693" target="_blank" rel="noopener noreferrer" className="hover:text-muted-foreground transition-colors">
-              WhatsApp
+              whatsapp
             </a>
           </div>
         </div>

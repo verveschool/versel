@@ -10,26 +10,26 @@ const filterSteps = [
 const selectedPeople = [
   {
     label: "01",
-    title: "The Closer",
+    title: "the closer",
     copy: "calm under pressure, direct on money, and able to move a stranger from doubt to decision without sounding rehearsed.",
   },
   {
     label: "02",
-    title: "The Prospector",
+    title: "the prospector",
     copy: "high-activity, low-ego, and comfortable turning cold lists into booked conversations with daily consistency.",
   },
   {
     label: "03",
-    title: "The Account Builder",
+    title: "the account builder",
     copy: "patient enough to listen, commercial enough to qualify, and disciplined enough to protect pipeline quality.",
   },
 ]
 
 const metrics = [
-  { value: "10-14", label: "Days to Shortlist" },
-  { value: "90", label: "Day Replacement Window" },
-  { value: "0", label: "Upfront Candidate Fees" },
-  { value: "1", label: "Standard: Hire for Outcomes" },
+  { value: "10-14", label: "days to shortlist" },
+  { value: "90", label: "day replacement window" },
+  { value: "0", label: "upfront candidate fees" },
+  { value: "1", label: "standard: hire for outcomes" },
 ]
 
 export default function HomePage() {
@@ -79,13 +79,13 @@ export default function HomePage() {
                 href="/partners"
                 className="inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:bg-[#f4d18a]"
               >
-                Hire Through the Filter
+                hire through the filter
               </Link>
               <a
                 href="mailto:ayush@verveschool.com"
                 className="inline-flex items-center justify-center border border-white/20 px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-white transition hover:border-white hover:bg-white/10"
               >
-                Talk to Us
+                talk to us
               </a>
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function HomePage() {
         <section className="border-y border-white/10 py-16 md:py-24">
           <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
             <div>
-              <p className="section-kicker">The Hiring Problem</p>
+              <p className="section-kicker">the hiring problem</p>
               <h2 className="mt-4 max-w-xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
                 sales hiring is noisy when everyone can perform confidence for forty minutes.
               </h2>
@@ -131,7 +131,7 @@ export default function HomePage() {
 
         <section className="grid gap-12 py-16 md:py-24 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <div>
-            <p className="section-kicker">The Filter</p>
+            <p className="section-kicker">the filter</p>
             <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
               we are not a classroom. we are a sorting mechanism.
             </h2>
@@ -153,7 +153,7 @@ export default function HomePage() {
         <section className="border-y border-white/10 py-16 md:py-24">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-20">
             <div>
-              <p className="section-kicker">Replacement Guarantee</p>
+              <p className="section-kicker">replacement guarantee</p>
               <h2 className="mt-4 text-5xl font-semibold leading-none tracking-[-0.06em] text-white md:text-7xl">
                 if the person does not perform, we replace them.
               </h2>
@@ -170,7 +170,7 @@ export default function HomePage() {
         <section className="py-16 md:py-24">
           <div className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
-              <p className="section-kicker">Selected People</p>
+              <p className="section-kicker">selected people</p>
               <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-white md:text-5xl">
                 the candidates we let through look different in motion.
               </h2>
@@ -183,7 +183,7 @@ export default function HomePage() {
                 href="/people"
                 className="inline-flex text-[12px] font-semibold uppercase tracking-[0.2em] text-primary transition-colors hover:text-white"
               >
-                View Selected People
+                view selected people
               </Link>
             </div>
           </div>
@@ -201,7 +201,7 @@ export default function HomePage() {
         <section className="mb-20 border border-white/12 bg-white/[0.04] p-8 md:p-12 lg:p-16">
           <div className="grid gap-10 lg:grid-cols-[1fr_0.72fr] lg:items-center">
             <div>
-              <p className="section-kicker">Partner CTA</p>
+              <p className="section-kicker">partner CTA</p>
               <h2 className="mt-4 max-w-3xl text-5xl font-semibold leading-none tracking-[-0.06em] text-white md:text-7xl">
                 stop interviewing hope. start hiring signal.
               </h2>
@@ -215,7 +215,7 @@ export default function HomePage() {
                 href="/partners"
                 className="mt-8 inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:bg-[#f4d18a]"
               >
-                Become a Hiring Partner
+                become a hiring partner
               </Link>
             </div>
           </div>
@@ -237,7 +237,7 @@ export default function HomePage() {
                 People
               </Link>
               <a href="mailto:ayush@verveschool.com" className="transition-colors hover:text-white">
-                Contact
+                contact
               </a>
               <a
                 href="https://wa.me/917065314693"
@@ -245,7 +245,7 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-white"
               >
-                WhatsApp
+                whatsapp
               </a>
             </div>
           </div>
