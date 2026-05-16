@@ -1,10 +1,10 @@
 ---
-title: "The Sales Talent Operating System"
+title: "The Selling Better Field Guide"
 subtitle: "An 80-page field guide, serialized for the web."
-description: "A practical book for founders, revenue leaders, and ambitious early-career sellers who want a cleaner way to find, test, train, and retain sales talent."
+description: "A practical book for founders, revenue leaders, and ambitious sellers who want to understand how buyers decide, create trust under pressure, and move commercial conversations forward."
 author: "verveschool"
 ---
 
-The book argues that early-career sales hiring should be treated like a compounding system, not a gamble on charisma. Each chapter turns one part of the talent loop into a readable, operational sequence: market context, signal design, simulations, partner calibration, ramp, and feedback.
+The book argues that selling better is a learnable commercial discipline, not a performance of charm. Each chapter turns one part of the selling craft into a readable, operational sequence: buyer psychology, trust creation, pressure, conversation design, follow-through, and judgment.
 
-Read it linearly if you are building a hiring motion from scratch. Jump by chapter if you are fixing one part of an existing process. The web version is intentionally serialized: each installment stands on its own, links back into the wider verveschool partner flow, and keeps the work close to the people who will use it.
+Read it linearly if you are building a sharper sales motion from scratch. Jump by chapter if you are trying to improve one recurring moment in the conversation: the first impression, the hard question, the objection, the next step, or the decision to walk away. The web version is intentionally serialized: each installment stands on its own, links back into the wider verveschool point of view, and keeps the work close to the people who sell, coach, and lead.
