@@ -23,7 +23,7 @@ function PartnerVisual({ variant }: { variant: PartnerVisualVariant }) {
       role="img"
       className="relative mb-8 h-[400px] w-full overflow-hidden border border-border bg-card"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_22%_24%,rgba(255,59,31,0.38),transparent_30%),radial-gradient(circle_at_78%_18%,rgba(255,176,0,0.28),transparent_24%),linear-gradient(135deg,rgba(255,122,24,0.18),transparent_45%),#080808]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_22%_24%,rgba(219,231,243,0.28),transparent_30%),radial-gradient(circle_at_78%_18%,rgba(143,154,170,0.24),transparent_24%),linear-gradient(135deg,rgba(127,139,153,0.18),transparent_45%),#050608]" />
       <div className="absolute inset-x-8 top-8 flex items-center justify-between text-[11px] font-bold uppercase tracking-[0.28em] text-foreground/60">
         <span>{detail.eyebrow}</span>
         <span>{detail.metric}</span>
@@ -34,9 +34,9 @@ function PartnerVisual({ variant }: { variant: PartnerVisualVariant }) {
           {detail.title}
         </p>
       </div>
-      <div className="absolute left-[10%] top-[34%] h-36 w-20 rounded-t-full border border-foreground/15 bg-background/70 shadow-[0_0_80px_rgba(255,59,31,0.22)]" />
+      <div className="absolute left-[10%] top-[34%] h-36 w-20 rounded-t-full border border-foreground/15 bg-background/70 shadow-[0_0_80px_rgba(219,231,243,0.18)]" />
       <div className="absolute left-[26%] top-[42%] h-44 w-24 rounded-t-full border border-foreground/10 bg-background/45" />
-      <div className="absolute right-[10%] top-[30%] h-52 w-28 rounded-t-full border border-primary/30 bg-primary/15 shadow-[0_0_110px_rgba(255,122,24,0.32)]" />
+      <div className="absolute right-[10%] top-[30%] h-52 w-28 rounded-t-full border border-primary/30 bg-primary/15 shadow-[0_0_110px_rgba(219,231,243,0.22)]" />
       <div className="absolute inset-y-0 right-1/3 w-px bg-foreground/10" />
       <div className="absolute inset-x-0 top-1/2 h-px bg-foreground/10" />
       <div className="absolute -bottom-24 -right-20 h-64 w-64 rounded-full bg-accent/20 blur-3xl" />

@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: BookChapterPageProps): Promis
   const chapter = getBookChapterBySlug(slug)
 
   return {
-    title: `${chapter.title} | The Sales Talent Operating System`,
+    title: `${chapter.title} | The Selling Better Field Guide`,
     description: chapter.description,
     alternates: {
       canonical: `/book/${chapter.slug}`,
@@ -52,7 +52,7 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_20%_0%,_rgba(215,178,103,0.16),_transparent_30%),linear-gradient(180deg,_#070707_0%,_#0d0b08_48%,_#050505_100%)]" />
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_20%_0%,_rgba(127,139,153,0.16),_transparent_30%),linear-gradient(180deg,_#050608_0%,_#0b0f14_48%,_#050608_100%)]" />
 
       <nav className="border-b border-white/10 bg-black/30 backdrop-blur-xl">
         <div className="yc-container py-5">
@@ -99,9 +99,9 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
 
           <section className="mt-16 border border-primary/30 bg-primary/10 p-8">
             <p className="section-kicker mb-4">put it to work</p>
-            <h2 className="mb-4 font-serif text-3xl tracking-[-0.02em] text-white">Use this chapter inside a real hiring loop.</h2>
+            <h2 className="mb-4 font-serif text-3xl tracking-[-0.02em] text-white">Use this chapter inside a real sales conversation.</h2>
             <p className="mb-6 text-white/70">
-              Bring the ideas into a partner calibration, candidate application, or contact conversation with verveschool.
+              Bring the ideas into a buyer conversation, coaching session, pipeline review, or contact conversation with verveschool.
             </p>
             <Link href={chapter.ctaHref} className="text-sm font-semibold uppercase tracking-[0.24em] text-primary transition-colors hover:text-white">
               {chapter.ctaLabel} →
@@ -130,7 +130,7 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
           ) : (
             <Link href="/partners" className="group border border-white/10 bg-white/[0.03] p-6 text-right transition-colors hover:border-primary/60">
               <p className="mb-3 text-sm text-white/45">finished →</p>
-              <h2 className="font-serif text-2xl tracking-[-0.02em] text-white transition-colors group-hover:text-primary">Partner with verveschool</h2>
+              <h2 className="font-serif text-2xl tracking-[-0.02em] text-white transition-colors group-hover:text-primary">Keep selling better</h2>
             </Link>
           )}
         </nav>
