@@ -13,8 +13,9 @@ export default function PartnersPage() {
       let current = ""
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect()
-        if (rect.top < 200) {
-          current = section.getAttribute("data-section")
+        const sectionName = section.getAttribute("data-section")
+        if (rect.top < 200 && sectionName) {
+          current = sectionName
         }
       })
       setActiveSection(current)
@@ -25,12 +26,12 @@ export default function PartnersPage() {
   }, [])
 
   const sections = [
-    "the-problem",
-    "the-solution",
-    "the-process",
-    "what-you-get",
-    "the-guarantee",
-    "focus-areas",
+    "hiring-risk",
+    "bad-hires",
+    "signal-filtering",
+    "selection-pressure",
+    "replacement-guarantee",
+    "partner-fit",
     "next-steps",
   ]
 
@@ -55,151 +56,193 @@ export default function PartnersPage() {
         <main className="yc-container py-20 flex-1 md:py-20 md:pt-20 pt-8">
           {/* Header */}
           <div className="mb-24">
-            <h1 className="mb-4">hire the best salespeople</h1>
+            <h1 className="mb-4">a filtered sales-talent pipeline with a replacement guarantee</h1>
             <p className="text-[14px]">verveschool.com/partners</p>
           </div>
 
-          {/* The Problem */}
-          <section data-section="the-problem" className="yc-section">
-            <h2>the hiring crisis in edtech</h2>
+          {/* Hiring Risk */}
+          <section data-section="hiring-risk" className="yc-section">
+            <h2>sales hiring is risk transfer</h2>
             <div className="grid grid-cols-2 gap-16 mb-12">
               <div className="yc-text-block">
-                <p className="mb-6">8 out of 10 salespeople miss targets.</p>
+                <p className="mb-6">every sales hire looks cheaper before they miss target.</p>
+                <p className="mb-6">
+                  the real cost is not salary. it is lost pipeline, manager attention, damaged follow up, and the months
+                  you spend discovering what the interview could not show.
+                </p>
                 <p>
-                  the interview goes well. they are confident. articulate. likeable. you make the offer. three months
-                  later they are gone. or worse they stay and keep missing.
+                  verveschool exists to absorb that uncertainty before a candidate reaches your floor. we filter for
+                  sales signal first, then stay accountable after joining.
                 </p>
               </div>
               <div className="relative w-full h-[400px] mb-8">
-                <Image src="/hiring-challenge-illustration.jpg" alt="hiring challenge" fill className="object-cover" />
+                <Image src="/hiring-challenge-illustration.jpg" alt="sales hiring risk" fill className="object-cover" />
               </div>
             </div>
           </section>
 
-          {/* The Signal Gap */}
-          <section data-section="the-solution" className="yc-section">
-            <h2>the signal gap</h2>
+          {/* Bad Hires */}
+          <section data-section="bad-hires" className="yc-section">
+            <h2>bad sales hires hide in plain sight</h2>
             <div className="yc-text-block mb-12">
-              <p className="mb-6">interviews show presentation skills. they cannot show hunger.</p>
+              <p className="mb-6">they interview well. they sound confident. they understand the role on paper.</p>
               <p className="mb-6">
-                they show confidence. they cannot show what happens after the 47th rejection in a week.
+                then rejection compounds. discipline drops. notes get thin. follow ups slip. the manager becomes the
+                safety net for work the hire should own.
               </p>
               <p className="mb-6">
-                traditional hiring relies on history and pedigree. but past performance in a different culture rarely
-                predicts future success in yours.
+                most hiring processes overvalue presentation and undervalue repetition, coachability, recovery speed,
+                and willingness to do unglamorous selling work every day.
               </p>
-              <p>that gap is where the cost lies. it is a system failure not a people failure.</p>
+              <p>that is the gap we are built to close.</p>
             </div>
             <div className="relative w-full h-[400px] mb-8">
-              <Image src="/signal-gap-illustration.jpg" alt="signal gap problem" fill className="object-cover" />
+              <Image src="/signal-gap-illustration.jpg" alt="bad sales hire signal gap" fill className="object-cover" />
             </div>
           </section>
 
-          {/* The Solution */}
-          <section data-section="the-process" className="yc-section">
-            <h2>our approach</h2>
+          {/* Signal Filtering */}
+          <section data-section="signal-filtering" className="yc-section">
+            <h2>we filter for signal before polish</h2>
             <div className="yc-text-block mb-12">
-              <p className="mb-6">we operate on definite optimism.</p>
+              <p className="mb-6">we source english fluent gen z sales talent for specific partner mandates.</p>
               <p className="mb-6">
-                we believe the future can be designed. we believe that if you vet for the right traits and train for the
-                specific role the result is deterministic.
+                resumes are not the product. filtered signal is. we screen for hunger, focus, listening quality,
+                feedback absorption, recovery after rejection, and the ability to stay precise under pressure.
               </p>
-              <p className="mb-6">we do not roll dice. we build a machine.</p>
-              <p>we do not hope for retention. we engineer it.</p>
+              <p className="mb-6">
+                candidates who only perform confidence do not make it through. candidates who improve quickly, ask
+                sharper questions, and keep standards under stress move forward.
+              </p>
+              <p>you see a smaller pool because the weak signal has already been removed.</p>
             </div>
             <div className="relative w-full h-[400px] mb-8">
-              <Image src="/approach-illustration.jpg" alt="our approach" fill className="object-cover" />
+              <Image
+                src="/approach-illustration.jpg"
+                alt="filtered sales talent pipeline"
+                fill
+                className="object-cover"
+              />
             </div>
           </section>
 
-          {/* The Process */}
-          <section data-section="what-you-get" className="yc-section">
-            <h2>the process</h2>
+          {/* Selection Pressure */}
+          <section data-section="selection-pressure" className="yc-section">
+            <h2>selection pressure creates the shortlist</h2>
             <div className="yc-text-block mb-8">
-              <h3 className="mb-8">1. scouting</h3>
+              <h3 className="mb-8">1. mandate-led scouting</h3>
               <p className="mb-12">
-                we source english fluent gen z talent. we ignore resumes and filter for drive, focus, and feedback
-                absorption.
+                we do not hand you a generic bench. we hunt against your role, city, compensation, language needs, and
+                sales motion.
               </p>
 
-              <h3 className="mb-8">2. the pressure test</h3>
+              <h3 className="mb-8">2. founder screen</h3>
               <p className="mb-12">
-                faraz arif (co-founder, 9+ years exp) personally screens every candidate. we do not look for polish. we
-                look for wreckage and recovery.
+                faraz arif (co-founder, 9+ years exp) personally screens every candidate for the traits interviews
+                usually miss: persistence, clarity, humility, and recovery.
               </p>
 
-              <h3 className="mb-8">3. pre-joining prep</h3>
+              <h3 className="mb-8">3. pressure tasks</h3>
               <p className="mb-12">
-                before day 1 they learn core buyer psychology, decision patterns, and objection logic. they do not enter
-                your building blank.
+                candidates are tested through realistic sales situations: objection handling, follow up discipline,
+                call thinking, and response to direct feedback.
               </p>
 
-              <h3 className="mb-8">4. live integration</h3>
+              <h3 className="mb-8">4. partner calibration</h3>
               <p className="mb-12">
-                during your product training (typically 7-10 days) we work parallel. we take your product knowledge and
-                build their scripts with them. they do not memorize. they internalize.
+                we map the final shortlist to your product, buyer, targets, and floor reality so you are choosing from
+                candidates who fit the actual job, not a generic sales profile.
               </p>
 
-              <h3 className="mb-8">5. the 90 day warrant</h3>
+              <h3 className="mb-8">5. post-joining support</h3>
               <p>
-                once they start calling they send us recordings daily. we critique tone, pacing, and questions. we stay
-                involved until they hit the level you want.
+                training and coaching are operational support for the guarantee. once a hire starts, we review calls,
+                tighten talk tracks, and identify replacement risk early.
               </p>
             </div>
             <div className="relative w-full h-[400px] mb-8">
-              <Image src="/process-illustration.jpg" alt="our process" fill className="object-cover" />
+              <Image
+                src="/process-illustration.jpg"
+                alt="sales candidate selection pressure"
+                fill
+                className="object-cover"
+              />
             </div>
           </section>
 
-          {/* What You Get */}
-          <section data-section="the-guarantee" className="yc-section">
-            <h2>what you get</h2>
+          {/* Replacement Guarantee */}
+          <section data-section="replacement-guarantee" className="yc-section">
+            <h2>the replacement guarantee changes the incentive</h2>
             <div className="grid grid-cols-2 gap-16 mb-12">
               <div className="yc-text-block">
                 <h3>90 day replacement guarantee</h3>
-                <p className="mt-4">if they do not perform, we replace them. no questions asked.</p>
+                <p className="mt-4">
+                  if the hire does not perform, we replace them. the pipeline is accountable after the offer letter, not
+                  just before it.
+                </p>
               </div>
               <div>
-                <h3>net 30 payment terms</h3>
-                <p className="mt-4">pay only after they deliver. aligned incentives. aligned timeline.</p>
+                <h3>aligned payment terms</h3>
+                <p className="mt-4">net 30 terms keep incentives tied to real partner outcomes, not resume delivery.</p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-16 mb-12">
               <div className="yc-text-block">
-                <h3>custom playbooks</h3>
-                <p className="mt-4">scripts, follow up systems, prospecting guides built for your specific product.</p>
+                <h3>risk monitoring</h3>
+                <p className="mt-4">
+                  we look for early warning signs in activity, call quality, follow up habits, and feedback response.
+                </p>
               </div>
               <div>
-                <h3>daily coaching</h3>
+                <h3>targeted coaching</h3>
                 <p className="mt-4">
-                  we review call recordings, coach tone and pacing, and iterate until they hit your target performance
-                  level.
+                  coaching exists to protect the guarantee: sharper scripts, better questions, cleaner pacing, and faster
+                  correction when performance drifts.
                 </p>
               </div>
             </div>
             <div className="relative w-full h-[400px] mb-8">
-              <Image src="/guarantee-illustration.jpg" alt="what you get" fill className="object-cover" />
+              <Image
+                src="/guarantee-illustration.jpg"
+                alt="sales hire replacement guarantee"
+                fill
+                className="object-cover"
+              />
             </div>
           </section>
 
-          {/* Focus Areas */}
-          <section data-section="focus-areas" className="yc-section">
-            <h2>where we focus</h2>
+          {/* Partner Fit */}
+          <section data-section="partner-fit" className="yc-section">
+            <h2>built for partners who cannot afford mis-hires</h2>
             <div className="yc-text-block mb-12">
-              <p className="mb-6">we focus exclusively on tier 1 cities where our model has proven roi.</p>
-              <p className="mb-6">we do not keep a bench. we hunt for your specific mandate.</p>
-              <p>the world moves for those who do.</p>
+              <p className="mb-6">we work best where one wrong sales hire has a visible cost.</p>
+              <p className="mb-6">
+                if your team needs dependable frontline salespeople in tier 1 cities, and you want fewer interviews with
+                more signal, we can build the pipeline around your hiring bar.
+              </p>
+              <p>
+                you bring the mandate. we bring filtered candidates, selection pressure, post-joining support, and a
+                replacement guarantee.
+              </p>
             </div>
             <div className="relative w-full h-[400px] mb-8">
-              <Image src="/focus-illustration.jpg" alt="our focus areas" fill className="object-cover" />
+              <Image
+                src="/focus-illustration.jpg"
+                alt="partners who need filtered sales talent"
+                fill
+                className="object-cover"
+              />
             </div>
           </section>
 
           {/* Next Steps */}
           <section data-section="next-steps" className="yc-section">
-            <h2>let's talk</h2>
+            <h2>partner with verveschool</h2>
             <div className="yc-text-block mb-12">
-              <p className="mb-6">if you are ready to end the hire hope fire cycle let's talk.</p>
+              <p className="mb-6">
+                if you want a tighter sales hiring funnel with accountability after joining, send us the role and the
+                target profile. we will tell you if we can build the pipeline.
+              </p>
               <ul className="space-y-4">
                 <li className="font-medium">phone: +91 81304 30683</li>
                 <li className="font-medium">email: ayush@verveschool.com</li>
