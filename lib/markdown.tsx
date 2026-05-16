@@ -42,11 +42,11 @@ function renderInline(text: string): ReactNode[] {
   })
 }
 
-export function MarkdownContent({ content }: { content: string }) {
+export function MarkdownContent({ content, className = "" }: { content: string; className?: string }) {
   const blocks = content.split(/\n{2,}/)
 
   return (
-    <div className="essay-prose">
+    <div className={["essay-prose", className].filter(Boolean).join(" ")}>
       {blocks.map((block, index) => {
         if (block.startsWith("## ")) {
           return <h2 key={index}>{renderInline(block.replace(/^## /, ""))}</h2>

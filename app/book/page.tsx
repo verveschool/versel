@@ -1,24 +1,19 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { getAllEssays } from "@/lib/essays"
+import { getAllBookChapters, getBookLanding } from "@/lib/book"
+import { MarkdownContent } from "@/lib/markdown"
 
 export const metadata: Metadata = {
   title: "Book | verveschool",
-  description: "A structured long-form reading path from verveschool on sales talent, hiring filters, and ramp systems.",
+  description: "An 80-page verveschool field guide serialized as a web-native reading experience.",
   alternates: {
     canonical: "/book",
   },
 }
 
-const chapters = [
-  "the talent market before the resume",
-  "signals that survive pressure",
-  "simulations, scorecards, and partner-specific filters",
-  "the ninety-day ramp as a feedback system",
-]
-
 export default function BookPage() {
-  const essays = getAllEssays()
+  const book = getBookLanding()
+  const chapters = getAllBookChapters()
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -40,6 +35,9 @@ export default function BookPage() {
               <Link href="/essays" className="transition-colors hover:text-white">
                 essays
               </Link>
+              <Link href="/book" className="text-white transition-colors hover:text-white">
+                book
+              </Link>
             </div>
           </div>
         </div>
@@ -48,50 +46,71 @@ export default function BookPage() {
       <main className="yc-container py-20">
         <section className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
           <div>
-            <p className="section-kicker mb-6">book</p>
-            <h1 className="mb-8 max-w-3xl font-serif text-5xl leading-[1.04] tracking-[-0.045em] text-white md:text-7xl">
-              a working outline for the verveschool talent canon.
+            <p className="section-kicker mb-6">serialized book</p>
+            <h1 className="mb-6 max-w-4xl font-serif text-5xl leading-[1.04] tracking-[-0.045em] text-white md:text-7xl">
+              {book.title}
             </h1>
-            <p className="max-w-2xl text-lg leading-8 text-white/70">
-              This page collects the long-form themes that will become a more durable guide to early-career sales talent: how to find it, test it, train it, and keep learning from it.
-            </p>
+            <p className="mb-8 max-w-2xl text-2xl font-serif leading-9 text-primary">{book.subtitle}</p>
+            <p className="max-w-2xl text-lg leading-8 text-white/70">{book.description}</p>
           </div>
           <div className="border border-primary/30 bg-primary/10 p-8">
-            <p className="mb-3 text-sm uppercase tracking-[0.24em] text-primary">current status</p>
-            <p className="text-2xl font-serif text-white">open notes, published as essays first.</p>
+            <p className="mb-3 text-sm uppercase tracking-[0.24em] text-primary">web edition</p>
+            <p className="text-2xl font-serif text-white">80 pages translated into a chapter-by-chapter reading path.</p>
+            <div className="mt-8 grid grid-cols-2 gap-4 border-t border-primary/20 pt-6 text-sm text-white/65">
+              <span>{chapters.length} chapters</span>
+              <span>by {book.author}</span>
+            </div>
           </div>
         </section>
 
-        <section className="my-20 grid gap-4 md:grid-cols-2">
-          {chapters.map((chapter, index) => (
-            <div key={chapter} className="border border-white/10 bg-white/[0.03] p-8">
-              <p className="mb-5 text-sm text-primary">chapter {String(index + 1).padStart(2, "0")}</p>
-              <h2 className="font-serif text-3xl leading-tight tracking-[-0.02em] text-white">{chapter}</h2>
-            </div>
-          ))}
+        <section className="my-20 grid gap-12 border-y border-white/10 py-14 lg:grid-cols-[0.85fr_1.15fr]">
+          <div>
+            <p className="section-kicker mb-4">introduction</p>
+            <h2 className="font-serif text-4xl leading-tight tracking-[-0.03em] text-white">Read as a system, not a stack of posts.</h2>
+          </div>
+          <MarkdownContent content={book.introduction} className="book-prose" />
         </section>
 
-        <section className="border-t border-white/10 pt-10">
+        <section>
           <div className="mb-8 flex items-end justify-between gap-6">
             <div>
-              <p className="section-kicker mb-4">source material</p>
-              <h2 className="font-serif text-4xl tracking-[-0.03em] text-white">latest essays</h2>
+              <p className="section-kicker mb-4">chapters</p>
+              <h2 className="font-serif text-4xl tracking-[-0.03em] text-white">Start the serial.</h2>
             </div>
-            <Link href="/essays" className="hidden text-sm uppercase tracking-[0.22em] text-primary transition-colors hover:text-white md:block">
-              all essays →
-            </Link>
+            {chapters[0] ? (
+              <Link href={`/book/${chapters[0].slug}`} className="hidden text-sm uppercase tracking-[0.22em] text-primary transition-colors hover:text-white md:block">
+                begin reading →
+              </Link>
+            ) : null}
           </div>
-          <div className="grid gap-4">
-            {essays.map((essay) => (
-              <Link key={essay.slug} href={`/essays/${essay.slug}`} className="group flex flex-col justify-between gap-3 border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-primary/60 md:flex-row md:items-center">
-                <div>
-                  <p className="mb-2 text-xs uppercase tracking-[0.2em] text-white/45">{essay.category}</p>
-                  <h3 className="font-serif text-2xl tracking-[-0.02em] text-white transition-colors group-hover:text-primary">{essay.title}</h3>
+
+          <div className="grid gap-4 md:grid-cols-2">
+            {chapters.map((chapter) => (
+              <Link key={chapter.slug} href={`/book/${chapter.slug}`} className="group border border-white/10 bg-white/[0.03] p-8 transition-colors hover:border-primary/60">
+                <div className="mb-8 flex items-center justify-between gap-4 text-sm text-white/45">
+                  <span className="text-primary">chapter {chapter.chapterNumber}</span>
+                  <span>{chapter.readingTime}</span>
                 </div>
-                <span className="text-sm text-primary">read →</span>
+                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-white/45">{chapter.part}</p>
+                <h3 className="mb-5 font-serif text-3xl leading-tight tracking-[-0.02em] text-white transition-colors group-hover:text-primary">
+                  {chapter.title}
+                </h3>
+                <p className="mb-8 text-white/65">{chapter.description}</p>
+                <span className="text-sm text-primary">read chapter →</span>
               </Link>
             ))}
           </div>
+        </section>
+
+        <section className="mt-20 border border-primary/30 bg-primary/10 p-8">
+          <p className="section-kicker mb-4">for teams</p>
+          <h2 className="mb-4 font-serif text-3xl tracking-[-0.02em] text-white">Turn the reading into a partner conversation.</h2>
+          <p className="mb-6 max-w-2xl text-white/70">
+            If the book maps to a problem inside your revenue team, use the partner page to start a more specific calibration loop.
+          </p>
+          <Link href="/partners" className="text-sm font-semibold uppercase tracking-[0.24em] text-primary transition-colors hover:text-white">
+            become a hiring partner →
+          </Link>
         </section>
       </main>
     </div>
