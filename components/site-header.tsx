@@ -16,8 +16,8 @@ export function SiteHeader() {
     <nav className="border-b border-border sticky top-0 bg-background/95 backdrop-blur z-40">
       <div className="yc-container py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-[15px] font-medium hover:text-primary transition-colors">
-            verveschool
+          <Link href="/" className="inline-flex items-center hover:opacity-80 transition-opacity">
+            <img src="/verveschool-logo.svg" alt="verveschool" className="h-8 w-auto" />
           </Link>
 
           {/* desktop nav */}
