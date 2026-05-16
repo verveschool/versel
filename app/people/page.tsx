@@ -60,7 +60,7 @@ export default function PeoplePage() {
           <div>
             <p className="section-kicker">selected people</p>
             <h1 className="mt-5 max-w-5xl text-6xl font-semibold leading-[0.95] tracking-[-0.075em] text-white md:text-8xl lg:text-9xl">
-              people who do, not people who perform polish.
+              People who made a change.
             </h1>
           </div>
           <div className="border border-white/12 bg-white/[0.04] p-7 shadow-2xl shadow-black/40 backdrop-blur">
