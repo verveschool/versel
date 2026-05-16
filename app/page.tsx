@@ -50,6 +50,9 @@ export default function HomePage() {
               <Link href="/partners" className="transition-colors hover:text-white">
                 partners
               </Link>
+              <Link href="/essays" className="transition-colors hover:text-white">
+                essays
+              </Link>
             </div>
           </div>
         </div>
