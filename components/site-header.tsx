@@ -4,11 +4,11 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 const navLinks = [
+  { href: "/about", label: "About" },
   { href: "/partners", label: "Partners" },
   { href: "/people", label: "People" },
-  { href: "/writing", label: "Writing" },
+  { href: "/writing", label: "Essays" },
   { href: "/book", label: "Book" },
-  { href: "/about", label: "About" },
 ]
 
 function isActivePath(pathname: string, href: string) {
