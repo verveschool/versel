@@ -23,10 +23,15 @@ const sourceSerif = Source_Serif_4({
 })
 
 export const metadata: Metadata = {
-  title: "sales talent fund | verveschool 🧡",
-  description: "verveschool is a talent fund backed by hiring partners. the company scouts, trains, and places early career sales talent into growth stage startups.",
+  title: "sales talent filter | verveschool",
+  description: "verveschool filters, tests, and backs early-career sales talent for hiring partners who need sharper signal, faster shortlists, and replacement-backed confidence.",
   icons: {
-    icon: "/icon.svg",
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)", type: "image/png", sizes: "32x32" },
+      { url: "/icon-dark-32x32.png", media: "(prefers-color-scheme: dark)", type: "image/png", sizes: "32x32" },
+    ],
+    apple: "/apple-icon.png",
   },
 }
 
