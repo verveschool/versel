@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { SiteHeader } from "@/components/site-header"
 
 export default function AboutPage() {
   const [activeSection, setActiveSection] = useState("")
@@ -40,18 +41,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Navigation */}
-      <nav className="border-b border-border sticky top-0 bg-background/95 backdrop-blur z-40">
-        <div className="yc-container py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="text-[15px] font-medium">
-              verveschool
-            </Link>
-            <Link href="/about" className="text-[13px] font-medium md:hidden">
-              about
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <SiteHeader />
 
       <div className="flex flex-col md:flex-row">
         {/* Main content */}
