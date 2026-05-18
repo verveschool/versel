@@ -20,15 +20,17 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur-xl">
-      <div className="yc-container py-6">
-        <nav className="flex items-center justify-between gap-8" aria-label="Primary navigation">
+      {/* Taller nav bar */}
+      <div className="yc-container py-8">
+        <nav className="flex items-center justify-between gap-10" aria-label="Primary navigation">
+          
           {/* Much bigger logo */}
           <Link href="/" className="inline-flex items-center transition-opacity hover:opacity-75" aria-label="verveschool home">
-            <img src="./verveschool-logo.svg" alt="VerveSchool logo" className="h-24 md:h-32 w-auto" />
+            <img src="./verveschool-logo.svg" alt="VerveSchool logo" className="h-32 w-auto" />
           </Link>
 
-          {/* Desktop navigation */}
-          <div className="hidden items-center gap-8 text-sm md:text-base text-foreground/62 md:flex">
+          {/* Desktop navigation with larger text */}
+          <div className="hidden items-center gap-10 text-lg md:text-xl text-foreground/62 md:flex">
             {navLinks.map((link) => {
               const active = isActivePath(pathname, link.href)
               return (
@@ -43,8 +45,8 @@ export function SiteHeader() {
             })}
           </div>
 
-          {/* Mobile navigation */}
-          <div className="flex items-center gap-4 text-xs text-foreground/68 md:hidden">
+          {/* Mobile navigation with bigger text too */}
+          <div className="flex items-center gap-6 text-base text-foreground/68 md:hidden">
             {navLinks.slice(0, 4).map((link) => {
               const active = isActivePath(pathname, link.href)
               return (
