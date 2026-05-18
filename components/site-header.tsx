@@ -20,16 +20,17 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur-xl">
-      <div className="yc-container py-4">
-        <nav className="flex items-center justify-between gap-6" aria-label="Primary navigation">
+      <div className="yc-container py-6">
+        <nav className="flex items-center justify-between gap-8" aria-label="Primary navigation">
+          {/* Much bigger logo */}
           <Link href="/" className="inline-flex items-center transition-opacity hover:opacity-75" aria-label="verveschool home">
-            <img src="./verveschool-logo.svg" alt="VerveSchool logo" className="h-8 w-auto" />
+            <img src="./verveschool-logo.svg" alt="VerveSchool logo" className="h-24 md:h-32 w-auto" />
           </Link>
 
-          <div className="hidden items-center gap-6 text-[13px] text-foreground/62 md:flex">
+          {/* Desktop navigation */}
+          <div className="hidden items-center gap-8 text-sm md:text-base text-foreground/62 md:flex">
             {navLinks.map((link) => {
               const active = isActivePath(pathname, link.href)
-
               return (
                 <Link
                   key={link.href}
@@ -42,10 +43,10 @@ export function SiteHeader() {
             })}
           </div>
 
-          <div className="flex items-center gap-4 text-[12px] text-foreground/68 md:hidden">
+          {/* Mobile navigation */}
+          <div className="flex items-center gap-4 text-xs text-foreground/68 md:hidden">
             {navLinks.slice(0, 4).map((link) => {
               const active = isActivePath(pathname, link.href)
-
               return (
                 <Link
                   key={link.href}
