@@ -48,7 +48,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-white/72 md:text-xl md:leading-9">
               VerveSchool finds, tests, and backs early-career sales talent for hiring partners who cannot afford another
-              charming interview that turns into a weak pipeline.
+              charming conversation that does not hold up on the floor.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
@@ -94,7 +94,7 @@ export default function HomePage() {
             <div className="grid gap-5 md:grid-cols-3">
               {[
                 "resumes reward polish, not conversion instinct.",
-                "interviews select talkers before they reveal builders.",
+                "interviews matter, but they need stronger on-the-job signal alongside them.",
                 "bad entry sales hires cost managers time before revenue ever appears.",
               ].map((copy) => (
                 <div key={copy} className="border border-white/10 bg-white/[0.035] p-6">
@@ -179,7 +179,7 @@ export default function HomePage() {
             <div>
               <p className="section-kicker">partner CTA</p>
               <h2 className="mt-4 max-w-3xl text-5xl font-semibold leading-none tracking-[-0.06em] text-white md:text-7xl">
-                stop interviewing hope. start hiring signal.
+                pair interviews with signal. hire with conviction.
               </h2>
             </div>
             <div>

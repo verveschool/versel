@@ -12,7 +12,7 @@ const visualDetails: Record<PartnerVisualVariant, { eyebrow: string; title: stri
   filter: { eyebrow: "Candidate Filter", title: "Signal before polish", metric: "1:8" },
   process: { eyebrow: "Selection Pressure", title: "Tasks reveal floor readiness", metric: "5" },
   guarantee: { eyebrow: "Aligned Incentive", title: "Replacement risk monitored", metric: "net 30" },
-  focus: { eyebrow: "Partner Fit", title: "Fewer interviews, more signal", metric: "tier 1" },
+  focus: { eyebrow: "Partner Fit", title: "Interviews plus stronger signal", metric: "tier 1" },
 }
 
 function PartnerVisual({ variant }: { variant: PartnerVisualVariant }) {
@@ -97,7 +97,7 @@ export default function PartnersPage() {
                 <p className="mb-6">every sales hire looks cheaper before they miss target.</p>
                 <p className="mb-6">
                   the real cost is not salary. it is lost pipeline, manager attention, damaged follow up, and the months
-                  you spend discovering what the interview could not show.
+                  you spend discovering what interviews alone could not show.
                 </p>
                 <p>
                   verveschool exists to absorb that uncertainty before a candidate reaches your floor. we filter for
@@ -156,8 +156,7 @@ export default function PartnersPage() {
 
               <h3 className="mb-8">2. founder screen</h3>
               <p className="mb-12">
-                faraz arif (co-founder, 9+ years exp) personally screens every candidate for the traits interviews
-                usually miss: persistence, clarity, humility, and recovery.
+                faraz arif (co-founder, 9+ years exp) personally screens every candidate for traits that deserve deeper validation: persistence, clarity, humility, and recovery.
               </p>
 
               <h3 className="mb-8">3. pressure tasks</h3>
@@ -221,8 +220,8 @@ export default function PartnersPage() {
             <div className="yc-text-block mb-12">
               <p className="mb-6">we work best where one wrong sales hire has a visible cost.</p>
               <p className="mb-6">
-                if your team needs dependable frontline salespeople in tier 1 cities, and you want fewer interviews with
-                more signal, we can build the pipeline around your hiring bar.
+                if your team needs dependable frontline salespeople in tier 1 cities, and you want interviews supported by
+                stronger signal, we can build the pipeline around your hiring bar.
               </p>
               <p>
                 You bring the mandate. We bring filtered candidates, selection pressure, post-joining support, and a
