@@ -17,7 +17,7 @@ const sections = [
     label: "Polish",
     kicker: "False Signal",
     title: "Polish is easy to fake. Movement is not.",
-    body: "A good interview can hide weak habits. A clean resume can hide low urgency. The real question is what someone does after pressure, rejection, ambiguity, and feedback. That is where useful signal begins.",
+    body: "Interviews and resumes are useful starting points, but the real question is what someone does after pressure, rejection, ambiguity, and feedback. That is where useful signal begins.",
   },
   {
     id: "filter",
