@@ -20,13 +20,11 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur-xl">
-      {/* Taller nav bar */}
-      <div className="yc-container py-8">
+      <div className="yc-container py-4 md:py-5">
         <nav className="flex items-center justify-between gap-10" aria-label="Primary navigation">
           
-          {/* Much bigger logo */}
           <Link href="/" className="inline-flex items-center transition-opacity hover:opacity-75" aria-label="verveschool home">
-            <img src="./verveschool-logo.svg" alt="VerveSchool logo" className="h-32 w-auto" />
+            <img src="/verveschool-logo.svg" alt="VerveSchool logo" className="h-10 w-auto md:h-12" />
           </Link>
 
           {/* Desktop navigation with larger text */}
