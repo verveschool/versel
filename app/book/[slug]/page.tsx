@@ -7,9 +7,9 @@ import { MarkdownContent } from "@/lib/markdown"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 type BookChapterPageProps = {
-  params: Promise<{
+  params: {
     slug: string
-  }>
+  }
 }
 
 export const dynamicParams = false
@@ -19,7 +19,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: BookChapterPageProps): Promise<Metadata> {
-  const { slug } = await params
+  const { slug } = params
 
   if (!getBookChapterSlugs().includes(slug)) {
     return {}
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: BookChapterPageProps): Promis
 }
 
 export default async function BookChapterPage({ params }: BookChapterPageProps) {
-  const { slug } = await params
+  const { slug } = params
 
   if (!getBookChapterSlugs().includes(slug)) {
     notFound()
