@@ -1,6 +1,8 @@
 import fs from "node:fs"
 import path from "node:path"
 
+import { parseMarkdownFrontmatter } from "@/lib/frontmatter"
+
 export type WritingFrontmatter = {
   title: string
   description: string
@@ -16,44 +18,6 @@ export type Writing = WritingFrontmatter & {
 }
 
 const writingDirectory = path.join(process.cwd(), "content", "essays")
-
-function parseFrontmatter(source: string): { frontmatter: WritingFrontmatter; content: string } {
-  const match = source.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/)
-
-  if (!match) {
-    throw new Error("Writing files must begin with frontmatter.")
-  }
-
-  const frontmatter = match[1].split("\n").reduce<Record<string, string>>((fields, line) => {
-    const separatorIndex = line.indexOf(":")
-
-    if (separatorIndex === -1) {
-      return fields
-    }
-
-    const key = line.slice(0, separatorIndex).trim()
-    const value = line
-      .slice(separatorIndex + 1)
-      .trim()
-      .replace(/^['\"]|['\"]$/g, "")
-
-    fields[key] = value
-    return fields
-  }, {})
-
-  const requiredFields = ["title", "description", "date", "category", "author"] as const
-
-  for (const field of requiredFields) {
-    if (!frontmatter[field]) {
-      throw new Error(`Missing required frontmatter field: ${field}`)
-    }
-  }
-
-  return {
-    frontmatter: frontmatter as WritingFrontmatter,
-    content: match[2].trim(),
-  }
-}
 
 function calculateReadingTime(content: string): string {
   const words = content.trim().split(/\s+/).filter(Boolean).length
@@ -76,10 +40,21 @@ export function getWritingSlugs(): string[] {
 export function getWritingBySlug(slug: string): Writing {
   const fullPath = path.join(writingDirectory, `${slug}.md`)
   const fileContents = fs.readFileSync(fullPath, "utf8")
-  const { frontmatter, content } = parseFrontmatter(fileContents)
+  const { data, content } = parseMarkdownFrontmatter<WritingFrontmatter>({
+    source: fileContents,
+    requiredFields: ["title", "description", "date", "category", "author"],
+    missingFrontmatterMessage: "Writing files must begin with frontmatter.",
+    fileLabel: slug,
+  })
+
+  const parsedDate = new Date(data.date)
+
+  if (Number.isNaN(parsedDate.getTime())) {
+    throw new Error(`Invalid date value in writing frontmatter: date (${slug})`)
+  }
 
   return {
-    ...frontmatter,
+    ...data,
     slug,
     content,
     readingTime: calculateReadingTime(content),
