@@ -34,6 +34,8 @@ const metrics = [
   { value: "1", label: "Standard: hire for outcomes" },
 ]
 
+const hiringPartners = ["Scaler", "Vedantu", "Crio.Do", "Infinity Learn", "AlmaBetter", "Prepca"]
+
 export default function HomePage() {
   return (
     <div className="min-h-screen overflow-hidden bg-background text-foreground">
@@ -79,6 +81,22 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-white/10 py-12 md:py-16">
+          <div className="flex flex-col gap-6">
+            <p className="section-kicker">hiring partners</p>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
+              {hiringPartners.map((partner) => (
+                <div
+                  key={partner}
+                  className="flex h-20 items-center justify-center border border-white/15 bg-white/[0.02] px-4 text-center text-lg font-semibold tracking-wide text-white/75 grayscale"
+                >
+                  {partner}
+                </div>
+              ))}
             </div>
           </div>
         </section>
