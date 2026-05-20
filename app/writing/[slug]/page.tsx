@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { formatWritingDate, getAllWriting, getWritingBySlug, getWritingSlugs } from "@/lib/writing"
-import { MarkdownContent } from "@/lib/markdown"
+import { MarkdownRenderer } from "@/lib/markdown"
 
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
@@ -77,7 +77,7 @@ export default async function WritingPage({ params }: WritingPageProps) {
             </div>
           </header>
 
-          <MarkdownContent content={piece.content} />
+          <MarkdownRenderer content={piece.content} />
         </article>
 
         {relatedPieces.length ? (

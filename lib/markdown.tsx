@@ -1,49 +1,144 @@
 import Link from "next/link"
 import type { ReactNode } from "react"
 
-function renderInline(text: string): ReactNode[] {
-  const parts = text.split(/(\[[^\]]+\]\([^)]+\)|`[^`]+`|\*\*[^*]+\*\*)/g)
+type MarkdownRendererProps = {
+  content: string
+  className?: string
+}
 
-  return parts.map((part, index) => {
-    const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
+type InlineToken =
+  | { type: "text"; value: string }
+  | { type: "strong"; children: InlineToken[] }
+  | { type: "code"; value: string }
+  | { type: "link"; href: string; children: InlineToken[] }
 
-    if (linkMatch) {
-      const [, label, href] = linkMatch
-      const className = "text-primary underline underline-offset-4 transition-colors hover:text-white"
+function parseLink(input: string, start: number): { token: InlineToken; next: number } | null {
+  if (input[start] !== "[") {
+    return null
+  }
 
-      if (href.startsWith("/")) {
-        return (
-          <Link key={index} href={href} className={className}>
-            {label}
-          </Link>
-        )
+  const labelEnd = input.indexOf("]", start + 1)
+
+  if (labelEnd === -1 || input[labelEnd + 1] !== "(") {
+    return null
+  }
+
+  let index = labelEnd + 2
+  let depth = 1
+
+  while (index < input.length && depth > 0) {
+    const char = input[index]
+
+    if (char === "(") depth += 1
+    if (char === ")") depth -= 1
+
+    index += 1
+  }
+
+  if (depth !== 0) {
+    return null
+  }
+
+  const label = input.slice(start + 1, labelEnd)
+  const href = input.slice(labelEnd + 2, index - 1)
+
+  return {
+    token: { type: "link", href, children: parseInlineTokens(label) },
+    next: index,
+  }
+}
+
+function parseInlineTokens(input: string): InlineToken[] {
+  const tokens: InlineToken[] = []
+  let i = 0
+  let textBuffer = ""
+
+  const flushText = () => {
+    if (textBuffer) {
+      tokens.push({ type: "text", value: textBuffer })
+      textBuffer = ""
+    }
+  }
+
+  while (i < input.length) {
+    if (input[i] === "`") {
+      const end = input.indexOf("`", i + 1)
+      if (end !== -1) {
+        flushText()
+        tokens.push({ type: "code", value: input.slice(i + 1, end) })
+        i = end + 1
+        continue
       }
-
-      return (
-        <a key={index} href={href} className={className} rel="noreferrer" target="_blank">
-          {label}
-        </a>
-      )
     }
 
-    if (part.startsWith("**") && part.endsWith("**")) {
-      return <strong key={index}>{part.slice(2, -2)}</strong>
+    if (input[i] === "*" && input[i + 1] === "*") {
+      const end = input.indexOf("**", i + 2)
+      if (end !== -1) {
+        flushText()
+        tokens.push({ type: "strong", children: parseInlineTokens(input.slice(i + 2, end)) })
+        i = end + 2
+        continue
+      }
     }
 
-    if (part.startsWith("`") && part.endsWith("`")) {
+    const link = parseLink(input, i)
+    if (link) {
+      flushText()
+      tokens.push(link.token)
+      i = link.next
+      continue
+    }
+
+    textBuffer += input[i]
+    i += 1
+  }
+
+  flushText()
+  return tokens
+}
+
+function renderInlineTokens(tokens: InlineToken[]): ReactNode[] {
+  return tokens.map((token, index) => {
+    if (token.type === "text") {
+      return token.value
+    }
+
+    if (token.type === "strong") {
+      return <strong key={`strong-${index}`}>{renderInlineTokens(token.children)}</strong>
+    }
+
+    if (token.type === "code") {
       return (
-        <code key={index} className="border border-white/10 bg-white/5 px-1.5 py-0.5 font-mono text-[0.9em] text-white">
-          {part.slice(1, -1)}
+        <code key={`code-${index}`} className="border border-white/10 bg-white/5 px-1.5 py-0.5 font-mono text-[0.9em] text-white">
+          {token.value}
         </code>
       )
     }
 
-    return part
+    const className = "text-primary underline underline-offset-4 transition-colors hover:text-white"
+
+    if (token.href.startsWith("/")) {
+      return (
+        <Link key={`link-${index}`} href={token.href} className={className}>
+          {renderInlineTokens(token.children)}
+        </Link>
+      )
+    }
+
+    return (
+      <a key={`link-${index}`} href={token.href} className={className} rel="noreferrer" target="_blank">
+        {renderInlineTokens(token.children)}
+      </a>
+    )
   })
 }
 
-export function MarkdownContent({ content, className = "" }: { content: string; className?: string }) {
-  const blocks = content.split(/\n{2,}/)
+function renderInline(content: string) {
+  return renderInlineTokens(parseInlineTokens(content))
+}
+
+export function MarkdownRenderer({ content, className = "" }: MarkdownRendererProps) {
+  const blocks = content.trim().split(/\n{2,}/)
 
   return (
     <div className={["essay-prose", className].filter(Boolean).join(" ")}>
@@ -74,4 +169,8 @@ export function MarkdownContent({ content, className = "" }: { content: string; 
       })}
     </div>
   )
+}
+
+export function MarkdownContent({ content, className = "" }: MarkdownRendererProps) {
+  return <MarkdownRenderer content={content} className={className} />
 }

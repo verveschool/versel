@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { getAdjacentBookChapters, getAllBookChapters, getBookChapterBySlug, getBookChapterSlugs } from "@/lib/book"
-import { MarkdownContent } from "@/lib/markdown"
+import { MarkdownRenderer } from "@/lib/markdown"
 
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
@@ -74,7 +74,7 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
             <p className="text-xl leading-8 text-white/70">{chapter.description}</p>
           </header>
 
-          <MarkdownContent content={chapter.content} className="book-prose" />
+          <MarkdownRenderer content={chapter.content} className="book-prose" />
 
           <section className="mt-16 border border-primary/30 bg-primary/10 p-8">
             <p className="section-kicker mb-4">put it to work</p>
