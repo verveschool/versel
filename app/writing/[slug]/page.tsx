@@ -7,9 +7,9 @@ import { MarkdownContent } from "@/lib/markdown"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 type WritingPageProps = {
-  params: Promise<{
+  params: {
     slug: string
-  }>
+  }
 }
 
 export const dynamicParams = false
@@ -19,7 +19,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: WritingPageProps): Promise<Metadata> {
-  const { slug } = await params
+  const { slug } = params
 
   if (!getWritingSlugs().includes(slug)) {
     return {}
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: WritingPageProps): Promise<Me
 }
 
 export default async function WritingPage({ params }: WritingPageProps) {
-  const { slug } = await params
+  const { slug } = params
 
   if (!getWritingSlugs().includes(slug)) {
     notFound()
