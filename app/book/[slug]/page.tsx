@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { getAdjacentBookChapters, getAllBookChapters, getBookChapterBySlug, getBookChapterSlugs } from "@/lib/book"
+import { getAllBookChapters, getBookChapterSlugs } from "@/lib/book"
 import { MarkdownContent } from "@/lib/markdown"
 
 import { SiteHeader } from "@/components/site-header"
@@ -18,14 +18,31 @@ export function generateStaticParams() {
   return getBookChapterSlugs().map((slug) => ({ slug }))
 }
 
+function getBookChapterPageData(slug: string) {
+  const chapters = getAllBookChapters()
+  const chapterIndex = chapters.findIndex((chapter) => chapter.slug === slug)
+
+  if (chapterIndex === -1) {
+    return null
+  }
+
+  return {
+    chapters,
+    chapter: chapters[chapterIndex],
+    previousChapter: chapterIndex > 0 ? chapters[chapterIndex - 1] : null,
+    nextChapter: chapterIndex < chapters.length - 1 ? chapters[chapterIndex + 1] : null,
+  }
+}
+
 export async function generateMetadata({ params }: BookChapterPageProps): Promise<Metadata> {
   const { slug } = await params
+  const pageData = getBookChapterPageData(slug)
 
-  if (!getBookChapterSlugs().includes(slug)) {
+  if (!pageData) {
     return {}
   }
 
-  const chapter = getBookChapterBySlug(slug)
+  const { chapter } = pageData
 
   return {
     title: `${chapter.title} | The Selling Better Field Guide`,
@@ -43,14 +60,13 @@ export async function generateMetadata({ params }: BookChapterPageProps): Promis
 
 export default async function BookChapterPage({ params }: BookChapterPageProps) {
   const { slug } = await params
+  const pageData = getBookChapterPageData(slug)
 
-  if (!getBookChapterSlugs().includes(slug)) {
+  if (!pageData) {
     notFound()
   }
 
-  const chapter = getBookChapterBySlug(slug)
-  const chapters = getAllBookChapters()
-  const { previousChapter, nextChapter } = getAdjacentBookChapters(slug)
+  const { chapter, chapters, previousChapter, nextChapter } = pageData
 
   return (
     <div className="min-h-screen bg-background text-foreground">

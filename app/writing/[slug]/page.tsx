@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { formatWritingDate, getAllWriting, getWritingBySlug, getWritingSlugs } from "@/lib/writing"
+import { formatWritingDate, getAllWriting, getWritingSlugs } from "@/lib/writing"
 import { MarkdownContent } from "@/lib/markdown"
 
 import { SiteHeader } from "@/components/site-header"
@@ -18,14 +18,29 @@ export function generateStaticParams() {
   return getWritingSlugs().map((slug) => ({ slug }))
 }
 
+function getWritingPageData(slug: string) {
+  const allWriting = getAllWriting()
+  const piece = allWriting.find((writingPiece) => writingPiece.slug === slug)
+
+  if (!piece) {
+    return null
+  }
+
+  return {
+    piece,
+    relatedPieces: allWriting.filter((relatedPiece) => relatedPiece.slug !== piece.slug).slice(0, 2),
+  }
+}
+
 export async function generateMetadata({ params }: WritingPageProps): Promise<Metadata> {
   const { slug } = await params
+  const pageData = getWritingPageData(slug)
 
-  if (!getWritingSlugs().includes(slug)) {
+  if (!pageData) {
     return {}
   }
 
-  const piece = getWritingBySlug(slug)
+  const { piece } = pageData
 
   return {
     title: `${piece.title} | verveschool`,
@@ -46,13 +61,13 @@ export async function generateMetadata({ params }: WritingPageProps): Promise<Me
 
 export default async function WritingPage({ params }: WritingPageProps) {
   const { slug } = await params
+  const pageData = getWritingPageData(slug)
 
-  if (!getWritingSlugs().includes(slug)) {
+  if (!pageData) {
     notFound()
   }
 
-  const piece = getWritingBySlug(slug)
-  const relatedPieces = getAllWriting().filter((relatedPiece) => relatedPiece.slug !== piece.slug).slice(0, 2)
+  const { piece, relatedPieces } = pageData
 
   return (
     <div className="min-h-screen bg-background text-foreground">
