@@ -88,14 +88,14 @@ export default function HomePage() {
             <div>
               <p className="section-kicker">the hiring problem</p>
               <h2 className="mt-4 max-w-xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
-                sales hiring is noisy when everyone can perform confidence for forty minutes.
+                sales hiring is noisy when candidates can interview well in short windows.
               </h2>
             </div>
             <div className="grid gap-5 md:grid-cols-3">
               {[
-                "resumes reward polish, not conversion instinct.",
-                "interviews matter, but they need stronger on-the-job signal alongside them.",
-                "bad entry sales hires cost managers time before revenue ever appears.",
+                "resumes and interviews are useful, but they don't always reveal real conversion instinct.",
+                "interviews still matter, and they work best when paired with stronger on-the-job signal.",
+                "weak entry sales hires consume manager time long before revenue appears.",
               ].map((copy) => (
                 <div key={copy} className="border border-white/10 bg-white/[0.035] p-6">
                   <p className="text-base leading-7 text-white/70">{copy}</p>
