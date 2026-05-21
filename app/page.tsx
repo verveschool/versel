@@ -100,8 +100,8 @@ export default function HomePage() {
           </div>
         </section>
 
-<section className="mb-20 border-y border-white/10 bg-white/[0.03] py-16 md:py-24">
-  <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+<section className="mb-20 border border-white/12 bg-white/[0.04] px-8 py-12 md:px-12 md:py-14 lg:px-16 lg:py-16">
+  <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
 
     <div>
       <h2 className="max-w-3xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
