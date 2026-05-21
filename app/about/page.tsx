@@ -6,50 +6,43 @@ import { SiteHeader } from "@/components/site-header"
 
 const sections = [
   {
-    id: "movement",
-    label: "Movement",
-    kicker: "Philosophy",
-    title: "The World Moves for Those Who Do",
-    body: "Most people wait to be chosen. Verveschool is built for the ones who create motion before permission arrives: the person who follows up, studies the room, asks the sharper question, and moves the conversation forward when everyone else freezes.",
+    id: "how-it-works",
+    label: "How it works",
+    kicker: "Candidate Flow",
+    title: "How it works for candidates",
+    body: "Create your profile, complete role-relevant evaluation, and get matched based on demonstrated performance. The goal is faster, clearer signal than resume-only filtering.",
   },
   {
-    id: "polish",
-    label: "Polish",
-    kicker: "False Signal",
-    title: "Polish is easy to fake. Movement is not.",
-    body: "Interviews and resumes are useful starting points, but the real question is what someone does after pressure, rejection, ambiguity, and feedback. That is where useful signal begins.",
+    id: "for",
+    label: "Who it's for",
+    kicker: "Best Fit",
+    title: "Who this is for",
+    body: "Candidates open to measurable evaluation, sales and execution-focused roles, and environments where outcomes matter more than polished interview theater.",
   },
   {
-    id: "filter",
-    label: "Filter",
-    kicker: "The Standard",
-    title: "We filter for behavior, not performance theatre.",
-    body: "We look for hunger, clarity, stamina, listening quality, recovery speed, and the ability to turn feedback into visible change. The goal is not to find the loudest candidate. The goal is to find the one who compounds fastest once the work becomes real.",
+    id: "not-for",
+    label: "Who it's not for",
+    kicker: "Not a Fit",
+    title: "Who this is not for",
+    body: "People who only want title-based placement, do not want structured assessments, or are avoiding performance-accountable roles should likely look elsewhere.",
   },
   {
-    id: "companies",
-    label: "Companies",
-    kicker: "Partner Lens",
-    title: "Companies do not need more applicants. They need sharper signal.",
-    body: "More profiles create more noise. Better signal creates conviction. Verveschool exists to reduce the distance between a hiring team and the few people who can actually survive the floor, learn the motion, and become useful fast.",
+    id: "partners",
+    label: "Partnered companies",
+    kicker: "Selection Standard",
+    title: "Why we partner with specific companies",
+    body: "We choose partners with role clarity, fair interview processes, timely feedback loops, and compensation structures that reward real contribution. Partnership quality protects candidate outcomes.",
   },
   {
-    id: "guarantee",
-    label: "Guarantee",
-    kicker: "Skin in the Game",
-    title: "Replacement confidence forces a higher bar.",
-    body: "If we stand behind someone, selection cannot be casual. The guarantee is not a marketing line. It is a forcing function. It makes the filter stricter, the feedback loop tighter, and the standard clearer for everyone involved.",
-  },
-  {
-    id: "candidates",
-    label: "Candidates",
-    kicker: "For Candidates",
-    title: "If you move, you get seen.",
-    body: "The system is not built for people who want a certificate, a script, or permission to begin. It is built for people who want a room where effort becomes visible and the next door opens because they made themselves undeniable.",
+    id: "incentives",
+    label: "Sales incentives",
+    kicker: "Compensation",
+    title: "Performance-based incentives in sales",
+    body: "Most sales roles include base pay plus variable pay. High performers can earn meaningful upside, but candidates should verify quota realism, payout mechanics, and the exact metrics that drive compensation.",
   },
 ]
 
-export default function AboutPage() {
+export default function CandidatesPage() {
   const [activeSection, setActiveSection] = useState(sections[0].id)
 
   useEffect(() => {
@@ -78,23 +71,40 @@ export default function AboutPage() {
       <div className="flex flex-col md:flex-row">
         <main className="yc-container flex-1 py-16 md:py-24">
           <section className="mb-20 max-w-5xl">
-            <p className="section-kicker mb-6">About Verveschool</p>
+            <p className="section-kicker mb-6">Candidates</p>
             <h1 className="max-w-4xl text-5xl font-semibold leading-[1.02] tracking-[-0.055em] text-foreground md:text-7xl">
-              We are a filter for people who move before the world agrees with them.
+              Get hired for what you can do, not just how your resume looks.
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-foreground/68 md:text-xl md:leading-9">
-              Verveschool is a selection system for early-career sales talent and the hiring partners who need conviction before they make another expensive bet.
+              This page is for candidates who want transparent evaluation, clear fit signals, and access to partnered companies that value performance in real sales environments.
             </p>
           </section>
 
+          <section data-section="how-it-works" className="mb-20 border-t border-white/10 pt-10">
+            <div className="grid gap-6 md:grid-cols-2">
+              {[
+                "Create your candidate profile with role preferences.",
+                "Complete a role-relevant evaluation.",
+                "Receive performance-based fit signals.",
+                "Get matched with partnered companies.",
+                "Interview where there is stronger two-way fit.",
+              ].map((step, index) => (
+                <div key={step} className="rounded-2xl border border-white/10 p-5">
+                  <p className="section-kicker">Step {index + 1}</p>
+                  <p className="mt-2 text-base text-foreground/75">{step}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
           <div className="space-y-20">
-            {sections.map((section, index) => (
+            {sections.slice(1).map((section, index) => (
               <section key={section.id} data-section={section.id} className="border-t border-white/10 pt-10">
                 <div className="grid gap-10 lg:grid-cols-[0.35fr_0.65fr]">
                   <div>
                     <p className="section-kicker">{section.kicker}</p>
                     <p className="mt-8 text-7xl font-semibold leading-none tracking-[-0.08em] text-foreground/10 md:text-8xl">
-                      {String(index + 1).padStart(2, "0")}
+                      {String(index + 2).padStart(2, "0")}
                     </p>
                   </div>
                   <div className="max-w-3xl">
