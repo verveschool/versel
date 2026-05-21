@@ -106,8 +106,8 @@ export default function HomePage() {
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-20">
             <div>
               <p className="section-kicker">replacement guarantee</p>
-              <h2 className="mt-4 text-5xl font-semibold leading-none tracking-[-0.06em] text-white md:text-7xl">
-                if a hire does not work out, we provide a replacement.
+              <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
+                If a hire does not work out, we provide a replacement.
               </h2>
             </div>
             <div className="border border-primary/40 bg-primary/10 p-7">
@@ -122,8 +122,8 @@ export default function HomePage() {
           <div className="grid gap-10 lg:grid-cols-[1fr_0.72fr] lg:items-center">
             <div>
               <p className="section-kicker">partner CTA</p>
-              <h2 className="mt-4 max-w-3xl text-5xl font-semibold leading-none tracking-[-0.06em] text-white md:text-7xl">
-                share the role. we will send aligned candidates.
+              <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
+                Share the role. We will send aligned candidates.
               </h2>
             </div>
             <div>
