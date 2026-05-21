@@ -41,7 +41,7 @@ export default function HomePage() {
                 Hire sincere sales talent
               </Link>
               <a
-                href="mailto:talent@verveschool.com"
+                href="https://wa.me/917042873035"
                 className="inline-flex items-center justify-center border border-white/20 px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-white transition hover:border-white/40 hover:bg-white/5"
               >
                 Talk to us
@@ -68,7 +68,6 @@ export default function HomePage() {
 
         <section className="border-y border-white/10 py-16 md:py-24">
           <div className="flex flex-col gap-6">
-            <p className="section-kicker">hiring partners</p>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
               {hiringPartners.map((partner) => (
                 <div
@@ -84,9 +83,8 @@ export default function HomePage() {
 
         <section className="grid gap-12 py-16 md:py-24 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <div>
-            <p className="section-kicker">the filter</p>
             <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
-              we are a hiring filter, not a training program.
+              How we help you hire pre-filtered candidates for sales roles
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-8 text-white/65">
               Partners share role details and hiring constraints. Our team filters and aligns candidates who are serious and ready to join.
@@ -105,7 +103,6 @@ export default function HomePage() {
         <section className="border-y border-white/10 py-16 md:py-24">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-20">
             <div>
-              <p className="section-kicker">replacement guarantee</p>
               <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
                 If a hire does not work out, we provide a replacement.
               </h2>
@@ -121,7 +118,6 @@ export default function HomePage() {
         <section className="mb-20 border border-white/12 bg-white/[0.04] p-8 md:p-12 lg:p-16">
           <div className="grid gap-10 lg:grid-cols-[1fr_0.72fr] lg:items-center">
             <div>
-              <p className="section-kicker">partner CTA</p>
               <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
                 Share the role. We will send aligned candidates.
               </h2>
