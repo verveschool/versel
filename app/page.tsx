@@ -83,7 +83,7 @@ export default function HomePage() {
 
         <section className="grid gap-12 py-16 md:py-24 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <div>
-            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
+            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
               How we help you hire pre-filtered candidates for sales roles
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-8 text-white/65">
@@ -103,7 +103,7 @@ export default function HomePage() {
         <section className="border-y border-white/10 py-16 md:py-24">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-20">
             <div>
-              <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
+              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
                 If a hire does not work out, we provide a replacement.
               </h2>
             </div>
@@ -116,8 +116,9 @@ export default function HomePage() {
         </section>
 
         <section className="mb-20 border border-white/12 bg-white/[0.04] p-8 md:p-12 lg:p-16">
+          <div className="grid gap-10 lg:grid-cols-[1fr_0.72fr] lg:items-center">
             <div>
-              <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
+              <h2 className="max-w-3xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
                 Share the role. We will send aligned candidates.
               </h2>
             </div>
