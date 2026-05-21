@@ -100,41 +100,34 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="border-y border-white/10 py-16 md:py-24">
-          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-20">
-            <div>
-              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
-                If a hire does not work out, we provide a replacement.
-              </h2>
-            </div>
-            <div className="border border-primary/40 bg-primary/10 p-7">
-              <p className="text-xl leading-9 text-white/75">
-                We help partner teams reduce hiring risk with practical replacement coverage and aligned candidate shortlists.
-              </p>
-            </div>
-          </div>
-        </section>
+<section className="mb-20 border-y border-white/10 bg-white/[0.03] py-16 md:py-24">
+  <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
 
-        <section className="mb-20 border border-white/12 bg-white/[0.04] p-8 md:p-12 lg:p-16">
-          <div className="grid gap-10 lg:grid-cols-[1fr_0.72fr] lg:items-center">
-            <div>
-              <h2 className="max-w-3xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
-                Share the role. We will send aligned candidates.
-              </h2>
-            </div>
-            <div>
-              <p className="text-lg leading-8 text-white/65">
-                If you are hiring for sales or counselling roles, share your hiring requirements with us. Our team will shortlist candidates aligned with your role.
-              </p>
-              <Link
-                href="/partners"
-                className="mt-8 inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:opacity-90"
-              >
-                become a hiring partner
-              </Link>
-            </div>
-          </div>
-        </section>
+    <div>
+      <h2 className="max-w-5xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-6xl">
+        Share the role. We will send aligned candidates and replace hires that do not work out.
+      </h2>
+    </div>
+
+    <div>
+      <p className="text-lg leading-8 text-white/65">
+        If you are hiring for sales or counselling roles, share your requirements with us. Our team shortlists sincere early-career candidates aligned with your role.
+      </p>
+
+      <p className="mt-5 text-sm uppercase tracking-[0.18em] text-white/40">
+        Replacement coverage included.
+      </p>
+
+      <Link
+        href="/partners"
+        className="mt-8 inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:opacity-90"
+      >
+        Become a hiring partner
+      </Link>
+    </div>
+
+  </div>
+</section>
       </main>
       <SiteFooter />
     </div>
