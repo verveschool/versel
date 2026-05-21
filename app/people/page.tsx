@@ -1,25 +1,45 @@
 import Link from "next/link"
 
-import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
+import { SiteHeader } from "@/components/site-header"
 
-type LeadershipMember = {
+type PersonCard = {
   name: string
-  linkedin: string
-  photo?: string
+  subtitle: string
+  image?: string
+  linkedin?: string
 }
 
-const leadershipTeam: LeadershipMember[] = [
-  { name: "Hashirama", linkedin: "https://www.linkedin.com" },
-  { name: "Tobirama", linkedin: "https://www.linkedin.com" },
-  { name: "Konan", linkedin: "https://www.linkedin.com" },
-  { name: "Mei Terumi", linkedin: "https://www.linkedin.com" },
-  { name: "Kurama", linkedin: "https://www.linkedin.com" },
+const leadershipTeam: PersonCard[] = [
+  { name: "Hashirama", subtitle: "Founder & CEO", linkedin: "https://www.linkedin.com" },
+  { name: "Tobirama", subtitle: "Co-Founder & COO", linkedin: "https://www.linkedin.com" },
+  { name: "Konan", subtitle: "Head of Talent", linkedin: "https://www.linkedin.com" },
+  { name: "Mei Terumi", subtitle: "VP, Partnerships", linkedin: "https://www.linkedin.com" },
+  { name: "Kurama", subtitle: "Director, Growth", linkedin: "https://www.linkedin.com" },
 ]
 
-const talentScouts = ["Meera Kapoor", "Rehan Ali", "Tara Patel", "Vikram S."]
+const talentPartners: PersonCard[] = [
+  { name: "Meera Kapoor", subtitle: "Senior Talent Partner" },
+  { name: "Rehan Ali", subtitle: "Talent Partner" },
+  { name: "Tara Patel", subtitle: "Talent Partner" },
+  { name: "Vikram S.", subtitle: "Associate Talent Partner" },
+]
 
-const placedPeople = ["Ananya G.", "Ritvik P.", "Sana M.", "Dev R.", "Ira T."]
+const industryPartners: PersonCard[] = [
+  { name: "Aarav Menon", subtitle: "VP Sales, Northstar Labs", linkedin: "https://www.linkedin.com" },
+  { name: "Isha Rao", subtitle: "Head of Revenue, Orbit Systems", linkedin: "https://www.linkedin.com" },
+  { name: "Karan Bedi", subtitle: "Director GTM, Nimbus AI", linkedin: "https://www.linkedin.com" },
+  { name: "Naina Khurana", subtitle: "Chief Growth Officer, Cedar Tech", linkedin: "https://www.linkedin.com" },
+]
+
+const membersPlaced: PersonCard[] = [
+  { name: "Riya Sharma", subtitle: "Scaler" },
+  { name: "Ananya G.", subtitle: "Rippling" },
+  { name: "Ritvik P.", subtitle: "Postman" },
+  { name: "Sana M.", subtitle: "Razorpay" },
+  { name: "Dev R.", subtitle: "Freshworks" },
+  { name: "Ira T.", subtitle: "CRED" },
+]
 
 function initialsFromName(name: string) {
   return name
@@ -31,87 +51,73 @@ function initialsFromName(name: string) {
     .toUpperCase()
 }
 
+function ProfileCard({ person, clickable = false }: { person: PersonCard; clickable?: boolean }) {
+  const cardBody = (
+    <article className="rounded-xl border border-white/12 bg-white/[0.03] p-4 transition md:p-5">
+      <div className="aspect-[4/5] overflow-hidden rounded-lg border border-white/12 bg-white/[0.05]">
+        {person.image ? (
+          <img src={person.image} alt={`${person.name} photo`} className="h-full w-full object-cover" />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center text-xl font-semibold tracking-[-0.03em] text-white/70">
+            {initialsFromName(person.name)}
+          </div>
+        )}
+      </div>
+
+      <div className="mt-3 space-y-1">
+        <p className="text-base font-semibold tracking-[-0.02em] text-white">{person.name}</p>
+        <p className="text-sm tracking-[-0.01em] text-white/65">{person.subtitle}</p>
+      </div>
+    </article>
+  )
+
+  if (clickable && person.linkedin) {
+    return (
+      <Link
+        href={person.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block opacity-95 transition hover:border-white/25 hover:opacity-100"
+      >
+        {cardBody}
+      </Link>
+    )
+  }
+
+  return cardBody
+}
+
+function PeopleSection({
+  title,
+  people,
+  clickable = false,
+}: {
+  title: string
+  people: PersonCard[]
+  clickable?: boolean
+}) {
+  return (
+    <section className="space-y-8">
+      <h2 className="text-2xl font-semibold tracking-[-0.03em] text-white md:text-3xl">{title}</h2>
+      <div className="grid grid-cols-2 gap-4 md:gap-5 lg:grid-cols-3 xl:grid-cols-4">
+        {people.map((person) => (
+          <ProfileCard key={`${title}-${person.name}`} person={person} clickable={clickable} />
+        ))}
+      </div>
+    </section>
+  )
+}
+
 export default function PeoplePage() {
   return (
-    <div className="min-h-screen overflow-hidden bg-background text-foreground">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_18%_0%,_rgba(127,139,153,0.18),_transparent_32%),radial-gradient(circle_at_90%_18%,_rgba(255,255,255,0.07),_transparent_25%),linear-gradient(180deg,_#050608_0%,_#0b0f14_58%,_#050608_100%)]" />
+    <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
 
-      <main className="yc-container py-20 md:py-28">
-        <section className="border-b border-white/10 pb-14">
-          <p className="section-kicker">people</p>
-          <h1 className="mt-5 text-6xl font-semibold leading-[0.95] tracking-[-0.075em] text-white md:text-8xl lg:text-9xl">
-            Leadership Team
-          </h1>
-          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {leadershipTeam.map((member) => (
-              <article
-                key={member.name}
-                className="group border border-white/10 bg-white/[0.035] p-6 transition hover:border-primary/45 hover:bg-white/[0.055]"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/15 bg-white/[0.06]">
-                    {member.photo ? (
-                      <img src={member.photo} alt={`${member.name} photo`} className="h-full w-full object-cover" />
-                    ) : (
-                      <span className="text-lg font-semibold tracking-[-0.03em] text-white/80">
-                        {initialsFromName(member.name)}
-                      </span>
-                    )}
-                  </div>
-                  <h2 className="text-2xl font-semibold tracking-[-0.03em] text-white">{member.name}</h2>
-                </div>
-
-                <Link
-                  href={member.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center border border-primary/35 bg-primary/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-primary"
-                >
-                  LinkedIn Profile
-                </Link>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="border-b border-white/10 py-14">
-          <h2 className="text-4xl font-semibold tracking-[-0.04em] text-white md:text-5xl">Business Head Spot</h2>
-          <Link
-            href="/partners"
-            className="mt-6 inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:bg-[#c5d3e0]"
-          >
-            Hiring Partners
-          </Link>
-        </section>
-
-        <section className="border-b border-white/10 py-14">
-          <h2 className="text-4xl font-semibold tracking-[-0.04em] text-white md:text-5xl">Talent Scouts Team</h2>
-          <ul className="mt-8 grid gap-4 md:grid-cols-2">
-            {talentScouts.map((scout) => (
-              <li
-                key={scout}
-                className="border border-white/10 bg-white/[0.035] px-5 py-5 text-base font-medium tracking-[-0.01em] text-white/85"
-              >
-                {scout}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="py-14">
-          <h2 className="text-4xl font-semibold tracking-[-0.04em] text-white md:text-5xl">Placed People</h2>
-          <ul className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {placedPeople.map((person) => (
-              <li
-                key={person}
-                className="border border-white/10 bg-white/[0.035] px-5 py-5 text-base font-medium tracking-[-0.01em] text-white/85"
-              >
-                {person}
-              </li>
-            ))}
-          </ul>
-        </section>
+      <main className="yc-container space-y-14 py-14 md:space-y-16 md:py-20">
+        <PeopleSection title="Leadership Team" people={leadershipTeam} clickable />
+        <PeopleSection title="Talent Partners" people={talentPartners} />
+        <PeopleSection title="Industry Partners" people={industryPartners} clickable />
+        <PeopleSection title="Members Placed" people={membersPlaced} />
       </main>
 
       <SiteFooter />
