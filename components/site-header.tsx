@@ -24,7 +24,7 @@ export function SiteHeader() {
         <nav className="flex items-center justify-between gap-10" aria-label="Primary navigation">
           
           <Link href="/" className="inline-flex items-center transition-opacity hover:opacity-75" aria-label="verveschool home">
-            <img src="./verveschool-logo.svg" alt="VerveSchool logo" className="h-10 w-auto md:h-12" />
+            <img src="/verveschool-logo.svg" alt="VerveSchool logo" className="h-10 w-auto md:h-12" />
           </Link>
 
           {/* Desktop navigation with larger text */}
