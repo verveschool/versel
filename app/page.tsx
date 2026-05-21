@@ -104,18 +104,14 @@ export default function HomePage() {
   <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
 
     <div>
-      <h2 className="max-w-5xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-6xl">
-        Share the role. We will send aligned candidates and replace hires that do not work out.
+      <h2 className="max-w-3xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
+        Share the role. We will send aligned candidates.
       </h2>
     </div>
 
     <div>
       <p className="text-lg leading-8 text-white/65">
-        If you are hiring for sales or counselling roles, share your requirements with us. Our team shortlists sincere early-career candidates aligned with your role.
-      </p>
-
-      <p className="mt-5 text-sm uppercase tracking-[0.18em] text-white/40">
-        Replacement coverage included.
+        If you are hiring for sales or counselling roles, share your requirements with us. Our team shortlists sincere early-career candidates aligned with your role and provides replacement coverage if a hire does not work out.
       </p>
 
       <Link
