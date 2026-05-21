@@ -28,7 +28,7 @@ export default function HomePage() {
       <main className="yc-container">
         <section className="grid min-h-[78vh] items-center gap-12 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:py-28">
           <div>
-            <h1 className="max-w-4xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl lg:text-6xl">
+            <h1 className="max-w-4xl text-3xl font-semibold leading-tight tracking-[-0.03em] text-white md:text-4xl lg:text-5xl">
               Hire sincere early-career sales talent without the noise.
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-white/72 md:text-xl md:leading-9">
