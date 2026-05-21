@@ -11,11 +11,11 @@ type PersonCard = {
 }
 
 const leadershipTeam: PersonCard[] = [
-  { name: "Hashirama", subtitle: "Founder & CEO", linkedin: "https://www.linkedin.com" },
-  { name: "Tobirama", subtitle: "Co-Founder & COO", linkedin: "https://www.linkedin.com" },
-  { name: "Konan", subtitle: "Head of Talent", linkedin: "https://www.linkedin.com" },
-  { name: "Mei Terumi", subtitle: "VP, Partnerships", linkedin: "https://www.linkedin.com" },
-  { name: "Kurama", subtitle: "Director, Growth", linkedin: "https://www.linkedin.com" },
+  { name: "A. Duggal", subtitle: "Co-founder, CEO", linkedin: "https://www.linkedin.com/in/okduggal/" },
+  { name: "Faraz Arif", subtitle: "Co-founder, COO", linkedin: "https://www.linkedin.com/in/arif-faraz/" },
+  { name: "Bhushan Kawale", subtitle: "Chief Business Officer", linkedin: "https://www.linkedin.com/in/bhushan-kawale-200220279/" },
+  { name: "Zubia Shah", subtitle: "Chief of Staff", linkedin: "https://www.linkedin.com/in/zubia-shah-11332a228/" },
+  { name: "Meehika Singh", subtitle: "Founder's Office", linkedin: "https://www.linkedin.com/in/meehika-singh-ab490b282/" },
 ]
 
 const talentPartners: PersonCard[] = [
@@ -26,10 +26,10 @@ const talentPartners: PersonCard[] = [
 ]
 
 const industryPartners: PersonCard[] = [
-  { name: "Aarav Menon", subtitle: "VP Sales, Northstar Labs", linkedin: "https://www.linkedin.com" },
-  { name: "Isha Rao", subtitle: "Head of Revenue, Orbit Systems", linkedin: "https://www.linkedin.com" },
-  { name: "Karan Bedi", subtitle: "Director GTM, Nimbus AI", linkedin: "https://www.linkedin.com" },
-  { name: "Naina Khurana", subtitle: "Chief Growth Officer, Cedar Tech", linkedin: "https://www.linkedin.com" },
+  { name: "Shrimn Nishit", subtitle: "SVP & Business Head, Vedantu", linkedin: "https://www.linkedin.com/in/shrimnnishit/" },
+  { name: "Nitin Solanki", subtitle: "SVP Business Development, Scaler", linkedin: "https://www.linkedin.com/in/nitin-solanki-b245b714a/" },
+  { name: "Atul Kumar Singh", subtitle: "Business Head, Infinity Learn", linkedin: "https://www.linkedin.com/in/atul-kumar-singh-71b49272/" },
+  { name: "Krishna Bandaru", subtitle: "Co-founder & CBO, Crio.do", linkedin: "https://www.linkedin.com/in/krishnabandaru/" },
 ]
 
 const membersPlaced: PersonCard[] = [
@@ -115,9 +115,9 @@ export default function PeoplePage() {
 
       <main className="yc-container space-y-14 py-14 md:space-y-16 md:py-20">
         <PeopleSection title="Leadership Team" people={leadershipTeam} clickable />
-        <PeopleSection title="Talent Partners" people={talentPartners} />
-        <PeopleSection title="Industry Partners" people={industryPartners} clickable />
-        <PeopleSection title="Members Placed" people={membersPlaced} />
+        <PeopleSection title="Talent Ops" people={talentPartners} />
+        <PeopleSection title="Industry Partners & Advisors" people={industryPartners} clickable />
+        <PeopleSection title="Placed Members" people={membersPlaced} />
       </main>
 
       <SiteFooter />
