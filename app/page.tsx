@@ -116,7 +116,6 @@ export default function HomePage() {
         </section>
 
         <section className="mb-20 border border-white/12 bg-white/[0.04] p-8 md:p-12 lg:p-16">
-          <div className="grid gap-10 lg:grid-cols-[1fr_0.72fr] lg:items-center">
             <div>
               <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
                 Share the role. We will send aligned candidates.
