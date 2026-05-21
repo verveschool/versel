@@ -27,15 +27,15 @@ export function SiteHeader() {
             <img src="/logo.png" alt="VerveSchool logo" className="h-8 w-auto md:h-10" />
           </Link>
 
-          {/* Desktop navigation with larger text */}
-          <div className="hidden items-center gap-10 text-lg md:text-xl text-foreground/62 md:flex">
+          {/* Navigation links */}
+          <div className="hidden items-center gap-8 text-sm md:text-base text-foreground/65 md:flex">
             {navLinks.map((link) => {
               const active = isActivePath(pathname, link.href)
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`transition-colors hover:text-foreground ${active ? "text-foreground" : "text-foreground/62"}`}
+                  className={`transition-colors hover:text-foreground ${active ? "text-foreground" : "text-foreground/65"}`}
                 >
                   {link.label}
                 </Link>
@@ -43,15 +43,15 @@ export function SiteHeader() {
             })}
           </div>
 
-          {/* Mobile navigation with bigger text too */}
-          <div className="flex items-center gap-6 text-base text-foreground/68 md:hidden">
-            {navLinks.slice(0, 4).map((link) => {
+          {/* Mobile navigation */}
+          <div className="flex items-center gap-4 text-xs md:hidden">
+            {navLinks.slice(0, 3).map((link) => {
               const active = isActivePath(pathname, link.href)
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`transition-colors hover:text-foreground ${active ? "text-foreground" : "text-foreground/68"}`}
+                  className={`transition-colors hover:text-foreground ${active ? "text-foreground" : "text-foreground/65"}`}
                 >
                   {link.label}
                 </Link>
