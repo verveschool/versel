@@ -29,7 +29,10 @@ const industryPartners: PersonCard[] = [
   { name: "Shrimn Nishit", subtitle: "SVP & Business Head, Vedantu", linkedin: "https://www.linkedin.com/in/shrimnnishit/" },
   { name: "Nitin Solanki", subtitle: "SVP Business Development, Scaler", linkedin: "https://www.linkedin.com/in/nitin-solanki-b245b714a/" },
   { name: "Atul Kumar Singh", subtitle: "Business Head, Infinity Learn", linkedin: "https://www.linkedin.com/in/atul-kumar-singh-71b49272/" },
-  { name: "Krishna Bandaru", subtitle: "Co-founder & CBO, Crio.do", linkedin: "https://www.linkedin.com/in/krishnabandaru/" },
+  { name: "Krishna Bandaru", subtitle: "Co-founder, Crio.do", linkedin: "https://www.linkedin.com/in/krishnabandaru/" },
+  { name: "Sagar Dudani", subtitle: "Co-founder, Prepca", linkedin: "https://www.linkedin.com/in/sagar-dudani-b33b4aaa/" },
+  { name: "Ravi Kumar Gupta", subtitle: "Co-founder, AlmaBetter", linkedin: "https://www.linkedin.com/in/ravi-kumar-gupta/" },
+  { name: "Nikhil Kaushik", subtitle: "Co-founder, ProjectStudio", linkedin: "https://www.linkedin.com/in/nikhilka/" },
 ]
 
 const membersPlaced: PersonCard[] = [
