@@ -3,35 +3,18 @@ import Link from "next/link"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 const filterSteps = [
-  "Source ambitious early-career operators before the market can price them",
-  "Pressure-test voice, follow-through, coachability, and speed to clarity",
-  "Put only the sharpest through partner-specific sales simulations",
-  "Keep post-start signal flowing so hiring teams know who is compounding",
+  "Source sincere early-career sales talent through active talent scouts",
+  "Filter for sincerity, role fit, and intent to stay",
+  "Align shortlisted candidates to partner role requirements",
+  "Support replacement coverage when a hire does not work out",
 ]
 
-const selectedPeople = [
-  {
-    label: "01",
-    title: "The Closer",
-    copy: "calm under pressure, direct on money, and able to move a stranger from doubt to decision without sounding rehearsed.",
-  },
-  {
-    label: "02",
-    title: "The Prospector",
-    copy: "high-activity, low-ego, and comfortable turning cold lists into booked conversations with daily consistency.",
-  },
-  {
-    label: "03",
-    title: "The Account Builder",
-    copy: "patient enough to listen, commercial enough to qualify, and disciplined enough to protect pipeline quality.",
-  },
-]
 
 const metrics = [
   { value: "10-14", label: "Days to shortlist" },
   { value: "90", label: "Day replacement window" },
   { value: "0", label: "Upfront candidate fees" },
-  { value: "1", label: "Standard: hire for outcomes" },
+  { value: "100%", label: "Replacement guarantee focus" },
 ]
 
 const hiringPartners = ["Scaler", "Vedantu", "Crio.Do", "Infinity Learn", "AlmaBetter", "Prepca"]
@@ -45,19 +28,20 @@ export default function HomePage() {
       <main className="yc-container">
         <section className="grid min-h-[78vh] items-center gap-12 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:py-28">
           <div>
+            <h1 className="max-w-4xl text-3xl font-semibold leading-tight tracking-[-0.03em] text-white md:text-4xl lg:text-5xl">
+              Hire sincere early-career sales talent without the noise.
             <h1 className="max-w-5xl text-5xl font-semibold leading-[0.95] tracking-[-0.055em] text-white md:text-7xl lg:text-8xl">
               the world moves for those who do.
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-white/72 md:text-xl md:leading-9">
-              VerveSchool finds, tests, and backs early-career sales talent for hiring partners who cannot afford another
-              charming conversation that does not hold up on the floor.
+              VerveSchool runs an active talent scout network to filter and align sincere candidates for real entry sales roles. We offer replacement guarantee, not performance guarantee.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/partners"
                 className="inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:bg-[#c5d3e0]"
               >
-                Hire through the filter
+                Hire sincere sales talent
               </Link>
               <a
                 href="mailto:talent@verveschool.com"
@@ -70,7 +54,7 @@ export default function HomePage() {
 
           <div className="border border-white/12 bg-white/[0.04] p-6 shadow-2xl shadow-black/40 backdrop-blur">
             <div className="border border-white/10 bg-black/45 p-6">
-              <p className="text-[12px] uppercase tracking-[0.3em] text-white/45">partner signal</p>
+              <p className="text-[12px] uppercase tracking-[0.3em] text-white/45">partner terms</p>
               <div className="mt-8 space-y-5">
                 {metrics.map((metric) => (
                   <div key={metric.label} className="flex items-end justify-between border-b border-white/10 pb-5">
@@ -101,37 +85,14 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="border-y border-white/10 py-16 md:py-24">
-          <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
-            <div>
-              <p className="section-kicker">the hiring problem</p>
-              <h2 className="mt-4 max-w-xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
-                sales hiring is noisy when candidates can interview well in short windows.
-              </h2>
-            </div>
-            <div className="grid gap-5 md:grid-cols-3">
-              {[
-                "resumes and interviews are useful, but they don't always reveal real conversion instinct.",
-                "interviews still matter, and they work best when paired with stronger on-the-job signal.",
-                "weak entry sales hires consume manager time long before revenue appears.",
-              ].map((copy) => (
-                <div key={copy} className="border border-white/10 bg-white/[0.035] p-6">
-                  <p className="text-base leading-7 text-white/70">{copy}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="grid gap-12 py-16 md:py-24 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <div>
             <p className="section-kicker">the filter</p>
             <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
-              we are not a classroom. we are a sorting mechanism.
+              we are a practical hiring filter, not a training program.
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-8 text-white/65">
-              Partners bring the role, market, and revenue motion. We return people who have already been tested for the
-              behaviors that make junior sales hires worth a manager&apos;s time.
+              Partners share role context, market, and expectations. Our active talent scouts filter and align sincere candidates who are ready for the role.
             </p>
           </div>
           <div className="space-y-4">
@@ -149,46 +110,14 @@ export default function HomePage() {
             <div>
               <p className="section-kicker">replacement guarantee</p>
               <h2 className="mt-4 text-5xl font-semibold leading-none tracking-[-0.06em] text-white md:text-7xl">
-                if the person does not perform, we replace them.
+                if a hire does not work out, we provide a replacement.
               </h2>
             </div>
             <div className="border border-primary/40 bg-primary/10 p-7">
               <p className="text-xl leading-9 text-white/78">
-                The guarantee keeps the incentive structure clean: partners pay for durable sales capacity, not promises,
-                certificates, or attendance. The filter is accountable after the hire starts.
+                We do not promise performance outcomes. We stand behind fit with a replacement guarantee and keep hiring risk practical for partner teams.
               </p>
             </div>
-          </div>
-        </section>
-
-        <section className="py-16 md:py-24">
-          <div className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <div>
-              <p className="section-kicker">Selected People</p>
-              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-white md:text-5xl">
-                the candidates we let through look different in motion.
-              </h2>
-            </div>
-            <div className="max-w-md space-y-5">
-              <p className="text-base leading-7 text-white/58">
-                Not a bench. Not a batch. Specific people selected for specific partner mandates.
-              </p>
-              <Link
-                href="/people"
-                className="inline-flex text-[12px] font-semibold uppercase tracking-[0.2em] text-primary transition-colors hover:text-white"
-              >
-                View Selected People
-              </Link>
-            </div>
-          </div>
-          <div className="grid gap-5 md:grid-cols-3">
-            {selectedPeople.map((person) => (
-              <article key={person.title} className="border border-white/10 bg-white/[0.035] p-7">
-                <p className="font-mono text-sm text-primary">{person.label}</p>
-                <h3 className="mt-10 text-3xl font-semibold tracking-[-0.04em] text-white">{person.title}</h3>
-                <p className="mt-5 text-base leading-7 text-white/64">{person.copy}</p>
-              </article>
-            ))}
           </div>
         </section>
 
@@ -197,13 +126,12 @@ export default function HomePage() {
             <div>
               <p className="section-kicker">partner CTA</p>
               <h2 className="mt-4 max-w-3xl text-5xl font-semibold leading-none tracking-[-0.06em] text-white md:text-7xl">
-                pair interviews with signal. hire with conviction.
+                share the role. we will send aligned, sincere candidates.
               </h2>
             </div>
             <div>
               <p className="text-lg leading-8 text-white/70">
-                If you are hiring entry sales talent, tell us the role, target market, ticket size, and manager bandwidth.
-                We will show you who survives the filter.
+                If you are hiring entry sales talent, share role details and constraints. Our team will shortlist sincere candidates aligned to your requirement, with replacement coverage in place.
               </p>
               <Link
                 href="/partners"
