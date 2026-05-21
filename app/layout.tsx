@@ -6,11 +6,9 @@ export const metadata: Metadata = {
   title: "VerveSchool",
   description: "VerveSchool filters, tests, and backs early-career sales talent for hiring partners who need sharper signal, faster shortlists, and replacement-backed confidence.",
   icons: {
-    icon: [
-      { url: "./verveschool-logo.svg", type: "image/svg+xml" },
-    ],
-    shortcut: [{ url: "./verveschool-logo.svg", type: "image/svg+xml" }],
-    apple: [{ url: "./verveschool-logo.svg", type: "image/svg+xml" }],
+    icon: "/verveschool-logo.svg",
+    shortcut: "/verveschool-logo.svg",
+    apple: "/verveschool-logo.svg",
   },
 }
 
