@@ -12,9 +12,9 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-white/10">
       <div className="yc-container py-8">
-        <div className="flex flex-col gap-5 text-[13px] text-foreground/62 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-5 text-[13px] text-foreground/65 md:flex-row md:items-center md:justify-between">
           <p>© 2026 VerveSchool</p>
-          <div className="flex flex-wrap gap-x-6 gap-y-3">
+          <div className="flex flex-wrap gap-x-6 gap-y-3 text-foreground/65">
             {footerLinks.map((link) => (
               <Link key={link.href} href={link.href} className="transition-colors hover:text-foreground">
                 {link.label}
