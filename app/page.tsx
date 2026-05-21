@@ -16,7 +16,14 @@ const metrics = [
   { value: "₹0", label: "Upfront hiring fees" },
 ]
 
-const hiringPartners = ["Scaler", "Vedantu", "Crio.Do", "Infinity Learn", "AlmaBetter", "Prepca"]
+const hiringPartners = [
+  { name: "Prepca", src: "/logos/prepca.png", className: "h-8" },
+  { name: "Infinity Learn", src: "/logos/infinity-learn.png", className: "h-11" },
+  { name: "Vedantu", src: "/logos/vedantu.png", className: "h-10" },
+  { name: "AlmaBetter", src: "/logos/almabetter.png", className: "h-8" },
+  { name: "Crio.Do", src: "/logos/crio-do.png", className: "h-10" },
+  { name: "Scaler", src: "/logos/scaler.png", className: "h-7" },
+]
 
 export default function HomePage() {
   return (
@@ -71,10 +78,15 @@ export default function HomePage() {
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
               {hiringPartners.map((partner) => (
                 <div
-                  key={partner}
-                  className="flex h-20 items-center justify-center border border-white/15 bg-white/[0.02] px-4 text-center text-lg font-semibold tracking-wide text-white/75 grayscale"
+                  key={partner.name}
+                  className="flex h-20 items-center justify-center border border-white/15 bg-white/[0.02] px-4"
                 >
-                  {partner}
+                  <img
+                    src={partner.src}
+                    alt={`${partner.name} logo`}
+                    className={`w-auto max-w-full object-contain opacity-80 grayscale brightness-0 invert ${partner.className}`}
+                    loading="lazy"
+                  />
                 </div>
               ))}
             </div>
