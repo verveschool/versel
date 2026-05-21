@@ -46,7 +46,7 @@ export default function HomePage() {
         <section className="grid min-h-[78vh] items-center gap-12 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:py-28">
           <div>
             <h1 className="max-w-5xl text-5xl font-semibold leading-[0.95] tracking-[-0.055em] text-white md:text-7xl lg:text-8xl">
-              The world moves for those who do.
+              the world moves for those who do.
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-white/72 md:text-xl md:leading-9">
               VerveSchool finds, tests, and backs early-career sales talent for hiring partners who cannot afford another
