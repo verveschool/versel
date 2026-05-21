@@ -30,6 +30,8 @@ export default function HomePage() {
           <div>
             <h1 className="max-w-4xl text-3xl font-semibold leading-tight tracking-[-0.03em] text-white md:text-4xl lg:text-5xl">
               Hire sincere early-career sales talent without the noise.
+            <h1 className="max-w-5xl text-5xl font-semibold leading-[0.95] tracking-[-0.055em] text-white md:text-7xl lg:text-8xl">
+              the world moves for those who do.
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-white/72 md:text-xl md:leading-9">
               VerveSchool runs an active talent scout network to filter and align sincere candidates for real entry sales roles. We offer replacement guarantee, not performance guarantee.
