@@ -58,8 +58,7 @@ export default function HomePage() {
 
           <div className="border border-white/12 bg-white/[0.04] p-6 shadow-2xl shadow-black/40 backdrop-blur">
             <div className="border border-white/10 bg-black/45 p-6">
-              <p className="text-[12px] uppercase tracking-[0.3em] text-white/45">partner terms</p>
-              <div className="mt-8 space-y-5">
+              <div className="space-y-5">
                 {metrics.map((metric) => (
                   <div key={metric.label} className="flex items-end justify-between border-b border-white/10 pb-5">
                     <span className="text-5xl font-semibold tracking-[-0.06em] text-white">{metric.value}</span>
