@@ -123,6 +123,7 @@ export default function HomePage() {
     <div>
       <p className="text-lg leading-8 text-white/65">
         If you are hiring for sales or business development roles, share your requirements with us. VerveSchool shortlists sincere candidates aligned with your role and provides replacement coverage if a hire does not work out.
+      </p>
       <Link
         href="/partners"
         className="mt-8 inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:opacity-90"
