@@ -32,7 +32,7 @@ export default function HomePage() {
       <SiteHeader />
 
       <main className="yc-container">
-        <section className="grid min-h-[72vh] items-center gap-12 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:py-22">
+        <section className="grid min-h-[74vh] items-center gap-12 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:py-24">
           <div>
             <h1 className="max-w-4xl text-3xl font-semibold leading-tight tracking-[-0.03em] text-white md:text-4xl lg:text-5xl">
               Hire sincere talent that can sell, connect, and stay.
