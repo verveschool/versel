@@ -32,7 +32,7 @@ export default function HomePage() {
       <SiteHeader />
 
       <main className="yc-container">
-        <section className="grid min-h-[78vh] items-center gap-12 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:py-28">
+        <section className="grid min-h-[72vh] items-center gap-12 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:py-22">
           <div>
             <h1 className="max-w-4xl text-3xl font-semibold leading-tight tracking-[-0.03em] text-white md:text-4xl lg:text-5xl">
               Hire sincere talent that can sell, connect, and stay.
@@ -45,7 +45,7 @@ export default function HomePage() {
                 href="/partners"
                 className="inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:opacity-90"
               >
-                Hire sincere sales talent
+                Hire sincere talent
               </Link>
               <a
                 href="https://wa.me/917042873035"
@@ -95,7 +95,7 @@ export default function HomePage() {
         <section className="grid gap-12 py-16 md:py-24 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <div>
             <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
-              How we help you hire pre-filtered candidates for sales roles
+              How hiring works with VerveSchool
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-8 text-white/65">
               Partners share role details and hiring constraints. Our team filters and aligns candidates who are serious and ready to join.
@@ -122,9 +122,7 @@ export default function HomePage() {
 
     <div>
       <p className="text-lg leading-8 text-white/65">
-        If you are hiring for sales or counselling roles, share your requirements with us. Our team shortlists sincere early-career candidates aligned with your role and provides replacement coverage if a hire does not work out.
-      </p>
-
+        If you are hiring for sales or business development roles, share your requirements with us. VerveSchool shortlists sincere candidates aligned with your role and provides replacement coverage if a hire does not work out.
       <Link
         href="/partners"
         className="mt-8 inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:opacity-90"
