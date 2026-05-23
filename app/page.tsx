@@ -35,10 +35,10 @@ export default function HomePage() {
         <section className="grid min-h-[78vh] items-center gap-12 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:py-28">
           <div>
             <h1 className="max-w-4xl text-3xl font-semibold leading-tight tracking-[-0.03em] text-white md:text-4xl lg:text-5xl">
-              Hire sincere sales talent for edtech teams.
+              Hire sincere talent that can sell, connect, and stay.
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-white/65 md:text-xl md:leading-9">
-              VerveSchool helps edtech companies hire sincere candidates for sales and counselling roles through an active talent scout network.
+              VerveSchool helps companies hire frontline talent through an active scout network built for speed and long-term fit.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
