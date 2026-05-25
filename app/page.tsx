@@ -34,7 +34,7 @@ export default function HomePage() {
       <main className="yc-container">
         <section className="grid min-h-[74vh] items-center gap-12 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:py-24">
           <div>
-            <h1 className="max-w-4xl text-3xl font-semibold leading-tight tracking-[-0.03em] text-white md:text-4xl lg:text-5xl">
+            <h1 className="max-w-4xl font-semibold text-white">
               Hire sincere talent that can sell, connect, and stay.
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-white/65 md:text-xl md:leading-9">
@@ -94,7 +94,7 @@ export default function HomePage() {
 
         <section className="grid gap-12 py-16 md:py-24 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <div>
-            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
+            <h2 className="font-semibold text-white">
               How hiring works with VerveSchool
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-8 text-white/65">
@@ -115,7 +115,7 @@ export default function HomePage() {
   <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
 
     <div>
-      <h2 className="max-w-3xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl">
+      <h2 className="max-w-3xl font-semibold text-white">
         Share the role. We will send aligned candidates.
       </h2>
     </div>
