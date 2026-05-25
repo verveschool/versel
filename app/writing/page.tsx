@@ -5,10 +5,22 @@ import { formatWritingDate, getAllWriting } from "@/lib/writing"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 export const metadata: Metadata = {
-  title: "Writing | verveschool",
-  description: "Long-form notes from verveschool on sales hiring, early-career talent, ramp, and partner operating systems.",
+  title: "Writing",
+  description:
+    "Read VerveSchool essays on sales hiring, early-career talent development, and practical operating notes for growth teams.",
   alternates: {
     canonical: "/writing",
+  },
+  openGraph: {
+    title: "Writing",
+    description:
+      "Read VerveSchool essays on sales hiring, early-career talent development, and practical operating notes for growth teams.",
+    url: "/writing",
+  },
+  twitter: {
+    title: "Writing",
+    description:
+      "Read VerveSchool essays on sales hiring, early-career talent development, and practical operating notes for growth teams.",
   },
 }
 

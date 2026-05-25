@@ -6,6 +6,8 @@ import { useState, useEffect } from "react"
 
 type PartnerVisualVariant = "risk" | "signal" | "filter" | "process" | "guarantee" | "focus"
 
+
+
 const visualDetails: Record<PartnerVisualVariant, { eyebrow: string; title: string; metric: string }> = {
   risk: { eyebrow: "Risk Map", title: "Missed target compounds", metric: "90d" },
   signal: { eyebrow: "Signal Gap", title: "Confidence is not conversion", metric: "4x" },

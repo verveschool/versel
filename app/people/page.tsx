@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 
 import { SiteFooter } from "@/components/site-footer"
@@ -9,6 +10,28 @@ type PersonCard = {
   image?: string
   linkedin?: string
 }
+
+export const metadata: Metadata = {
+  title: "People",
+  description:
+    "Meet the VerveSchool leadership, talent partners, and industry advisors helping candidates and hiring teams build better sales outcomes.",
+  alternates: {
+    canonical: "/people",
+  },
+  openGraph: {
+    title: "People",
+    description:
+      "Meet the VerveSchool leadership, talent partners, and industry advisors helping candidates and hiring teams build better sales outcomes.",
+    url: "/people",
+  },
+  twitter: {
+    title: "People",
+    description:
+      "Meet the VerveSchool leadership, talent partners, and industry advisors helping candidates and hiring teams build better sales outcomes.",
+  },
+}
+
+
 
 const leadershipTeam: PersonCard[] = [
   { name: "A. Duggal", subtitle: "Co-founder, CEO", linkedin: "https://www.linkedin.com/in/okduggal/" },
