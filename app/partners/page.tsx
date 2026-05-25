@@ -47,24 +47,7 @@ function PartnerVisual({ variant }: { variant: PartnerVisualVariant }) {
 
 export default function PartnersPage() {
   const [activeSection, setActiveSection] = useState("")
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("[data-section]")
-      let current = ""
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect()
-        const sectionName = section.getAttribute("data-section")
-        if (rect.top < 200 && sectionName) {
-          current = sectionName
-        }
-      })
-      setActiveSection(current)
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  const [headerOffset, setHeaderOffset] = useState(96)
 
   const sections = [
     "hiring-risk",
@@ -75,6 +58,55 @@ export default function PartnersPage() {
     "partner-fit",
     "next-steps",
   ]
+
+  const scrollToSection = (section: string) => {
+    const element = document.querySelector(`[data-section="${section}"]`) as HTMLElement | null
+    if (!element) return
+
+    const top = element.getBoundingClientRect().top + window.scrollY - headerOffset - 16
+    window.scrollTo({ top, behavior: "smooth" })
+  }
+
+  useEffect(() => {
+    const header = document.querySelector("header")
+    const updateOffset = () => {
+      const height = header?.getBoundingClientRect().height
+      setHeaderOffset(height ? Math.round(height) : 96)
+    }
+    updateOffset()
+    window.addEventListener("resize", updateOffset)
+
+    return () => {
+      window.removeEventListener("resize", updateOffset)
+    }
+  }, [])
+
+  useEffect(() => {
+    const sectionElements = Array.from(document.querySelectorAll("[data-section]")) as HTMLElement[]
+    if (!sectionElements.length) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntries = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
+        if (!visibleEntries.length) return
+
+        const nextActive = visibleEntries[0].target.getAttribute("data-section") ?? ""
+        setActiveSection(nextActive)
+      },
+      {
+        rootMargin: `-${headerOffset + 20}px 0px -45% 0px`,
+        threshold: [0.2, 0.35, 0.5, 0.7],
+      },
+    )
+
+    sectionElements.forEach((section) => observer.observe(section))
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [headerOffset])
 
   return (
     <div className="min-h-screen">
@@ -88,9 +120,32 @@ export default function PartnersPage() {
               A Filtered Sales-Talent Pipeline With a Replacement Guarantee
             </h1>
           </div>
+          <div className="mb-10 rounded-md border border-border bg-card/70 p-4 md:hidden">
+            <details>
+              <summary className="cursor-pointer list-none text-sm font-semibold tracking-wide text-foreground [&::-webkit-details-marker]:hidden">
+                On this page
+              </summary>
+              <ul className="mt-4 space-y-2">
+                {sections.map((section) => (
+                  <li key={`mobile-${section}`}>
+                    <button
+                      onClick={() => scrollToSection(section)}
+                      className={`w-full rounded-sm px-2 py-2 text-left text-sm transition-colors ${
+                        activeSection === section
+                          ? "bg-primary/10 font-semibold text-primary"
+                          : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                      }`}
+                    >
+                      {section.replace(/-/g, " ")}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          </div>
 
           {/* Hiring Risk */}
-          <section data-section="hiring-risk" className="yc-section">
+          <section data-section="hiring-risk" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
             <h2>Sales hiring is risk transfer</h2>
             <div className="grid grid-cols-2 gap-16 mb-12">
               <div className="yc-text-block">
@@ -109,7 +164,7 @@ export default function PartnersPage() {
           </section>
 
           {/* Bad Hires */}
-          <section data-section="bad-hires" className="yc-section">
+          <section data-section="bad-hires" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
             <h2>Bad sales hires hide in plain sight</h2>
             <div className="yc-text-block mb-12">
               <p className="mb-6">They interview well. They sound confident. They understand the role on paper.</p>
@@ -127,7 +182,7 @@ export default function PartnersPage() {
           </section>
 
           {/* Signal Filtering */}
-          <section data-section="signal-filtering" className="yc-section">
+          <section data-section="signal-filtering" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
             <h2>We filter for signal before polish</h2>
             <div className="yc-text-block mb-12">
               <p className="mb-6">We source English-fluent Gen Z sales talent for specific partner mandates.</p>
@@ -145,7 +200,7 @@ export default function PartnersPage() {
           </section>
 
           {/* Selection Pressure */}
-          <section data-section="selection-pressure" className="yc-section">
+          <section data-section="selection-pressure" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
             <h2>Selection pressure creates the shortlist</h2>
             <div className="yc-text-block mb-8">
               <h3 className="mb-8">1. Mandate-led scouting</h3>
@@ -181,7 +236,7 @@ export default function PartnersPage() {
           </section>
 
           {/* Replacement Guarantee */}
-          <section data-section="replacement-guarantee" className="yc-section">
+          <section data-section="replacement-guarantee" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
             <h2>The replacement guarantee changes the incentive</h2>
             <div className="grid grid-cols-2 gap-16 mb-12">
               <div className="yc-text-block">
@@ -215,7 +270,7 @@ export default function PartnersPage() {
           </section>
 
           {/* Partner Fit */}
-          <section data-section="partner-fit" className="yc-section">
+          <section data-section="partner-fit" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
             <h2>Built for partners who cannot afford mis-hires</h2>
             <div className="yc-text-block mb-12">
               <p className="mb-6">We work best where one wrong sales hire has a visible cost.</p>
@@ -232,7 +287,7 @@ export default function PartnersPage() {
           </section>
 
           {/* Next Steps */}
-          <section data-section="next-steps" className="yc-section">
+          <section data-section="next-steps" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
             <h2>Partner with Verveschool</h2>
             <div className="yc-text-block mb-12">
               <p className="mb-6">
@@ -249,18 +304,19 @@ export default function PartnersPage() {
         </main>
 
         {/* Table of Contents */}
-        <aside className="hidden md:block sticky top-20 pt-20 pb-20 px-6 h-screen overflow-y-auto flex-shrink-0 border-l border-border">
-          <div className="text-[12px] font-medium text-muted-foreground mb-4">On this page</div>
-          <ul className="space-y-2">
+        <aside className="hidden md:block sticky top-20 pt-20 pb-20 px-8 h-screen overflow-y-auto flex-shrink-0 border-l border-border">
+          <div className="mb-5 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground/90">
+            On this page
+          </div>
+          <ul className="space-y-1.5">
             {sections.map((section) => (
               <li key={section}>
                 <button
-                  onClick={() => {
-                    const element = document.querySelector(`[data-section="${section}"]`)
-                    element?.scrollIntoView({ behavior: "smooth" })
-                  }}
-                  className={`text-[13px] text-left hover:text-primary transition-colors ${
-                    activeSection === section ? "font-bold text-primary" : "text-foreground"
+                  onClick={() => scrollToSection(section)}
+                  className={`w-full rounded-sm px-2 py-1.5 text-left text-[13px] capitalize transition-colors ${
+                    activeSection === section
+                      ? "bg-primary/10 font-semibold text-primary"
+                      : "text-muted-foreground hover:bg-muted hover:text-foreground"
                   }`}
                 >
                   {section.replace(/-/g, " ")}
