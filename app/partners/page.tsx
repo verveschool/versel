@@ -91,10 +91,10 @@ export default function PartnersPage() {
 
           {/* Hiring Risk */}
           <section data-section="hiring-risk" className="yc-section">
-            <h2>sales hiring is risk transfer</h2>
+            <h2>Sales hiring is risk transfer</h2>
             <div className="grid grid-cols-2 gap-16 mb-12">
               <div className="yc-text-block">
-                <p className="mb-6">every sales hire looks cheaper before they miss target.</p>
+                <p className="mb-6">Every sales hire looks cheaper before they miss target.</p>
                 <p className="mb-6">
                   the real cost is not salary. it is lost pipeline, manager attention, damaged follow up, and the months
                   you spend discovering what interviews alone could not show.
@@ -110,9 +110,9 @@ export default function PartnersPage() {
 
           {/* Bad Hires */}
           <section data-section="bad-hires" className="yc-section">
-            <h2>bad sales hires hide in plain sight</h2>
+            <h2>Bad sales hires hide in plain sight</h2>
             <div className="yc-text-block mb-12">
-              <p className="mb-6">they interview well. they sound confident. they understand the role on paper.</p>
+              <p className="mb-6">They interview well. They sound confident. They understand the role on paper.</p>
               <p className="mb-6">
                 then rejection compounds. discipline drops. notes get thin. follow ups slip. the manager becomes the
                 safety net for work the hire should own.
@@ -128,9 +128,9 @@ export default function PartnersPage() {
 
           {/* Signal Filtering */}
           <section data-section="signal-filtering" className="yc-section">
-            <h2>we filter for signal before polish</h2>
+            <h2>We filter for signal before polish</h2>
             <div className="yc-text-block mb-12">
-              <p className="mb-6">we source english fluent gen z sales talent for specific partner mandates.</p>
+              <p className="mb-6">We source English-fluent Gen Z sales talent for specific partner mandates.</p>
               <p className="mb-6">
                 Resumes are not the product. Filtered signal is. We screen for hunger, focus, listening quality,
                 feedback absorption, recovery after rejection, and the ability to stay precise under pressure.
@@ -146,34 +146,34 @@ export default function PartnersPage() {
 
           {/* Selection Pressure */}
           <section data-section="selection-pressure" className="yc-section">
-            <h2>selection pressure creates the shortlist</h2>
+            <h2>Selection pressure creates the shortlist</h2>
             <div className="yc-text-block mb-8">
-              <h3 className="mb-8">1. mandate-led scouting</h3>
+              <h3 className="mb-8">1. Mandate-led scouting</h3>
               <p className="mb-12">
-                we do not hand you a generic bench. we hunt against your role, city, compensation, language needs, and
+                We do not hand you a generic bench. We hunt against your role, city, compensation, language needs, and
                 sales motion.
               </p>
 
-              <h3 className="mb-8">2. founder screen</h3>
+              <h3 className="mb-8">2. Founder screen</h3>
               <p className="mb-12">
-                faraz arif (co-founder, 9+ years exp) personally screens every candidate for traits that deserve deeper validation: persistence, clarity, humility, and recovery.
+                Faraz Arif (co-founder, 9+ years exp) personally screens every candidate for traits that deserve deeper validation: persistence, clarity, humility, and recovery.
               </p>
 
-              <h3 className="mb-8">3. pressure tasks</h3>
+              <h3 className="mb-8">3. Pressure tasks</h3>
               <p className="mb-12">
                 candidates are tested through realistic sales situations: objection handling, follow up discipline,
                 call thinking, and response to direct feedback.
               </p>
 
-              <h3 className="mb-8">4. partner calibration</h3>
+              <h3 className="mb-8">4. Partner calibration</h3>
               <p className="mb-12">
-                we map the final shortlist to your product, buyer, targets, and floor reality so you are choosing from
+                We map the final shortlist to your product, buyer, targets, and floor reality so you are choosing from
                 candidates who fit the actual job, not a generic sales profile.
               </p>
 
-              <h3 className="mb-8">5. post-joining support</h3>
+              <h3 className="mb-8">5. Post-joining support</h3>
               <p>
-                training and coaching are operational support for the guarantee. once a hire starts, we review calls,
+                Training and coaching are operational support for the guarantee. Once a hire starts, we review calls,
                 tighten talk tracks, and identify replacement risk early.
               </p>
             </div>
@@ -182,31 +182,31 @@ export default function PartnersPage() {
 
           {/* Replacement Guarantee */}
           <section data-section="replacement-guarantee" className="yc-section">
-            <h2>the replacement guarantee changes the incentive</h2>
+            <h2>The replacement guarantee changes the incentive</h2>
             <div className="grid grid-cols-2 gap-16 mb-12">
               <div className="yc-text-block">
-                <h3>90 day replacement guarantee</h3>
+                <h3>90-day replacement guarantee</h3>
                 <p className="mt-4">
-                  if the hire does not perform, we replace them. the pipeline is accountable after the offer letter, not
+                  If the hire does not perform, we replace them. The pipeline is accountable after the offer letter, not
                   just before it.
                 </p>
               </div>
               <div>
-                <h3>aligned payment terms</h3>
-                <p className="mt-4">net 30 terms keep incentives tied to real partner outcomes, not resume delivery.</p>
+                <h3>Aligned payment terms</h3>
+                <p className="mt-4">Net 30 terms keep incentives tied to real partner outcomes, not resume delivery.</p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-16 mb-12">
               <div className="yc-text-block">
-                <h3>risk monitoring</h3>
+                <h3>Risk monitoring</h3>
                 <p className="mt-4">
-                  we look for early warning signs in activity, call quality, follow up habits, and feedback response.
+                  We look for early warning signs in activity, call quality, follow-up habits, and feedback response.
                 </p>
               </div>
               <div>
-                <h3>targeted coaching</h3>
+                <h3>Targeted coaching</h3>
                 <p className="mt-4">
-                  coaching exists to protect the guarantee: sharper scripts, better questions, cleaner pacing, and faster
+                  Coaching exists to protect the guarantee: sharper scripts, better questions, cleaner pacing, and faster
                   correction when performance drifts.
                 </p>
               </div>
@@ -216,9 +216,9 @@ export default function PartnersPage() {
 
           {/* Partner Fit */}
           <section data-section="partner-fit" className="yc-section">
-            <h2>built for partners who cannot afford mis-hires</h2>
+            <h2>Built for partners who cannot afford mis-hires</h2>
             <div className="yc-text-block mb-12">
-              <p className="mb-6">we work best where one wrong sales hire has a visible cost.</p>
+              <p className="mb-6">We work best where one wrong sales hire has a visible cost.</p>
               <p className="mb-6">
                 if your team needs dependable frontline salespeople in tier 1 cities, and you want interviews supported by
                 stronger signal, we can build the pipeline around your hiring bar.
@@ -233,11 +233,11 @@ export default function PartnersPage() {
 
           {/* Next Steps */}
           <section data-section="next-steps" className="yc-section">
-            <h2>partner with verveschool</h2>
+            <h2>Partner with Verveschool</h2>
             <div className="yc-text-block mb-12">
               <p className="mb-6">
-                if you want a tighter sales hiring funnel with accountability after joining, send us the role and the
-                target profile. we will tell you if we can build the pipeline.
+                If you want a tighter sales hiring funnel with accountability after joining, send us the role and the
+                target profile. We will tell you if we can build the pipeline.
               </p>
               <ul className="space-y-4">
                 <li className="font-medium">phone: +91 81304 30683</li>
