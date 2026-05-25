@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 
 import { SiteHeader } from "@/components/site-header"
@@ -8,6 +9,28 @@ const filterSteps = [
   "Align shortlisted candidates with partner requirements",
   "Provide replacement coverage if a hire does not work out",
 ]
+
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "VerveSchool helps teams hire frontline sales talent through scout-led sourcing, role-fit filtering, and replacement-backed hiring confidence.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Home",
+    description:
+      "VerveSchool helps teams hire frontline sales talent through scout-led sourcing, role-fit filtering, and replacement-backed hiring confidence.",
+    url: "/",
+  },
+  twitter: {
+    title: "Home",
+    description:
+      "VerveSchool helps teams hire frontline sales talent through scout-led sourcing, role-fit filtering, and replacement-backed hiring confidence.",
+  },
+}
+
+
 
 const metrics = [
   { value: "10%", label: "Placement fee on fixed CTC" },

@@ -6,10 +6,22 @@ import { MarkdownContent } from "@/lib/markdown"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 export const metadata: Metadata = {
-  title: "Book | verveschool",
-  description: "An 80-page verveschool field guide on selling better, serialized as a web-native reading experience.",
+  title: "Book",
+  description:
+    "Read the VerveSchool field guide on selling better, published as a chapter-by-chapter web experience for founders and revenue teams.",
   alternates: {
     canonical: "/book",
+  },
+  openGraph: {
+    title: "Book",
+    description:
+      "Read the VerveSchool field guide on selling better, published as a chapter-by-chapter web experience for founders and revenue teams.",
+    url: "/book",
+  },
+  twitter: {
+    title: "Book",
+    description:
+      "Read the VerveSchool field guide on selling better, published as a chapter-by-chapter web experience for founders and revenue teams.",
   },
 }
 
