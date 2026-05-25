@@ -50,41 +50,50 @@ export function SiteHeader() {
               aria-controls="mobile-nav-menu"
               aria-label="Toggle navigation menu"
               onClick={() => setMobileMenuOpen((open) => !open)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/15 bg-background/80 text-foreground transition-colors hover:bg-white/10"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-none border border-white/20 bg-background/85 text-foreground transition-all duration-200 hover:bg-white/12 active:scale-[0.97] active:bg-white/20"
             >
               <span className="sr-only">Open menu</span>
               <div className="flex flex-col gap-1.5">
-                <span className={`h-0.5 w-5 bg-current transition-transform ${mobileMenuOpen ? "translate-y-2 rotate-45" : ""}`} />
-                <span className={`h-0.5 w-5 bg-current transition-opacity ${mobileMenuOpen ? "opacity-0" : "opacity-100"}`} />
-                <span className={`h-0.5 w-5 bg-current transition-transform ${mobileMenuOpen ? "-translate-y-2 -rotate-45" : ""}`} />
+                <span
+                  className={`h-0.5 w-5 bg-current transition-transform duration-200 ${mobileMenuOpen ? "translate-y-2 rotate-45" : ""}`}
+                />
+                <span
+                  className={`h-0.5 w-5 bg-current transition-opacity duration-200 ${mobileMenuOpen ? "opacity-0" : "opacity-100"}`}
+                />
+                <span
+                  className={`h-0.5 w-5 bg-current transition-transform duration-200 ${mobileMenuOpen ? "-translate-y-2 -rotate-45" : ""}`}
+                />
               </div>
             </button>
           </div>
 
-          {mobileMenuOpen && (
-            <div
-              id="mobile-nav-menu"
-              className="absolute right-0 top-full mt-3 w-56 rounded-xl border border-white/10 bg-background/95 p-3 shadow-2xl md:hidden"
-            >
-              <div className="flex flex-col gap-1 text-sm">
-                {navLinks.map((link) => {
-                  const active = isActivePath(pathname, link.href)
-                  return (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className={`rounded-md px-3 py-2 transition-colors hover:bg-white/10 hover:text-foreground ${
-                        active ? "bg-white/10 text-foreground" : "text-foreground/75"
-                      }`}
-                    >
-                      {link.label}
-                    </Link>
-                  )
-                })}
-              </div>
+          <div
+            id="mobile-nav-menu"
+            className={`absolute right-0 top-full mt-3 w-60 border border-white/15 bg-background/90 p-3 shadow-2xl backdrop-blur-2xl transition-all duration-200 ease-out md:hidden ${
+              mobileMenuOpen
+                ? "pointer-events-auto translate-y-0 opacity-100"
+                : "pointer-events-none -translate-y-1 opacity-0"
+            }`}
+            aria-hidden={!mobileMenuOpen}
+          >
+            <div className="flex flex-col gap-1.5 border-l border-white/10 pl-2 text-sm">
+              {navLinks.map((link) => {
+                const active = isActivePath(pathname, link.href)
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`flex min-h-11 items-center px-3 text-foreground transition-all duration-150 hover:bg-white/12 active:scale-[0.99] active:bg-white/20 ${
+                      active ? "border-l border-white/35 bg-white/12 text-foreground" : "text-foreground/75"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              })}
             </div>
-          )}
+          </div>
         </nav>
       </div>
     </header>
