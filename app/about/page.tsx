@@ -72,7 +72,7 @@ export default function CandidatesPage() {
         <main className="yc-container flex-1 py-16 md:py-24">
           <section className="mb-20 max-w-5xl">
             <p className="section-kicker mb-6">Candidates</p>
-            <h1 className="max-w-4xl text-5xl font-semibold leading-[1.02] tracking-[-0.055em] text-foreground md:text-7xl">
+            <h1 className="max-w-4xl font-semibold text-foreground">
               Get hired for what you can do, not just how your resume looks.
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-foreground/68 md:text-xl md:leading-9">
@@ -108,7 +108,7 @@ export default function CandidatesPage() {
                     </p>
                   </div>
                   <div className="max-w-3xl">
-                    <h2 className="text-4xl font-semibold leading-tight tracking-[-0.045em] text-foreground md:text-5xl">
+                    <h2 className="font-semibold text-foreground">
                       {section.title}
                     </h2>
                     <p className="mt-6 text-lg leading-8 text-foreground/68">{section.body}</p>
