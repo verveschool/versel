@@ -15,7 +15,7 @@ const sections = [
     id: "fit",
     label: "Role fit",
     title: "We match you to the right partner",
-    body: "If your signal is strong, we map you to the partner where you can win fastest. Scaler, Vedantu, PrepCA, Infinity Learn and other high-growth teams are actively hiring through us.",
+    body: "If your signal is strong, we map you to the partner where you can win the fastest. Scaler, Vedantu, PrepCA, Infinity Learn and other high-growth teams are actively hiring through us.",
   },
   {
     id: "support",
