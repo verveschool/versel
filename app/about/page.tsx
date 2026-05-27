@@ -3,15 +3,10 @@
 import { useEffect, useState } from "react"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
-type AboutSection = {
-  id: string
-  label: string
-  kicker: string
-  title: string
-  body: string
-}
 
-const sections: readonly AboutSection[] = [
+
+
+const sections = [
   {
     id: "how-it-works",
     label: "How it works",
