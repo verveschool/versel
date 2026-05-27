@@ -49,7 +49,6 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/verveschool-logo.svg", type: "image/svg+xml" },
       { url: "/favicon.png", type: "image/png" },
     ],
     shortcut: [{ url: "/favicon.png", type: "image/png" }],
@@ -70,7 +69,7 @@ const organizationJsonLd = {
   "@type": "Organization",
   name: "VerveSchool",
   url: "https://www.verveschool.com",
-  logo: "https://www.verveschool.com/verveschool-logo.svg",
+  logo: "https://www.verveschool.com/logo.png",
   email: "talent@verveschool.com",
   telephone: "+91 81304 30683",
   address: {

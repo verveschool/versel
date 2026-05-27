@@ -25,7 +25,7 @@ export function SiteHeader() {
       <div className="yc-container py-4 md:py-5">
         <nav className="relative flex items-center justify-between gap-10" aria-label="Primary navigation">
           <Link href="/" className="inline-flex items-center transition-opacity hover:opacity-75" aria-label="verveschool home">
-            <img src="/verveschool-logo.svg" alt="VerveSchool logo" className="h-8 w-auto md:h-10" />
+            <img src="/logo.png" alt="VerveSchool logo" className="h-8 w-auto md:h-10" />
           </Link>
 
           <div className="hidden items-center gap-8 text-sm text-foreground/65 md:flex md:text-base">
