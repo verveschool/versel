@@ -4,43 +4,36 @@ import { useEffect, useState } from "react"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 
-
-
 const sections = [
   {
     id: "how-it-works",
     label: "How it works",
-    kicker: "Candidate Flow",
-    title: "How it works for candidates",
-    body: "Create your profile, complete role-relevant evaluation, and get matched based on demonstrated performance. The goal is faster, clearer signal than resume-only filtering.",
+    title: "How this actually works",
+    body: "You speak with our Talent Scout first. No resume scanning. We look at how you communicate, how you think, and whether you show real ownership.",
   },
   {
-    id: "for",
-    label: "Who it's for",
-    kicker: "Best Fit",
-    title: "Who this is for",
-    body: "Candidates open to measurable evaluation, sales and execution-focused roles, and environments where outcomes matter more than polished interview theater.",
+    id: "fit",
+    label: "Role fit",
+    title: "We match you to the right partner",
+    body: "If your signal is strong, we map you to the partner where you can win fastest. Scaler, Vedantu, PrepCA, Infinity Learn and other high-growth teams are actively hiring through us.",
   },
   {
-    id: "not-for",
-    label: "Who it's not for",
-    kicker: "Not a Fit",
-    title: "Who this is not for",
-    body: "People who only want title-based placement, do not want structured assessments, or are avoiding performance-accountable roles should likely look elsewhere.",
+    id: "support",
+    label: "Support",
+    title: "Selection is not the end",
+    body: "Once you are selected, we stay in your corner. Role clarity, interview preparation, onboarding support, early performance alignment. You are not left alone after the offer stage.",
   },
   {
-    id: "partners",
-    label: "Partnered companies",
-    kicker: "Selection Standard",
-    title: "Why we partner with specific companies",
-    body: "We choose partners with role clarity, fair interview processes, timely feedback loops, and compensation structures that reward real contribution. Partnership quality protects candidate outcomes.",
+    id: "roles",
+    label: "Roles",
+    title: "Roles, money, and growth",
+    body: "Freshers usually start between 4 and 8 LPA fixed, with uncapped incentives. Experienced candidates can start higher. Strong performers regularly reach total monthly earnings of 60K to 1L within the first few months.",
   },
   {
-    id: "incentives",
-    label: "Sales incentives",
-    kicker: "Compensation",
-    title: "Performance-based incentives in sales",
-    body: "Most sales roles include base pay plus variable pay. High performers can earn meaningful upside, but candidates should verify quota realism, payout mechanics, and the exact metrics that drive compensation.",
+    id: "bar",
+    label: "Hiring bar",
+    title: "What we care about",
+    body: "Clear spoken English. Serious intent. Consistency under pressure. If you are sincere, coachable, and willing to perform in-office, we will open doors most people never even see.",
   },
 ]
 
@@ -73,26 +66,25 @@ export default function CandidatesPage() {
       <div className="flex flex-col md:flex-row">
         <main className="yc-container flex-1 py-16 md:py-24">
           <section className="mb-20 max-w-5xl">
-            <p className="section-kicker mb-6">Candidates</p>
             <h1 className="max-w-4xl font-semibold text-foreground">
-              Get hired for what you can do, not just how your resume looks.
+              No resume games. We place serious candidates into real sales careers.
             </h1>
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-foreground/68 md:text-xl md:leading-9">
-              This page is for candidates who want transparent evaluation, clear fit signals, and access to partnered companies that value performance in real sales environments.
+            <p className="mt-8 max-w-3xl text-lg leading-8 text-foreground/68 md:text-xl md:leading-9">
+              If you can communicate, stay sincere under pressure, and execute daily, we help you break into high-growth in-office roles with strong partners.
             </p>
           </section>
 
           <section data-section="how-it-works" className="mb-20 border-t border-white/10 pt-10">
             <div className="grid gap-6 md:grid-cols-2">
               {[
-                "Create your candidate profile with role preferences.",
-                "Complete a role-relevant evaluation.",
-                "Receive performance-based fit signals.",
-                "Get matched with partnered companies.",
-                "Interview where there is stronger two-way fit.",
+                "Speak to a Talent Scout.",
+                "Get evaluated on communication, intent, and consistency.",
+                "Receive partner-role matching based on real fit.",
+                "Interview with teams where you actually have upside.",
+                "Get post-selection support once you join.",
               ].map((step, index) => (
                 <div key={step} className="rounded-2xl border border-white/10 p-5">
-                  <p className="section-kicker">Step {index + 1}</p>
+                  <p className="text-sm font-medium text-primary">{String(index + 1).padStart(2, "0")}</p>
                   <p className="mt-2 text-base text-foreground/75">{step}</p>
                 </div>
               ))}
@@ -104,15 +96,12 @@ export default function CandidatesPage() {
               <section key={section.id} data-section={section.id} className="border-t border-white/10 pt-10">
                 <div className="grid gap-10 lg:grid-cols-[0.35fr_0.65fr]">
                   <div>
-                    <p className="section-kicker">{section.kicker}</p>
                     <p className="mt-8 text-7xl font-semibold leading-none tracking-[-0.08em] text-foreground/10 md:text-8xl">
                       {String(index + 2).padStart(2, "0")}
                     </p>
                   </div>
                   <div className="max-w-3xl">
-                    <h2 className="font-semibold text-foreground">
-                      {section.title}
-                    </h2>
+                    <h2 className="font-semibold text-foreground">{section.title}</h2>
                     <p className="mt-6 text-lg leading-8 text-foreground/68">{section.body}</p>
                   </div>
                 </div>
@@ -122,7 +111,6 @@ export default function CandidatesPage() {
         </main>
 
         <aside className="sticky top-20 hidden h-screen shrink-0 overflow-y-auto border-l border-white/10 px-6 py-20 md:block">
-          <div className="mb-4 text-[12px] font-medium text-muted-foreground">On this page</div>
           <ul className="space-y-2">
             {sections.map((section) => (
               <li key={section.id}>
