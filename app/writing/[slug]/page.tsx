@@ -65,8 +65,7 @@ export default async function WritingPage({ params }: WritingPageProps) {
             ← all writing
           </Link>
           <header className="mb-14 border-b border-white/10 pb-10">
-            <p className="section-kicker mb-6">{piece.category}</p>
-            <h1 className="mb-8 font-serif text-white">{piece.title}</h1>
+                        <h1 className="mb-8 font-serif text-white">{piece.title}</h1>
             <p className="mb-8 text-xl leading-8 text-white/70">{piece.description}</p>
             <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-white/45">
               <span>{formatWritingDate(piece.date)}</span>
@@ -82,12 +81,10 @@ export default async function WritingPage({ params }: WritingPageProps) {
 
         {relatedPieces.length ? (
           <section className="mx-auto mt-20 max-w-3xl border-t border-white/10 pt-10">
-            <p className="section-kicker mb-6">keep reading</p>
-            <div className="grid gap-4">
+                        <div className="grid gap-4">
               {relatedPieces.map((relatedPiece) => (
                 <Link key={relatedPiece.slug} href={`/writing/${relatedPiece.slug}`} className="group border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-primary/60">
-                  <p className="mb-2 text-xs uppercase tracking-[0.2em] text-white/45">{relatedPiece.category}</p>
-                  <h2 className="font-serif text-white transition-colors group-hover:text-primary">{relatedPiece.title}</h2>
+                                    <h2 className="font-serif text-white transition-colors group-hover:text-primary">{relatedPiece.title}</h2>
                 </Link>
               ))}
             </div>

@@ -31,20 +31,17 @@ export function SiteFooter() {
       <div className="yc-container py-10 md:py-12">
         <div className="grid grid-cols-1 gap-8 text-sm leading-relaxed text-foreground/70 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           <section className="space-y-3">
-            <p className="text-sm font-medium text-foreground/55">Branding</p>
-            <div className="space-y-2">
+                        <div className="space-y-2">
               <p className="text-base font-medium text-foreground">VerveSchool</p>
               <p>Building high-trust connections between candidates, partners, and people.</p>
             </div>
           </section>
 
           <section className="space-y-4">
-            <p className="text-sm font-medium text-foreground/55">Quick Links</p>
-            <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
+                        <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
               {quickLinks.map((group) => (
                 <div key={group.heading} className="space-y-2">
-                  <p className="text-sm font-medium text-foreground/55">{group.heading}</p>
-                  <ul className="space-y-2">
+                                    <ul className="space-y-2">
                     {group.links.map((link) => (
                       <li key={link.href}>
                         <Link href={link.href} className="transition-colors hover:text-foreground">
@@ -59,8 +56,7 @@ export function SiteFooter() {
           </section>
 
           <section className="space-y-4">
-            <p className="text-sm font-medium text-foreground/55">Contact</p>
-            <div className="space-y-2">
+                        <div className="space-y-2">
               <a href="mailto:talent@verveschool.com" className="block transition-colors hover:text-foreground">
                 talent@verveschool.com
               </a>
@@ -76,8 +72,7 @@ export function SiteFooter() {
           </section>
 
           <section className="space-y-4">
-            <p className="text-sm font-medium text-foreground/55">Social</p>
-            <ul className="space-y-2">
+                        <ul className="space-y-2">
               {socialLinks.map((link) => (
                 <li key={link.href}>
                   <a
@@ -97,8 +92,7 @@ export function SiteFooter() {
         <div className="mt-8 border-t border-[rgba(219,231,243,0.16)] pt-5 md:mt-10 md:pt-6">
           <div className="grid grid-cols-1 gap-4 text-[13px] text-foreground/65 sm:grid-cols-[1fr_auto] sm:items-center">
             <div className="space-y-2">
-              <p className="text-sm font-medium text-foreground/55">Newsletter</p>
-              <p>Stay close to new essays, cohorts, and opportunities.</p>
+                            <p>Stay close to new essays, cohorts, and opportunities.</p>
             </div>
             <a
               href="mailto:talent@verveschool.com?subject=Join%20the%20newsletter"
@@ -113,9 +107,7 @@ export function SiteFooter() {
           <div className="flex flex-col gap-3 text-[12px] text-foreground/60 sm:flex-row sm:items-center sm:justify-between">
             <p>© 2026 VerveSchool</p>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-              <p className="text-foreground/50">All rights reserved.</p>
-              <div className="h-3 w-px bg-[rgba(219,231,243,0.16)]" aria-hidden="true" />
-              <Link href="/about" className="transition-colors hover:text-foreground">
+                            <Link href="/about" className="transition-colors hover:text-foreground">
                 Legal
               </Link>
             </div>

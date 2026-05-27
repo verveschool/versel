@@ -64,7 +64,7 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
           </Link>
           <header className="mb-14 border-b border-white/10 pb-10">
             <div className="mb-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-white/45">
-              <span className="section-kicker">chapter {chapter.chapterNumber}</span>
+              <span>chapter {chapter.chapterNumber}</span>
               <span aria-hidden="true">·</span>
               <span>{chapter.part}</span>
               <span aria-hidden="true">·</span>
@@ -77,8 +77,7 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
           <MarkdownRenderer content={chapter.content} className="book-prose" />
 
           <section className="mt-16 border border-primary/30 bg-primary/10 p-8">
-            <p className="section-kicker mb-4">put it to work</p>
-            <h2 className="mb-4 font-serif text-white">Use this chapter inside a real sales conversation.</h2>
+                        <h2 className="mb-4 font-serif text-white">Use this chapter inside a real sales conversation.</h2>
             <p className="mb-6 text-white/70">
               Bring the ideas into a buyer conversation, coaching session, pipeline review, or contact conversation with verveschool.
             </p>
@@ -115,8 +114,7 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
         </nav>
 
         <section className="mx-auto mt-16 max-w-3xl border-t border-white/10 pt-10">
-          <p className="section-kicker mb-6">all chapters</p>
-          <div className="grid gap-3">
+                    <div className="grid gap-3">
             {chapters.map((bookChapter) => (
               <Link
                 key={bookChapter.slug}
