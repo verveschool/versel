@@ -48,6 +48,9 @@ function PartnerVisual({ variant }: { variant: PartnerVisualVariant }) {
 }
 
 export default function PartnersPage() {
+  const [activeSection, setActiveSection] = useState("")
+  const [headerOffset, setHeaderOffset] = useState(96)
+
   const sections = [
     "hiring-risk",
     "bad-hires",
@@ -56,14 +59,9 @@ export default function PartnersPage() {
     "replacement-guarantee",
     "partner-fit",
     "next-steps",
-  ] as const
+  ]
 
-  type PartnerSection = (typeof sections)[number]
-
-  const [activeSection, setActiveSection] = useState<PartnerSection>(sections[0])
-  const [headerOffset, setHeaderOffset] = useState(96)
-
-  const scrollToSection = (section: PartnerSection) => {
+  const scrollToSection = (section: string) => {
     const element = document.querySelector(`[data-section="${section}"]`) as HTMLElement | null
     if (!element) return
 
@@ -96,12 +94,8 @@ export default function PartnersPage() {
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
         if (!visibleEntries.length) return
 
-        const nextActive = visibleEntries[0].target.getAttribute("data-section")
-        if (!nextActive || !sections.includes(nextActive as PartnerSection)) {
-          return
-        }
-
-        setActiveSection(nextActive as PartnerSection)
+        const nextActive = visibleEntries[0].target.getAttribute("data-section") ?? ""
+        setActiveSection(nextActive)
       },
       {
         rootMargin: `-${headerOffset + 20}px 0px -45% 0px`,
