@@ -58,7 +58,7 @@ export default function HomePage() {
         <section className="grid min-h-[74vh] items-center gap-12 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:py-24">
           <div>
             <h1 className="max-w-4xl font-semibold text-white">
-              Hire sincere talent that can sell, connect, and stay.
+              Hire sincere talent that can connect and sell.
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-white/65 md:text-xl md:leading-9">
               VerveSchool helps companies hire frontline talent through an active scout network built for speed and long-term fit.
