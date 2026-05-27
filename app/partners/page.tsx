@@ -33,7 +33,7 @@ function PartnerVisual({ variant }: { variant: PartnerVisualVariant }) {
       </div>
       <div className="absolute inset-x-8 bottom-8 z-10 max-w-[520px]">
         <div className="mb-5 h-px w-24 bg-primary" />
-        <p className="text-[clamp(1.8rem,4vw,4.4rem)] font-extrabold leading-[0.9] tracking-[-0.06em] text-foreground">
+        <p className="text-[clamp(1.8rem,4vw,4.4rem)] font-bold leading-[0.9] tracking-[-0.06em] text-foreground">
           {detail.title}
         </p>
       </div>
