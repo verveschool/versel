@@ -31,8 +31,6 @@ export const metadata: Metadata = {
   },
 }
 
-
-
 const leadershipTeam: PersonCard[] = [
   { name: "A. Duggal", subtitle: "Co-founder, CEO", linkedin: "https://www.linkedin.com/in/okduggal/" },
   { name: "Faraz Arif", subtitle: "Co-founder, COO", linkedin: "https://www.linkedin.com/in/arif-faraz/" },
@@ -79,20 +77,22 @@ function initialsFromName(name: string) {
 
 function ProfileCard({ person, clickable = false }: { person: PersonCard; clickable?: boolean }) {
   const cardBody = (
-    <article className="rounded-xl border border-white/12 bg-white/[0.03] p-4 transition md:p-5">
-      <div className="aspect-[4/5] overflow-hidden rounded-lg border border-white/12 bg-white/[0.05]">
+    <article className="rounded-xl border border-white/10 bg-white/[0.02] p-4 transition">
+      <div className="aspect-[4/5] overflow-hidden rounded-lg border border-white/10 bg-white/[0.04]">
         {person.image ? (
           <img src={person.image} alt={`${person.name} photo`} className="h-full w-full object-cover" />
         ) : (
-          <div className="flex h-full w-full items-center justify-center text-xl font-semibold tracking-[-0.03em] text-white/70">
-            {initialsFromName(person.name)}
+          <div className="flex h-full w-full items-center justify-center bg-white/[0.02]">
+            <span className="rounded-md bg-white/5 px-3 py-1.5 text-sm font-medium tracking-[-0.01em] text-white/70">
+              {initialsFromName(person.name)}
+            </span>
           </div>
         )}
       </div>
 
-      <div className="mt-3 space-y-1">
-        <p className="text-base font-semibold tracking-[-0.02em] text-white">{person.name}</p>
-        <p className="text-sm tracking-[-0.01em] text-white/65">{person.subtitle}</p>
+      <div className="mt-3 space-y-1.5 px-0.5">
+        <p className="text-[15px] font-medium leading-5 tracking-[-0.01em] text-white">{person.name}</p>
+        <p className="text-sm leading-5 text-white/65">{person.subtitle}</p>
       </div>
     </article>
   )
@@ -103,7 +103,7 @@ function ProfileCard({ person, clickable = false }: { person: PersonCard; clicka
         href={person.linkedin}
         target="_blank"
         rel="noopener noreferrer"
-        className="block opacity-95 transition hover:border-white/25 hover:opacity-100"
+        className="block opacity-95 transition hover:opacity-100"
       >
         {cardBody}
       </Link>
@@ -123,8 +123,8 @@ function PeopleSection({
   clickable?: boolean
 }) {
   return (
-    <section className="space-y-8">
-      <h2 className="font-semibold text-white">{title}</h2>
+    <section className="space-y-6 md:space-y-7">
+      <h2 className="text-lg font-medium tracking-[-0.01em] text-white/95">{title}</h2>
       <div className="grid grid-cols-2 gap-4 md:gap-5 lg:grid-cols-3 xl:grid-cols-4">
         {people.map((person) => (
           <ProfileCard key={`${title}-${person.name}`} person={person} clickable={clickable} />
@@ -139,7 +139,7 @@ export default function PeoplePage() {
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
 
-      <main className="yc-container space-y-14 py-14 md:space-y-16 md:py-20">
+      <main className="yc-container space-y-12 py-14 md:space-y-14 md:py-20">
         <PeopleSection title="Leadership Team" people={leadershipTeam} clickable />
         <PeopleSection title="Talent Ops" people={talentPartners} />
         <PeopleSection title="Industry Partners & Advisors" people={industryPartners} clickable />
