@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import Script from "next/script"
 import { Analytics } from "@vercel/analytics/next"
+import { Inter } from "next/font/google"
 import "./globals.css"
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.verveschool.com"),
@@ -57,6 +58,13 @@ export const metadata: Metadata = {
 }
 
 
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+})
+
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -85,7 +93,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased bg-background text-foreground">
+      <body className={`${inter.variable} font-sans antialiased bg-background text-foreground`}>
         <Script
           id="organization-jsonld"
           type="application/ld+json"
