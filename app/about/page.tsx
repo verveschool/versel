@@ -82,6 +82,7 @@ export default function CandidatesPage() {
                 "Receive partner-role matching based on real fit.",
                 "Interview with teams where you actually have upside.",
                 "Get post-selection support once you join.",
+                "Meet our in-office community that helps you settle in.",
               ].map((step, index) => (
                 <div key={step} className="rounded-2xl border border-white/10 p-5">
                   <p className="text-sm font-medium text-primary">{String(index + 1).padStart(2, "0")}</p>
