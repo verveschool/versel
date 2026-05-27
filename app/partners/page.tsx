@@ -81,8 +81,8 @@ export default function PartnersPage() {
           </div>
           <div className="mb-10 rounded-md border border-border bg-card/70 p-4 md:hidden">
             <details>
-              <summary className="cursor-pointer list-none text-sm font-semibold tracking-wide text-foreground [&::-webkit-details-marker]:hidden">
-                On this page
+              <summary className="cursor-pointer list-none text-base font-medium text-foreground [&::-webkit-details-marker]:hidden">
+                Page sections
               </summary>
               <ul className="mt-4 space-y-2">
                 {sections.map((section) => (
@@ -250,10 +250,7 @@ export default function PartnersPage() {
 
         {/* Table of Contents */}
         <aside className="hidden md:block sticky top-20 pt-20 pb-20 px-8 h-screen overflow-y-auto flex-shrink-0 border-l border-border">
-          <div className="mb-5 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground/90">
-            On this page
-          </div>
-          <ul className="space-y-1.5">
+                    <ul className="space-y-1.5">
             {sections.map((section) => (
               <li key={section}>
                 <button
