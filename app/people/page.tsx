@@ -54,6 +54,7 @@ const industryPartners: PersonCard[] = [
   { name: "Sagar Dudani", subtitle: "Co-founder, Prepca", linkedin: "https://www.linkedin.com/in/sagar-dudani-b33b4aaa/" },
   { name: "Ravi Kumar Gupta", subtitle: "Co-founder, AlmaBetter", linkedin: "https://www.linkedin.com/in/ravi-kumar-gupta/" },
   { name: "Nikhil Kaushik", subtitle: "Co-founder, ProjectStudio", linkedin: "https://www.linkedin.com/in/nikhilka/" },
+  { name: "Madara Uchiha", subtitle: "Advisor", image: "/people/madara-uchiha.png" },
 ]
 
 const membersPlaced: PersonCard[] = [
