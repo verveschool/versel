@@ -40,10 +40,14 @@ const leadershipTeam: PersonCard[] = [
 ]
 
 const talentPartners: PersonCard[] = [
-  { name: "Meera Kapoor", subtitle: "Senior Talent Partner" },
-  { name: "Rehan Ali", subtitle: "Talent Partner" },
-  { name: "Tara Patel", subtitle: "Talent Partner" },
-  { name: "Vikram S.", subtitle: "Associate Talent Partner" },
+  { name: "Khushi Soni", subtitle: "Talent Operations", linkedin: "https://www.linkedin.com/in/khushi-soni-placeholder/", image: "/people/khushi-soni.png" },
+  { name: "Hadia Rehman", subtitle: "Talent Operations", linkedin: "https://www.linkedin.com/in/hadia-rehman-placeholder/", image: "/people/hadia-rehman.png" },
+  { name: "Laiba Zafar", subtitle: "Talent Operations", linkedin: "https://www.linkedin.com/in/laiba-zafar-placeholder/", image: "/people/laiba-zafar.png" },
+  { name: "Garima Gandhi", subtitle: "Talent Operations", linkedin: "https://www.linkedin.com/in/garima-gandhi-placeholder/", image: "/people/garima-gandhi.png" },
+  { name: "Aditi Sahu", subtitle: "Talent Operations", linkedin: "https://www.linkedin.com/in/aditi-sahu-placeholder/", image: "/people/aditi-sahu.png" },
+  { name: "Zubda Sajda", subtitle: "Talent Operations", linkedin: "https://www.linkedin.com/in/zubda-sajda-placeholder/", image: "/people/zubda-sajda.png" },
+  { name: "Gopika K.", subtitle: "Talent Operations", linkedin: "https://www.linkedin.com/in/gopika-k-placeholder/", image: "/people/gopika-k.png" },
+  { name: "Shahida Arif", subtitle: "Talent Operations", linkedin: "https://www.linkedin.com/in/shahida-arif-placeholder/", image: "/people/shahida-arif.png" },
 ]
 
 const industryPartners: PersonCard[] = [
@@ -54,17 +58,9 @@ const industryPartners: PersonCard[] = [
   { name: "Sagar Dudani", subtitle: "Co-founder, Prepca", linkedin: "https://www.linkedin.com/in/sagar-dudani-b33b4aaa/" },
   { name: "Ravi Kumar Gupta", subtitle: "Co-founder, AlmaBetter", linkedin: "https://www.linkedin.com/in/ravi-kumar-gupta/" },
   { name: "Nikhil Kaushik", subtitle: "Co-founder, ProjectStudio", linkedin: "https://www.linkedin.com/in/nikhilka/" },
-  { name: "Madara Uchiha", subtitle: "Advisor", image: "/people/madara-uchiha.png" },
+  { name: "Madara Uchiha", subtitle: "Co-founder, Konohagakure", image: "/people/madara-uchiha.png", linkedin: "https://en.wikipedia.org/wiki/Madara_Uchiha" },
 ]
 
-const membersPlaced: PersonCard[] = [
-  { name: "Riya Sharma", subtitle: "Scaler" },
-  { name: "Ananya G.", subtitle: "Rippling" },
-  { name: "Ritvik P.", subtitle: "Postman" },
-  { name: "Sana M.", subtitle: "Razorpay" },
-  { name: "Dev R.", subtitle: "Freshworks" },
-  { name: "Ira T.", subtitle: "CRED" },
-]
 
 function initialsFromName(name: string) {
   return name
@@ -146,9 +142,8 @@ export default function PeoplePage() {
 
       <main className="yc-container space-y-12 py-14 md:space-y-14 md:py-20">
         <PeopleSection title="Leadership Team" people={leadershipTeam} clickable />
-        <PeopleSection title="Talent Ops" people={talentPartners} />
+        <PeopleSection title="Talent Ops" people={talentPartners} clickable />
         <PeopleSection title="Industry Partners & Advisors" people={industryPartners} clickable />
-        <PeopleSection title="Placed Members" people={membersPlaced} />
       </main>
 
       <SiteFooter />
