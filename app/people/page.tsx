@@ -123,10 +123,14 @@ function PeopleSection({
   people: PersonCard[]
   clickable?: boolean
 }) {
+  const isLeadership = title === "Leadership Team"
+
   return (
     <section className="space-y-6 md:space-y-7">
       <h2 className="text-lg font-medium tracking-[-0.01em] text-white/95">{title}</h2>
-      <div className="grid grid-cols-2 gap-4 md:gap-5 lg:grid-cols-3 xl:grid-cols-4">
+      <div
+        className={isLeadership ? "grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-5 lg:grid-cols-3 xl:grid-cols-5" : "grid grid-cols-2 gap-4 md:gap-5 lg:grid-cols-3 xl:grid-cols-4"}
+      >
         {people.map((person) => (
           <ProfileCard key={`${title}-${person.name}`} person={person} clickable={clickable} />
         ))}
