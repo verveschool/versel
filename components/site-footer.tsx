@@ -1,11 +1,12 @@
 import Link from "next/link"
 
-const quickLinks = [
+const sitemapGroups = [
   {
-    heading: "Explore",
+    heading: "Company",
     links: [
+      { href: "/", label: "Home" },
       { href: "/about", label: "Candidates" },
-      { href: "/partners", label: "Partners" },
+      { href: "/partners", label: "Hiring partners" },
       { href: "/people", label: "People" },
     ],
   },
@@ -16,12 +17,26 @@ const quickLinks = [
       { href: "/book", label: "Book" },
     ],
   },
+  {
+    heading: "Legal",
+    links: [
+      { href: "/terms", label: "Terms" },
+      { href: "/privacy", label: "Privacy Policy" },
+    ],
+  },
 ]
 
-const socialLinks = [
+const contactOptions = [
+  {
+    href: "mailto:talent@verveschool.com",
+    label: "Email",
+    value: "talent@verveschool.com",
+  },
   {
     href: "https://wa.me/917065314693",
     label: "WhatsApp",
+    value: "+91 70653 14693",
+    external: true,
   },
 ]
 
@@ -29,77 +44,54 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-[rgba(219,231,243,0.16)] bg-background">
       <div className="yc-container py-10 md:py-12">
-        <div className="grid grid-cols-1 gap-8 text-sm leading-relaxed text-foreground/70 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          <section className="space-y-3">
-            <div className="space-y-2">
-              <p className="text-base font-medium text-foreground">VerveSchool</p>
-              <p>The world moves for those who do.</p>
-            </div>
+        <div className="grid grid-cols-1 gap-10 text-[13px] leading-6 text-foreground/62 md:grid-cols-[1.1fr_1.8fr] lg:grid-cols-[1.05fr_2fr_1fr]">
+          <section className="max-w-xs space-y-3">
+            <p className="text-base font-medium leading-6 text-foreground">VerveSchool</p>
+            <p className="text-sm leading-6 text-foreground/60">The world moves for those who do.</p>
           </section>
 
-          <section className="space-y-4">
-            <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
-              {quickLinks.map((group) => (
-                <div key={group.heading} className="space-y-2">
-                  <ul className="space-y-2">
-                    {group.links.map((link) => (
-                      <li key={link.href}>
-                        <Link href={link.href} className="transition-colors hover:text-foreground">
-                          {link.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+          <nav aria-label="Footer sitemap" className="grid gap-8 sm:grid-cols-3">
+            {sitemapGroups.map((group) => (
+              <div key={group.heading} className="space-y-3">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/40">
+                  {group.heading}
+                </p>
+                <div className="flex flex-col items-start gap-2.5">
+                  {group.links.map((link) => (
+                    <Link key={link.href} href={link.href} className="transition-colors hover:text-foreground">
+                      {link.label}
+                    </Link>
+                  ))}
                 </div>
+              </div>
+            ))}
+          </nav>
+
+          <section className="space-y-3">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/40">Contact</p>
+            <div className="flex flex-col items-start gap-3 text-xs leading-5 text-foreground/58">
+              {contactOptions.map((option) => (
+                <a
+                  key={option.href}
+                  href={option.href}
+                  target={option.external ? "_blank" : undefined}
+                  rel={option.external ? "noopener noreferrer" : undefined}
+                  className="group transition-colors hover:text-foreground"
+                >
+                  <span className="block text-[10px] font-semibold uppercase tracking-[0.16em] text-foreground/35 group-hover:text-foreground/55">
+                    {option.label}
+                  </span>
+                  <span className="block">{option.value}</span>
+                </a>
               ))}
             </div>
-          </section>
-
-          <section className="space-y-4">
-            <div className="space-y-2">
-              <a href="mailto:talent@verveschool.com" className="block transition-colors hover:text-foreground">
-                talent@verveschool.com
-              </a>
-              <a
-                href="https://wa.me/917065314693"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block transition-colors hover:text-foreground"
-              >
-                +91 70653 14693
-              </a>
-            </div>
-          </section>
-
-          <section className="space-y-4">
-            <ul className="space-y-2">
-              {socialLinks.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="transition-colors hover:text-foreground"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
           </section>
         </div>
 
-        <div className="mt-6 border-t border-[rgba(219,231,243,0.16)] pt-4">
-          <div className="flex flex-col gap-3 text-sm text-foreground/60 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 border-t border-[rgba(219,231,243,0.16)] pt-4">
+          <div className="flex flex-col gap-3 text-xs leading-5 text-foreground/50 sm:flex-row sm:items-center sm:justify-between">
             <p>© 2026 VerveSchool</p>
-            <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-              <Link href="/terms" className="transition-colors hover:text-foreground">
-                Terms
-              </Link>
-              <Link href="/privacy" className="transition-colors hover:text-foreground">
-                Privacy Policy
-              </Link>
-            </div>
+            <p>Built for sharper hiring signal.</p>
           </div>
         </div>
       </div>
