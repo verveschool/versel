@@ -259,11 +259,9 @@
 }
 
 @media (max-width: 768px) {
-  p,
-  li,
-  span {
-    font-size: 14px;
-    line-height: 1.6;
+  body {
+    --type-body: 0.94rem;
+    --type-lede: 1rem;
   }
 
   .brand-container,
