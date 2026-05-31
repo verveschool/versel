@@ -239,11 +239,12 @@ export default function PartnersPage() {
                 If you want a tighter sales hiring funnel with accountability after joining, send us the role and the
                 target profile. We will tell you if we can build the pipeline.
               </p>
-              <ul className="space-y-4">
-                <li className="font-medium">phone: +91 81304 30683</li>
-                <li className="font-medium">email: ayush@verveschool.com</li>
-                <li className="font-medium">address: 20 h 1a, sector 63, noida 201301</li>
-              </ul>
+              <a
+                href="https://wa.me/917042873035"
+                className="inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:opacity-90"
+              >
+                Talk to us
+              </a>
             </div>
           </section>
         </main>
