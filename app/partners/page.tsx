@@ -73,8 +73,8 @@ export default function PartnersPage() {
       <SiteHeader />
 
       <div className="flex flex-col md:flex-row">
-        <main className="yc-container flex-1 py-14 md:py-20">
-          <div className="mb-16 max-w-3xl">
+        <main className="yc-container flex-1 py-16 md:py-24">
+          <div className="mb-24">
             <h1 className="mb-4 font-semibold">
               A Filtered Sales-Talent Pipeline With a Replacement Guarantee
             </h1>
