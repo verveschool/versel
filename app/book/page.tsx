@@ -40,11 +40,11 @@ export default function BookPage() {
                         <h1 className="mb-6 max-w-4xl font-serif text-white">
               {book.title}
             </h1>
-            <p className="mb-8 max-w-2xl text-2xl font-serif leading-9 text-primary">{book.subtitle}</p>
+            <p className="mb-8 max-w-2xl text-lg leading-8 text-primary">{book.subtitle}</p>
             <p className="max-w-2xl text-lg leading-8 text-white/70">{book.description}</p>
           </div>
           <div className="border border-primary/30 bg-primary/10 p-8">
-                        <p className="text-2xl font-serif text-white">80 pages translated into a chapter-by-chapter reading path.</p>
+                        <p className="text-lg leading-8 text-white">80 pages translated into a chapter-by-chapter reading path.</p>
             <div className="mt-8 grid grid-cols-2 gap-4 border-t border-primary/20 pt-6 text-sm text-white/65">
               <span>{chapters.length} chapters</span>
               <span>by {book.author}</span>

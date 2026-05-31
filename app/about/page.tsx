@@ -97,7 +97,7 @@ export default function CandidatesPage() {
               <section key={section.id} data-section={section.id} className="border-t border-white/10 pt-10">
                 <div className="grid gap-10 lg:grid-cols-[0.35fr_0.65fr]">
                   <div>
-                    <p className="mt-8 text-7xl font-semibold leading-none tracking-[-0.08em] text-foreground/10 md:text-8xl">
+                    <p className="mt-8 text-5xl font-semibold leading-none tracking-[-0.06em] text-foreground/10 md:text-6xl">
                       {String(index + 2).padStart(2, "0")}
                     </p>
                   </div>

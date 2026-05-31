@@ -7,9 +7,9 @@ import { MarkdownRenderer } from "@/lib/markdown"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 type BookChapterPageProps = {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export const dynamicParams = false
@@ -19,7 +19,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: BookChapterPageProps): Promise<Metadata> {
-  const { slug } = params
+  const { slug } = await params
 
   if (!getBookChapterSlugs().includes(slug)) {
     return {}
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: BookChapterPageProps): Promis
 }
 
 export default async function BookChapterPage({ params }: BookChapterPageProps) {
-  const { slug } = params
+  const { slug } = await params
 
   if (!getBookChapterSlugs().includes(slug)) {
     notFound()
@@ -71,7 +71,7 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
               <span>{chapter.readingTime}</span>
             </div>
             <h1 className="mb-8 font-serif text-white">{chapter.title}</h1>
-            <p className="text-xl leading-8 text-white/70">{chapter.description}</p>
+            <p className="text-lg leading-8 text-white/70">{chapter.description}</p>
           </header>
 
           <MarkdownRenderer content={chapter.content} className="book-prose" />
