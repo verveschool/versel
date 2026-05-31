@@ -107,7 +107,7 @@ export default function PartnersPage() {
           <section data-section="hiring-risk" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
             <h2>Sales hiring is risk transfer</h2>
             <div className="yc-text-block mb-8">
-              <p className="mb-6">Every sales hire looks cheaper before they miss target.</p>
+              <p>Every sales hire looks cheaper before they miss target.</p>
               <p className="mb-6">
                 the real cost is not salary. it is lost pipeline, manager attention, damaged follow up, and the months
                 you spend discovering what interviews alone could not show.
@@ -157,30 +157,30 @@ export default function PartnersPage() {
           <section data-section="selection-pressure" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
             <h2>Selection pressure creates the shortlist</h2>
             <div className="yc-text-block mb-8">
-              <h3 className="mb-8">1. Mandate-led scouting</h3>
-              <p className="mb-12">
+              <h3>1. Mandate-led scouting</h3>
+              <p>
                 We do not hand you a generic bench. We hunt against your role, city, compensation, language needs, and
                 sales motion.
               </p>
 
-              <h3 className="mb-8">2. Founder screen</h3>
-              <p className="mb-12">
+              <h3>2. Founder screen</h3>
+              <p>
                 Faraz Arif (co-founder, 9+ years exp) personally screens every candidate for traits that deserve deeper validation: persistence, clarity, humility, and recovery.
               </p>
 
-              <h3 className="mb-8">3. Pressure tasks</h3>
-              <p className="mb-12">
+              <h3>3. Pressure tasks</h3>
+              <p>
                 candidates are tested through realistic sales situations: objection handling, follow up discipline,
                 call thinking, and response to direct feedback.
               </p>
 
-              <h3 className="mb-8">4. Partner calibration</h3>
-              <p className="mb-12">
+              <h3>4. Partner calibration</h3>
+              <p>
                 We map the final shortlist to your product, buyer, targets, and floor reality so you are choosing from
                 candidates who fit the actual job, not a generic sales profile.
               </p>
 
-              <h3 className="mb-8">5. Post-joining support</h3>
+              <h3>5. Post-joining support</h3>
               <p>
                 Training and coaching are operational support for the guarantee. Once a hire starts, we review calls,
                 tighten talk tracks, and identify replacement risk early.

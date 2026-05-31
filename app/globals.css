@@ -204,7 +204,7 @@
 
   .brand-text-block,
   .yc-text-block {
-    max-width: 580px;
+    max-width: 620px;
   }
 
   .brand-text-narrow,
@@ -214,9 +214,20 @@
 
   .brand-section,
   .yc-section {
-    margin-bottom: 88px;
+    margin-bottom: 72px;
     border-top: 1px solid var(--border);
-    padding-top: 32px;
+    padding-top: 24px;
+  }
+
+  .brand-section > h2,
+  .yc-section > h2 {
+    margin-bottom: 22px;
+  }
+
+  .brand-section h3,
+  .yc-section h3 {
+    margin-top: 28px;
+    margin-bottom: 12px;
   }
 
   .section-kicker {

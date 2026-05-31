@@ -120,7 +120,7 @@ export default function HomePage() {
             <h2 className="font-semibold text-white">
               How hiring works with VerveSchool
             </h2>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-white/65">
+            <p className="mt-6 max-w-xl leading-8 text-white/65">
               Partners share role details and hiring constraints. Our team filters and aligns candidates who are serious and ready to join.
             </p>
           </div>
@@ -128,35 +128,30 @@ export default function HomePage() {
             {filterSteps.map((step, index) => (
               <div key={step} className="grid grid-cols-[64px_1fr] gap-5 border border-white/10 bg-white/[0.03] p-5">
                 <span className="font-mono text-sm text-primary">0{index + 1}</span>
-                <p className="text-lg leading-8 text-white/75">{step}</p>
+                <p className="leading-8 text-white/75">{step}</p>
               </div>
             ))}
           </div>
         </section>
 
-<section className="mb-20 border border-white/12 bg-white/[0.04] px-8 py-12 md:px-12 md:py-14 lg:px-16 lg:py-16">
-  <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
-
-    <div>
-      <h2 className="max-w-3xl font-semibold text-white">
-        Share the role. We will send aligned candidates.
-      </h2>
-    </div>
-
-    <div>
-      <p className="text-lg leading-8 text-white/65">
-        If you are hiring for sales or business development roles, share your requirements with us. VerveSchool shortlists sincere candidates aligned with your role and provides replacement coverage if a hire does not work out.
-      </p>
-      <Link
-        href="/partners"
-        className="mt-8 inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:opacity-90"
-      >
-        Become a hiring partner
-      </Link>
-    </div>
-
-  </div>
-</section>
+        <section className="mb-20 border border-white/12 bg-white/[0.04] px-8 py-12 md:px-12 md:py-14 lg:px-16 lg:py-16">
+          <div className="max-w-5xl">
+            <h2 className="max-w-2xl font-semibold text-white">
+              Share the role. We will send aligned candidates.
+            </h2>
+            <div className="mt-8 max-w-2xl">
+              <p className="leading-8 text-white/65">
+                If you are hiring for sales or business development roles, share your requirements with us. VerveSchool shortlists sincere candidates aligned with your role and provides replacement coverage if a hire does not work out.
+              </p>
+              <Link
+                href="/partners"
+                className="mt-8 inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:opacity-90"
+              >
+                Become a hiring partner
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
       <SiteFooter />
     </div>
