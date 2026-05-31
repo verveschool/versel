@@ -99,7 +99,7 @@ export function SiteFooter() {
         <div className="mt-8 border-t border-[rgba(219,231,243,0.16)] pt-4">
           <div className="flex flex-col gap-3 text-xs leading-5 text-foreground/50 sm:flex-row sm:items-center sm:justify-between">
             <p>© 2026 VerveSchool</p>
-            <p>Built for sharper hiring signal.</p>
+            <p>JIRAIYA EDUCATION LLP</p>
           </div>
         </div>
       </div>
