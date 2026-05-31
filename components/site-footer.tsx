@@ -90,7 +90,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-8 border-t border-[rgba(219,231,243,0.16)] pt-5 md:mt-10 md:pt-6">
-          <div className="grid grid-cols-1 gap-4 text-[13px] text-foreground/65 sm:grid-cols-[1fr_auto] sm:items-center">
+          <div className="grid grid-cols-1 gap-4 text-sm text-foreground/65 sm:grid-cols-[1fr_auto] sm:items-center">
             <div className="space-y-2">
                             <p>Stay close to new essays, cohorts, and opportunities.</p>
             </div>
@@ -104,7 +104,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-6 border-t border-[rgba(219,231,243,0.16)] pt-4">
-          <div className="flex flex-col gap-3 text-[12px] text-foreground/60 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-3 text-sm text-foreground/60 sm:flex-row sm:items-center sm:justify-between">
             <p>© 2026 VerveSchool</p>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
                             <Link href="/about" className="transition-colors hover:text-foreground">
