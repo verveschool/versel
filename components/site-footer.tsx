@@ -40,6 +40,8 @@ const contactOptions = [
   },
 ]
 
+const footerAddress = "1st Floor, H-20, Sector 63, Noida, UP 201301"
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-[rgba(219,231,243,0.16)] bg-background">
@@ -84,6 +86,12 @@ export function SiteFooter() {
                   <span className="block">{option.value}</span>
                 </a>
               ))}
+              <address className="not-italic">
+                <span className="block text-[10px] font-semibold uppercase tracking-[0.16em] text-foreground/35">
+                  Address
+                </span>
+                <span className="block">{footerAddress}</span>
+              </address>
             </div>
           </section>
         </div>
