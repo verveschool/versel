@@ -7,9 +7,9 @@ import { MarkdownRenderer } from "@/lib/markdown"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 type WritingPageProps = {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export const dynamicParams = false
@@ -19,7 +19,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: WritingPageProps): Promise<Metadata> {
-  const { slug } = params
+  const { slug } = await params
 
   if (!getWritingSlugs().includes(slug)) {
     return {}
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: WritingPageProps): Promise<Me
 }
 
 export default async function WritingPage({ params }: WritingPageProps) {
-  const { slug } = params
+  const { slug } = await params
 
   if (!getWritingSlugs().includes(slug)) {
     notFound()
@@ -66,7 +66,7 @@ export default async function WritingPage({ params }: WritingPageProps) {
           </Link>
           <header className="mb-14 border-b border-white/10 pb-10">
                         <h1 className="mb-8 font-serif text-white">{piece.title}</h1>
-            <p className="mb-8 text-xl leading-8 text-white/70">{piece.description}</p>
+            <p className="mb-8 text-lg leading-8 text-white/70">{piece.description}</p>
             <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-white/45">
               <span>{formatWritingDate(piece.date)}</span>
               <span aria-hidden="true">·</span>
