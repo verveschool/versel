@@ -84,7 +84,7 @@ export default function HomePage() {
               <div className="space-y-5">
                 {metrics.map((metric) => (
                   <div key={metric.label} className="flex items-end justify-between border-b border-white/10 pb-5">
-                    <span className="text-5xl font-semibold tracking-[-0.06em] text-white">{metric.value}</span>
+                    <span className="text-4xl font-semibold tracking-[-0.045em] text-white">{metric.value}</span>
                     <span className="max-w-36 text-right text-[12px] uppercase leading-5 tracking-[0.18em] text-white/52">
                       {metric.label}
                     </span>
