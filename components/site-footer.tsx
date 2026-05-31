@@ -33,7 +33,7 @@ export function SiteFooter() {
           <section className="space-y-3">
                         <div className="space-y-2">
               <p className="text-base font-medium text-foreground">VerveSchool</p>
-              <p>Building high-trust connections between candidates, partners, and people.</p>
+              <p>The world moves for those who do.</p>
             </div>
           </section>
 
