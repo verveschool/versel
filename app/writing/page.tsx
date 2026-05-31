@@ -53,7 +53,7 @@ export default function WritingPage() {
                 </p>
               </div>
               <div>
-                <h2 className="mb-5 font-serif text-white transition-colors group-hover:text-primary">
+                <h2 className="mb-5 font-serif text-2xl text-white transition-colors group-hover:text-primary">
                   {featuredPiece.title}
                 </h2>
                 <p className="max-w-2xl text-lg leading-8 text-white/70">{featuredPiece.description}</p>
@@ -65,7 +65,7 @@ export default function WritingPage() {
         <section className="grid gap-6 md:grid-cols-2">
           {remainingPieces.map((piece) => (
             <Link key={piece.slug} href={`/writing/${piece.slug}`} className="group border border-white/10 bg-white/[0.03] p-8 transition-colors hover:border-primary/60">
-                            <h2 className="mb-4 font-serif text-white transition-colors group-hover:text-primary">
+                            <h2 className="mb-4 font-serif text-xl text-white transition-colors group-hover:text-primary">
                 {piece.title}
               </h2>
               <p className="mb-8 text-white/65">{piece.description}</p>
@@ -77,7 +77,7 @@ export default function WritingPage() {
         </section>
 
         <section className="mt-20 border border-primary/30 bg-primary/10 p-8">
-                    <h2 className="mb-4 font-serif text-white">building a longer canon</h2>
+                    <h2 className="mb-4 font-serif text-xl text-white">building a longer canon</h2>
           <p className="mb-6 max-w-2xl text-white/70">
             The writing archive is the home for tactical notes. For a more structured reading path, visit the book page.
           </p>

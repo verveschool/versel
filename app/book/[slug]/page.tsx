@@ -77,7 +77,7 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
           <MarkdownRenderer content={chapter.content} className="book-prose" />
 
           <section className="mt-16 border border-primary/30 bg-primary/10 p-8">
-                        <h2 className="mb-4 font-serif text-white">Use this chapter inside a real sales conversation.</h2>
+                        <h2 className="mb-4 font-serif text-xl text-white">Use this chapter inside a real sales conversation.</h2>
             <p className="mb-6 text-white/70">
               Bring the ideas into a buyer conversation, coaching session, pipeline review, or contact conversation with verveschool.
             </p>
@@ -91,24 +91,24 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
           {previousChapter ? (
             <Link href={`/book/${previousChapter.slug}`} className="group border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-primary/60">
               <p className="mb-3 text-sm text-white/45">← previous</p>
-              <h2 className="font-serif text-white transition-colors group-hover:text-primary">{previousChapter.title}</h2>
+              <h2 className="font-serif text-lg text-white transition-colors group-hover:text-primary">{previousChapter.title}</h2>
             </Link>
           ) : (
             <Link href="/book" className="group border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-primary/60">
               <p className="mb-3 text-sm text-white/45">← overview</p>
-              <h2 className="font-serif text-white transition-colors group-hover:text-primary">Book landing</h2>
+              <h2 className="font-serif text-lg text-white transition-colors group-hover:text-primary">Book landing</h2>
             </Link>
           )}
 
           {nextChapter ? (
             <Link href={`/book/${nextChapter.slug}`} className="group border border-white/10 bg-white/[0.03] p-6 text-right transition-colors hover:border-primary/60">
               <p className="mb-3 text-sm text-white/45">next →</p>
-              <h2 className="font-serif text-white transition-colors group-hover:text-primary">{nextChapter.title}</h2>
+              <h2 className="font-serif text-lg text-white transition-colors group-hover:text-primary">{nextChapter.title}</h2>
             </Link>
           ) : (
             <Link href="/partners" className="group border border-white/10 bg-white/[0.03] p-6 text-right transition-colors hover:border-primary/60">
               <p className="mb-3 text-sm text-white/45">finished →</p>
-              <h2 className="font-serif text-white transition-colors group-hover:text-primary">Keep selling better</h2>
+              <h2 className="font-serif text-lg text-white transition-colors group-hover:text-primary">Keep selling better</h2>
             </Link>
           )}
         </nav>

@@ -78,7 +78,7 @@ export default function BookPage() {
                   <span className="text-primary">chapter {chapter.chapterNumber}</span>
                   <span>{chapter.readingTime}</span>
                 </div>
-                                <h3 className="mb-5 font-serif text-white transition-colors group-hover:text-primary">
+                                <h3 className="mb-5 font-serif text-xl text-white transition-colors group-hover:text-primary">
                   {chapter.title}
                 </h3>
                 <p className="mb-8 text-white/65">{chapter.description}</p>
@@ -89,7 +89,7 @@ export default function BookPage() {
         </section>
 
         <section className="mt-20 border border-primary/30 bg-primary/10 p-8">
-                    <h2 className="mb-4 font-serif text-white">Turn the reading into a better sales conversation.</h2>
+                    <h2 className="mb-4 font-serif text-xl text-white">Turn the reading into a better sales conversation.</h2>
           <p className="mb-6 max-w-2xl text-white/70">
             If the book maps to a problem inside your revenue team, use the partner page to start a more specific conversation about selling better.
           </p>
