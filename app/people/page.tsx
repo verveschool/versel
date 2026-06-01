@@ -41,7 +41,6 @@ const leadershipTeam: PersonCard[] = [
 
 const talentPartners: PersonCard[] = [
   { name: "Khushi Soni", subtitle: "Talent Operations", image: "/people/khushi-soni.jpg" },
-  { name: "Hadia Rehman", subtitle: "Talent Operations", image: "/placeholder-user.jpg" },
   { name: "Laiba Zafar", subtitle: "Talent Operations", image: "/people/laiba-zafar.jpg" },
   { name: "Garima Gandhi", subtitle: "Talent Operations", image: "/people/garima-gandhi.jpg" },
   { name: "Aditi Sahu", subtitle: "Talent Operations", image: "/people/aditi-sahu.jpg" },
@@ -58,7 +57,11 @@ const industryPartners: PersonCard[] = [
   { name: "Sagar Dudani", subtitle: "Co-founder, Prepca", image: "/people/sagar-dudani.jpg", linkedin: "https://www.linkedin.com/in/sagar-dudani-b33b4aaa/" },
   { name: "Ravi Kumar Gupta", subtitle: "Co-founder, AlmaBetter", image: "/people/ravi-kumar-gupta.jpg", linkedin: "https://www.linkedin.com/in/ravi-kumar-gupta/" },
   { name: "Nikhil Kaushik", subtitle: "Co-founder, ProjectStudio", image: "/people/nikhil-kaushik.jpg", linkedin: "https://www.linkedin.com/in/nikhilka/" },
-  { name: "Madara Uchiha", subtitle: "Co-founder, Konohagakure", image: "/people/madara-uchiha.jpg", linkedin: "https://en.wikipedia.org/wiki/Madara_Uchiha" },
+  { name: "Madara Uchiha", subtitle: "Co-founder, Konohagakure", image: "/people/madara-uchiha.jpg", linkedin: "https://en.wikipedia.org/wiki/Madara_Uchiha/" },
+  { name: "Yashwardhan Burad", subtitle: "Co-founder, AccioJob", image: "/people/yashwardhan-burad.jpg", linkedin: "https://www.linkedin.com/in/yashwardhanburad/" },
+  { name: "Faiz Ahmad", subtitle: "Tech Lead, [24]7.ai", image: "/people/faiz-ahmed.jpg", linkedin: "https://www.linkedin.com/in/faizzahd/" },
+  { name: "Arindam Dutta", subtitle: "Business Head, Academically Global", image: "/people/arindam-dutta.jpg", linkedin: "https://www.linkedin.com/in/arindam-dutta-04109954/" },
+  { name: "Ronak Agrawal", subtitle: "Co-founder, SkilloVilla", image: "/people/ronak-agarwal.jpg", linkedin: "https://www.linkedin.com/in/ronak-agrawal-88066432/" },
 ]
 
 
