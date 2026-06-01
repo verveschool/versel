@@ -50,8 +50,8 @@ const talentPartners: PersonCard[] = [
 ]
 
 const industryPartners: PersonCard[] = [
-  { name: "Shrimn Nishit", subtitle: "SVP & Business Head, Vedantu", image: "/people/shrimn-nishit.jpg", linkedin: "https://www.linkedin.com/in/shrimnnishit/" },
-  { name: "Nitin Solanki", subtitle: "SVP Business Development, Scaler", image: "/people/nitin-solanki.jpg", linkedin: "https://www.linkedin.com/in/nitin-solanki-b245b714a/" },
+  { name: "Shrimn Nishit", subtitle: "Business Head, Vedantu", image: "/people/shrimn-nishit.jpg", linkedin: "https://www.linkedin.com/in/shrimnnishit/" },
+  { name: "Nitin Solanki", subtitle: "Business Head, Scaler", image: "/people/nitin-solanki.jpg", linkedin: "https://www.linkedin.com/in/nitin-solanki-b245b714a/" },
   { name: "Atul Kumar Singh", subtitle: "Business Head, Infinity Learn", image: "/people/atul-kumar-singh.jpg", linkedin: "https://www.linkedin.com/in/atul-kumar-singh-71b49272/" },
   { name: "Krishna Bandaru", subtitle: "Co-founder, Crio.do", image: "/people/krishna-bandaru.jpg", linkedin: "https://www.linkedin.com/in/krishnabandaru/" },
   { name: "Sagar Dudani", subtitle: "Co-founder, Prepca", image: "/people/sagar-dudani.jpg", linkedin: "https://www.linkedin.com/in/sagar-dudani-b33b4aaa/" },
@@ -60,7 +60,7 @@ const industryPartners: PersonCard[] = [
   { name: "Madara Uchiha", subtitle: "Co-founder, Konohagakure", image: "/people/madara-uchiha.jpg", linkedin: "https://en.wikipedia.org/wiki/Madara_Uchiha/" },
   { name: "Yashwardhan Burad", subtitle: "Co-founder, AccioJob", image: "/people/yashwardhan-burad.jpg", linkedin: "https://www.linkedin.com/in/yashwardhanburad/" },
   { name: "Faiz Ahmad", subtitle: "Tech Lead, [24]7.ai", image: "/people/faiz-ahmed.jpg", linkedin: "https://www.linkedin.com/in/faizzahd/" },
-  { name: "Arindam Dutta", subtitle: "Business Head, Academically Global", image: "/people/arindam-dutta.jpg", linkedin: "https://www.linkedin.com/in/arindam-dutta-04109954/" },
+  { name: "Arindam Dutta", subtitle: "Business Head, Academically", image: "/people/arindam-dutta.jpg", linkedin: "https://www.linkedin.com/in/arindam-dutta-04109954/" },
   { name: "Ronak Agrawal", subtitle: "Co-founder, SkilloVilla", image: "/people/ronak-agarwal.jpg", linkedin: "https://www.linkedin.com/in/ronak-agrawal-88066432/" },
 ]
 
