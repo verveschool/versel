@@ -32,33 +32,33 @@ export const metadata: Metadata = {
 }
 
 const leadershipTeam: PersonCard[] = [
-  { name: "A. Duggal", subtitle: "Co-founder, CEO", linkedin: "https://www.linkedin.com/in/okduggal/" },
-  { name: "Faraz Arif", subtitle: "Co-founder, COO", linkedin: "https://www.linkedin.com/in/arif-faraz/" },
-  { name: "Bhushan Kawale", subtitle: "Chief Business Officer", linkedin: "https://www.linkedin.com/in/bhushan-kawale-200220279/" },
-  { name: "Zubia Shah", subtitle: "Chief of Staff", linkedin: "https://www.linkedin.com/in/zubia-shah-11332a228/" },
-  { name: "Meehika Singh", subtitle: "Founder's Office", linkedin: "https://www.linkedin.com/in/meehika-singh-ab490b282/" },
+  { name: "A. Duggal", subtitle: "Co-founder, CEO", image: "/people/a-duggal.jpg", linkedin: "https://www.linkedin.com/in/okduggal/" },
+  { name: "Faraz Arif", subtitle: "Co-founder, COO", image: "/people/faraz-arif.jpg", linkedin: "https://www.linkedin.com/in/arif-faraz/" },
+  { name: "Bhushan Kawale", subtitle: "Chief Business Officer", image: "/people/bhushan-kawale.jpg", linkedin: "https://www.linkedin.com/in/bhushan-kawale-200220279/" },
+  { name: "Zubia Shah", subtitle: "Chief of Staff", image: "/people/zubia-shah.jpg", linkedin: "https://www.linkedin.com/in/zubia-shah-11332a228/" },
+  { name: "Meehika Singh", subtitle: "Founder's Office", image: "/people/meehika-singh.jpg", linkedin: "https://www.linkedin.com/in/meehika-singh-ab490b282/" },
 ]
 
 const talentPartners: PersonCard[] = [
-  { name: "Khushi Soni", subtitle: "Talent Operations", linkedin: "https://www.linkedin.com/in/khushi-soni-placeholder/", image: "/people/khushi-soni.png" },
-  { name: "Hadia Rehman", subtitle: "Talent Operations", linkedin: "https://www.linkedin.com/in/hadia-rehman-placeholder/", image: "/people/hadia-rehman.png" },
-  { name: "Laiba Zafar", subtitle: "Talent Operations", linkedin: "https://www.linkedin.com/in/laiba-zafar-placeholder/", image: "/people/laiba-zafar.png" },
-  { name: "Garima Gandhi", subtitle: "Talent Operations", linkedin: "https://www.linkedin.com/in/garima-gandhi-placeholder/", image: "/people/garima-gandhi.png" },
-  { name: "Aditi Sahu", subtitle: "Talent Operations", linkedin: "https://www.linkedin.com/in/aditi-sahu-placeholder/", image: "/people/aditi-sahu.png" },
-  { name: "Zubda Sajda", subtitle: "Talent Operations", linkedin: "https://www.linkedin.com/in/zubda-sajda-placeholder/", image: "/people/zubda-sajda.png" },
-  { name: "Gopika K.", subtitle: "Talent Operations", linkedin: "https://www.linkedin.com/in/gopika-k-placeholder/", image: "/people/gopika-k.png" },
-  { name: "Shahida Arif", subtitle: "Talent Operations", linkedin: "https://www.linkedin.com/in/shahida-arif-placeholder/", image: "/people/shahida-arif.png" },
+  { name: "Khushi Soni", subtitle: "Talent Operations", image: "/people/khushi-soni.jpg" },
+  { name: "Hadia Rehman", subtitle: "Talent Operations", image: "/placeholder-user.jpg" },
+  { name: "Laiba Zafar", subtitle: "Talent Operations", image: "/people/laiba-zafar.jpg" },
+  { name: "Garima Gandhi", subtitle: "Talent Operations", image: "/people/garima-gandhi.jpg" },
+  { name: "Aditi Sahu", subtitle: "Talent Operations", image: "/people/aditi-sahu.jpg" },
+  { name: "Zubda Sajda", subtitle: "Talent Operations", image: "/people/zubda-sajda.jpg" },
+  { name: "Gopika K.", subtitle: "Talent Operations", image: "/people/gopika-k.jpg" },
+  { name: "Shahida Arif", subtitle: "Talent Operations", image: "/people/shahida-arif.jpg" },
 ]
 
 const industryPartners: PersonCard[] = [
-  { name: "Shrimn Nishit", subtitle: "SVP & Business Head, Vedantu", linkedin: "https://www.linkedin.com/in/shrimnnishit/" },
-  { name: "Nitin Solanki", subtitle: "SVP Business Development, Scaler", linkedin: "https://www.linkedin.com/in/nitin-solanki-b245b714a/" },
-  { name: "Atul Kumar Singh", subtitle: "Business Head, Infinity Learn", linkedin: "https://www.linkedin.com/in/atul-kumar-singh-71b49272/" },
-  { name: "Krishna Bandaru", subtitle: "Co-founder, Crio.do", linkedin: "https://www.linkedin.com/in/krishnabandaru/" },
-  { name: "Sagar Dudani", subtitle: "Co-founder, Prepca", linkedin: "https://www.linkedin.com/in/sagar-dudani-b33b4aaa/" },
-  { name: "Ravi Kumar Gupta", subtitle: "Co-founder, AlmaBetter", linkedin: "https://www.linkedin.com/in/ravi-kumar-gupta/" },
-  { name: "Nikhil Kaushik", subtitle: "Co-founder, ProjectStudio", linkedin: "https://www.linkedin.com/in/nikhilka/" },
-  { name: "Madara Uchiha", subtitle: "Co-founder, Konohagakure", image: "/people/madara-uchiha.png", linkedin: "https://en.wikipedia.org/wiki/Madara_Uchiha" },
+  { name: "Shrimn Nishit", subtitle: "SVP & Business Head, Vedantu", image: "/people/shrimn-nishit.jpg", linkedin: "https://www.linkedin.com/in/shrimnnishit/" },
+  { name: "Nitin Solanki", subtitle: "SVP Business Development, Scaler", image: "/people/nitin-solanki.jpg", linkedin: "https://www.linkedin.com/in/nitin-solanki-b245b714a/" },
+  { name: "Atul Kumar Singh", subtitle: "Business Head, Infinity Learn", image: "/people/atul-kumar-singh.jpg", linkedin: "https://www.linkedin.com/in/atul-kumar-singh-71b49272/" },
+  { name: "Krishna Bandaru", subtitle: "Co-founder, Crio.do", image: "/people/krishna-bandaru.jpg", linkedin: "https://www.linkedin.com/in/krishnabandaru/" },
+  { name: "Sagar Dudani", subtitle: "Co-founder, Prepca", image: "/people/sagar-dudani.jpg", linkedin: "https://www.linkedin.com/in/sagar-dudani-b33b4aaa/" },
+  { name: "Ravi Kumar Gupta", subtitle: "Co-founder, AlmaBetter", image: "/people/ravi-kumar-gupta.jpg", linkedin: "https://www.linkedin.com/in/ravi-kumar-gupta/" },
+  { name: "Nikhil Kaushik", subtitle: "Co-founder, ProjectStudio", image: "/people/nikhil-kaushik.jpg", linkedin: "https://www.linkedin.com/in/nikhilka/" },
+  { name: "Madara Uchiha", subtitle: "Co-founder, Konohagakure", image: "/people/madara-uchiha.jpg", linkedin: "https://en.wikipedia.org/wiki/Madara_Uchiha" },
 ]
 
 
@@ -72,9 +72,19 @@ function initialsFromName(name: string) {
     .toUpperCase()
 }
 
-function ProfileCard({ person, clickable = false }: { person: PersonCard; clickable?: boolean }) {
-  const cardBody = (
-    <article className="rounded-xl border border-white/10 bg-white/[0.02] p-4 transition">
+function ProfileCard({
+  person,
+  clickable = false,
+  className = "",
+}: {
+  person: PersonCard
+  clickable?: boolean
+  className?: string
+}) {
+  const articleClassName = "rounded-xl border border-white/10 bg-white/[0.02] p-4 transition"
+  const standaloneArticleClassName = `${className} ${articleClassName}`.trim()
+  const content = (
+    <>
       <div className="aspect-[4/5] overflow-hidden rounded-lg border border-white/10 bg-white/[0.04]">
         {person.image ? (
           <img src={person.image} alt={`${person.name} photo`} className="h-full w-full object-cover" />
@@ -91,7 +101,7 @@ function ProfileCard({ person, clickable = false }: { person: PersonCard; clicka
         <p className="text-[15px] font-medium leading-5 tracking-[-0.01em] text-white">{person.name}</p>
         <p className="text-sm leading-5 text-white/65">{person.subtitle}</p>
       </div>
-    </article>
+    </>
   )
 
   if (clickable && person.linkedin) {
@@ -100,15 +110,16 @@ function ProfileCard({ person, clickable = false }: { person: PersonCard; clicka
         href={person.linkedin}
         target="_blank"
         rel="noopener noreferrer"
-        className="block opacity-95 transition hover:opacity-100"
+        className={`${className} block opacity-95 transition hover:opacity-100`.trim()}
       >
-        {cardBody}
+        <article className={articleClassName}>{content}</article>
       </Link>
     )
   }
 
-  return cardBody
+  return <article className={standaloneArticleClassName}>{content}</article>
 }
+
 
 function PeopleSection({
   title,
@@ -120,15 +131,19 @@ function PeopleSection({
   clickable?: boolean
 }) {
   const isLeadership = title === "Leadership Team"
+  const sectionClassName = isLeadership
+    ? "grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-5 lg:grid-cols-3 xl:grid-cols-5"
+    : "flex flex-wrap justify-center gap-4 md:gap-5"
+  const cardClassName = isLeadership
+    ? ""
+    : "w-[calc((100%_-_1rem)/2)] md:w-[calc((100%_-_1.25rem)/2)] lg:w-[calc((100%_-_2.5rem)/3)] xl:w-[calc((100%_-_3.75rem)/4)]"
 
   return (
     <section className="space-y-6 md:space-y-7">
       <h2 className="text-lg font-medium tracking-[-0.01em] text-white/95">{title}</h2>
-      <div
-        className={isLeadership ? "grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-5 lg:grid-cols-3 xl:grid-cols-5" : "grid grid-cols-2 gap-4 md:gap-5 lg:grid-cols-3 xl:grid-cols-4"}
-      >
+      <div className={sectionClassName}>
         {people.map((person) => (
-          <ProfileCard key={`${title}-${person.name}`} person={person} clickable={clickable} />
+          <ProfileCard key={`${title}-${person.name}`} person={person} clickable={clickable} className={cardClassName} />
         ))}
       </div>
     </section>
