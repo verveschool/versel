@@ -85,7 +85,7 @@ function ProfileCard({
   const standaloneArticleClassName = `${className} ${articleClassName}`.trim()
   const content = (
     <>
-      <div className="aspect-[4/5] overflow-hidden rounded-lg border border-white/10 bg-white/[0.04]">
+      <div className="mx-auto aspect-square w-24 overflow-hidden rounded-lg border border-white/10 bg-white/[0.04] sm:w-28 md:w-32">
         {person.image ? (
           <img src={person.image} alt={`${person.name} photo`} className="h-full w-full object-cover" />
         ) : (
