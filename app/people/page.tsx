@@ -84,11 +84,11 @@ function ProfileCard({
   clickable?: boolean
   className?: string
 }) {
-  const articleClassName = "rounded-xl border border-white/10 bg-white/[0.02] p-4 transition"
+  const articleClassName = "rounded-xl border border-white/10 bg-white/[0.02] p-4 text-center transition"
   const standaloneArticleClassName = `${className} ${articleClassName}`.trim()
   const content = (
     <>
-      <div className="mx-auto aspect-square w-24 overflow-hidden rounded-lg border border-white/10 bg-white/[0.04] sm:w-28 md:w-32">
+      <div className="mx-auto aspect-square w-28 overflow-hidden rounded-lg border border-white/10 bg-white/[0.04] sm:w-32 md:w-36">
         {person.image ? (
           <img src={person.image} alt={`${person.name} photo`} className="h-full w-full object-cover" />
         ) : (
@@ -133,20 +133,12 @@ function PeopleSection({
   people: PersonCard[]
   clickable?: boolean
 }) {
-  const isLeadership = title === "Leadership Team"
-  const sectionClassName = isLeadership
-    ? "grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-5 lg:grid-cols-3 xl:grid-cols-5"
-    : "flex flex-wrap justify-center gap-4 md:gap-5"
-  const cardClassName = isLeadership
-    ? ""
-    : "w-[calc((100%_-_1rem)/2)] md:w-[calc((100%_-_1.25rem)/2)] lg:w-[calc((100%_-_2.5rem)/3)] xl:w-[calc((100%_-_3.75rem)/4)]"
-
   return (
     <section className="space-y-6 md:space-y-7">
       <h2 className="text-lg font-medium tracking-[-0.01em] text-white/95">{title}</h2>
-      <div className={sectionClassName}>
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-5 lg:grid-cols-4">
         {people.map((person) => (
-          <ProfileCard key={`${title}-${person.name}`} person={person} clickable={clickable} className={cardClassName} />
+          <ProfileCard key={`${title}-${person.name}`} person={person} clickable={clickable} />
         ))}
       </div>
     </section>
@@ -159,9 +151,8 @@ export default function PeoplePage() {
       <SiteHeader />
 
       <main className="yc-container space-y-12 py-14 md:space-y-14 md:py-20">
-        <PeopleSection title="Leadership Team" people={leadershipTeam} clickable />
-        <PeopleSection title="Talent Ops" people={talentPartners} clickable />
-        <PeopleSection title="Industry Partners & Advisors" people={industryPartners} clickable />
+        <PeopleSection title="The Unit" people={[...leadershipTeam, ...talentPartners]} clickable />
+        <PeopleSection title="The Alliance" people={industryPartners} clickable />
       </main>
 
       <SiteFooter />
