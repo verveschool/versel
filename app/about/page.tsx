@@ -67,10 +67,10 @@ export default function CandidatesPage() {
         <main className="yc-container flex-1 py-16 md:py-24">
           <section className="mb-20 max-w-5xl">
             <h1 className="max-w-4xl font-semibold text-foreground">
-              No resume games. We place serious people into real sales careers.
+              The world moves for those who do.
             </h1>
             <p className="mt-8 max-w-3xl text-lg leading-8 text-foreground/68 md:text-xl md:leading-9">
-              If you can communicate, stay sincere under pressure, and execute daily, we help you break into high-growth in-office roles with strong partners.
+              If you can communicate, stay composed under pressure, and keep your word, we would like to meet you.
             </p>
           </section>
 
