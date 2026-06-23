@@ -66,12 +66,9 @@ export default function CandidatesPage() {
       <div className="flex flex-col md:flex-row">
         <main className="yc-container flex-1 py-16 md:py-24">
           <section className="mb-20 max-w-5xl">
-            <h1 className="max-w-4xl font-semibold text-foreground">
-              The world moves for those who do.
-            </h1>
-            <p className="mt-8 max-w-3xl text-lg leading-8 text-foreground/68 md:text-xl md:leading-9">
+            <h2 className="max-w-4xl font-semibold text-foreground">
               If you can communicate, stay composed under pressure, and keep your word, we would like to meet you.
-            </p>
+            </h2>
           </section>
 
           <section data-section="how-it-works" className="mb-20 border-t border-white/10 pt-10">
@@ -102,7 +99,7 @@ export default function CandidatesPage() {
                     </p>
                   </div>
                   <div className="max-w-3xl">
-                    <h2 className="font-semibold text-foreground">{section.title}</h2>
+                    <h3 className="font-semibold text-foreground">{section.title}</h3>
                     <p className="mt-6 text-lg leading-8 text-foreground/68">{section.body}</p>
                   </div>
                 </div>
