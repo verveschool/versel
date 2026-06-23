@@ -75,9 +75,9 @@ export default function PartnersPage() {
       <div className="flex flex-col md:flex-row">
         <main className="yc-container flex-1 py-16 md:py-24">
           <div className="mb-24">
-            <h1 className="mb-4 font-semibold">
-              A Filtered Sales-Talent Pipeline With a Replacement Guarantee
-            </h1>
+            <h2 className="mb-4 font-semibold">
+              Hire customer-facing talent with replacement coverage.
+            </h2>
           </div>
           <div className="mb-10 rounded-md border border-border bg-card/70 p-4 md:hidden">
             <details>
@@ -105,7 +105,7 @@ export default function PartnersPage() {
 
           {/* Hiring Risk */}
           <section data-section="hiring-risk" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
-            <h2>Sales hiring is risk transfer</h2>
+            <h3>Sales hiring is risk transfer</h3>
             <div className="yc-text-block mb-8">
               <p>Every sales hire looks cheaper before they miss target.</p>
               <p className="mb-6">
@@ -121,7 +121,7 @@ export default function PartnersPage() {
 
           {/* Bad Hires */}
           <section data-section="bad-hires" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
-            <h2>Bad sales hires hide in plain sight</h2>
+            <h3>Bad sales hires hide in plain sight</h3>
             <div className="yc-text-block mb-8">
               <p className="mb-6">They interview well. They sound confident. They understand the role on paper.</p>
               <p className="mb-6">
@@ -138,7 +138,7 @@ export default function PartnersPage() {
 
           {/* Signal Filtering */}
           <section data-section="signal-filtering" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
-            <h2>We filter for signal before polish</h2>
+            <h3>We filter for signal before polish</h3>
             <div className="yc-text-block mb-8">
               <p className="mb-6">We source English-fluent Gen Z sales talent for specific partner mandates.</p>
               <p className="mb-6">
@@ -155,7 +155,7 @@ export default function PartnersPage() {
 
           {/* Selection Pressure */}
           <section data-section="selection-pressure" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
-            <h2>Selection pressure creates the shortlist</h2>
+            <h3>Selection pressure creates the shortlist</h3>
             <div className="yc-text-block mb-8">
               <h3>1. Mandate-led scouting</h3>
               <p>
@@ -190,7 +190,7 @@ export default function PartnersPage() {
 
           {/* Replacement Guarantee */}
           <section data-section="replacement-guarantee" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
-            <h2>The replacement guarantee changes the incentive</h2>
+            <h3>The replacement guarantee changes the incentive</h3>
             <div className="yc-text-block mb-8">
               <h3>90-day replacement guarantee</h3>
               <p className="mt-4 mb-8">
@@ -217,7 +217,7 @@ export default function PartnersPage() {
 
           {/* Partner Fit */}
           <section data-section="partner-fit" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
-            <h2>Built for partners who cannot afford mis-hires</h2>
+            <h3>Built for partners who cannot afford mis-hires</h3>
             <div className="yc-text-block mb-8">
               <p className="mb-6">We work best where one wrong sales hire has a visible cost.</p>
               <p className="mb-6">
@@ -233,7 +233,7 @@ export default function PartnersPage() {
 
           {/* Next Steps */}
           <section data-section="next-steps" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
-            <h2>Partner with Verveschool</h2>
+            <h3>Partner with Verveschool</h3>
             <div className="yc-text-block mb-12">
               <p className="mb-6">
                 If you want a tighter sales hiring funnel with accountability after joining, send us the role and the
