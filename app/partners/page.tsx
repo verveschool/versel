@@ -9,12 +9,12 @@ export default function PartnersPage() {
   const [headerOffset, setHeaderOffset] = useState(96)
 
   const sections = [
-    "hiring-risk",
-    "bad-hires",
-    "signal-filtering",
-    "selection-pressure",
-    "replacement-guarantee",
-    "partner-fit",
+    "growth-needs-people",
+    "how-we-help",
+    "who-we-work-with",
+    "how-hiring-works",
+    "what-partners-can-expect",
+    "commercial-terms",
     "next-steps",
   ]
 
@@ -76,9 +76,26 @@ export default function PartnersPage() {
         <main className="yc-container flex-1 py-16 md:py-24">
           <div className="mb-24">
             <h1 className="mb-4 font-semibold">
-              Hire customer-facing talent with replacement coverage.
+              Hire customer-facing talent fast with replacement coverage.
             </h1>
+            <p className="max-w-2xl text-base text-muted-foreground md:text-lg">
+              Helping growing companies hire sales, business development, counselling, and support talent through a
+              sourcing model designed for speed and consistency.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3 text-sm text-muted-foreground">
+              <span className="rounded-full border border-border px-4 py-2">
+                Reduced sourcing burden
+              </span>
+              <span className="rounded-full border border-border px-4 py-2">
+                Faster access to role-aligned candidates
+              </span>
+              <span className="rounded-full border border-border px-4 py-2">
+                60-day replacement coverage
+              </span>
+            </div>
           </div>
+
           <div className="mb-10 rounded-md border border-border bg-card/70 p-4 md:hidden">
             <details>
               <summary className="cursor-pointer list-none text-base font-medium text-foreground [&::-webkit-details-marker]:hidden">
@@ -103,141 +120,148 @@ export default function PartnersPage() {
             </details>
           </div>
 
-          {/* Hiring Risk */}
-          <section data-section="hiring-risk" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
-            <h2>Sales hiring is risk transfer</h2>
+          {/* Growth Needs People */}
+          <section
+            data-section="growth-needs-people"
+            className="yc-section"
+            style={{ scrollMarginTop: `${headerOffset + 20}px` }}
+          >
+            <h2>Growth needs people</h2>
             <div className="yc-text-block mb-8">
-              <p>Every sales hire looks cheaper before they miss target.</p>
+              <p>
+                As hiring demand increases, internal teams often struggle to keep up with sourcing and screening
+                requirements.
+              </p>
               <p className="mb-6">
-                the real cost is not salary. it is lost pipeline, manager attention, damaged follow up, and the months
-                you spend discovering what interviews alone could not show.
+                Open roles stay open longer. Hiring teams spend more time searching for candidates. Hiring momentum
+                becomes harder to maintain.
               </p>
               <p>
-                verveschool exists to absorb that uncertainty before a candidate reaches your floor. we filter for
-                sales signal first, then stay accountable after joining.
+                VerveSchool helps companies maintain a consistent flow of role-aligned candidates by acting as an
+                extension of their hiring function.
               </p>
             </div>
           </section>
 
-          {/* Bad Hires */}
-          <section data-section="bad-hires" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
-            <h2>Bad sales hires hide in plain sight</h2>
+          {/* How We Help */}
+          <section
+            data-section="how-we-help"
+            className="yc-section"
+            style={{ scrollMarginTop: `${headerOffset + 20}px` }}
+          >
+            <h2>How VerveSchool helps</h2>
             <div className="yc-text-block mb-8">
-              <p className="mb-6">They interview well. They sound confident. They understand the role on paper.</p>
               <p className="mb-6">
-                then rejection compounds. discipline drops. notes get thin. follow ups slip. the manager becomes the
-                safety net for work the hire should own.
+                Our scout network actively identifies, engages, and qualifies candidates before they enter your hiring
+                process.
               </p>
               <p className="mb-6">
-                most hiring processes overvalue presentation and undervalue repetition, coachability, recovery speed,
-                and willingness to do unglamorous selling work every day.
+                Instead of spending internal bandwidth sourcing large volumes of candidates, your team receives
+                role-aligned profiles that are ready for evaluation.
               </p>
-              <p>that is the gap we are built to close.</p>
+              <p>You spend less time searching, more time hiring.</p>
             </div>
           </section>
 
-          {/* Signal Filtering */}
-          <section data-section="signal-filtering" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
-            <h2>We filter for signal before polish</h2>
+          {/* Who We Work With */}
+          <section
+            data-section="who-we-work-with"
+            className="yc-section"
+            style={{ scrollMarginTop: `${headerOffset + 20}px` }}
+          >
+            <h2>Who we work with</h2>
             <div className="yc-text-block mb-8">
-              <p className="mb-6">We source English-fluent Gen Z sales talent for specific partner mandates.</p>
-              <p className="mb-6">
-                Resumes are not the product. Filtered signal is. We screen for hunger, focus, listening quality,
-                feedback absorption, recovery after rejection, and the ability to stay precise under pressure.
-              </p>
-              <p className="mb-6">
-                candidates who only perform confidence do not make it through. candidates who improve quickly, ask
-                sharper questions, and keep standards under stress move forward.
-              </p>
-              <p>you see a smaller pool because the weak signal has already been removed.</p>
+              <ul className="space-y-3">
+                <li>Growth-stage companies building frontline teams</li>
+                <li>Talent acquisition teams managing hiring targets</li>
+                <li>High-volume hiring teams scaling operations</li>
+                <li>Founders building customer-facing functions</li>
+                <li>Business leaders scaling revenue teams</li>
+              </ul>
             </div>
           </section>
 
-          {/* Selection Pressure */}
-          <section data-section="selection-pressure" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
-            <h2>Selection pressure creates the shortlist</h2>
+          {/* How Hiring Works */}
+          <section
+            data-section="how-hiring-works"
+            className="yc-section"
+            style={{ scrollMarginTop: `${headerOffset + 20}px` }}
+          >
+            <h2>How hiring works</h2>
             <div className="yc-text-block mb-8">
-              <h2>1. Mandate-led scouting</h2>
+              <h2>1. Share role details</h2>
               <p>
-                We do not hand you a generic bench. We hunt against your role, city, compensation, language needs, and
-                sales motion.
+                Share role details, compensation, location, hiring targets, and expectations.
               </p>
 
-              <h2>2. Founder screen</h2>
+              <h2>2. Candidate identification</h2>
               <p>
-                Faraz Arif (co-founder, 9+ years exp) personally screens every candidate for traits that deserve deeper validation: persistence, clarity, humility, and recovery.
+                Relevant candidates are identified and engaged across the market.
               </p>
 
-              <h2>3. Pressure tasks</h2>
+              <h2>3. Screening</h2>
               <p>
-                candidates are tested through realistic sales situations: objection handling, follow up discipline,
-                call thinking, and response to direct feedback.
+                Candidates are screened for communication, coachability, and role fit.
               </p>
 
-              <h2>4. Partner calibration</h2>
+              <h2>4. Interview shortlist</h2>
               <p>
-                We map the final shortlist to your product, buyer, targets, and floor reality so you are choosing from
-                candidates who fit the actual job, not a generic sales profile.
+                Interview shortlisted candidates and assess fit for the role.
               </p>
 
-              <h2>5. Post-joining support</h2>
+              <h2>5. Hiring decision</h2>
               <p>
-                Training and coaching are operational support for the guarantee. Once a hire starts, we review calls,
-                tighten talk tracks, and identify replacement risk early.
-              </p>
-            </div>
-          </section>
-
-          {/* Replacement Guarantee */}
-          <section data-section="replacement-guarantee" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
-            <h2>The replacement guarantee changes the incentive</h2>
-            <div className="yc-text-block mb-8">
-              <h2>90-day replacement guarantee</h2>
-              <p className="mt-4 mb-8">
-                If the hire does not perform, we replace them. The pipeline is accountable after the offer letter, not
-                just before it.
-              </p>
-
-              <h2>Aligned payment terms</h2>
-              <p className="mt-4">Net 30 terms keep incentives tied to real partner outcomes, not resume delivery.</p>
-            </div>
-            <div className="yc-text-block mb-8">
-              <h2>Risk monitoring</h2>
-              <p className="mt-4 mb-8">
-                We look for early warning signs in activity, call quality, follow-up habits, and feedback response.
-              </p>
-
-              <h2>Targeted coaching</h2>
-              <p className="mt-4">
-                Coaching exists to protect the guarantee: sharper scripts, better questions, cleaner pacing, and faster
-                correction when performance drifts.
+                Make hiring decisions and continue building your team.
               </p>
             </div>
           </section>
 
-          {/* Partner Fit */}
-          <section data-section="partner-fit" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
-            <h2>Built for partners who cannot afford mis-hires</h2>
+          {/* What Partners Can Expect */}
+          <section
+            data-section="what-partners-can-expect"
+            className="yc-section"
+            style={{ scrollMarginTop: `${headerOffset + 20}px` }}
+          >
+            <h2>What partners can expect</h2>
             <div className="yc-text-block mb-8">
-              <p className="mb-6">We work best where one wrong sales hire has a visible cost.</p>
-              <p className="mb-6">
-                if your team needs dependable frontline salespeople in tier 1 cities, and you want interviews supported by
-                stronger signal, we can build the pipeline around your hiring bar.
-              </p>
-              <p>
-                You bring the mandate. We bring filtered candidates, selection pressure, post-joining support, and a
-                replacement guarantee.
-              </p>
+              <ul className="space-y-3">
+                <li>Faster hiring cycles</li>
+                <li>Role-aligned candidates</li>
+                <li>Reduced sourcing burden</li>
+                <li>Support for high-volume hiring</li>
+                <li>Replacement coverage included</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Commercial Terms */}
+          <section
+            data-section="commercial-terms"
+            className="yc-section"
+            style={{ scrollMarginTop: `${headerOffset + 20}px` }}
+          >
+            <h2>Commercial terms</h2>
+            <div className="yc-text-block mb-8">
+              <ul className="space-y-3">
+                <li>10% fee on fixed annual CTC</li>
+                <li>₹0 upfront hiring fees</li>
+                <li>Net 30 + 7 payment terms</li>
+                <li>60-day replacement coverage</li>
+              </ul>
             </div>
           </section>
 
           {/* Next Steps */}
-          <section data-section="next-steps" className="yc-section" style={{ scrollMarginTop: `${headerOffset + 20}px` }}>
-            <h2>Partner with Verveschool</h2>
+          <section
+            data-section="next-steps"
+            className="yc-section"
+            style={{ scrollMarginTop: `${headerOffset + 20}px` }}
+          >
+            <h2>The world moves for those who do.</h2>
             <div className="yc-text-block mb-12">
               <p className="mb-6">
-                If you want a tighter sales hiring funnel with accountability after joining, send us the role and the
-                target profile. We will tell you if we can build the pipeline.
+                If you are hiring for sales, business development, counselling, customer success, or support roles,
+                share your hiring requirements with us.
               </p>
               <a
                 href="https://wa.me/917042873035"
@@ -251,7 +275,7 @@ export default function PartnersPage() {
 
         {/* Table of Contents */}
         <aside className="hidden md:block sticky top-20 pt-20 pb-20 px-8 h-screen overflow-y-auto flex-shrink-0 border-l border-border">
-                    <ul className="space-y-1.5">
+          <ul className="space-y-1.5">
             {sections.map((section) => (
               <li key={section}>
                 <button
