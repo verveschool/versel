@@ -189,27 +189,27 @@ export default function PartnersPage() {
           >
             <h2>How hiring works</h2>
             <div className="yc-text-block mb-8">
-              <h2>1. Share role details</h2>
+              <h3>1. Share role details</h3>
               <p>
                 Share role details, compensation, location, hiring targets, and expectations.
               </p>
 
-              <h2>2. Candidate identification</h2>
+              <h3>2. Candidate identification</h3>
               <p>
                 Relevant candidates are identified and engaged across the market.
               </p>
 
-              <h2>3. Screening</h2>
+              <h3>3. Screening</h3>
               <p>
                 Candidates are screened for communication, coachability, and role fit.
               </p>
 
-              <h2>4. Interview shortlist</h2>
+              <h3>4. Interview shortlist</h3>
               <p>
                 Interview shortlisted candidates and assess fit for the role.
               </p>
 
-              <h2>5. Hiring decision</h2>
+              <h3>5. Hiring decision</h3>
               <p>
                 Make hiring decisions and continue building your team.
               </p>
