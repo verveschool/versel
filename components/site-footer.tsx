@@ -33,14 +33,14 @@ const contactOptions = [
     value: "talent@verveschool.com",
   },
   {
-    href: "https://wa.me/917065314693",
+    href: "https://wa.me/917042873035",
     label: "WhatsApp",
     value: "+91 70653 14693",
     external: true,
   },
 ]
 
-const footerAddress = "1st Floor, H-20, Sector 63, Noida, UP 201301"
+const footerAddress = "20, H-1/A, Sector 63, Noida, UP 201301"
 
 export function SiteFooter() {
   return (
