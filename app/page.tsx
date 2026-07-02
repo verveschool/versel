@@ -61,7 +61,7 @@ export default function HomePage() {
               Hire sincere talent that can connect and sell.
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-white/65 md:text-xl md:leading-9">
-              VerveSchool helps companies hire frontline talent through an active scout network built for speed and long-term fit.
+              VerveSchool helps companies hire customer-facing talent through an active scout network built for speed and long-term fit.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
