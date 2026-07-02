@@ -34,13 +34,13 @@ export const metadata: Metadata = {
 const leadershipTeam: PersonCard[] = [
   {
     name: "A. Duggal",
-    subtitle: "Co-founder, CEO",
+    subtitle: "Co-Founder",
     image: "/people/a-duggal.jpg",
     linkedin: "https://www.linkedin.com/in/okduggal/",
   },
   {
     name: "Faraz Arif",
-    subtitle: "Co-founder, COO",
+    subtitle: "Co-Founder",
     image: "/people/faraz-arif.jpg",
     linkedin: "https://www.linkedin.com/in/arif-faraz/",
   },
@@ -66,7 +66,7 @@ const leadershipTeam: PersonCard[] = [
 
 const talentPartners: PersonCard[] = [
   { name: "Khushi Soni", subtitle: "Talent Operations", image: "/people/khushi-soni.jpg" },
-  { name: "Laiba Zafar", subtitle: "Talent Operations", image: "/people/laiba-zafar.jpg" },
+  { name: "Nafisha Israr", subtitle: "Talent Operations", image: "/people/nafisha-israr.jpg" },
   { name: "Garima Gandhi", subtitle: "Talent Operations", image: "/people/garima-gandhi.jpg" },
   { name: "Aditi Sahu", subtitle: "Talent Operations", image: "/people/aditi-sahu.jpg" },
   { name: "Zubda Sajda", subtitle: "Talent Operations", image: "/people/zubda-sajda.jpg" },
