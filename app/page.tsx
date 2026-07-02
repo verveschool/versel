@@ -132,22 +132,53 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mb-20 border-t border-white/10 px-8 py-12 md:px-12 md:py-14 lg:px-16 lg:py-16">
-          <div className="max-w-5xl">
-            <h2 className="max-w-2xl font-semibold text-white">
-              Share the role. We will send aligned candidates.
-            </h2>
-            <div className="mt-8 max-w-2xl">
-              <p className="leading-8 text-white/65">
-                If you are hiring for sales or business development roles, share your requirements with us. VerveSchool shortlists sincere candidates aligned with your role and provides replacement coverage if a hire does not work out.
-              </p>
-              <Link
-                href="/partners"
-                className="mt-8 inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:opacity-90"
-              >
-                Become a hiring partner
-              </Link>
-            </div>
+        <section className="my-24 border-t border-white/10 pt-24">
+          <h2 className="font-semibold text-white mb-12">
+            Explore VerveSchool
+          </h2>
+          
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {/* Candidates Card */}
+            <Link href="/about" className="group border border-white/10 p-8 hover:border-white/20 transition">
+              <h3 className="font-semibold text-white">For Candidates</h3>
+              <p className="mt-4 text-sm text-white/65">Apply for customer-facing roles with companies scaling fast. Transparent process, real support.</p>
+              <p className="mt-6 text-xs uppercase tracking-[0.18em] text-primary">Learn more →</p>
+            </Link>
+
+            {/* Partners Card */}
+            <Link href="/partners" className="group border border-white/10 p-8 hover:border-white/20 transition">
+              <h3 className="font-semibold text-white">For Hiring Partners</h3>
+              <p className="mt-4 text-sm text-white/65">Access role-aligned candidates for sales and business development. 60-day coverage included.</p>
+              <p className="mt-6 text-xs uppercase tracking-[0.18em] text-primary">Learn more →</p>
+            </Link>
+
+            {/* People Card */}
+            <Link href="/people" className="group border border-white/10 p-8 hover:border-white/20 transition">
+              <h3 className="font-semibold text-white">The Team</h3>
+              <p className="mt-4 text-sm text-white/65">Meet the VerveSchool unit and alliance of leaders building better hiring outcomes.</p>
+              <p className="mt-6 text-xs uppercase tracking-[0.18em] text-primary">Learn more →</p>
+            </Link>
+
+            {/* Essays Card */}
+            <Link href="/writing" className="group border border-white/10 p-8 hover:border-white/20 transition">
+              <h3 className="font-semibold text-white">Essays</h3>
+              <p className="mt-4 text-sm text-white/65">Long-form writing on sales hiring, talent development, and operating notes for revenue teams.</p>
+              <p className="mt-6 text-xs uppercase tracking-[0.18em] text-primary">Read essays →</p>
+            </Link>
+
+            {/* Book Card */}
+            <Link href="/book" className="group border border-white/10 p-8 hover:border-white/20 transition">
+              <h3 className="font-semibold text-white">Field Guide</h3>
+              <p className="mt-4 text-sm text-white/65">A comprehensive guide to selling better. 80 pages structured as a chapter-by-chapter journey.</p>
+              <p className="mt-6 text-xs uppercase tracking-[0.18em] text-primary">Start reading →</p>
+            </Link>
+
+            {/* Contact Card */}
+            <a href="https://wa.me/917042873035" className="group border border-white/10 p-8 hover:border-white/20 transition">
+              <h3 className="font-semibold text-white">Talk to Us</h3>
+              <p className="mt-4 text-sm text-white/65">Questions about hiring, recruiting, or anything else? Reach out directly on WhatsApp.</p>
+              <p className="mt-6 text-xs uppercase tracking-[0.18em] text-primary">Contact →</p>
+            </a>
           </div>
         </section>
       </main>
