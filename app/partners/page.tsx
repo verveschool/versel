@@ -234,22 +234,22 @@ export default function PartnersPage() {
               </ul>
             </div>
           </section>
-
           <section
             data-section="next-steps"
             className="yc-section"
             style={{ scrollMarginTop: `${headerOffset + 20}px` }}
-          >
+            >
             <h2>The world moves for those who do.</h2>
-            <div className="yc-text-block mb-12">
-              <p className="mb-6">
-                If you are hiring for sales, business development, counselling, customer success, or support roles,
-                share your hiring requirements with us.
+            
+            <div className="yc-text-block mb-6">
+              <p className="mb-10">
+                If you are hiring for sales, business development, counselling, customer success, or support roles, share your hiring requirements with us.
               </p>
+              
               <a
                 href="https://wa.me/917042873035"
                 className="inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold tracking-normal text-black transition hover:opacity-90"
-              >
+                >
                 Talk to us
               </a>
             </div>
