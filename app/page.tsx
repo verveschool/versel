@@ -11,32 +11,32 @@ const filterSteps = [
 ]
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "VerveSchool – Hire customer-facing talent with replacement coverage",
   description:
-    "VerveSchool helps teams hire frontline sales talent through scout-led sourcing, role-fit filtering, and replacement-backed hiring confidence.",
+    "VerveSchool connects companies with sincere, ambitious talent through an active scout network. Fast sourcing, role-fit matching, and 60-day replacement coverage.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Home",
+    title: "VerveSchool – Hire customer-facing talent with replacement coverage",
     description:
-      "VerveSchool helps teams hire frontline sales talent through scout-led sourcing, role-fit filtering, and replacement-backed hiring confidence.",
+      "VerveSchool connects companies with sincere, ambitious talent through an active scout network. Fast sourcing, role-fit matching, and 60-day replacement coverage.",
     url: "/",
   },
   twitter: {
-    title: "Home",
+    title: "VerveSchool – Hire customer-facing talent with replacement coverage",
     description:
-      "VerveSchool helps teams hire frontline sales talent through scout-led sourcing, role-fit filtering, and replacement-backed hiring confidence.",
+      "VerveSchool connects companies with sincere, ambitious talent through an active scout network. Fast sourcing, role-fit matching, and 60-day replacement coverage.",
   },
 }
 
 
 
 const metrics = [
-  { value: "10%", label: "Placement fee on fixed CTC" },
-  { value: "60", label: "Day replacement coverage" },
-  { value: "5+", label: "Role-aligned candidates from Day 1" },
-  { value: "₹0", label: "Upfront hiring fees" },
+  { value: "10%", label: "Fee on CTC" },
+  { value: "60", label: "Days replacement coverage" },
+  { value: "5+", label: "Candidates, ready to interview" },
+  { value: "₹0", label: "Upfront fees" },
 ]
 
 const hiringPartners = [
@@ -57,7 +57,7 @@ export default function HomePage() {
       <main className="yc-container">
         <section className="grid min-h-[74vh] items-center gap-12 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:py-24">
           <div>
-            <h1 className="max-w-4xl font-semibold text-white">
+            <h1 className="max-w-4xl font-semibold text-white text-[clamp(1.76rem,1.35rem+1.49vw,2.48rem)]">
               Hire sincere talent that can connect and sell.
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-white/65 md:text-xl md:leading-9">
@@ -79,8 +79,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="border border-white/12 bg-white/[0.04] p-6 shadow-2xl shadow-black/40 backdrop-blur">
-            <div className="border border-white/10 bg-black/45 p-6">
+          <div className="border border-white/10 bg-white/[0.02] p-6 hover:bg-white/[0.04] transition-colors">
+            <div className="border border-white/10 bg-white/[0.02] p-6">
               <div className="space-y-5">
                 {metrics.map((metric) => (
                   <div key={metric.label} className="flex items-end justify-between border-b border-white/10 pb-5">
@@ -126,7 +126,7 @@ export default function HomePage() {
           </div>
           <div className="space-y-4">
             {filterSteps.map((step, index) => (
-              <div key={step} className="grid grid-cols-[64px_1fr] gap-5 border border-white/10 bg-white/[0.03] p-5">
+              <div key={step} className="grid grid-cols-[64px_1fr] gap-5 border border-white/10 bg-white/[0.03] px-5 py-4">
                 <span className="font-mono text-sm text-primary">0{index + 1}</span>
                 <p className="leading-8 text-white/75">{step}</p>
               </div>
@@ -134,7 +134,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mb-20 border border-white/12 bg-white/[0.04] px-8 py-12 md:px-12 md:py-14 lg:px-16 lg:py-16">
+        <section className="mb-20 border border-white/10 bg-white/[0.02] px-8 py-12 md:px-12 md:py-14 lg:px-16 lg:py-16 hover:bg-white/[0.04] transition-colors">
           <div className="max-w-5xl">
             <h2 className="max-w-2xl font-semibold text-white">
               Share the role. We will send aligned candidates.

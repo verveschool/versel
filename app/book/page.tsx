@@ -43,8 +43,8 @@ export default function BookPage() {
             <p className="mb-8 max-w-2xl text-lg leading-8 text-primary">{book.subtitle}</p>
             <p className="max-w-2xl text-lg leading-8 text-white/70">{book.description}</p>
           </div>
-          <div className="border border-primary/30 bg-primary/10 p-8">
-                        <p className="text-lg leading-8 text-white">80 pages translated into a chapter-by-chapter reading path.</p>
+          <div className="border border-white/10 bg-white/[0.02] p-8">
+                        <p className="text-lg leading-8 text-white">80 pages translated into a chapter-by-chapter reading path</p>
             <div className="mt-8 grid grid-cols-2 gap-4 border-t border-primary/20 pt-6 text-sm text-white/65">
               <span>{chapters.length} chapters</span>
               <span>by {book.author}</span>
@@ -88,8 +88,8 @@ export default function BookPage() {
           </div>
         </section>
 
-        <section className="mt-20 border border-primary/30 bg-primary/10 p-8">
-                    <h2 className="mb-4 font-serif text-xl text-white">Turn the reading into a better sales conversation.</h2>
+        <section className="mt-20 border border-white/10 bg-white/[0.02] p-8">
+                    <h2 className="mb-4 font-serif text-xl text-white">Turn the reading into a better sales conversation</h2>
           <p className="mb-6 max-w-2xl text-white/70">
             If the book maps to a problem inside your revenue team, use the partner page to start a more specific conversation about selling better.
           </p>
