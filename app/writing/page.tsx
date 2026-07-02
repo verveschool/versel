@@ -37,7 +37,7 @@ export default function WritingPage() {
       <main className="yc-container py-20">
         <section className="max-w-4xl">
                     <h1 className="mb-8 max-w-3xl font-serif text-white">
-            long-form writing on talent, sales, and the work behind better hiring.
+            Long-form writing on talent, sales, and the work behind better hiring
           </h1>
           <p className="yc-text-block text-lg leading-8 text-white/70">
             Operating notes for founders, sales leaders, and ambitious early-career candidates. Start with the latest piece or browse the full archive below.
@@ -76,8 +76,8 @@ export default function WritingPage() {
           ))}
         </section>
 
-        <section className="mt-20 border border-primary/30 bg-primary/10 p-8">
-                    <h2 className="mb-4 font-serif text-xl text-white">building a longer canon</h2>
+        <section className="mt-20 border border-white/10 bg-white/[0.02] p-8">
+                    <h2 className="mb-4 font-serif text-xl text-white">Building a longer canon</h2>
           <p className="mb-6 max-w-2xl text-white/70">
             The writing archive is the home for tactical notes. For a more structured reading path, visit the book page.
           </p>

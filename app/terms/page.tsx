@@ -75,7 +75,7 @@ export default function TermsPage() {
           ))}
         </div>
 
-        <section className="mt-16 max-w-4xl border border-primary/30 bg-primary/10 p-8">
+        <section className="mt-16 max-w-4xl border border-white/10 bg-white/[0.02] p-8">
           <h2 className="text-2xl font-semibold text-white">Questions</h2>
           <p className="mt-4 max-w-3xl text-base leading-8 text-white/70">
             If you have questions about these terms, contact us at{" "}

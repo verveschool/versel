@@ -127,7 +127,7 @@ export default function CandidatesPage() {
           </section>
 
           {/* How It Works Step Section */}
-          <section data-section="how-it-works" className="mb-20 border-t border-white/10 pt-10">
+          <section data-section="how-it-works" className="mb-20 border border-white/10 bg-white/[0.02] p-8 hover:bg-white/[0.04] transition-colors">
             <div>
               <h2 className="font-semibold text-foreground mb-8">How this actually works</h2>
               <div className="grid gap-6 md:grid-cols-2">
@@ -149,18 +149,18 @@ export default function CandidatesPage() {
           </section>
 
           {/* Main sections */}
-          <div className="space-y-20">
+          <div className="space-y-8">
             {sections.map((section, index) => (
-              <section key={section.id} data-section={section.id} className="border-t border-white/10 pt-10">
-                <div className="grid gap-10 lg:grid-cols-[0.35fr_0.65fr]">
+              <section key={section.id} data-section={section.id} className="border border-white/10 bg-white/[0.02] p-8 hover:bg-white/[0.04] transition-colors">
+                <div className="grid gap-8 lg:grid-cols-[0.35fr_0.65fr]">
                   <div>
-                    <p className="mt-8 text-5xl font-semibold leading-none tracking-[-0.06em] text-foreground/10 md:text-6xl">
+                    <p className="text-4xl font-semibold leading-none tracking-[-0.06em] text-foreground/8 md:text-5xl">
                       {String(index + 2).padStart(2, "0")}
                     </p>
                   </div>
                   <div className="max-w-3xl">
                     <h2 className="font-semibold text-foreground">{section.title}</h2>
-                    <p className="mt-6 text-lg leading-8 text-foreground/68">{section.body}</p>
+                    <p className="mt-4 text-lg leading-8 text-foreground/68">{section.body}</p>
                   </div>
                 </div>
               </section>
@@ -168,7 +168,7 @@ export default function CandidatesPage() {
           </div>
 
           {/* FAQ Section */}
-          <section data-section="faq" className="border-t border-white/10 pt-16 mt-20 mb-20">
+          <section data-section="faq" className="border border-white/10 bg-white/[0.02] p-8 mt-20 mb-20 hover:bg-white/[0.04] transition-colors">
             <h2 className="font-semibold text-foreground mb-12">Frequently asked questions</h2>
             <div className="grid gap-6 max-w-3xl">
               {faqs.map((faq, index) => (
@@ -191,10 +191,10 @@ export default function CandidatesPage() {
           </section>
 
           {/* Final CTA Section */}
-          <section className="mb-20 border-t border-white/10 px-8 py-12 md:px-12 md:py-14 lg:px-16 lg:py-16">
+          <section className="mb-20 border border-white/10 bg-white/[0.02] px-8 py-12 md:px-12 md:py-14 lg:px-16 lg:py-16 hover:bg-white/[0.04] transition-colors">
             <div className="max-w-5xl">
               <h2 className="max-w-2xl font-semibold text-white">
-                The world moves for those who do.
+                The world moves for those who do
               </h2>
               <div className="mt-8 max-w-2xl">
                 <p className="leading-8 text-white/65">

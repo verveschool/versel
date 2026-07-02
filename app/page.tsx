@@ -79,8 +79,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="border border-white/12 bg-white/[0.04] p-6 shadow-2xl shadow-black/40 backdrop-blur">
-            <div className="border border-white/10 bg-black/45 p-6">
+          <div className="border border-white/10 bg-white/[0.02] p-6 hover:bg-white/[0.04] transition-colors">
+            <div className="border border-white/10 bg-white/[0.02] p-6">
               <div className="space-y-5">
                 {metrics.map((metric) => (
                   <div key={metric.label} className="flex items-end justify-between border-b border-white/10 pb-5">
@@ -134,7 +134,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mb-20 border-t border-white/10 px-8 py-12 md:px-12 md:py-14 lg:px-16 lg:py-16">
+        <section className="mb-20 border border-white/10 bg-white/[0.02] px-8 py-12 md:px-12 md:py-14 lg:px-16 lg:py-16 hover:bg-white/[0.04] transition-colors">
           <div className="max-w-5xl">
             <h2 className="max-w-2xl font-semibold text-white">
               Share the role. We will send aligned candidates.
