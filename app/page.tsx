@@ -39,12 +39,12 @@ const metrics = [
 ]
 
 const hiringPartners = [
-  { name: "Prepca", src: "/logos/prepca.png", className: "h-8" },
-  { name: "Infinity Learn", src: "/logos/infinity-learn.png", className: "h-11" },
-  { name: "Vedantu", src: "/logos/vedantu.png", className: "h-10" },
-  { name: "AlmaBetter", src: "/logos/almabetter.png", className: "h-8" },
-  { name: "Crio.Do", src: "/logos/crio-do.png", className: "h-10" },
-  { name: "Scaler", src: "/logos/scaler.png", className: "h-7" },
+  { name: "Prepca", src: "/logos/prepca.png", className: "h-10 w-auto" },
+  { name: "Infinity Learn", src: "/logos/infinity-learn.png", className: "h-10 w-auto" },
+  { name: "Vedantu", src: "/logos/vedantu.png", className: "h-10 w-auto" },
+  { name: "AlmaBetter", src: "/logos/almabetter.png", className: "h-10 w-auto" },
+  { name: "Crio.Do", src: "/logos/crio-do.png", className: "h-10 w-auto" },
+  { name: "Scaler", src: "/logos/scaler.png", className: "h-10 w-auto" },
 ]
 
 export default function HomePage() {
