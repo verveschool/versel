@@ -54,12 +54,12 @@ export default function HomePage() {
       <SiteHeader />
 
       <main className="yc-container">
-        <section className="grid min-h-[74vh] items-center gap-12 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:py-24">
+        <section className="grid min-h-[74vh] items-center gap-12 py-16 lg:grid-cols-[1.16fr_0.84fr] lg:py-24">
           <div>
-            <h1 className="max-w-4xl text-[clamp(1.76rem,1.35rem+1.49vw,2.48rem)] font-semibold text-white">
-              Hire sincere talent that can connect and sell.
+            <h1 className="max-w-4xl text-[clamp(1.76rem,1.35rem+1.49vw,2.48rem)] font-semibold leading-[1.08] text-white">
+              Hire talent that can sell.
             </h1>
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-white/65 md:text-xl md:leading-9">
+            <p className="mt-8 max-w-3xl text-lg leading-8 text-white/65 md:text-xl md:leading-9">
               VerveSchool helps companies hire customer-facing talent through an active scout network built for speed and long-term fit.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -81,7 +81,10 @@ export default function HomePage() {
           <div className="border border-white/10 bg-transparent p-6 transition-colors hover:border-white/20">
             <div className="space-y-5">
               {metrics.map((metric) => (
-                <div key={metric.label} className="flex items-end justify-between border-b border-white/10 pb-5 last:border-b-0 last:pb-0">
+                <div
+                  key={metric.label}
+                  className="flex items-end justify-between border-b border-white/10 pb-5 last:border-b-0 last:pb-0"
+                >
                   <span className="text-3xl font-semibold tracking-[-0.025em] text-white">
                     {metric.value}
                   </span>
@@ -114,7 +117,7 @@ export default function HomePage() {
 
         <section className="grid gap-12 py-16 md:py-24 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <div>
-            <h2 className="font-semibold text-white">
+            <h2 className="text-white font-semibold">
               How hiring works with VerveSchool
             </h2>
             <p className="mt-6 max-w-xl leading-8 text-white/65">
