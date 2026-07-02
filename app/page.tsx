@@ -80,17 +80,15 @@ export default function HomePage() {
           </div>
 
           <div className="border border-white/10 bg-white/[0.02] p-6 hover:bg-white/[0.04] transition-colors">
-            <div className="border border-white/10 bg-white/[0.02] p-6">
-              <div className="space-y-5">
-                {metrics.map((metric) => (
-                  <div key={metric.label} className="flex items-end justify-between border-b border-white/10 pb-5">
-                    <span className="text-3xl font-semibold tracking-[-0.025em] text-white">{metric.value}</span>
-                    <span className="max-w-36 text-right text-[12px] uppercase leading-5 tracking-[0.18em] text-white/52">
-                      {metric.label}
-                    </span>
-                  </div>
-                ))}
-              </div>
+            <div className="space-y-5">
+              {metrics.map((metric) => (
+                <div key={metric.label} className="flex items-end justify-between border-b border-white/10 pb-5">
+                  <span className="text-3xl font-semibold tracking-[-0.025em] text-white">{metric.value}</span>
+                  <span className="max-w-36 text-right text-[12px] uppercase leading-5 tracking-[0.18em] text-white/52">
+                    {metric.label}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -134,7 +132,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mb-20 border border-white/10 bg-white/[0.02] px-8 py-12 md:px-12 md:py-14 lg:px-16 lg:py-16 hover:bg-white/[0.04] transition-colors">
+        <section className="mb-20 border-t border-white/10 px-8 py-12 md:px-12 md:py-14 lg:px-16 lg:py-16">
           <div className="max-w-5xl">
             <h2 className="max-w-2xl font-semibold text-white">
               Share the role. We will send aligned candidates.
