@@ -1,22 +1,22 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
-import { useState, useEffect } from "react"
+
+const sectionNav = [
+  { id: "growth-needs-people", label: "Growth needs people" },
+  { id: "how-we-help", label: "How we help" },
+  { id: "who-we-work-with", label: "Who we work with" },
+  { id: "how-hiring-works", label: "How hiring works" },
+  { id: "what-partners-can-expect", label: "What partners can expect" },
+  { id: "commercial-terms", label: "Commercial terms" },
+  { id: "next-steps", label: "Next steps" },
+]
 
 export default function PartnersPage() {
   const [activeSection, setActiveSection] = useState("")
   const [headerOffset, setHeaderOffset] = useState(96)
-
-  const sections = [
-    "growth-needs-people",
-    "how-we-help",
-    "who-we-work-with",
-    "how-hiring-works",
-    "what-partners-can-expect",
-    "commercial-terms",
-    "next-steps",
-  ]
 
   const scrollToSection = (section: string) => {
     const element = document.querySelector(`[data-section="${section}"]`) as HTMLElement | null
@@ -32,6 +32,7 @@ export default function PartnersPage() {
       const height = header?.getBoundingClientRect().height
       setHeaderOffset(height ? Math.round(height) : 96)
     }
+
     updateOffset()
     window.addEventListener("resize", updateOffset)
 
@@ -49,6 +50,7 @@ export default function PartnersPage() {
         const visibleEntries = entries
           .filter((entry) => entry.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
+
         if (!visibleEntries.length) return
 
         const nextActive = visibleEntries[0].target.getAttribute("data-section") ?? ""
@@ -69,18 +71,16 @@ export default function PartnersPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Navigation */}
       <SiteHeader />
 
       <div className="flex flex-col md:flex-row">
         <main className="yc-container flex-1 py-16 md:py-24">
           <div className="mb-24">
             <h1 className="mb-4 font-semibold">
-              Hire customer-facing talent fast with replacement coverage.
+              Hire customer-facing talent through an active scout network.
             </h1>
             <p className="max-w-2xl text-base text-muted-foreground md:text-lg">
-              Helping growing companies hire sales, business development, counselling, and support talent through a
-              sourcing model designed for speed and consistency.
+              VerveSchool extends your hiring team through an active scout network built for speed and long-term fit.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3 text-sm text-muted-foreground">
@@ -102,17 +102,17 @@ export default function PartnersPage() {
                 Page sections
               </summary>
               <ul className="mt-4 space-y-2">
-                {sections.map((section) => (
-                  <li key={`mobile-${section}`}>
+                {sectionNav.map((section) => (
+                  <li key={`mobile-${section.id}`}>
                     <button
-                      onClick={() => scrollToSection(section)}
+                      onClick={() => scrollToSection(section.id)}
                       className={`w-full rounded-sm px-2 py-2 text-left text-sm transition-colors ${
-                        activeSection === section
-                          ? "bg-primary/10 font-semibold text-primary"
-                          : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                        activeSection === section.id
+                          ? "font-semibold text-primary"
+                          : "text-muted-foreground hover:text-foreground"
                       }`}
                     >
-                      {section.replace(/-/g, " ")}
+                      {section.label}
                     </button>
                   </li>
                 ))}
@@ -120,7 +120,6 @@ export default function PartnersPage() {
             </details>
           </div>
 
-          {/* Growth Needs People */}
           <section
             data-section="growth-needs-people"
             className="yc-section"
@@ -143,7 +142,6 @@ export default function PartnersPage() {
             </div>
           </section>
 
-          {/* How We Help */}
           <section
             data-section="how-we-help"
             className="yc-section"
@@ -163,7 +161,6 @@ export default function PartnersPage() {
             </div>
           </section>
 
-          {/* Who We Work With */}
           <section
             data-section="who-we-work-with"
             className="yc-section"
@@ -181,7 +178,6 @@ export default function PartnersPage() {
             </div>
           </section>
 
-          {/* How Hiring Works */}
           <section
             data-section="how-hiring-works"
             className="yc-section"
@@ -190,33 +186,22 @@ export default function PartnersPage() {
             <h2>How hiring works</h2>
             <div className="yc-text-block mb-8">
               <h3>1. Share role details</h3>
-              <p>
-                Share role details, compensation, location, hiring targets, and expectations.
-              </p>
+              <p>Share role details, compensation, location, hiring targets, and expectations.</p>
 
-              <h3>2. Candidate identification</h3>
-              <p>
-                Relevant candidates are identified and engaged across the market.
-              </p>
+              <h3>2. Identify candidates</h3>
+              <p>Relevant candidates are identified and engaged across the market.</p>
 
-              <h3>3. Screening</h3>
-              <p>
-                Candidates are screened for communication, coachability, and role fit.
-              </p>
+              <h3>3. Evaluate candidates</h3>
+              <p>Candidates are screened for communication, coachability, and role fit.</p>
 
-              <h3>4. Interview shortlist</h3>
-              <p>
-                Interview shortlisted candidates and assess fit for the role.
-              </p>
+              <h3>4. Interview shortlisted candidates</h3>
+              <p>Interview shortlisted candidates and assess fit for the role.</p>
 
-              <h3>5. Hiring decision</h3>
-              <p>
-                Make hiring decisions and continue building your team.
-              </p>
+              <h3>5. Make the hiring decision</h3>
+              <p>Make hiring decisions and continue building your team.</p>
             </div>
           </section>
 
-          {/* What Partners Can Expect */}
           <section
             data-section="what-partners-can-expect"
             className="yc-section"
@@ -234,7 +219,6 @@ export default function PartnersPage() {
             </div>
           </section>
 
-          {/* Commercial Terms */}
           <section
             data-section="commercial-terms"
             className="yc-section"
@@ -251,7 +235,6 @@ export default function PartnersPage() {
             </div>
           </section>
 
-          {/* Next Steps */}
           <section
             data-section="next-steps"
             className="yc-section"
@@ -265,7 +248,7 @@ export default function PartnersPage() {
               </p>
               <a
                 href="https://wa.me/917042873035"
-                className="inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:opacity-90"
+                className="inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold tracking-normal text-black transition hover:opacity-90"
               >
                 Talk to us
               </a>
@@ -273,26 +256,26 @@ export default function PartnersPage() {
           </section>
         </main>
 
-        {/* Table of Contents */}
-        <aside className="hidden md:block sticky top-20 pt-20 pb-20 px-8 h-screen overflow-y-auto flex-shrink-0 border-l border-border">
+        <aside className="sticky top-20 hidden h-screen shrink-0 overflow-y-auto border-l border-border px-8 pt-20 pb-20 md:block">
           <ul className="space-y-1.5">
-            {sections.map((section) => (
-              <li key={section}>
+            {sectionNav.map((section) => (
+              <li key={section.id}>
                 <button
-                  onClick={() => scrollToSection(section)}
-                  className={`w-full rounded-sm px-2 py-1.5 text-left text-[13px] capitalize transition-colors ${
-                    activeSection === section
-                      ? "bg-primary/10 font-semibold text-primary"
-                      : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                  onClick={() => scrollToSection(section.id)}
+                  className={`w-full rounded-sm px-2 py-1.5 text-left text-[13px] transition-colors ${
+                    activeSection === section.id
+                      ? "font-semibold text-primary"
+                      : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
-                  {section.replace(/-/g, " ")}
+                  {section.label}
                 </button>
               </li>
             ))}
           </ul>
         </aside>
       </div>
+
       <SiteFooter />
     </div>
   )
