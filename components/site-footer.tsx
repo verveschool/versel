@@ -17,13 +17,11 @@ const sitemapGroups = [
       { href: "/book", label: "Book" },
     ],
   },
-  {
-    heading: "Legal",
-    links: [
-      { href: "/terms", label: "Terms" },
-      { href: "/privacy", label: "Privacy Policy" },
-    ],
-  },
+]
+
+const legalLinks = [
+  { href: "/terms", label: "Terms" },
+  { href: "/privacy", label: "Privacy Policy" },
 ]
 
 const contactOptions = [
@@ -97,9 +95,19 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-8 border-t border-[rgba(219,231,243,0.16)] pt-4">
-          <div className="flex flex-col gap-3 text-xs leading-5 text-foreground/50 sm:flex-row sm:items-center sm:justify-between">
-            <p>© 2026 VerveSchool</p>
-            <p>JIRAIYA EDUCATION LLP</p>
+          <div className="flex flex-col gap-4 text-xs leading-5 text-foreground/50 sm:flex-row sm:items-center sm:justify-between">
+            <p>© 2026 JIRAIYA EDUCATION LLP</p>
+            <div className="flex gap-6">
+              {legalLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="transition-colors hover:text-foreground"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>
