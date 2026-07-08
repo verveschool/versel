@@ -75,20 +75,10 @@ export default function PartnersPage() {
       <main className="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
         <div className="mx-auto w-full max-w-[760px]">
           <section className="mb-24">
-            <h1 className="mb-4 font-semibold">
-              Hire customer-facing talent through an active scout network.
-            </h1>
+            <h1 className="mb-4 font-semibold">Hire customer-facing talent through an active scout network.</h1>
             <p className="max-w-2xl text-base text-muted-foreground md:text-lg">
               VerveSchool extends your hiring team through an active scout network built for speed and long-term fit.
             </p>
-
-            <div className="mt-8 flex flex-wrap gap-3 text-sm text-muted-foreground">
-              <span className="rounded-full border border-border px-4 py-2">Reduced sourcing burden</span>
-              <span className="rounded-full border border-border px-4 py-2">
-                Faster access to role-aligned candidates
-              </span>
-              <span className="rounded-full border border-border px-4 py-2">60-day replacement coverage</span>
-            </div>
           </section>
 
           <div className="mb-14 rounded-md border border-border bg-card/70 p-4 md:hidden">
