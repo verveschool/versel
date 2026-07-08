@@ -24,7 +24,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur-xl">
       <div className="yc-container py-4 md:py-5">
         <nav className="relative flex items-center justify-between gap-10" aria-label="Primary navigation">
-          <Link href="/" className="inline-flex items-center transition-premium hover:opacity-75" aria-label="verveschool home">
+          <Link href="/" className="inline-flex items-center transition-opacity hover:opacity-75" aria-label="verveschool home">
             <img src="/logo.png" alt="VerveSchool logo" className="h-8 w-auto md:h-10" />
           </Link>
 
@@ -35,7 +35,7 @@ export function SiteHeader() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`transition-premium hover:text-foreground relative ${active ? "text-foreground" : "text-foreground/65"} after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-purple-accent after:transition-premium hover:after:w-full`}
+                  className={`transition-colors hover:text-foreground ${active ? "text-foreground" : "text-foreground/65"}`}
                 >
                   {link.label}
                 </Link>
@@ -50,7 +50,7 @@ export function SiteHeader() {
               aria-controls="mobile-nav-menu"
               aria-label="Toggle navigation menu"
               onClick={() => setMobileMenuOpen((open) => !open)}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-none border border-white/20 bg-background/85 text-foreground transition-premium hover:bg-white/12 hover:border-white/40 hover:shadow-[0_0_12px_rgba(167,139,250,0.15)] active:scale-[0.97] active:bg-white/20"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-none border border-white/20 bg-background/85 text-foreground transition-all duration-200 hover:bg-white/12 active:scale-[0.97] active:bg-white/20"
             >
               <span className="sr-only">Open menu</span>
               <div className="flex flex-col gap-1.5">
