@@ -1,10 +1,15 @@
 ---
-title: "The Selling Better Field Guide"
-subtitle: "An 80-page field guide, serialized for the web."
-description: "A practical book for founders, revenue leaders, and ambitious sellers who want to understand how buyers decide, create trust under pressure, and move commercial conversations forward."
-author: "verveschool"
+title: "Hope Is the Enemy"
+subtitle: "How to Stop Begging, Start Operating, and Become Dangerous"
+description: "A first-edition VerveSchool field guide by A. Duggal on moving people from no to yes without begging, hoping, or performing like a desperate salesperson."
+author: "A. Duggal"
 ---
 
-The book argues that selling better is a learnable commercial discipline, not a performance of charm. Each chapter turns one part of the selling craft into a readable, operational sequence: buyer psychology, trust creation, pressure, conversation design, follow-through, and judgment.
+Most people don't want information. They want confirmation. They want to believe effort alone will change their outcomes. It will not.
 
-Read it linearly if you are building a sharper sales motion from scratch. Jump by chapter if you are trying to improve one recurring moment in the conversation: the first impression, the hard question, the objection, the next step, or the decision to walk away. The web version is intentionally serialized: each installment stands on its own, links back into the wider verveschool point of view, and keeps the work close to the people who sell, coach, and lead.
+The methods in this ebook are the ones we use at VerveSchool to move people from no to yes. It is a map, the call is the terrain, and results depend on decision and execution.
+
+VerveSchool  
+www.verveschool.com
+
+The world moves for those who do.

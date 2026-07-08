@@ -8,18 +8,18 @@ import { SiteFooter } from "@/components/site-footer"
 
 export const metadata: Metadata = {
   title: "Book",
-  description: "Read the VerveSchool field guide on selling better, published as a chapter-by-chapter web experience for founders and revenue teams.",
+  description: "Read Hope Is the Enemy, A. Duggal’s VerveSchool field guide on closing with certainty, integrity, and operator-level execution.",
   alternates: {
     canonical: "/book",
   },
   openGraph: {
     title: "Book",
-    description: "Read the VerveSchool field guide on selling better, published as a chapter-by-chapter web experience for founders and revenue teams.",
+    description: "Read Hope Is the Enemy, A. Duggal’s VerveSchool field guide on closing with certainty, integrity, and operator-level execution.",
     url: "/book",
   },
   twitter: {
     title: "Book",
-    description: "Read the VerveSchool field guide on selling better, published as a chapter-by-chapter web experience for founders and revenue teams.",
+    description: "Read Hope Is the Enemy, A. Duggal’s VerveSchool field guide on closing with certainty, integrity, and operator-level execution.",
   },
 }
 
@@ -43,7 +43,7 @@ export default function BookPage() {
           <div className="grid grid-cols-2 gap-4 border-t border-white/10 pt-6 text-sm text-white/50 md:grid-cols-4">
             <span>First Edition</span>
             <span>{chapters.length} Chapters</span>
-            <span>~80 Pages</span>
+            <span>79 Pages</span>
             <span>By {book?.author || "A. Duggal"}</span>
           </div>
         </section>
@@ -51,7 +51,7 @@ export default function BookPage() {
         {book?.introduction && (
           <section className="mx-auto mt-24 max-w-[760px] border-t border-white/10 pt-24 md:mt-32 md:pt-32">
             <h2 className="mb-8 font-serif text-2xl text-white">
-              Read as a field guide, not a stack of posts.
+              Read as a map. Use calls as the terrain.
             </h2>
             <MarkdownContent content={book.introduction} className="book-prose" />
           </section>
@@ -59,7 +59,7 @@ export default function BookPage() {
 
         <section className="mx-auto mt-24 max-w-[760px] border-t border-white/10 pt-24 md:mt-32 md:pt-32">
           <div className="mb-12 flex items-end justify-between gap-6">
-            <h2 className="font-serif text-2xl text-white">Start the serial.</h2>
+            <h2 className="font-serif text-2xl text-white">Start the book.</h2>
             {chapters.length > 0 && chapters[0]?.slug && (
               <Link href={`/book/${chapters[0].slug}`} className="hidden text-sm uppercase tracking-[0.22em] text-primary transition-colors hover:text-white md:block">
                 begin reading {"->"}
@@ -94,13 +94,13 @@ export default function BookPage() {
 
         <section className="mx-auto mt-12 max-w-[760px] border-t border-white/10 pb-12 pt-24 md:mt-16 md:pt-32">
           <h2 className="mb-6 font-serif text-2xl text-white">
-            Turn the reading into a better sales conversation
+            Turn the reading into operator practice
           </h2>
           <p className="mb-8 text-lg leading-8 text-white/70">
-            If the book maps to a problem inside your revenue team, use the partner page to start a more specific conversation about selling better.
+            If the book maps to a problem inside your sales motion, use it on real calls, review the terrain, and start a more specific conversation with VerveSchool.
           </p>
-          <Link href="/partners" className="text-sm font-semibold uppercase tracking-[0.24em] text-primary transition-colors hover:text-white">
-            start a sales conversation {"->"}
+          <Link href="/about#contact" className="text-sm font-semibold uppercase tracking-[0.24em] text-primary transition-colors hover:text-white">
+            talk to verveschool {"->"}
           </Link>
         </section>
       </main>

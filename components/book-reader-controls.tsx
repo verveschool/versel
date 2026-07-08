@@ -82,7 +82,7 @@ export function BookSidebar({ chapters, activeSlug }: Pick<BookReaderControlsPro
       </button>
       <aside
         id="book-sidebar"
-        className={`book-sidebar fixed bottom-0 left-0 top-0 z-30 w-[min(20rem,86vw)] border-r border-white/10 bg-black px-5 py-24 transition-transform duration-200 ease-out md:translate-x-0 ${
+        className={`book-sidebar fixed bottom-0 left-0 top-0 z-30 w-[min(20rem,86vw)] overflow-y-auto border-r border-white/10 bg-black px-5 py-24 transition-transform duration-200 ease-out md:translate-x-0 ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
         aria-label="Book chapters"
@@ -90,7 +90,7 @@ export function BookSidebar({ chapters, activeSlug }: Pick<BookReaderControlsPro
         <Link href="/book" className="mb-8 block text-xs uppercase tracking-[0.24em] text-white/45 hover:text-primary">
           Book overview
         </Link>
-        <nav className="space-y-2">
+        <nav className="space-y-2 pb-8">
           {chapters.map((chapter) => {
             const active = chapter.slug === activeSlug
             return (
