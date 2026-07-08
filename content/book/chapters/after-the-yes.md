@@ -1,10 +1,10 @@
 ---
 title: "After the yes"
-description: "Protect certainty after the close and make sure value is delivered."
+description: "The sale ends when they get value. After the yes, confirm everything in writing within the hour. Between commitment and start date, reinforce certainty by adding value and creating momentum. Make the first interaction excellent. Stay connected when they hit friction. When they succeed, document the proof and ask for permission to share it."
 order: "15"
 part: "Operator manual"
-ctaLabel: "talk to verveschool"
-ctaHref: "/about#contact"
+ctaLabel: "Talk to Duggal"
+ctaHref: "https://wa.me/917042873035"
 ---
 
 The sale does not end at close.
@@ -17,7 +17,7 @@ Here is how you follow up so deals do not die.
 
 Immediate confirmation.
 
-The moment they commit, you confirm everything in writing. Message them within the hour. Subject line: "You're in. Next steps."
+The moment they commit, you confirm everything in writing. Message them within the hour. Subject line: "You are in. Next steps."
 
 Restate their commitment. The program they bought. The investment. The start date.
 

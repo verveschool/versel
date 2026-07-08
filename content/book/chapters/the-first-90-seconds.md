@@ -1,10 +1,10 @@
 ---
 title: "The first 90 seconds"
-description: "Set the frame, earn attention, and get permission to ask real questions."
+description: "The first 90 seconds decide whether you are worth listening to. Establish why you are talking, set a clear frame, and get permission to ask questions. Say who you are, reference the topic they checked for earlier, and explain that you want to understand their situation properly so you do not waste their time. Frame the call as a consultation instead of a chase."
 order: "5"
 part: "Operator manual"
-ctaLabel: "talk to verveschool"
-ctaHref: "/about#contact"
+ctaLabel: "Talk to Duggal"
+ctaHref: "https://wa.me/917042873035"
 ---
 
 In that time, the person on the other end of the phone is making a decision about whether you are worth their time.

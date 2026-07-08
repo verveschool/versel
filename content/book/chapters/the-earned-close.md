@@ -1,10 +1,10 @@
 ---
 title: "The earned close"
-description: "Ask for commitment after you have earned the right to ask."
+description: "A close is not an event. It is an accumulation. Closes fail when you ask too soon, ask weak questions, sound unsure, talk after asking, or avoid asking at all. A clean close states your recommendation, names the next step, and asks a logistical question. Then you wait. Silence after a close is sacred. If they object, loop once. If they still resist, tell the truth without chasing. Integrity requires not needing the sale."
 order: "14"
 part: "Operator manual"
-ctaLabel: "talk to verveschool"
-ctaHref: "/about#contact"
+ctaLabel: "Talk to Duggal"
+ctaHref: "https://wa.me/917042873035"
 ---
 
 A close is not an event. It is an accumulation.
@@ -59,10 +59,32 @@ When they start answering the logistical question, they have answered the real q
 
 If they object again, loop once. Address the objection with the mechanical loop. Ask again.
 
-If they object again, tell them the truth.
+If they object again, you do something different.
 
-"I get it. And I respect that. But here is what I also know. You came to me because something needs to change. You said you cannot keep doing what you are doing. You said the situation is costing you. All of that is still true right now."
+You tell them the truth.
 
-If they still say no, let them go. Do not chase. Do not negotiate down. Do not try another angle.
+"I get it. And I respect that. But here is what I also know. You came to me because something needs to change. You said you cannot keep doing what you are doing. You said the situation is costing you. All of that is still true right now. 
 
-The close with integrity is the hardest close because it requires that you do not need the sale.
+So the question is not whether you will do this. The question is whether you are ready to stop suffering. 
+
+And if the answer is not right now, that is okay. You can come back when you are ready. 
+
+But do not tell yourself you do not have a choice. You do. You are choosing to stay stuck if you do not move."
+
+This is not mean. But it does expose what is already happening.
+
+And exposure in the close creates more closures than pushiness ever could because people respect you for naming what they are running from.
+
+If they still say no, you let them go. You do not chase. You do not negotiate down. You do not try another angle.
+
+You say, "Okay, I respect that. But I am going to stay in touch. Sometimes people realize a few weeks later that they made the wrong call. If that happens, reach out."
+
+And you move on.
+
+The close with integrity is the hardest close because it requires that you do not need the sale. 
+
+That you would rather not close someone who is not ready. 
+
+That you believe in what you are selling enough to know it will help the people who commit. 
+
+Once you have that mindset, the close becomes simple. It is not a technique. It is an honest conversation with someone about what they need to do to solve their problem.

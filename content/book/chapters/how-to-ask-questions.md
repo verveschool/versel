@@ -1,10 +1,10 @@
 ---
 title: "How to ask questions"
-description: "Use consultative, pattern, and confirmation questions in the right order."
+description: "Most salespeople ask bad questions. Good questions move the conversation forward. Start with consultative questions to understand what is going on beneath the surface. Move from broad to specific to emotional to honest. Then use pattern questions to reveal how they think about the problem and what beliefs are stopping them. Near the close, use confirmation questions. The progression matters: consult to pattern to confirmation."
 order: "6"
 part: "Operator manual"
-ctaLabel: "talk to verveschool"
-ctaHref: "/about#contact"
+ctaLabel: "Talk to Duggal"
+ctaHref: "https://wa.me/917042873035"
 ---
 
 Most salespeople ask bad questions.
@@ -31,7 +31,9 @@ Listen more than you talk. When they answer, sit with it. Ask a follow up. Most 
 
 People do not buy based on how bad the problem is objectively. They buy based on how much they feel the problem. And they only feel it when they have articulated it themselves.
 
-If you tell them their situation is bad, they will defend it. If they tell themselves their situation is bad and articulate the cost, they are ready to solve it.
+If you tell them their situation is bad, they will defend it. They will come up with reasons it is not that bad.
+
+If they tell themselves their situation is bad and articulate the cost, they are ready to solve it.
 
 The second type of question happens in the middle. These are pattern questions.
 
@@ -41,7 +43,9 @@ If someone says "I am not smart enough to make the jump to tech," you do not say
 
 You ask "where do you think that belief comes from?" They tell you.
 
-Then: "has that belief been tested? Have you tried to learn something hard and failed or is this something you have just assumed?"
+Then "has that belief been tested? Have you tried to learn something hard and failed or is this something you have just assumed?"
+
+They think about it. Maybe they realize they have never tried. Maybe they realize the belief is old. Maybe they realize they are protecting themselves.
 
 These questions reveal what is stopping them.
 
@@ -56,3 +60,9 @@ The progression matters.
 Consult to pattern to confirmation. If you skip it or jump around, it does not work.
 
 You are gathering information early. You are understanding their beliefs in the middle. You are moving toward commitment at the end.
+
+Know when to transition. You transition from consultative when you have a clear picture of their situation. They have articulated the problem. They have felt it.
+
+You transition from pattern questions when they have started to open. When they are considering that something serious needs to happen.
+
+You transition to confirmation questions when they have signaled they are ready. They start asking you questions. They start thinking about how something might work.

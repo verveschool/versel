@@ -1,10 +1,10 @@
 ---
 title: "Math that moves people"
-description: "Reframe price as the cost of staying stuck."
+description: "Price is what you pay once. Cost is what you pay over time for making a bad choice. Reframe the calculation using their exact numbers. If they earn thirty thousand and the role creates eighty thousand, the difference is fifty thousand every month. Waiting four months costs two lakh, meaning doing nothing can cost the entire program price while leaving them with nothing. The cost of waiting is not zero."
 order: "13"
 part: "Operator manual"
-ctaLabel: "talk to verveschool"
-ctaHref: "/about#contact"
+ctaLabel: "Talk to Duggal"
+ctaHref: "https://wa.me/917042873035"
 ---
 
 Before you ask for the close, you must reframe their entire calculation.
