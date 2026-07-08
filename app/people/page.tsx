@@ -236,9 +236,9 @@ export default function PeoplePage() {
       <SiteHeader />
 
       <main className="yc-container space-y-14 py-14 md:space-y-16 md:py-20">
-        <section className="max-w-4xl space-y-6">
+        <section className="max-w-[760px] space-y-8">
           <h1 className="font-semibold text-white">People</h1>
-          <p className="max-w-2xl text-base leading-8 text-white/65 md:text-lg md:leading-9">
+          <p className="text-lg leading-8 text-white/65 md:text-xl md:leading-9">
             Behind every hire is a unit building VerveSchool each day and an alliance of founders, operators, and hiring leaders who have shaped the journey.
           </p>
         </section>
