@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import Script from "next/script"
 import { Analytics } from "@vercel/analytics/next"
+import { CustomCursor } from "@/components/custom-cursor"
 import "./globals.css"
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.verveschool.com"),
@@ -92,6 +93,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
         {children}
+        <CustomCursor />
         <Analytics />
       </body>
     </html>
