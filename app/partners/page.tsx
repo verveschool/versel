@@ -75,9 +75,9 @@ export default function PartnersPage() {
       <main className="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
         <div className="mx-auto w-full max-w-[760px]">
           <section className="mb-24">
-            <h1 className="mb-4 font-semibold">Hire customer-facing talent through an active scout network.</h1>
+            <h1 className="mb-4 font-semibold">Hiring Partners</h1>
             <p className="max-w-2xl text-base text-muted-foreground md:text-lg">
-              VerveSchool extends your hiring team through an active scout network built for speed and long-term fit.
+              VerveSchool helps companies hire for sales, business development, counselling, customer success, support, and other customer-facing roles. We extend your hiring team by sourcing, screening, and presenting role-aligned candidates, so your team spends less time searching and more time hiring.
             </p>
           </section>
 
