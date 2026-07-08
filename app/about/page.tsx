@@ -4,62 +4,19 @@ import { useEffect, useMemo, useState } from "react"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 
-type Section = {
-  id: string
-  label: string
-  title: string
-  body: string
-}
-
 type FaqItem = {
   question: string
   answer: string
 }
 
-const sections: Section[] = [
-  {
-    id: "why-verveschool",
-    label: "Why VerveSchool",
-    title: "Why candidates choose VerveSchool",
-    body:
-      "We are not a job board. We are a curated process for people who want customer facing roles, steady growth, and support that continues after selection. Every candidate is matched for fit, not just availability.",
-  },
-  {
-    id: "who-we-look-for",
-    label: "Who we look for",
-    title: "What kind of people thrive here",
-    body:
-      "We look for sincere, ambitious people who can speak with customers, handle pressure, and want to move fast. Clear English, serious intent, and willingness to work in office matter more than years of experience.",
-  },
-  {
-    id: "what-we-value",
-    label: "What we value",
-    title: "Qualities VerveSchool values",
-    body:
-      "Communication over credentials. Consistency under pressure. Ownership of outcomes. Coachability. If you can speak clearly, stay composed when things get hard, and keep your word, you already have the base we care about.",
-  },
-  {
-    id: "hiring-process",
-    label: "Hiring process",
-    title: "What the hiring process looks like",
-    body:
-      "You start with a scout call focused on how you communicate and think. We assess your intent and consistency. If there is a fit, we match you with the right partner company. Then you interview directly with them. If selected, we stay with you through onboarding.",
-  },
-  {
-    id: "roles",
-    label: "Roles",
-    title: "What kinds of customer facing roles are available",
-    body:
-      "Sales, business development, customer success, counselling, and support roles across high growth companies. We work with companies like Scaler, Vedantu, PrepCA, and Infinity Learn. Roles range from entry level for freshers to experienced positions paying 60K to 1L+ per month.",
-  },
-  {
-    id: "after-apply",
-    label: "After applying",
-    title: "What happens after applying",
-    body:
-      "Every application is reviewed within 24 hours. Shortlisted candidates get a call from our talent scout within 2 to 3 business days. We assess your communication and fit, then match you with relevant partner companies. The process from application to first company interview usually takes 5 to 7 days.",
-  },
-]
+const sectionNav = [
+  { id: "how-this-works", label: "How this works" },
+  { id: "who-we-look-for", label: "Who we look for" },
+  { id: "what-we-value", label: "What we value" },
+  { id: "roles", label: "Roles" },
+  { id: "after-applying", label: "After applying" },
+  { id: "faq", label: "FAQ" },
+] as const
 
 const faqs: FaqItem[] = [
   {
@@ -93,12 +50,6 @@ const faqs: FaqItem[] = [
       "We assess communication skills, intent, consistency, and coachability through a scout call. It is not about resume keywords. It is about whether you are serious and ready to grow.",
   },
 ]
-
-const navItems = [
-  { id: "how-it-works", label: "How it works" },
-  ...sections.map(({ id, label }) => ({ id, label })),
-  { id: "faq", label: "FAQ" },
-] as const
 
 const applyMessage = `Hi VerveSchool,
 
@@ -149,7 +100,7 @@ function useActiveSection(sectionIds: string[]) {
 }
 
 export default function CandidatesPage() {
-  const sectionIds = useMemo(() => navItems.map((item) => item.id), [])
+  const sectionIds = useMemo(() => sectionNav.map((item) => item.id), [])
   const activeSection = useActiveSection(sectionIds)
 
   return (
@@ -190,40 +141,60 @@ export default function CandidatesPage() {
             </div>
           </section>
 
-          <section data-section="how-it-works" className="border-t border-white/10 pt-16">
-            <h2 className="mb-8 font-semibold text-foreground">How this works</h2>
-
-            <div className="grid gap-6 md:grid-cols-2">
-              {[
-                "Speak to a talent scout",
-                "Get evaluated on communication, intent, and consistency",
-                "Receive partner role matching based on real fit",
-                "Interview with teams where you have upside",
-                "Get post selection support once you join",
-                "Meet our in office community that helps you settle in",
-              ].map((step, index) => (
-                <div key={step} className="border border-white/10 p-5 transition hover:border-white/20">
-                  <p className="text-sm font-medium text-primary">{String(index + 1).padStart(2, "0")}</p>
-                  <p className="mt-3 text-base text-foreground/75">{step}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
           <div className="space-y-20">
-            {sections.map((section, index) => (
-              <section key={section.id} data-section={section.id} className="border-t border-white/10 pt-16">
-                <div className="grid gap-8 lg:grid-cols-[0.25fr_0.75fr]">
-                  <p className="text-4xl font-semibold leading-none tracking-[-0.06em] text-foreground/10 md:text-5xl">
-                    {String(index + 2).padStart(2, "0")}
-                  </p>
-                  <div className="max-w-3xl">
-                    <h2 className="font-semibold text-foreground">{section.title}</h2>
-                    <p className="mt-6 text-lg leading-8 text-foreground/68">{section.body}</p>
-                  </div>
-                </div>
-              </section>
-            ))}
+            <section data-section="how-this-works" className="border-t border-white/10 pt-16">
+              <h2 className="font-semibold text-foreground">How this works</h2>
+              <div className="mt-8 space-y-4 text-lg leading-8 text-foreground/68">
+                <p>Speak to a talent scout.</p>
+                <p>Get evaluated on communication, intent, and consistency.</p>
+                <p>Receive partner role matching based on real fit.</p>
+                <p>Interview with teams where you have upside.</p>
+                <p>Get post selection support once you join.</p>
+                <p>Meet our in office community that helps you settle in.</p>
+              </div>
+            </section>
+
+            <section data-section="who-we-look-for" className="border-t border-white/10 pt-16">
+              <h2 className="font-semibold text-foreground">Who we look for</h2>
+              <div className="mt-8 space-y-4 text-lg leading-8 text-foreground/68">
+                <p>
+                  We look for sincere, ambitious people who can speak with customers, handle pressure, and want to move fast.
+                  Clear English, serious intent, and willingness to work in office matter more than years of experience.
+                </p>
+              </div>
+            </section>
+
+            <section data-section="what-we-value" className="border-t border-white/10 pt-16">
+              <h2 className="font-semibold text-foreground">What we value</h2>
+              <div className="mt-8 space-y-4 text-lg leading-8 text-foreground/68">
+                <p>
+                  Communication over credentials. Consistency under pressure. Ownership of outcomes. Coachability.
+                  If you can speak clearly, stay composed when things get hard, and keep your word, you already have the base we care about.
+                </p>
+              </div>
+            </section>
+
+            <section data-section="roles" className="border-t border-white/10 pt-16">
+              <h2 className="font-semibold text-foreground">Roles</h2>
+              <div className="mt-8 space-y-4 text-lg leading-8 text-foreground/68">
+                <p>
+                  Sales, business development, customer success, counselling, and support roles across high growth companies.
+                  We work with companies like Scaler, Vedantu, PrepCA, and Infinity Learn. Roles range from entry level for freshers
+                  to experienced positions paying 60K to 1L+ per month.
+                </p>
+              </div>
+            </section>
+
+            <section data-section="after-applying" className="border-t border-white/10 pt-16">
+              <h2 className="font-semibold text-foreground">After applying</h2>
+              <div className="mt-8 space-y-4 text-lg leading-8 text-foreground/68">
+                <p>
+                  Every application is reviewed within 24 hours. Shortlisted candidates get a call from our talent scout within 2 to 3 business days.
+                  We assess your communication and fit, then match you with relevant partner companies. The process from application to first company
+                  interview usually takes 5 to 7 days.
+                </p>
+              </div>
+            </section>
           </div>
 
           <section
