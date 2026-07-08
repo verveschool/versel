@@ -46,11 +46,7 @@ export function CustomCursor() {
 
     const move = (event: PointerEvent) => {
       target.current = { x: event.clientX, y: event.clientY }
-      if (!cursorRef.current?.dataset.visible) {
-        position.current = target.current
-        cursorRef.current?.setAttribute("data-visible", "true")
-        dotRef.current?.setAttribute("data-visible", "true")
-      }
+      position.current = cursorRef.current?.dataset.visible ? position.current : target.current
     }
 
     const animate = () => {
@@ -69,7 +65,15 @@ export function CustomCursor() {
 
     const over = (event: PointerEvent) => {
       const element = event.target instanceof Element ? event.target : null
-      setActive(Boolean(element?.closest(interactiveSelector)))
+      const isInteractive = Boolean(element?.closest(interactiveSelector))
+      setActive(isInteractive)
+      if (isInteractive) {
+        cursorRef.current?.setAttribute("data-visible", "true")
+        dotRef.current?.setAttribute("data-visible", "true")
+      } else {
+        cursorRef.current?.removeAttribute("data-visible")
+        dotRef.current?.removeAttribute("data-visible")
+      }
     }
 
     const down = (event: PointerEvent) => {
