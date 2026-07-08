@@ -65,20 +65,20 @@ export default function HomePage() {
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/partners"
-                className="inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold tracking-normal text-black transition hover:opacity-90"
+                className="inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold tracking-normal text-black transition-premium hover:shadow-[0_0_20px_rgba(167,139,250,0.3),inset_0_0_10px_rgba(167,139,250,0.1)] hover:-translate-y-0.5"
               >
                 Hire sincere talent
               </Link>
               <a
                 href="https://wa.me/917042873035"
-                className="inline-flex items-center justify-center border border-white/20 px-6 py-3 text-[13px] font-semibold tracking-normal text-white transition hover:border-white/40 hover:bg-white/5"
+                className="inline-flex items-center justify-center border border-white/20 px-6 py-3 text-[13px] font-semibold tracking-normal text-white transition-premium hover:border-white/40 hover:bg-white/5 hover:shadow-[0_0_15px_rgba(167,139,250,0.2)] hover:-translate-y-0.5"
               >
                 Talk to us
               </a>
             </div>
           </div>
 
-          <div className="border border-white/10 bg-transparent p-6 transition-colors hover:border-white/20">
+          <div className="border border-white/10 bg-transparent p-6 transition-premium hover:border-white/20 hover:shadow-[inset_0_0_20px_rgba(167,139,250,0.05)]">
             <div className="space-y-5">
               {metrics.map((metric) => (
                 <div
@@ -129,7 +129,7 @@ export default function HomePage() {
             {filterSteps.map((step, index) => (
               <div
                 key={step}
-                className="grid grid-cols-[64px_1fr] gap-5 border border-white/10 px-5 py-4 transition-colors hover:border-white/20"
+                className="grid grid-cols-[64px_1fr] gap-5 border border-white/10 px-5 py-4 transition-premium hover:border-white/20 hover:shadow-[0_0_15px_rgba(167,139,250,0.1),inset_0_0_8px_rgba(167,139,250,0.05)] hover:-translate-y-0.5"
               >
                 <span className="font-mono text-sm text-primary">0{index + 1}</span>
                 <p className="leading-8 text-white/75">{step}</p>
@@ -144,74 +144,74 @@ export default function HomePage() {
           </h2>
 
           <div className="divide-y divide-white/10">
-            <Link href="/about" className="group flex items-center justify-between py-10 transition-colors">
+            <Link href="/about" className="group flex items-center justify-between py-10 transition-premium hover:bg-white/[0.02]">
               <div className="max-w-2xl">
-                <h3 className="text-xl font-semibold text-white">Candidates</h3>
-                <p className="mt-3 leading-8 text-white/65">
+                <h3 className="text-xl font-semibold text-white transition-premium group-hover:text-white">Candidates</h3>
+                <p className="mt-3 leading-8 text-white/65 transition-premium group-hover:text-white/75">
                   Apply for customer-facing roles with companies that value communication, ownership, and long-term growth.
                 </p>
               </div>
-              <span className="text-sm text-primary transition group-hover:translate-x-1">
+              <span className="text-sm text-primary transition-premium group-hover:translate-x-1 group-hover:text-purple-accent">
                 Explore →
               </span>
             </Link>
 
-            <Link href="/partners" className="group flex items-center justify-between py-10 transition-colors">
+            <Link href="/partners" className="group flex items-center justify-between py-10 transition-premium hover:bg-white/[0.02]">
               <div className="max-w-2xl">
-                <h3 className="text-xl font-semibold text-white">Hiring partners</h3>
-                <p className="mt-3 leading-8 text-white/65">
+                <h3 className="text-xl font-semibold text-white transition-premium group-hover:text-white">Hiring partners</h3>
+                <p className="mt-3 leading-8 text-white/65 transition-premium group-hover:text-white/75">
                   Hire customer-facing talent through an active scout network built for speed, role alignment, and replacement coverage.
                 </p>
               </div>
-              <span className="text-sm text-primary transition group-hover:translate-x-1">
+              <span className="text-sm text-primary transition-premium group-hover:translate-x-1 group-hover:text-purple-accent">
                 Explore →
               </span>
             </Link>
 
-            <Link href="/people" className="group flex items-center justify-between py-10 transition-colors">
+            <Link href="/people" className="group flex items-center justify-between py-10 transition-premium hover:bg-white/[0.02]">
               <div className="max-w-2xl">
-                <h3 className="text-xl font-semibold text-white">People</h3>
-                <p className="mt-3 leading-8 text-white/65">
+                <h3 className="text-xl font-semibold text-white transition-premium group-hover:text-white">People</h3>
+                <p className="mt-3 leading-8 text-white/65 transition-premium group-hover:text-white/75">
                   Meet the people building VerveSchool and the principles guiding every hiring decision.
                 </p>
               </div>
-              <span className="text-sm text-primary transition group-hover:translate-x-1">
+              <span className="text-sm text-primary transition-premium group-hover:translate-x-1 group-hover:text-purple-accent">
                 Explore →
               </span>
             </Link>
 
-            <Link href="/writing" className="group flex items-center justify-between py-10 transition-colors">
+            <Link href="/writing" className="group flex items-center justify-between py-10 transition-premium hover:bg-white/[0.02]">
               <div className="max-w-2xl">
-                <h3 className="text-xl font-semibold text-white">Essays</h3>
-                <p className="mt-3 leading-8 text-white/65">
+                <h3 className="text-xl font-semibold text-white transition-premium group-hover:text-white">Essays</h3>
+                <p className="mt-3 leading-8 text-white/65 transition-premium group-hover:text-white/75">
                   Essays on hiring, sales, communication, and building organizations that last.
                 </p>
               </div>
-              <span className="text-sm text-primary transition group-hover:translate-x-1">
+              <span className="text-sm text-primary transition-premium group-hover:translate-x-1 group-hover:text-purple-accent">
                 Read →
               </span>
             </Link>
 
-            <Link href="/book" className="group flex items-center justify-between py-10 transition-colors">
+            <Link href="/book" className="group flex items-center justify-between py-10 transition-premium hover:bg-white/[0.02]">
               <div className="max-w-2xl">
-                <h3 className="text-xl font-semibold text-white">Book</h3>
-                <p className="mt-3 leading-8 text-white/65">
+                <h3 className="text-xl font-semibold text-white transition-premium group-hover:text-white">Book</h3>
+                <p className="mt-3 leading-8 text-white/65 transition-premium group-hover:text-white/75">
                   An ongoing book capturing the philosophy behind communication, sales, hiring, and building exceptional customer-facing teams.
                 </p>
               </div>
-              <span className="text-sm text-primary transition group-hover:translate-x-1">
+              <span className="text-sm text-primary transition-premium group-hover:translate-x-1 group-hover:text-purple-accent">
                 Read →
               </span>
             </Link>
 
-            <a href="https://wa.me/917042873035" className="group flex items-center justify-between py-10 transition-colors">
+            <a href="https://wa.me/917042873035" className="group flex items-center justify-between py-10 transition-premium hover:bg-white/[0.02]">
               <div className="max-w-2xl">
-                <h3 className="text-xl font-semibold text-white">Talk to us</h3>
-                <p className="mt-3 leading-8 text-white/65">
+                <h3 className="text-xl font-semibold text-white transition-premium group-hover:text-white">Talk to us</h3>
+                <p className="mt-3 leading-8 text-white/65 transition-premium group-hover:text-white/75">
                   Questions about hiring, recruiting, or anything else? Reach out directly on WhatsApp.
                 </p>
               </div>
-              <span className="text-sm text-primary transition group-hover:translate-x-1">
+              <span className="text-sm text-primary transition-premium group-hover:translate-x-1 group-hover:text-purple-accent">
                 Contact →
               </span>
             </a>

@@ -58,7 +58,7 @@ export function SiteFooter() {
                 </p>
                 <div className="flex flex-col items-start gap-2.5">
                   {group.links.map((link) => (
-                    <Link key={link.href} href={link.href} className="transition-colors hover:text-foreground">
+                    <Link key={link.href} href={link.href} className="transition-premium hover:text-foreground hover:text-purple-accent relative after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-0 after:bg-purple-accent after:transition-premium hover:after:w-full">
                       {link.label}
                     </Link>
                   ))}
@@ -76,12 +76,12 @@ export function SiteFooter() {
                   href={option.href}
                   target={option.external ? "_blank" : undefined}
                   rel={option.external ? "noopener noreferrer" : undefined}
-                  className="group transition-colors hover:text-foreground"
+                  className="group transition-premium hover:text-purple-accent"
                 >
-                  <span className="block text-[10px] font-semibold uppercase tracking-[0.16em] text-foreground/35 group-hover:text-foreground/55">
+                  <span className="block text-[10px] font-semibold uppercase tracking-[0.16em] text-foreground/35 transition-premium group-hover:text-purple-accent">
                     {option.label}
                   </span>
-                  <span className="block">{option.value}</span>
+                  <span className="block transition-premium group-hover:text-purple-accent">{option.value}</span>
                 </a>
               ))}
               <address className="not-italic">
@@ -102,7 +102,7 @@ export function SiteFooter() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="transition-colors hover:text-foreground"
+                  className="transition-premium hover:text-purple-accent relative after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-0 after:bg-purple-accent after:transition-premium hover:after:w-full"
                 >
                   {link.label}
                 </Link>

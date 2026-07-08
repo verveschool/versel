@@ -141,7 +141,7 @@ export function ApplicationForm({ isOpen, onClose }: ApplicationFormProps) {
             </p>
             <button
               onClick={handleClose}
-              className="inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:opacity-90"
+              className="inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition-premium hover:opacity-90 hover:shadow-[0_0_20px_rgba(167,139,250,0.3),inset_0_0_10px_rgba(167,139,250,0.1)] hover:-translate-y-0.5"
             >
               Close
             </button>
@@ -153,7 +153,7 @@ export function ApplicationForm({ isOpen, onClose }: ApplicationFormProps) {
                 <h2 className="text-lg font-semibold text-foreground">Apply now</h2>
                 <button
                   onClick={handleClose}
-                  className="inline-flex h-8 w-8 items-center justify-center rounded hover:bg-white/10 transition"
+                  className="inline-flex h-8 w-8 items-center justify-center rounded transition-premium hover:bg-white/10 hover:shadow-[0_0_10px_rgba(167,139,250,0.15)]"
                   aria-label="Close form"
                 >
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -180,7 +180,7 @@ export function ApplicationForm({ isOpen, onClose }: ApplicationFormProps) {
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleInputChange}
-                  className="w-full border border-white/15 bg-white/5 px-4 py-3 text-foreground placeholder:text-foreground/40 transition hover:bg-white/8 focus:outline-none focus:ring-1 focus:ring-primary/50"
+                  className="w-full border border-white/15 bg-white/5 px-4 py-3 text-foreground placeholder:text-foreground/40 transition-premium hover:bg-white/8 hover:border-white/25 focus:outline-none focus:bg-white/8 focus:border-purple-accent focus:shadow-[0_0_12px_rgba(167,139,250,0.2),inset_0_0_6px_rgba(167,139,250,0.05)]"
                   placeholder="John Doe"
                 />
               </div>
@@ -195,7 +195,7 @@ export function ApplicationForm({ isOpen, onClose }: ApplicationFormProps) {
                   name="mobile"
                   value={formData.mobile}
                   onChange={handleInputChange}
-                  className="w-full border border-white/15 bg-white/5 px-4 py-3 text-foreground placeholder:text-foreground/40 transition hover:bg-white/8 focus:outline-none focus:ring-1 focus:ring-primary/50"
+                  className="w-full border border-white/15 bg-white/5 px-4 py-3 text-foreground placeholder:text-foreground/40 transition-premium hover:bg-white/8 hover:border-white/25 focus:outline-none focus:bg-white/8 focus:border-purple-accent focus:shadow-[0_0_12px_rgba(167,139,250,0.2),inset_0_0_6px_rgba(167,139,250,0.05)]"
                   placeholder="+91 9876543210"
                 />
               </div>
@@ -210,7 +210,7 @@ export function ApplicationForm({ isOpen, onClose }: ApplicationFormProps) {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full border border-white/15 bg-white/5 px-4 py-3 text-foreground placeholder:text-foreground/40 transition hover:bg-white/8 focus:outline-none focus:ring-1 focus:ring-primary/50"
+                  className="w-full border border-white/15 bg-white/5 px-4 py-3 text-foreground placeholder:text-foreground/40 transition-premium hover:bg-white/8 hover:border-white/25 focus:outline-none focus:bg-white/8 focus:border-purple-accent focus:shadow-[0_0_12px_rgba(167,139,250,0.2),inset_0_0_6px_rgba(167,139,250,0.05)]"
                   placeholder="john@example.com"
                 />
               </div>
@@ -225,7 +225,7 @@ export function ApplicationForm({ isOpen, onClose }: ApplicationFormProps) {
                   name="city"
                   value={formData.city}
                   onChange={handleInputChange}
-                  className="w-full border border-white/15 bg-white/5 px-4 py-3 text-foreground placeholder:text-foreground/40 transition hover:bg-white/8 focus:outline-none focus:ring-1 focus:ring-primary/50"
+                  className="w-full border border-white/15 bg-white/5 px-4 py-3 text-foreground placeholder:text-foreground/40 transition-premium hover:bg-white/8 hover:border-white/25 focus:outline-none focus:bg-white/8 focus:border-purple-accent focus:shadow-[0_0_12px_rgba(167,139,250,0.2),inset_0_0_6px_rgba(167,139,250,0.05)]"
                   placeholder="Bangalore"
                 />
               </div>
@@ -241,7 +241,7 @@ export function ApplicationForm({ isOpen, onClose }: ApplicationFormProps) {
                     name="currentRole"
                     value={formData.currentRole}
                     onChange={handleInputChange}
-                    className="w-full border border-white/15 bg-white/5 px-4 py-3 text-foreground placeholder:text-foreground/40 transition hover:bg-white/8 focus:outline-none focus:ring-1 focus:ring-primary/50"
+                    className="w-full border border-white/15 bg-white/5 px-4 py-3 text-foreground placeholder:text-foreground/40 transition-premium hover:bg-white/8 hover:border-white/25 focus:outline-none focus:bg-white/8 focus:border-purple-accent focus:shadow-[0_0_12px_rgba(167,139,250,0.2),inset_0_0_6px_rgba(167,139,250,0.05)]"
                     placeholder="e.g., BDE at XYZ"
                   />
                 </div>
@@ -255,7 +255,7 @@ export function ApplicationForm({ isOpen, onClose }: ApplicationFormProps) {
                     name="yearsOfExperience"
                     value={formData.yearsOfExperience}
                     onChange={handleInputChange}
-                    className="w-full border border-white/15 bg-white/5 px-4 py-3 text-foreground placeholder:text-foreground/40 transition hover:bg-white/8 focus:outline-none focus:ring-1 focus:ring-primary/50"
+                    className="w-full border border-white/15 bg-white/5 px-4 py-3 text-foreground placeholder:text-foreground/40 transition-premium hover:bg-white/8 hover:border-white/25 focus:outline-none focus:bg-white/8 focus:border-purple-accent focus:shadow-[0_0_12px_rgba(167,139,250,0.2),inset_0_0_6px_rgba(167,139,250,0.05)]"
                   >
                     <option value="">Select...</option>
                     <option value="fresher">Fresher (0 years)</option>
@@ -276,7 +276,7 @@ export function ApplicationForm({ isOpen, onClose }: ApplicationFormProps) {
                 <button
                   type="button"
                   onClick={() => fileInputRef.current?.click()}
-                  className="w-full border-2 border-dashed border-white/20 px-4 py-6 text-center transition hover:border-white/40 hover:bg-white/5"
+                  className="w-full border-2 border-dashed border-white/20 px-4 py-6 text-center transition-premium hover:border-white/40 hover:bg-white/5 hover:shadow-[0_0_12px_rgba(167,139,250,0.1),inset_0_0_8px_rgba(167,139,250,0.04)]"
                 >
                   {formData.resume ? (
                     <div className="flex items-center justify-center gap-2 text-foreground/75">
@@ -314,7 +314,7 @@ export function ApplicationForm({ isOpen, onClose }: ApplicationFormProps) {
                   name="linkedIn"
                   value={formData.linkedIn}
                   onChange={handleInputChange}
-                  className="w-full border border-white/15 bg-white/5 px-4 py-3 text-foreground placeholder:text-foreground/40 transition hover:bg-white/8 focus:outline-none focus:ring-1 focus:ring-primary/50"
+                  className="w-full border border-white/15 bg-white/5 px-4 py-3 text-foreground placeholder:text-foreground/40 transition-premium hover:bg-white/8 hover:border-white/25 focus:outline-none focus:bg-white/8 focus:border-purple-accent focus:shadow-[0_0_12px_rgba(167,139,250,0.2),inset_0_0_6px_rgba(167,139,250,0.05)]"
                   placeholder="https://linkedin.com/in/yourprofile"
                 />
               </div>
@@ -329,7 +329,7 @@ export function ApplicationForm({ isOpen, onClose }: ApplicationFormProps) {
                   value={formData.motivation}
                   onChange={handleInputChange}
                   rows={4}
-                  className="w-full border border-white/15 bg-white/5 px-4 py-3 text-foreground placeholder:text-foreground/40 transition hover:bg-white/8 focus:outline-none focus:ring-1 focus:ring-primary/50 resize-none"
+                  className="w-full border border-white/15 bg-white/5 px-4 py-3 text-foreground placeholder:text-foreground/40 transition-premium hover:bg-white/8 hover:border-white/25 focus:outline-none focus:bg-white/8 focus:border-purple-accent focus:shadow-[0_0_12px_rgba(167,139,250,0.2),inset_0_0_6px_rgba(167,139,250,0.05)] resize-none"
                   placeholder="Share what excites you about customer-facing work..."
                 />
               </div>
@@ -339,14 +339,14 @@ export function ApplicationForm({ isOpen, onClose }: ApplicationFormProps) {
                 <button
                   type="button"
                   onClick={handleClose}
-                  className="flex-1 border border-white/20 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-foreground/75 transition hover:bg-white/5 hover:text-foreground"
+                  className="flex-1 border border-white/20 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-foreground/75 transition-premium hover:bg-white/5 hover:text-foreground hover:border-white/40 hover:shadow-[0_0_12px_rgba(167,139,250,0.1)]"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="flex-1 border border-primary bg-primary px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-black transition hover:opacity-90 disabled:opacity-50"
+                  className="flex-1 border border-primary bg-primary px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-black transition-premium hover:opacity-90 hover:shadow-[0_0_20px_rgba(167,139,250,0.3),inset_0_0_10px_rgba(167,139,250,0.1)] hover:-translate-y-0.5 disabled:opacity-50"
                 >
                   {isSubmitting ? "Submitting..." : "Submit application"}
                 </button>
