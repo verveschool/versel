@@ -52,6 +52,9 @@ export function SiteFooter() {
 
           {sitemapGroups.map((group) => (
             <nav key={group.heading} aria-label={`Footer ${group.heading}`} className="space-y-3">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/40">
+                {group.heading}
+              </p>
               <div className="flex flex-col items-start gap-2.5">
                 {group.links.map((link) => (
                   <Link key={link.href} href={link.href} className="transition-colors hover:text-foreground">
@@ -63,6 +66,7 @@ export function SiteFooter() {
           ))}
 
           <section className="space-y-3">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/40">Contact</p>
             <div className="flex flex-col items-start gap-3 text-xs leading-5 text-foreground/58">
               {contactOptions.map((option) => (
                 <a
