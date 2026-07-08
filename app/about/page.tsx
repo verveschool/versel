@@ -1,11 +1,27 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import Link from "next/link"
+import { useEffect, useMemo, useState } from "react"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 
-const sections = [
+type Section = {
+  id: string
+  label: string
+  title: string
+  body: string
+}
+
+type FaqItem = {
+  question: string
+  answer: string
+}
+
+const glowStyle: React.CSSProperties = {
+  background:
+    "radial-gradient(circle at 18% 0%, rgba(219, 231, 243, 0.12), transparent 30%), linear-gradient(180deg, #050608 0%, #0b0f14 54%, #050608 100%)",
+}
+
+const sections: Section[] = [
   {
     id: "why-verveschool",
     label: "Why VerveSchool",
@@ -50,7 +66,7 @@ const sections = [
   },
 ]
 
-const faqs = [
+const faqs: FaqItem[] = [
   {
     question: "Do I need previous experience?",
     answer:
@@ -83,6 +99,12 @@ const faqs = [
   },
 ]
 
+const navItems = [
+  { id: "how-it-works", label: "How it works" },
+  ...sections.map(({ id, label }) => ({ id, label })),
+  { id: "faq", label: "FAQ" },
+] as const
+
 const applyMessage = `Hi VerveSchool,
 
 I would like to apply for customer facing roles.
@@ -97,41 +119,62 @@ Why do you think you would do well in a customer facing role?`
 
 const applyHref = `https://wa.me/917042873035?text=${encodeURIComponent(applyMessage)}`
 
-export default function CandidatesPage() {
-  const [activeSection, setActiveSection] = useState("why-verveschool")
+function useActiveSection(sectionIds: string[]) {
+  const [activeSection, setActiveSection] = useState(sectionIds[0] ?? "")
 
   useEffect(() => {
-    const handleScroll = () => {
-      let current = "why-verveschool"
+    const elements = sectionIds
+      .map((id) => document.querySelector<HTMLElement>(`[data-section="${id}"]`))
+      .filter((el): el is HTMLElement => Boolean(el))
 
-      for (const section of document.querySelectorAll<HTMLElement>("[data-section]")) {
-        if (section.getBoundingClientRect().top < 220) {
-          current = section.dataset.section ?? current
+    if (!elements.length) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
+
+        if (visible?.target instanceof HTMLElement) {
+          setActiveSection(visible.target.dataset.section ?? sectionIds[0] ?? "")
         }
+      },
+      {
+        root: null,
+        rootMargin: "-20% 0px -65% 0px",
+        threshold: [0.1, 0.25, 0.5, 0.75],
       }
+    )
 
-      setActiveSection(current)
-    }
+    elements.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [sectionIds])
 
-    handleScroll()
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  return activeSection
+}
+
+export default function CandidatesPage() {
+  const sectionIds = useMemo(() => navItems.map((item) => item.id), [])
+  const activeSection = useActiveSection(sectionIds)
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_18%_0%,rgba(219,231,243,0.12),transparent_30%),linear-gradient(180deg,#050608_0%,#0b0f14_54%,#050608_100%)]" />
+      <div className="pointer-events-none fixed inset-0 -z-10" style={glowStyle} />
+
       <SiteHeader />
 
-      <div className="flex flex-col md:flex-row">
-        <main className="yc-container flex-1 py-16 md:py-24">
-          <section className="mb-20 max-w-5xl">
+      <main className="mx-auto flex w-full max-w-[1240px] gap-0 px-6 py-16 md:px-10 md:py-24">
+        <div className="mx-auto w-full max-w-[760px]">
+          <section className="mb-24">
             <h1 className="max-w-4xl font-semibold text-foreground">
               If you can communicate, stay composed under pressure, and keep your word, we would like to meet you.
             </h1>
+
             <p className="mt-8 max-w-2xl text-lg leading-8 text-white/65 md:text-xl md:leading-9">
-              VerveSchool connects sincere, ambitious people with high growth companies building strong customer facing teams. We handle matching, support, and replacement coverage so you can focus on doing great work.
+              VerveSchool connects sincere, ambitious people with high growth companies building strong customer facing teams.
+              We handle matching, support, and replacement coverage so you can focus on doing great work.
             </p>
+
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a
                 href={applyHref}
@@ -152,8 +195,9 @@ export default function CandidatesPage() {
             </div>
           </section>
 
-          <section data-section="how-it-works" className="mb-24 border-t border-white/10 pt-16">
+          <section data-section="how-it-works" className="border-t border-white/10 pt-16">
             <h2 className="mb-8 font-semibold text-foreground">How this works</h2>
+
             <div className="grid gap-6 md:grid-cols-2">
               {[
                 "Speak to a talent scout",
@@ -174,12 +218,10 @@ export default function CandidatesPage() {
           <div className="space-y-20">
             {sections.map((section, index) => (
               <section key={section.id} data-section={section.id} className="border-t border-white/10 pt-16">
-                <div className="grid gap-8 lg:grid-cols-[0.35fr_0.65fr]">
-                  <div>
-                    <p className="text-4xl font-semibold leading-none tracking-[-0.06em] text-foreground/10 md:text-5xl">
-                      {String(index + 2).padStart(2, "0")}
-                    </p>
-                  </div>
+                <div className="grid gap-8 lg:grid-cols-[0.25fr_0.75fr]">
+                  <p className="text-4xl font-semibold leading-none tracking-[-0.06em] text-foreground/10 md:text-5xl">
+                    {String(index + 2).padStart(2, "0")}
+                  </p>
                   <div className="max-w-3xl">
                     <h2 className="font-semibold text-foreground">{section.title}</h2>
                     <p className="mt-6 text-lg leading-8 text-foreground/68">{section.body}</p>
@@ -189,25 +231,22 @@ export default function CandidatesPage() {
             ))}
           </div>
 
-          <section data-section="faq" className="mt-24 mb-24 border-t border-white/10 pt-16">
+          <section data-section="faq" className="mt-24 border-t border-white/10 pt-16">
             <h2 className="mb-12 font-semibold text-foreground">Frequently asked questions</h2>
+
             <div className="grid max-w-3xl gap-6">
-              {faqs.map((faq, index) => (
-                <details key={index} className="group cursor-pointer">
+              {faqs.map((faq) => (
+                <details key={faq.question} className="group cursor-pointer">
                   <summary className="flex list-none items-center justify-between border-b border-white/10 py-4 font-medium text-foreground transition hover:border-white/20">
-                    {faq.question}
+                    <span>{faq.question}</span>
                     <svg
                       className="h-5 w-5 text-primary transition group-open:rotate-180"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
+                      aria-hidden="true"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                      />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                     </svg>
                   </summary>
                   <p className="mt-4 pb-4 leading-7 text-foreground/68">{faq.answer}</p>
@@ -216,14 +255,13 @@ export default function CandidatesPage() {
             </div>
           </section>
 
-          <section className="mb-20 border-t border-white/10 pt-16 mt-24">
+          <section className="mt-24 border-t border-white/10 pt-16">
             <div className="max-w-5xl">
-              <h2 className="max-w-2xl font-semibold text-white">
-                The world moves for those who do
-              </h2>
+              <h2 className="max-w-2xl font-semibold text-white">The world moves for those who do</h2>
               <div className="mt-8 max-w-2xl">
                 <p className="leading-8 text-white/65">
-                  If you communicate well, keep your word, and want to build a career in customer facing work, we would like to meet you. The companies we work with are hiring now. Apply today and you could be speaking with us within days.
+                  If you communicate well, keep your word, and want to build a career in customer facing work, we would like
+                  to meet you. The companies we work with are hiring now. Apply today and you could be speaking with us within days.
                 </p>
                 <a
                   href={applyHref}
@@ -236,33 +274,33 @@ export default function CandidatesPage() {
               </div>
             </div>
           </section>
-        </main>
+        </div>
 
-        <aside className="sticky top-20 hidden h-screen shrink-0 overflow-y-auto border-l border-white/10 px-6 py-20 md:block">
-          <ul className="space-y-2">
-            {[
-              { id: "how-it-works", label: "How it works" },
-              ...sections,
-              { id: "faq", label: "FAQ" },
-            ].map((item) => (
-              <li key={item.id}>
-                <button
-                  onClick={() =>
-                    document.querySelector(`[data-section="${item.id}"]`)?.scrollIntoView({
-                      behavior: "smooth",
-                    })
-                  }
-                  className={`text-left text-[13px] transition-colors hover:text-foreground ${
-                    activeSection === item.id ? "text-foreground" : "text-foreground/52"
-                  }`}
-                >
-                  {item.label}
-                </button>
-              </li>
-            ))}
-          </ul>
+        <aside className="sticky top-24 hidden h-[calc(100vh-6rem)] w-56 shrink-0 overflow-y-auto border-l border-white/10 pl-6 md:block">
+          <nav aria-label="Section navigation">
+            <ul className="space-y-2">
+              {navItems.map((item) => (
+                <li key={item.id}>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      document.querySelector<HTMLElement>(`[data-section="${item.id}"]`)?.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      })
+                    }}
+                    className={`text-left text-[13px] transition-colors hover:text-foreground ${
+                      activeSection === item.id ? "text-foreground" : "text-foreground/52"
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </aside>
-      </div>
+      </main>
 
       <SiteFooter />
     </div>
