@@ -4,7 +4,6 @@ const sitemapGroups = [
   {
     heading: "Company",
     links: [
-      { href: "/", label: "Home" },
       { href: "/about", label: "Candidates" },
       { href: "/partners", label: "Hiring partners" },
       { href: "/people", label: "People" },
@@ -50,8 +49,8 @@ export function SiteFooter() {
             <p className="text-sm leading-6 text-foreground/60">The world moves for those who do.</p>
           </section>
 
-          {sitemapGroups.map((group) => (
-            <nav key={group.heading} aria-label={`Footer ${group.heading}`} className="space-y-3">
+          {sitemapGroups.map((group, index) => (
+            <nav key={group.heading} aria-label={`Footer ${group.heading}`} className={`space-y-3 ${index === 0 ? "lg:ml-8" : ""}`}>
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/40">
                 {group.heading}
               </p>
