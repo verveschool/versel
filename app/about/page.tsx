@@ -16,11 +16,6 @@ type FaqItem = {
   answer: string
 }
 
-const glowStyle: React.CSSProperties = {
-  background:
-    "radial-gradient(circle at 18% 0%, rgba(219, 231, 243, 0.12), transparent 30%), linear-gradient(180deg, #050608 0%, #0b0f14 54%, #050608 100%)",
-}
-
 const sections: Section[] = [
   {
     id: "why-verveschool",
@@ -159,11 +154,11 @@ export default function CandidatesPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="pointer-events-none fixed inset-0 -z-10" style={glowStyle} />
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_18%_0%,rgba(219,231,243,0.12),transparent_30%),linear-gradient(180deg,#050608_0%,#0b0f14_54%,#050608_100%)]" />
 
       <SiteHeader />
 
-      <main className="mx-auto flex w-full max-w-[1240px] gap-0 px-6 py-16 md:px-10 md:py-24">
+      <main className="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
         <div className="mx-auto w-full max-w-[760px]">
           <section className="mb-24">
             <h1 className="max-w-4xl font-semibold text-foreground">
@@ -231,7 +226,10 @@ export default function CandidatesPage() {
             ))}
           </div>
 
-          <section data-section="faq" className="mt-24 border-t border-white/10 pt-16">
+          <section
+            data-section="faq"
+            className="mt-24 rounded-2xl border border-white/10 bg-white/[0.02] px-6 py-8 md:px-8 md:py-10"
+          >
             <h2 className="mb-12 font-semibold text-foreground">Frequently asked questions</h2>
 
             <div className="grid max-w-3xl gap-6">
@@ -275,31 +273,6 @@ export default function CandidatesPage() {
             </div>
           </section>
         </div>
-
-        <aside className="sticky top-24 hidden h-[calc(100vh-6rem)] w-56 shrink-0 overflow-y-auto border-l border-white/10 pl-6 md:block">
-          <nav aria-label="Section navigation">
-            <ul className="space-y-2">
-              {navItems.map((item) => (
-                <li key={item.id}>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      document.querySelector<HTMLElement>(`[data-section="${item.id}"]`)?.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                      })
-                    }}
-                    className={`text-left text-[13px] transition-colors hover:text-foreground ${
-                      activeSection === item.id ? "text-foreground" : "text-foreground/52"
-                    }`}
-                  >
-                    {item.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </aside>
       </main>
 
       <SiteFooter />
