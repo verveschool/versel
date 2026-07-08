@@ -12,7 +12,7 @@ const sectionNav = [
   { id: "what-partners-can-expect", label: "What partners can expect" },
   { id: "commercial-terms", label: "Commercial terms" },
   { id: "next-steps", label: "Next steps" },
-]
+] as const
 
 export default function PartnersPage() {
   const [activeSection, setActiveSection] = useState("")
@@ -75,19 +75,23 @@ export default function PartnersPage() {
       <main className="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
         <div className="mx-auto w-full max-w-[760px]">
           <section className="mb-24">
-            <h1 className="mb-4 font-semibold">Hire customer-facing talent through an active scout network.</h1>
+            <h1 className="mb-4 font-semibold">
+              Hire customer-facing talent through an active scout network.
+            </h1>
             <p className="max-w-2xl text-base text-muted-foreground md:text-lg">
               VerveSchool extends your hiring team through an active scout network built for speed and long-term fit.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3 text-sm text-muted-foreground">
               <span className="rounded-full border border-border px-4 py-2">Reduced sourcing burden</span>
-              <span className="rounded-full border border-border px-4 py-2">Faster access to role-aligned candidates</span>
+              <span className="rounded-full border border-border px-4 py-2">
+                Faster access to role-aligned candidates
+              </span>
               <span className="rounded-full border border-border px-4 py-2">60-day replacement coverage</span>
             </div>
           </section>
 
-          <div className="mb-10 rounded-md border border-border bg-card/70 p-4 md:hidden">
+          <div className="mb-14 rounded-md border border-border bg-card/70 p-4 md:hidden">
             <details>
               <summary className="cursor-pointer list-none text-base font-medium text-foreground [&::-webkit-details-marker]:hidden">
                 Page sections
@@ -243,26 +247,6 @@ export default function PartnersPage() {
             </div>
           </section>
         </div>
-
-        <aside className="sticky top-20 hidden h-screen shrink-0 overflow-y-auto border-l border-border px-8 pt-20 pb-20 md:block">
-          <ul className="space-y-1.5">
-            {sectionNav.map((section) => (
-              <li key={section.id}>
-                <button
-                  type="button"
-                  onClick={() => scrollToSection(section.id)}
-                  className={`w-full rounded-sm px-2 py-1.5 text-left text-[13px] transition-colors ${
-                    activeSection === section.id
-                      ? "font-semibold text-primary"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
-                >
-                  {section.label}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </aside>
       </main>
 
       <SiteFooter />
