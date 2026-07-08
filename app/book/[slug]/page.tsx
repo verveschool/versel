@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: BookChapterPageProps): Promis
   const chapter = getBookChapterBySlug(slug)
 
   return {
-    title: `${chapter.title} | The Selling Better Field Guide`,
+    title: `${chapter.title} | Hope Is the Enemy`,
     description: chapter.description,
     alternates: { canonical: `/book/${chapter.slug}` },
     openGraph: { title: chapter.title, description: chapter.description, type: "article" },
@@ -69,9 +69,9 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
           <MarkdownRenderer content={chapter.content} className="book-prose" />
 
           <section className="mt-20 border border-primary/30 bg-primary/[0.07] p-8">
-            <h2 className="mb-4 font-serif text-2xl text-white">Use this chapter inside a real sales conversation.</h2>
+            <h2 className="mb-4 font-serif text-2xl text-white">Use this chapter on the next call.</h2>
             <p className="mb-6 text-white/68">
-              Bring the ideas into a buyer conversation, coaching session, pipeline review, or contact conversation with VerveSchool.
+              The book is the map. The call is the terrain. Take the framework into a real conversation, then review what happened with operator-level honesty.
             </p>
             <Link href={chapter.ctaHref} className="text-sm font-semibold uppercase tracking-[0.24em] text-primary transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
               {chapter.ctaLabel} →
@@ -91,9 +91,9 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
               <h2 className="font-serif text-lg text-white transition-colors group-hover:text-primary">{nextChapter.title}</h2>
             </Link>
           ) : (
-            <Link href="/partners" className="group border border-white/10 bg-white/[0.025] p-6 text-right transition duration-200 ease-out hover:-translate-y-0.5 hover:border-primary/60 hover:bg-white/[0.04] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
+            <Link href="/about#contact" className="group border border-white/10 bg-white/[0.025] p-6 text-right transition duration-200 ease-out hover:-translate-y-0.5 hover:border-primary/60 hover:bg-white/[0.04] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
               <p className="mb-3 text-sm text-white/45">finished →</p>
-              <h2 className="font-serif text-lg text-white transition-colors group-hover:text-primary">Keep selling better</h2>
+              <h2 className="font-serif text-lg text-white transition-colors group-hover:text-primary">Become dangerous</h2>
             </Link>
           )}
         </nav>
