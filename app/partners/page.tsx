@@ -28,6 +28,7 @@ export default function PartnersPage() {
 
   useEffect(() => {
     const header = document.querySelector("header")
+
     const updateOffset = () => {
       const height = header?.getBoundingClientRect().height
       setHeaderOffset(height ? Math.round(height) : 96)
@@ -36,9 +37,7 @@ export default function PartnersPage() {
     updateOffset()
     window.addEventListener("resize", updateOffset)
 
-    return () => {
-      window.removeEventListener("resize", updateOffset)
-    }
+    return () => window.removeEventListener("resize", updateOffset)
   }, [])
 
   useEffect(() => {
@@ -59,42 +58,34 @@ export default function PartnersPage() {
       {
         rootMargin: `-${headerOffset + 20}px 0px -45% 0px`,
         threshold: [0.2, 0.35, 0.5, 0.7],
-      },
+      }
     )
 
     sectionElements.forEach((section) => observer.observe(section))
 
-    return () => {
-      observer.disconnect()
-    }
+    return () => observer.disconnect()
   }, [headerOffset])
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background text-foreground">
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_18%_0%,rgba(219,231,243,0.12),transparent_30%),linear-gradient(180deg,#050608_0%,#0b0f14_54%,#050608_100%)]" />
+
       <SiteHeader />
 
-      <div className="flex flex-col md:flex-row">
-        <main className="yc-container flex-1 py-16 md:py-24">
-          <div className="mb-24">
-            <h1 className="mb-4 font-semibold">
-              Hire customer-facing talent through an active scout network.
-            </h1>
+      <main className="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
+        <div className="mx-auto w-full max-w-[760px]">
+          <section className="mb-24">
+            <h1 className="mb-4 font-semibold">Hire customer-facing talent through an active scout network.</h1>
             <p className="max-w-2xl text-base text-muted-foreground md:text-lg">
               VerveSchool extends your hiring team through an active scout network built for speed and long-term fit.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3 text-sm text-muted-foreground">
-              <span className="rounded-full border border-border px-4 py-2">
-                Reduced sourcing burden
-              </span>
-              <span className="rounded-full border border-border px-4 py-2">
-                Faster access to role-aligned candidates
-              </span>
-              <span className="rounded-full border border-border px-4 py-2">
-                60-day replacement coverage
-              </span>
+              <span className="rounded-full border border-border px-4 py-2">Reduced sourcing burden</span>
+              <span className="rounded-full border border-border px-4 py-2">Faster access to role-aligned candidates</span>
+              <span className="rounded-full border border-border px-4 py-2">60-day replacement coverage</span>
             </div>
-          </div>
+          </section>
 
           <div className="mb-10 rounded-md border border-border bg-card/70 p-4 md:hidden">
             <details>
@@ -105,6 +96,7 @@ export default function PartnersPage() {
                 {sectionNav.map((section) => (
                   <li key={`mobile-${section.id}`}>
                     <button
+                      type="button"
                       onClick={() => scrollToSection(section.id)}
                       className={`w-full rounded-sm px-2 py-2 text-left text-sm transition-colors ${
                         activeSection === section.id
@@ -128,16 +120,13 @@ export default function PartnersPage() {
             <h2>Growth needs people</h2>
             <div className="yc-text-block mb-8">
               <p>
-                As hiring demand increases, internal teams often struggle to keep up with sourcing and screening
-                requirements.
+                As hiring demand increases, internal teams often struggle to keep up with sourcing and screening requirements.
               </p>
               <p className="mb-6">
-                Open roles stay open longer. Hiring teams spend more time searching for candidates. Hiring momentum
-                becomes harder to maintain.
+                Open roles stay open longer. Hiring teams spend more time searching for candidates. Hiring momentum becomes harder to maintain.
               </p>
               <p>
-                VerveSchool helps companies maintain a consistent flow of role-aligned candidates by acting as an
-                extension of their hiring function.
+                VerveSchool helps companies maintain a consistent flow of role-aligned candidates by acting as an extension of their hiring function.
               </p>
             </div>
           </section>
@@ -150,12 +139,10 @@ export default function PartnersPage() {
             <h2>How VerveSchool helps</h2>
             <div className="yc-text-block mb-8">
               <p className="mb-6">
-                Our scout network actively identifies, engages, and qualifies candidates before they enter your hiring
-                process.
+                Our scout network actively identifies, engages, and qualifies candidates before they enter your hiring process.
               </p>
               <p className="mb-6">
-                Instead of spending internal bandwidth sourcing large volumes of candidates, your team receives
-                role-aligned profiles that are ready for evaluation.
+                Instead of spending internal bandwidth sourcing large volumes of candidates, your team receives role-aligned profiles that are ready for evaluation.
               </p>
               <p>You spend less time searching, more time hiring.</p>
             </div>
@@ -234,33 +221,35 @@ export default function PartnersPage() {
               </ul>
             </div>
           </section>
+
           <section
             data-section="next-steps"
             className="yc-section"
             style={{ scrollMarginTop: `${headerOffset + 20}px` }}
-            >
+          >
             <h2>The world moves for those who do.</h2>
-            
+
             <div className="yc-text-block mb-6">
               <p className="mb-10">
                 If you are hiring for sales, business development, counselling, customer success, or support roles, share your hiring requirements with us.
               </p>
-              
+
               <a
                 href="https://wa.me/917042873035"
                 className="inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold tracking-normal text-black transition hover:opacity-90"
-                >
+              >
                 Talk to us
               </a>
             </div>
           </section>
-        </main>
+        </div>
 
         <aside className="sticky top-20 hidden h-screen shrink-0 overflow-y-auto border-l border-border px-8 pt-20 pb-20 md:block">
           <ul className="space-y-1.5">
             {sectionNav.map((section) => (
               <li key={section.id}>
                 <button
+                  type="button"
                   onClick={() => scrollToSection(section.id)}
                   className={`w-full rounded-sm px-2 py-1.5 text-left text-[13px] transition-colors ${
                     activeSection === section.id
@@ -274,7 +263,7 @@ export default function PartnersPage() {
             ))}
           </ul>
         </aside>
-      </div>
+      </main>
 
       <SiteFooter />
     </div>
