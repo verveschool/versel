@@ -21,7 +21,7 @@ export function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-primary/15 bg-background/85 shadow-[0_1px_24px_rgba(124,92,255,0.08)] backdrop-blur-xl">
       <div className="yc-container py-4 md:py-5">
         <nav className="relative flex items-center justify-between gap-10" aria-label="Primary navigation">
           <Link href="/" className="inline-flex items-center transition-opacity hover:opacity-75" aria-label="verveschool home">
@@ -35,7 +35,7 @@ export function SiteHeader() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`transition-colors hover:text-foreground ${active ? "text-foreground" : "text-foreground/65"}`}
+                  className={`relative transition-colors after:absolute after:-bottom-2 after:left-0 after:h-px after:bg-primary after:shadow-[0_0_14px_rgba(139,109,255,0.65)] after:transition-all after:duration-200 after:ease-out hover:text-primary hover:after:w-full ${active ? "text-primary after:w-full" : "text-foreground/65 after:w-0"}`}
                 >
                   {link.label}
                 </Link>
@@ -85,7 +85,7 @@ export function SiteHeader() {
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
                     className={`flex min-h-11 items-center px-3 text-foreground transition-all duration-150 hover:bg-white/12 active:scale-[0.99] active:bg-white/20 ${
-                      active ? "border-l border-white/35 bg-white/12 text-foreground" : "text-foreground/75"
+                      active ? "border-l border-primary/70 bg-primary/10 text-primary shadow-[inset_10px_0_24px_rgba(124,92,255,0.08)]" : "text-foreground/75"
                     }`}
                   >
                     {link.label}
