@@ -44,31 +44,25 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-[rgba(219,231,243,0.16)] bg-background">
       <div className="yc-container py-10 md:py-12">
-        <div className="grid grid-cols-1 gap-10 text-[13px] leading-6 text-foreground/62 md:grid-cols-[1.1fr_1.8fr] lg:grid-cols-[1.05fr_2fr_1fr]">
-          <section className="max-w-xs space-y-3">
+        <div className="grid grid-cols-1 gap-10 text-[13px] leading-6 text-foreground/62 md:grid-cols-2 lg:grid-cols-4">
+          <section className="space-y-3">
             <p className="text-base font-medium leading-6 text-foreground">VerveSchool</p>
             <p className="text-sm leading-6 text-foreground/60">The world moves for those who do.</p>
           </section>
 
-          <nav aria-label="Footer sitemap" className="grid gap-8 sm:grid-cols-3">
-            {sitemapGroups.map((group) => (
-              <div key={group.heading} className="space-y-3">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/40">
-                  {group.heading}
-                </p>
-                <div className="flex flex-col items-start gap-2.5">
-                  {group.links.map((link) => (
-                    <Link key={link.href} href={link.href} className="transition-colors hover:text-foreground">
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
+          {sitemapGroups.map((group) => (
+            <nav key={group.heading} aria-label={`Footer ${group.heading}`} className="space-y-3">
+              <div className="flex flex-col items-start gap-2.5">
+                {group.links.map((link) => (
+                  <Link key={link.href} href={link.href} className="transition-colors hover:text-foreground">
+                    {link.label}
+                  </Link>
+                ))}
               </div>
-            ))}
-          </nav>
+            </nav>
+          ))}
 
           <section className="space-y-3">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/40">Contact</p>
             <div className="flex flex-col items-start gap-3 text-xs leading-5 text-foreground/58">
               {contactOptions.map((option) => (
                 <a
@@ -76,19 +70,13 @@ export function SiteFooter() {
                   href={option.href}
                   target={option.external ? "_blank" : undefined}
                   rel={option.external ? "noopener noreferrer" : undefined}
-                  className="group transition-colors hover:text-foreground"
+                  className="transition-colors hover:text-foreground"
                 >
-                  <span className="block text-[10px] font-semibold uppercase tracking-[0.16em] text-foreground/35 group-hover:text-foreground/55">
-                    {option.label}
-                  </span>
-                  <span className="block">{option.value}</span>
+                  {option.value}
                 </a>
               ))}
               <address className="not-italic">
-                <span className="block text-[10px] font-semibold uppercase tracking-[0.16em] text-foreground/35">
-                  Address
-                </span>
-                <span className="block">{footerAddress}</span>
+                {footerAddress}
               </address>
             </div>
           </section>
