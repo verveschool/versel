@@ -65,13 +65,13 @@ const leadershipTeam: PersonCard[] = [
 ]
 
 const talentPartners: PersonCard[] = [
-  { name: "Khushi Soni", subtitle: "Talent Operations", image: "/people/khushi-soni.jpg" },
-  { name: "Nafisha Israr", subtitle: "Talent Operations", image: "/people/nafisha-israr.jpg" },
-  { name: "Garima Gandhi", subtitle: "Talent Operations", image: "/people/garima-gandhi.jpg" },
-  { name: "Aditi Sahu", subtitle: "Talent Operations", image: "/people/aditi-sahu.jpg" },
-  { name: "Zubda Sajda", subtitle: "Talent Operations", image: "/people/zubda-sajda.jpg" },
-  { name: "Gopika K.", subtitle: "Talent Operations", image: "/people/gopika-k.jpg" },
-  { name: "Shahida Arif", subtitle: "Talent Operations", image: "/people/shahida-arif.jpg" },
+  { name: "Khushi Soni", subtitle: "Talent Operations", image: "/people/khushi-soni.jpg", linkedin: "https://www.linkedin.com/in/khushi-soni-a66761231", },
+  { name: "Nafisha Israr", subtitle: "Talent Operations", image: "/people/nafisha-israr.jpg", linkedin: "https://www.linkedin.com/in/nafisha-israr-2255ab383", },
+  { name: "Garima Gandhi", subtitle: "Talent Operations", image: "/people/garima-gandhi.jpg", linkedin: "https://www.linkedin.com/in/garima-gandhi222", },
+  { name: "Diya Ravani", subtitle: "Talent Operations", image: "/people/diya-ravani.jpg", linkedin: "https://www.linkedin.com/in/diya-ravani-4b27ab243", },
+  { name: "Zubda Sajda", subtitle: "Talent Operations", image: "/people/zubda-sajda.jpg", linkedin: "https://www.linkedin.com/in/zubda-sajda-2bb200116", },
+  { name: "Gopika K.", subtitle: "Talent Operations", image: "/people/gopika-k.jpg", linkedin: "https://www.linkedin.com/in/gopika-k-057285230", },
+  { name: "Shahida Arif", subtitle: "Talent Operations", image: "/people/shahida-arif.jpg", linkedin: "https://www.linkedin.com/in/shahida-p-a-", },
 ]
 
 const industryPartners: PersonCard[] = [
@@ -79,73 +79,73 @@ const industryPartners: PersonCard[] = [
     name: "Shrimn Nishit",
     subtitle: "Business Head, Vedantu",
     image: "/people/shrimn-nishit.jpg",
-    linkedin: "https://www.linkedin.com/in/shrimnnishit/",
+    linkedin: "https://www.linkedin.com/in/shrimnnishit",
   },
   {
     name: "Nitin Solanki",
     subtitle: "Business Head, Scaler",
     image: "/people/nitin-solanki.jpg",
-    linkedin: "https://www.linkedin.com/in/nitin-solanki-b245b714a/",
+    linkedin: "https://www.linkedin.com/in/nitin-solanki-b245b714a",
   },
   {
     name: "Atul Kumar Singh",
     subtitle: "Business Head, Infinity Learn",
     image: "/people/atul-kumar-singh.jpg",
-    linkedin: "https://www.linkedin.com/in/atul-kumar-singh-71b49272/",
+    linkedin: "https://www.linkedin.com/in/atul-kumar-singh-71b49272",
   },
   {
     name: "Krishna Bandaru",
     subtitle: "Co-founder, Crio.do",
     image: "/people/krishna-bandaru.jpg",
-    linkedin: "https://www.linkedin.com/in/krishnabandaru/",
+    linkedin: "https://www.linkedin.com/in/krishnabandaru",
   },
   {
     name: "Sagar Dudani",
     subtitle: "Co-founder, Prepca",
     image: "/people/sagar-dudani.jpg",
-    linkedin: "https://www.linkedin.com/in/sagar-dudani-b33b4aaa/",
+    linkedin: "https://www.linkedin.com/in/sagar-dudani-b33b4aaa",
   },
   {
     name: "Ravi Kumar Gupta",
     subtitle: "Co-founder, AlmaBetter",
     image: "/people/ravi-kumar-gupta.jpg",
-    linkedin: "https://www.linkedin.com/in/ravi-kumar-gupta/",
+    linkedin: "https://www.linkedin.com/in/ravi-kumar-gupta",
   },
   {
     name: "Nikhil Kaushik",
     subtitle: "Co-founder, ProjectStudio",
     image: "/people/nikhil-kaushik.jpg",
-    linkedin: "https://www.linkedin.com/in/nikhilka/",
+    linkedin: "https://www.linkedin.com/in/nikhilka",
   },
   {
     name: "Madara Uchiha",
     subtitle: "Co-founder, Konohagakure",
     image: "/people/madara-uchiha.jpg",
-    linkedin: "https://en.wikipedia.org/wiki/Madara_Uchiha/",
+    linkedin: "https://en.wikipedia.org/wiki/Madara_Uchiha",
   },
   {
     name: "Yashwardhan Burad",
     subtitle: "Co-founder, AccioJob",
     image: "/people/yashwardhan-burad.jpg",
-    linkedin: "https://www.linkedin.com/in/yashwardhanburad/",
+    linkedin: "https://www.linkedin.com/in/yashwardhanburad",
   },
   {
     name: "Faiz Ahmad",
     subtitle: "Tech Lead, [24]7.ai",
     image: "/people/faiz-ahmed.jpg",
-    linkedin: "https://www.linkedin.com/in/faizzahd/",
+    linkedin: "https://www.linkedin.com/in/faizzahd",
   },
   {
     name: "Arindam Dutta",
     subtitle: "Business Head, Academically",
     image: "/people/arindam-dutta.jpg",
-    linkedin: "https://www.linkedin.com/in/arindam-dutta-04109954/",
+    linkedin: "https://www.linkedin.com/in/arindam-dutta-04109954",
   },
   {
     name: "Ronak Agrawal",
     subtitle: "Co-founder, SkilloVilla",
     image: "/people/ronak-agarwal.jpg",
-    linkedin: "https://www.linkedin.com/in/ronak-agrawal-88066432/",
+    linkedin: "https://www.linkedin.com/in/ronak-agrawal-88066432",
   },
 ]
 
