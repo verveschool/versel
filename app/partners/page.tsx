@@ -235,7 +235,7 @@ export default function PartnersPage() {
                 href="https://wa.me/917042873035"
                 className="inline-flex items-center justify-center rounded-full border border-primary bg-primary px-6 py-3 text-[13px] font-semibold tracking-normal text-primary-foreground shadow-[0_12px_34px_rgba(139,109,255,0.22)] transition hover:shadow-[0_16px_48px_rgba(139,109,255,0.34)] hover:brightness-110"
               >
-                Talk to us
+                Chat with Duggal
               </a>
             </div>
           </section>
