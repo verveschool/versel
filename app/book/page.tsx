@@ -67,14 +67,14 @@ export default function BookPage() {
             )}
           </div>
 
-          <div className="divide-y divide-white/10 border-t border-white/10">
+          <div className="grid gap-4 border-t border-primary/25">
             {chapters.map((chapter) => (
               <Link 
                 key={chapter.slug} 
                 href={`/book/${chapter.slug}`} 
-                className="group block py-12 transition-colors"
+                className="group rounded-lg border border-primary/25 bg-primary/[0.05] px-6 py-8 shadow-[0_2px_8px_rgba(139,109,255,0.06)] transition-all hover:border-primary/50 hover:bg-primary/[0.1] hover:shadow-[0_8px_24px_rgba(139,109,255,0.12)]"
               >
-                <p className="mb-3 text-sm text-primary">Chapter {chapter.chapterNumber}</p>
+                <p className="mb-3 text-sm font-semibold text-primary">Chapter {chapter.chapterNumber}</p>
                 <h3 className="mb-4 font-serif text-2xl text-white transition-colors group-hover:text-primary">
                   {chapter.title}
                 </h3>
