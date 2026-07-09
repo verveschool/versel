@@ -45,6 +45,12 @@ const hiringPartners = [
   { name: "AlmaBetter", src: "/logos/almabetter.png", className: "h-10 w-auto" },
   { name: "Crio.Do", src: "/logos/crio-do.png", className: "h-10 w-auto" },
   { name: "Scaler", src: "/logos/scaler.png", className: "h-10 w-auto" },
+  { name: "SkilloVilla", src: "/logos/skillovilla.png", className: "h-10 w-auto" },
+  { name: "AccioJob", src: "/logos/acciojob.png", className: "h-10 w-auto" },
+  { name: "Leverage Edu", src: "/logos/leverage-edu.png", className: "h-10 w-auto" },
+  { name: "BrightCHAMPS", src: "/logos/brightchamps.png", className: "h-10 w-auto" },
+  { name: "University Living", src: "/logos/university-living.png", className: "h-10 w-auto" },
+  { name: "Career Launcher", src: "/logos/career-launcher.png", className: "h-10 w-auto" },
 ]
 
 const exploreLinks = [
@@ -152,9 +158,9 @@ export default function HomePage() {
 
         <section className="yc-section grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <div>
-            <h2 className="font-semibold text-white">How hiring works with VerveSchool</h2>
+            <h2 className="font-semibold text-white">How VerveSchool Works</h2>
             <p className="mt-6 max-w-xl leading-8 text-white/65">
-              Partners share role details and hiring constraints. Our team filters and aligns candidates who are serious and ready to join.
+              Share your hiring requirements. We take it from there.
             </p>
           </div>
 
