@@ -1,8 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { getAllBookChapters, getBookLanding } from "@/lib/book"
-import { MarkdownContent } from "@/lib/markdown"
-
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 
@@ -38,26 +36,10 @@ export default function BookPage() {
             {book?.title || "Book"}
           </h1>
           <p className="mb-8 text-lg leading-8 text-primary">{book?.subtitle}</p>
-          <p className="mb-12 text-lg leading-8 text-white/70">{book?.description}</p>
-          
-          <div className="grid grid-cols-2 gap-4 pt-6 text-sm text-white/50 md:grid-cols-4">
-            <span>First Edition</span>
-            <span>{chapters.length} Chapters</span>
-            <span>79 Pages</span>
-            <span>By {book?.author || "A. Duggal"}</span>
-          </div>
+          <p className="text-lg leading-8 text-white/70">{book?.description}</p>
         </section>
 
-        {book?.introduction && (
-          <section className="mx-auto mt-24 max-w-[760px] border-t border-white/10 pt-24 md:mt-32 md:pt-32">
-            <h2 className="mb-8 font-serif text-2xl text-white">
-              Read as a map. Use calls as the terrain.
-            </h2>
-            <MarkdownContent content={book.introduction} className="book-prose" />
-          </section>
-        )}
-
-        <section className="mx-auto mt-24 max-w-[760px] border-t border-white/10 pt-24 md:mt-32 md:pt-32">
+        <section className="mx-auto mt-16 max-w-[760px] md:mt-24">
           <div className="mb-12 flex items-end justify-between gap-6">
             <h2 className="font-serif text-2xl text-white">Start the book.</h2>
             {chapters.length > 0 && chapters[0]?.slug && (
