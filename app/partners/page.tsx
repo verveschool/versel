@@ -81,21 +81,24 @@ export default function PartnersPage() {
             </p>
           </section>
 
-          <div className="mb-14 rounded-md border border-border bg-card/70 p-4 md:hidden">
+          <div className="mb-14 rounded-lg border border-primary/25 bg-primary/[0.05] p-4 shadow-[0_2px_8px_rgba(139,109,255,0.06)] md:hidden">
             <details>
-              <summary className="cursor-pointer list-none text-base font-medium text-foreground [&::-webkit-details-marker]:hidden">
-                Page sections
+              <summary className="cursor-pointer list-none text-base font-medium text-foreground [&::-webkit-details-marker]:hidden flex items-center justify-between">
+                <span>Page sections</span>
+                <svg className="h-5 w-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
               </summary>
-              <ul className="mt-4 space-y-2">
+              <ul className="mt-4 space-y-2 border-t border-primary/15 pt-4">
                 {sectionNav.map((section) => (
                   <li key={`mobile-${section.id}`}>
                     <button
                       type="button"
                       onClick={() => scrollToSection(section.id)}
-                      className={`w-full rounded-sm px-2 py-2 text-left text-sm transition-colors ${
+                      className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                         activeSection === section.id
-                          ? "font-semibold text-primary"
-                          : "text-muted-foreground hover:text-foreground"
+                          ? "font-semibold bg-primary/15 text-primary"
+                          : "text-muted-foreground hover:text-foreground hover:bg-primary/10"
                       }`}
                     >
                       {section.label}
@@ -230,7 +233,7 @@ export default function PartnersPage() {
 
               <a
                 href="https://wa.me/917042873035"
-                className="inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold tracking-normal text-black transition hover:opacity-90"
+                className="inline-flex items-center justify-center rounded-full border border-primary bg-primary px-6 py-3 text-[13px] font-semibold tracking-normal text-primary-foreground shadow-[0_12px_34px_rgba(139,109,255,0.22)] transition hover:shadow-[0_16px_48px_rgba(139,109,255,0.34)] hover:brightness-110"
               >
                 Talk to us
               </a>

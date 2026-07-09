@@ -126,7 +126,7 @@ export default function CandidatesPage() {
                 href={applyHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold tracking-normal text-black transition hover:opacity-90"
+                className="inline-flex items-center justify-center rounded-full border border-primary bg-primary px-6 py-3 text-[13px] font-semibold tracking-normal text-primary-foreground shadow-[0_12px_34px_rgba(139,109,255,0.22)] transition hover:shadow-[0_16px_48px_rgba(139,109,255,0.34)] hover:brightness-110"
               >
                 Apply now
               </a>
@@ -134,7 +134,7 @@ export default function CandidatesPage() {
                 href="https://wa.me/917042873035"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center border border-white/20 px-6 py-3 text-[13px] font-semibold tracking-normal text-white transition hover:border-white/40 hover:bg-white/5"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-[13px] font-semibold tracking-normal text-white transition hover:border-primary/50 hover:bg-primary/10 hover:text-primary"
               >
                 Talk to us
               </a>
@@ -199,17 +199,17 @@ export default function CandidatesPage() {
 
           <section
             data-section="faq"
-            className="mt-24 rounded-2xl border border-white/10 bg-white/[0.02] px-6 py-8 md:px-8 md:py-10"
+            className="mt-24 rounded-2xl border border-primary/30 bg-primary/[0.06] px-6 py-8 shadow-[0_8px_32px_rgba(139,109,255,0.12)] md:px-8 md:py-10"
           >
             <h2 className="mb-12 font-semibold text-foreground">Frequently asked questions</h2>
 
-            <div className="grid max-w-3xl gap-6">
+            <div className="grid max-w-3xl gap-4">
               {faqs.map((faq) => (
                 <details key={faq.question} className="group cursor-pointer">
-                  <summary className="flex list-none items-center justify-between border-b border-white/10 py-4 font-medium text-foreground transition hover:border-white/20">
+                  <summary className="flex list-none items-center justify-between rounded-lg border border-primary/20 bg-primary/[0.03] px-4 py-4 font-medium text-foreground shadow-[0_2px_8px_rgba(139,109,255,0.06)] transition hover:border-primary/40 hover:bg-primary/[0.08] hover:shadow-[0_6px_20px_rgba(139,109,255,0.12)]">
                     <span>{faq.question}</span>
                     <svg
-                      className="h-5 w-5 text-primary transition group-open:rotate-180"
+                      className="h-5 w-5 flex-shrink-0 text-primary transition group-open:rotate-180"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -218,13 +218,13 @@ export default function CandidatesPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                     </svg>
                   </summary>
-                  <p className="mt-4 pb-4 leading-7 text-foreground/68">{faq.answer}</p>
+                  <p className="mt-3 pb-3 ml-4 pl-2 border-l border-primary/20 leading-7 text-foreground/75">{faq.answer}</p>
                 </details>
               ))}
             </div>
           </section>
 
-          <section className="mt-24 border-t border-white/10 pt-16">
+          <section className="mt-24 border-t border-primary/20 pt-16">
             <div className="max-w-5xl">
               <h2 className="max-w-2xl font-semibold text-white">The world moves for those who do</h2>
               <div className="mt-8 max-w-2xl">
@@ -236,7 +236,7 @@ export default function CandidatesPage() {
                   href={applyHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-8 inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-[13px] font-semibold tracking-normal text-black transition hover:opacity-90"
+                  className="mt-8 inline-flex items-center justify-center rounded-full border border-primary bg-primary px-6 py-3 text-[13px] font-semibold tracking-normal text-primary-foreground shadow-[0_12px_34px_rgba(139,109,255,0.22)] transition hover:shadow-[0_16px_48px_rgba(139,109,255,0.34)] hover:brightness-110"
                 >
                   Apply now
                 </a>

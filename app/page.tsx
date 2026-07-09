@@ -104,7 +104,7 @@ export default function HomePage() {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/partners"
-                className="inline-flex items-center justify-center rounded-full border border-primary bg-primary px-6 py-3 text-[13px] font-semibold tracking-normal text-black transition hover:opacity-90"
+                className="inline-flex items-center justify-center rounded-full border border-primary bg-primary px-6 py-3 text-[13px] font-semibold tracking-normal text-primary-foreground shadow-[0_12px_34px_rgba(139,109,255,0.22)] transition hover:shadow-[0_16px_48px_rgba(139,109,255,0.34)] hover:brightness-110"
               >
                 Hire sincere talent
               </Link>
@@ -117,15 +117,15 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/[0.02] p-6 transition-colors hover:border-white/20 md:p-8">
+          <div className="rounded-3xl border border-primary/30 bg-primary/[0.06] p-6 shadow-[0_8px_32px_rgba(139,109,255,0.12)] transition-all hover:border-primary/50 hover:bg-primary/[0.1] hover:shadow-[0_12px_48px_rgba(139,109,255,0.18)] md:p-8">
             <div className="space-y-5">
               {metrics.map((metric) => (
                 <div
                   key={metric.label}
-                  className="flex items-end justify-between border-b border-white/10 pb-5 last:border-b-0 last:pb-0"
+                  className="flex items-end justify-between border-b border-primary/15 pb-5 last:border-b-0 last:pb-0"
                 >
-                  <span className="text-3xl font-semibold tracking-[-0.025em] text-white">{metric.value}</span>
-                  <span className="max-w-36 text-right text-[12px] leading-5 text-white/52">{metric.label}</span>
+                  <span className="text-4xl font-semibold tracking-[-0.025em] text-white">{metric.value}</span>
+                  <span className="max-w-36 text-right text-[12px] leading-5 text-white/60">{metric.label}</span>
                 </div>
               ))}
             </div>
@@ -137,12 +137,12 @@ export default function HomePage() {
             {hiringPartners.map((partner) => (
               <div
                 key={partner.name}
-                className="flex h-20 items-center justify-center rounded-2xl border border-white/15 bg-white/[0.02] px-4 transition-colors hover:border-white/25"
+                className="flex h-20 items-center justify-center rounded-2xl border border-primary/20 bg-primary/[0.04] px-4 shadow-[0_2px_8px_rgba(139,109,255,0.06)] transition-all hover:border-primary/40 hover:bg-primary/[0.08] hover:shadow-[0_6px_20px_rgba(139,109,255,0.12)]"
               >
                 <img
                   src={partner.src}
                   alt={`${partner.name} logo`}
-                  className={`w-auto max-w-full object-contain opacity-80 grayscale brightness-0 invert ${partner.className}`}
+                  className={`w-auto max-w-full object-contain opacity-85 grayscale brightness-0 invert transition-opacity group-hover:opacity-100 ${partner.className}`}
                   loading="lazy"
                 />
               </div>
@@ -162,10 +162,10 @@ export default function HomePage() {
             {filterSteps.map((step, index) => (
               <div
                 key={step}
-                className="grid grid-cols-[64px_1fr] gap-5 rounded-2xl border border-white/10 bg-white/[0.02] px-5 py-4 transition-colors hover:border-white/20"
+                className="grid grid-cols-[64px_1fr] gap-5 rounded-2xl border border-primary/25 bg-primary/[0.05] px-5 py-4 shadow-[0_2px_8px_rgba(139,109,255,0.06)] transition-all hover:border-primary/50 hover:bg-primary/[0.1] hover:shadow-[0_8px_24px_rgba(139,109,255,0.12)]"
               >
-                <span className="font-mono text-sm text-primary">0{index + 1}</span>
-                <p className="leading-8 text-white/75">{step}</p>
+                <span className="font-mono text-sm font-semibold text-primary">0{index + 1}</span>
+                <p className="leading-8 text-white/80">{step}</p>
               </div>
             ))}
           </div>
@@ -178,14 +178,14 @@ export default function HomePage() {
             {exploreLinks.map((item) => {
               const isExternal = item.href.startsWith("http")
               const className =
-                "group flex min-h-44 flex-col justify-between rounded-[2rem] border border-white/10 bg-white/[0.02] p-6 transition-all duration-200 hover:-translate-y-1 hover:border-primary/50 hover:bg-white/[0.04] md:p-7"
+                "group flex min-h-44 flex-col justify-between rounded-[2rem] border border-white/10 bg-white/[0.02] p-6 shadow-[0_4px_16px_rgba(139,109,255,0.08)] transition-all duration-200 hover:-translate-y-2 hover:border-primary/60 hover:bg-primary/[0.08] hover:shadow-[0_12px_48px_rgba(139,109,255,0.16)] md:p-7"
               const content = (
                 <>
                   <div>
                     <h3 className="text-xl font-semibold text-white">{item.title}</h3>
                     <p className="mt-3 leading-8 text-white/65">{item.description}</p>
                   </div>
-                  <span className="mt-6 inline-flex w-fit items-center justify-center rounded-full border border-primary/45 px-4 py-2 text-sm text-primary transition group-hover:translate-x-1 group-hover:border-primary group-hover:bg-primary group-hover:text-black">
+                  <span className="mt-6 inline-flex w-fit items-center justify-center rounded-full border border-primary/60 bg-primary/10 px-4 py-2 text-sm text-primary transition group-hover:translate-x-1 group-hover:border-primary group-hover:bg-primary group-hover:text-white group-hover:shadow-[0_8px_24px_rgba(139,109,255,0.26)]">
                     {item.cta}
                   </span>
                 </>
