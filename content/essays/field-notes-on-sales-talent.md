@@ -4,6 +4,7 @@ description: "How verveschool thinks about finding, training, and backing early-
 date: "2026-05-01"
 category: "Hiring philosophy"
 author: "verveschool"
+tags: ["hiring", "sales", "talent-selection", "early-career"]
 ---
 
 Early sales talent is rarely obvious on a resume. The best candidates often look unfinished: a little under-credentialed, a little too intense, and still learning how to translate raw ambition into trusted commercial behavior.

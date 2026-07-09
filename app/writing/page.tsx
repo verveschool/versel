@@ -4,6 +4,7 @@ import { formatWritingDate, getAllWriting } from "@/lib/writing"
 
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
+import { WritingFilter } from "@/components/writing-filter"
 
 export const metadata: Metadata = {
   title: "Writing",
@@ -29,6 +30,15 @@ export default function WritingPage() {
   const pieces = getAllWriting()
   const featuredPiece = pieces[0]
   const remainingPieces = pieces.slice(1)
+  
+  // Extract unique tags from all essays
+  const tagsSet = new Set<string>()
+  pieces.forEach((piece) => {
+    if (piece.tags && Array.isArray(piece.tags)) {
+      piece.tags.forEach((tag) => tagsSet.add(tag))
+    }
+  })
+  const allTags = Array.from(tagsSet).sort()
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -57,6 +67,13 @@ export default function WritingPage() {
               <p className="mb-6 text-lg leading-8 text-white/70">
                 {featuredPiece.description}
               </p>
+              <div className="mb-4 flex flex-wrap gap-2">
+                {(Array.isArray(featuredPiece.tags) ? featuredPiece.tags : [])?.map((tag) => (
+                  <span key={tag} className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary border border-primary/25">
+                    {tag}
+                  </span>
+                ))}
+              </div>
               <p className="text-sm text-white/50">
                 {formatWritingDate(featuredPiece.date)} · {featuredPiece.category} · {featuredPiece.readingTime}
               </p>
@@ -64,34 +81,9 @@ export default function WritingPage() {
           </section>
         ) : null}
 
-        <section className="mx-auto mt-24 max-w-[760px] border-t border-white/10 md:mt-32">
-          <div className="divide-y divide-white/10">
-            {remainingPieces.map((piece) => (
-              <Link 
-                key={piece.slug} 
-                href={`/writing/${piece.slug}`} 
-                className="group flex flex-col justify-between gap-6 py-12 transition-colors md:flex-row md:items-center"
-              >
-                <div className="max-w-2xl">
-                  <h2 className="mb-4 font-serif text-xl text-white transition-colors group-hover:text-primary">
-                    {piece.title}
-                  </h2>
-                  <p className="mb-6 leading-8 text-white/70">
-                    {piece.description}
-                  </p>
-                  <p className="text-sm text-white/50">
-                    {formatWritingDate(piece.date)} · {piece.readingTime} · by {piece.author}
-                  </p>
-                </div>
-                <span className="shrink-0 text-sm text-primary transition group-hover:translate-x-1">
-                  Read →
-                </span>
-              </Link>
-            ))}
-          </div>
-        </section>
+        <WritingFilter essays={remainingPieces} allTags={allTags} />
 
-        <section className="mx-auto mt-12 max-w-[760px] border-t border-white/10 pt-24 pb-12 md:mt-16 md:pt-32">
+        <section className="mx-auto mt-12 max-w-[760px] border-t border-primary/20 pt-24 pb-12 md:mt-16 md:pt-32">
           <h2 className="mb-6 font-serif text-2xl text-white">
             Building a longer canon
           </h2>

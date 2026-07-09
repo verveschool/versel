@@ -4,6 +4,7 @@ description: "A practical view of the early ramp window, from manager signal to 
 date: "2026-04-12"
 category: "Sales ramp"
 author: "verveschool"
+tags: ["onboarding", "sales", "management", "ramp"]
 ---
 
 The first ninety days are not just a probationary window. They are the clearest view a company gets into whether its hiring process selected for the right traits.

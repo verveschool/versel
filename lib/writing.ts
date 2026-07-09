@@ -2,20 +2,9 @@ import fs from "node:fs"
 import path from "node:path"
 
 import { parseMarkdownFrontmatter } from "@/lib/frontmatter"
+import type { WritingFrontmatter, Writing } from "@/lib/writing-types"
 
-export type WritingFrontmatter = {
-  title: string
-  description: string
-  date: string
-  category: string
-  author: string
-}
-
-export type Writing = WritingFrontmatter & {
-  slug: string
-  content: string
-  readingTime: string
-}
+export type { WritingFrontmatter, Writing }
 
 const writingDirectory = path.join(process.cwd(), "content", "essays")
 
@@ -74,4 +63,21 @@ export function formatWritingDate(date: string): string {
     year: "numeric",
     timeZone: "UTC",
   }).format(new Date(date))
+}
+
+export function getAllTags(): string[] {
+  const allWriting = getAllWriting()
+  const tagsSet = new Set<string>()
+
+  allWriting.forEach((piece) => {
+    if (piece.tags && Array.isArray(piece.tags)) {
+      piece.tags.forEach((tag) => tagsSet.add(tag))
+    }
+  })
+
+  return Array.from(tagsSet).sort()
+}
+
+export function getWritingByTag(tag: string): Writing[] {
+  return getAllWriting().filter((piece) => piece.tags?.includes(tag) ?? false)
 }
