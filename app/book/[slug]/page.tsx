@@ -68,31 +68,31 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
 
           <MarkdownRenderer content={chapter.content} className="book-prose" />
 
-          <section className="mt-20 border border-primary/30 bg-primary/[0.07] p-8">
+          <section className="mt-20 rounded-lg border border-primary/40 bg-primary/[0.1] p-8 shadow-[0_8px_32px_rgba(139,109,255,0.12)]">
             <h2 className="mb-4 font-serif text-2xl text-white">Use this chapter on the next call.</h2>
             <p className="mb-6 text-white/68">
               The book is the map. The call is the terrain. Take the framework into a real conversation, then review what happened with operator-level honesty.
             </p>
-            <Link href={chapter.ctaHref} className="text-sm font-semibold uppercase tracking-[0.24em] text-primary transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
+            <Link href={chapter.ctaHref} className="text-sm font-semibold uppercase tracking-[0.24em] text-primary transition-colors hover:text-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
               {chapter.ctaLabel} →
             </Link>
           </section>
         </article>
 
         <nav className="mx-auto mt-12 grid max-w-[72ch] gap-4 md:grid-cols-2" aria-label="chapter navigation">
-          <Link href={previousHref} className="group border border-white/10 bg-white/[0.025] p-6 transition duration-200 ease-out hover:-translate-y-0.5 hover:border-primary/60 hover:bg-white/[0.04] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
-            <p className="mb-3 text-sm text-white/45">← {previousChapter ? "previous" : "overview"}</p>
+          <Link href={previousHref} className="group rounded-lg border border-primary/25 bg-primary/[0.05] p-6 shadow-[0_2px_8px_rgba(139,109,255,0.06)] transition-all duration-200 ease-out hover:-translate-y-1 hover:border-primary/50 hover:bg-primary/[0.1] hover:shadow-[0_8px_24px_rgba(139,109,255,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
+            <p className="mb-3 text-sm font-semibold text-primary">← {previousChapter ? "previous" : "overview"}</p>
             <h2 className="font-serif text-lg text-white transition-colors group-hover:text-primary">{previousChapter?.title ?? "Book landing"}</h2>
           </Link>
 
           {nextChapter ? (
-            <Link href={`/book/${nextChapter.slug}`} className="group border border-white/10 bg-white/[0.025] p-6 text-right transition duration-200 ease-out hover:-translate-y-0.5 hover:border-primary/60 hover:bg-white/[0.04] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
-              <p className="mb-3 text-sm text-white/45">next →</p>
+            <Link href={`/book/${nextChapter.slug}`} className="group rounded-lg border border-primary/25 bg-primary/[0.05] p-6 text-right shadow-[0_2px_8px_rgba(139,109,255,0.06)] transition-all duration-200 ease-out hover:-translate-y-1 hover:border-primary/50 hover:bg-primary/[0.1] hover:shadow-[0_8px_24px_rgba(139,109,255,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
+              <p className="mb-3 text-sm font-semibold text-primary">next →</p>
               <h2 className="font-serif text-lg text-white transition-colors group-hover:text-primary">{nextChapter.title}</h2>
             </Link>
           ) : (
-            <Link href="/about#contact" className="group border border-white/10 bg-white/[0.025] p-6 text-right transition duration-200 ease-out hover:-translate-y-0.5 hover:border-primary/60 hover:bg-white/[0.04] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
-              <p className="mb-3 text-sm text-white/45">finished →</p>
+            <Link href="/about#contact" className="group rounded-lg border border-primary/25 bg-primary/[0.05] p-6 text-right shadow-[0_2px_8px_rgba(139,109,255,0.06)] transition-all duration-200 ease-out hover:-translate-y-1 hover:border-primary/50 hover:bg-primary/[0.1] hover:shadow-[0_8px_24px_rgba(139,109,255,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
+              <p className="mb-3 text-sm font-semibold text-primary">finished →</p>
               <h2 className="font-serif text-lg text-white transition-colors group-hover:text-primary">Become dangerous</h2>
             </Link>
           )}
