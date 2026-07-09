@@ -40,7 +40,7 @@ export default function BookPage() {
           <p className="mb-8 text-lg leading-8 text-primary">{book?.subtitle}</p>
           <p className="mb-12 text-lg leading-8 text-white/70">{book?.description}</p>
           
-          <div className="grid grid-cols-2 gap-4 border-t border-white/10 pt-6 text-sm text-white/50 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 pt-6 text-sm text-white/50 md:grid-cols-4">
             <span>First Edition</span>
             <span>{chapters.length} Chapters</span>
             <span>79 Pages</span>
