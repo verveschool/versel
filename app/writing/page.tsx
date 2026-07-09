@@ -75,7 +75,7 @@ export default function WritingPage() {
                 ))}
               </div>
               <p className="text-sm text-white/50">
-                {formatWritingDate(featuredPiece.date)} · {featuredPiece.category} · {featuredPiece.readingTime}
+                {featuredPiece.category} · {featuredPiece.readingTime}
               </p>
             </Link>
           </section>
