@@ -88,7 +88,7 @@ const exploreLinks = [
   },
   {
     href: "https://wa.me/917042873035",
-    title: "Talk to us",
+    title: "Chat with Duggal",
     description: "Questions about hiring, recruiting, or anything else? Reach out directly on WhatsApp.",
     cta: "Contact →",
   },
@@ -118,7 +118,7 @@ export default function HomePage() {
                 href="https://wa.me/917042873035"
                 className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-[13px] font-semibold tracking-normal text-white transition hover:border-white/40 hover:bg-white/5"
               >
-                Talk to us
+                Chat with Duggal
               </a>
             </div>
           </div>
