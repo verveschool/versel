@@ -236,7 +236,7 @@ export default function PeoplePage() {
       <SiteHeader />
 
       <main className="yc-container space-y-14 py-14 md:space-y-16 md:py-20">
-        <section className="w-full max-w-[900px]">
+        <section>
           <h1 className="font-semibold text-white">People</h1>
           <p className="mt-10">
             Good work is rarely the result of one person. It comes from people who care enough to challenge ideas, raise standards, and contribute in meaningful ways. The Unit carries the work forward every day. The Alliance stands with us.
