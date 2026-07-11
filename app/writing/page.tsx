@@ -83,17 +83,22 @@ export default function WritingPage() {
 
         <WritingFilter essays={remainingPieces} allTags={allTags} />
 
-        <section className="mx-auto mt-12 max-w-[760px] border-t border-primary/20 pt-24 pb-12 md:mt-16 md:pt-32">
-          <h2 className="mb-6 font-serif text-2xl text-white">
-            Building a longer canon
-          </h2>
-          <p className="mb-8 text-lg leading-8 text-white/70">
-            The writing archive is the home for tactical notes. For a more structured reading path, visit the book page.
-          </p>
-          <Link href="/book" className="text-sm font-semibold uppercase tracking-[0.24em] text-primary transition-colors hover:text-white">
-            view the book outline →
-          </Link>
-        </section>
+        <section className="yc-section">
+  <h2>Ideas grow when they are shared.</h2>
+
+  <div className="yc-text-block">
+    <p className="mb-10">
+      If something you have read raises a question, challenges your thinking, or opens a new line of thought, I would be glad to hear from you.
+    </p>
+
+    <Link
+      href="https://wa.me/917042873035"
+      className="text-sm font-semibold text-primary transition-colors hover:text-white"
+    >
+      Chat with Duggal →
+    </Link>
+  </div>
+</section>
       </main>
 
       <SiteFooter />
