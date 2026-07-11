@@ -30,8 +30,7 @@ export default function WritingPage() {
   const pieces = getAllWriting()
   const featuredPiece = pieces[0]
   const remainingPieces = pieces.slice(1)
-  
-  // Extract unique tags from all essays
+
   const tagsSet = new Set<string>()
   pieces.forEach((piece) => {
     if (piece.tags && Array.isArray(piece.tags)) {
@@ -46,34 +45,41 @@ export default function WritingPage() {
       <SiteHeader />
 
       <main className="yc-container py-24 md:py-32">
-        <section className="mx-auto max-w-[760px]">
+        <section className="max-w-[760px]">
           <h1 className="mb-8 font-serif text-[clamp(1.76rem,1.35rem+1.49vw,2.48rem)] text-white">
-            Long-form writing on talent, sales, and the work behind better hiring
+            Essays
           </h1>
           <p className="yc-text-block text-lg leading-8 text-white/70">
-            Operating notes for founders, sales leaders, and ambitious early-career candidates. Start with the latest piece or browse the full archive below.
+            Operating notes for founders, sales leaders, and anyone who wants to think more deeply about hiring, sales, and the work behind them.
           </p>
         </section>
 
         {featuredPiece ? (
-          <section className="mx-auto mt-24 max-w-[760px] md:mt-32">
+          <section className="mt-24 max-w-[760px] md:mt-32">
             <p className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
               Latest Essay
             </p>
+
             <Link href={`/writing/${featuredPiece.slug}`} className="group block">
-              <h2 className="mb-5 font-serif text-2xl md:text-3xl text-white transition-colors group-hover:text-primary">
+              <h2 className="mb-5 font-serif text-2xl text-white transition-colors group-hover:text-primary md:text-3xl">
                 {featuredPiece.title}
               </h2>
+
               <p className="mb-6 text-lg leading-8 text-white/70">
                 {featuredPiece.description}
               </p>
+
               <div className="mb-4 flex flex-wrap gap-2">
-                {(Array.isArray(featuredPiece.tags) ? featuredPiece.tags : [])?.map((tag) => (
-                  <span key={tag} className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary border border-primary/25">
+                {(Array.isArray(featuredPiece.tags) ? featuredPiece.tags : []).map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-block rounded-full border border-primary/25 bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
+                  >
                     {tag}
                   </span>
                 ))}
               </div>
+
               <p className="text-sm text-white/50">
                 {featuredPiece.category} · {featuredPiece.readingTime}
               </p>
@@ -83,22 +89,28 @@ export default function WritingPage() {
 
         <WritingFilter essays={remainingPieces} allTags={allTags} />
 
-        <section className="yc-section">
-  <h2>Ideas grow when they are shared.</h2>
+        <section className="mt-24 grid grid-cols-1 lg:grid-cols-2">
+          <div />
 
-  <div className="yc-text-block">
-    <p className="mb-10">
-      If something you have read raises a question, challenges your thinking, or opens a new line of thought, I would be glad to hear from you.
-    </p>
+          <section className="max-w-[560px]">
+            <h2 className="mb-6 font-serif text-2xl text-white">
+              Ideas grow when they are shared.
+            </h2>
 
-    <Link
-      href="https://wa.me/917042873035"
-      className="text-sm font-semibold text-primary transition-colors hover:text-white"
-    >
-      Chat with Duggal →
-    </Link>
-  </div>
-</section>
+            <div className="yc-text-block">
+              <p className="mb-10">
+                If something you have read raises a question, challenges your thinking, or opens a new line of thought, I would be glad to hear from you.
+              </p>
+
+              <Link
+                href="https://wa.me/917042873035"
+                className="text-sm font-semibold text-primary transition-colors hover:text-white"
+              >
+                Chat with Duggal →
+              </Link>
+            </div>
+          </section>
+        </section>
       </main>
 
       <SiteFooter />
