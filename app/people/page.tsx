@@ -236,10 +236,10 @@ export default function PeoplePage() {
       <SiteHeader />
 
       <main className="yc-container space-y-14 py-14 md:space-y-16 md:py-20">
-        <section className="max-w-[760px] space-y-8">
+        <section className="mx-auto w-full max-w-[760px]">
           <h1 className="font-semibold text-white">People</h1>
           <p className="text-lg leading-8 text-white/65 md:text-xl md:leading-9">
-            Behind every hire is a unit building VerveSchool each day and an alliance of founders, operators, and hiring leaders who have shaped the journey.
+            Good work is rarely the result of one person. It comes from people who choose to share what they know, lend their support, and believe in what we are building. The Unit carries the work forward every day. The Alliance helps make that possible.
           </p>
         </section>
 
