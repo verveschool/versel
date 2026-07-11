@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+=2import type { Metadata } from "next"
 import Link from "next/link"
 import { getAllBookChapters, getBookLanding } from "@/lib/book"
 import { SiteHeader } from "@/components/site-header"
@@ -74,22 +74,6 @@ export default function BookPage() {
           </div>
         </section>
 
-        <section className="yc-section">
-  <h2>Keep reading. Keep questioning.</h2>
-
-  <div className="yc-text-block">
-    <p className="mb-10">
-      Books are written to start conversations, not end them. If you want to discuss an idea, ask a question, or challenge something you have read, I would be glad to hear from you.
-    </p>
-
-    <Link
-      href="https://wa.me/917042873035"
-      className="text-sm font-semibold text-primary transition-colors hover:text-white"
-    >
-      Chat with Duggal →
-    </Link>
-  </div>
-</section>
       </main>
 
       <SiteFooter />
