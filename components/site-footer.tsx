@@ -1,7 +1,6 @@
 import Link from "next/link"
 
 const companyLinks = [
-  { href: "/", label: "Home" },
   { href: "/about", label: "Candidates" },
   { href: "/partners", label: "Hiring partners" },
   { href: "/people", label: "People" },
