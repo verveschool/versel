@@ -220,7 +220,7 @@ function PeopleSection({
 }) {
   return (
     <section className="space-y-6 md:space-y-7">
-      <h2 className="text-lg font-medium tracking-[-0.01em] text-white/95">{title}</h2>
+      <h2 className="text-2xl font-semibold tracking-tight text-white">{title}</h2>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-5 lg:grid-cols-4">
         {people.map((person) => (
           <ProfileCard key={`${title}-${person.name}`} person={person} clickable={clickable} />
