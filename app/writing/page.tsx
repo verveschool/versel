@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { formatWritingDate, getAllWriting } from "@/lib/writing"
+import { getAllWriting } from "@/lib/writing"
 
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
@@ -44,55 +44,53 @@ export default function WritingPage() {
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(127,139,153,0.18),_transparent_32%),linear-gradient(180deg,_#050608_0%,_#0b0f14_52%,_#050608_100%)]" />
       <SiteHeader />
 
-      <main className="yc-container py-24 md:py-32">
-        <section className="max-w-[760px]">
-          <h1 className="mb-8 font-serif text-[clamp(1.76rem,1.35rem+1.49vw,2.48rem)] text-white">
-            Essays
-          </h1>
-          <p className="yc-text-block text-lg leading-8 text-white/70">
-            Operating notes for founders, sales leaders, and anyone who wants to think more deeply about hiring, sales, and the work behind them.
-          </p>
-        </section>
-
-        {featuredPiece ? (
-          <section className="mt-24 max-w-[760px] md:mt-32">
-            <p className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              Latest Essay
+      <main className="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
+        <div className="mx-auto w-full max-w-[760px]">
+          <section className="mb-24">
+            <h1 className="mb-8 font-serif text-[clamp(1.76rem,1.35rem+1.49vw,2.48rem)] text-white">
+              Essays
+            </h1>
+            <p className="yc-text-block text-lg leading-8 text-white/70">
+              Operating notes for founders, sales leaders, and anyone who wants to think more deeply about hiring, sales, and the work behind them.
             </p>
-
-            <Link href={`/writing/${featuredPiece.slug}`} className="group block">
-              <h2 className="mb-5 font-serif text-2xl text-white transition-colors group-hover:text-primary md:text-3xl">
-                {featuredPiece.title}
-              </h2>
-
-              <p className="mb-6 text-lg leading-8 text-white/70">
-                {featuredPiece.description}
-              </p>
-
-              <div className="mb-4 flex flex-wrap gap-2">
-                {(Array.isArray(featuredPiece.tags) ? featuredPiece.tags : []).map((tag) => (
-                  <span
-                    key={tag}
-                    className="inline-block rounded-full border border-primary/25 bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              <p className="text-sm text-white/50">
-                {featuredPiece.category} · {featuredPiece.readingTime}
-              </p>
-            </Link>
           </section>
-        ) : null}
 
-        <WritingFilter essays={remainingPieces} allTags={allTags} />
+          {featuredPiece ? (
+            <section className="mb-24">
+              <p className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+                Latest Essay
+              </p>
 
-        <section className="mt-24 grid grid-cols-1 lg:grid-cols-2">
-          <div />
+              <Link href={`/writing/${featuredPiece.slug}`} className="group block">
+                <h2 className="mb-5 font-serif text-2xl text-white transition-colors group-hover:text-primary md:text-3xl">
+                  {featuredPiece.title}
+                </h2>
 
-          <section className="max-w-[560px]">
+                <p className="mb-6 text-lg leading-8 text-white/70">
+                  {featuredPiece.description}
+                </p>
+
+                <div className="mb-4 flex flex-wrap gap-2">
+                  {(Array.isArray(featuredPiece.tags) ? featuredPiece.tags : []).map((tag) => (
+                    <span
+                      key={tag}
+                      className="inline-block rounded-full border border-primary/25 bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <p className="text-sm text-white/50">
+                  {featuredPiece.category} · {featuredPiece.readingTime}
+                </p>
+              </Link>
+            </section>
+          ) : null}
+
+          <WritingFilter essays={remainingPieces} allTags={allTags} />
+
+          <section className="mt-24">
             <h2 className="mb-6 font-serif text-2xl text-white">
               Ideas grow when they are shared.
             </h2>
@@ -110,7 +108,7 @@ export default function WritingPage() {
               </Link>
             </div>
           </section>
-        </section>
+        </div>
       </main>
 
       <SiteFooter />

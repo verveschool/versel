@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from "react"
 import Link from "next/link"
-import { formatWritingDate } from "@/lib/writing-utils"
 
 interface EssayData {
   slug: string
@@ -64,7 +63,7 @@ export function WritingFilter({ essays, allTags }: WritingFilterProps) {
   const hasActiveFilters = selectedTags.size > 0 || selectedAuthors.size > 0
 
   return (
-    <section className="mx-auto mt-24 max-w-7xl md:mt-32">
+    <section className="mt-24">
       {/* Filters */}
       <div className="mb-16 space-y-8">
         {/* Tag Filter */}
@@ -132,7 +131,7 @@ export function WritingFilter({ essays, allTags }: WritingFilterProps) {
 
       {/* Essays Grid */}
       {filteredEssays.length > 0 ? (
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="space-y-6">
           {filteredEssays.map((piece) => (
             <Link
               key={piece.slug}
