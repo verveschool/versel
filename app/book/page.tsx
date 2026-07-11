@@ -1,4 +1,4 @@
-=2import type { Metadata } from "next"
+import type { Metadata } from "next"
 import Link from "next/link"
 import { getAllBookChapters, getBookLanding } from "@/lib/book"
 import { SiteHeader } from "@/components/site-header"
