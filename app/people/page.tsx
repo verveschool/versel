@@ -220,7 +220,7 @@ function PeopleSection({
 }) {
   return (
     <section className="space-y-6 md:space-y-7">
-      <h2 className="text-2xl font-semibold tracking-tight text-white">{title}</h2>
+      <h2>{title}</h2>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-5 lg:grid-cols-4">
         {people.map((person) => (
           <ProfileCard key={`${title}-${person.name}`} person={person} clickable={clickable} />
@@ -236,9 +236,9 @@ export default function PeoplePage() {
       <SiteHeader />
 
       <main className="yc-container space-y-14 py-14 md:space-y-16 md:py-20">
-        <section className="mx-auto w-full max-w-4xl">
+        <section className="w-full max-w-[900px]">
           <h1 className="font-semibold text-white">People</h1>
-          <section className="max-w-[760px] space-y-8">
+          <p className="mt-10">
             Good work is rarely the result of one person. It comes from people who care enough to challenge ideas, raise standards, and contribute in meaningful ways. The Unit carries the work forward every day. The Alliance stands with us.
           </p>
         </section>
