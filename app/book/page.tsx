@@ -74,17 +74,22 @@ export default function BookPage() {
           </div>
         </section>
 
-        <section className="mx-auto mt-12 max-w-[760px] border-t border-white/10 pb-12 pt-24 md:mt-16 md:pt-32">
-          <h2 className="mb-6 font-serif text-2xl text-white">
-            Turn the reading into operator practice
-          </h2>
-          <p className="mb-8 text-lg leading-8 text-white/70">
-            If the book maps to a problem inside your sales motion, use it on real calls, review the terrain, and start a more specific conversation with VerveSchool.
-          </p>
-          <Link href="/about#contact" className="text-sm font-semibold uppercase tracking-[0.24em] text-primary transition-colors hover:text-white">
-            talk to verveschool {"->"}
-          </Link>
-        </section>
+        <section className="yc-section">
+  <h2>Keep reading. Keep questioning.</h2>
+
+  <div className="yc-text-block">
+    <p className="mb-10">
+      Books are written to start conversations, not end them. If you want to discuss an idea, ask a question, or challenge something you have read, I would be glad to hear from you.
+    </p>
+
+    <Link
+      href="https://wa.me/917042873035"
+      className="text-sm font-semibold text-primary transition-colors hover:text-white"
+    >
+      Chat with Duggal →
+    </Link>
+  </div>
+</section>
       </main>
 
       <SiteFooter />
