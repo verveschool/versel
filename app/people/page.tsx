@@ -221,7 +221,7 @@ function PeopleSection({
   return (
     <section className="space-y-6 md:space-y-7">
       <h2>{title}</h2>
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-5 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-5">
         {people.map((person) => (
           <ProfileCard key={`${title}-${person.name}`} person={person} clickable={clickable} />
         ))}
@@ -235,16 +235,18 @@ export default function PeoplePage() {
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
 
-      <main className="yc-container space-y-14 py-14 md:space-y-16 md:py-20">
-        <section>
-          <h1 className="font-semibold text-white">People</h1>
-          <p className="mt-10">
-            Good work is rarely the result of one person. It comes from people who care enough to challenge ideas, raise standards, and contribute in meaningful ways. The Unit carries the work forward every day. The Alliance stands with us.
-          </p>
-        </section>
+      <main className="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
+        <div className="mx-auto w-full max-w-[760px] space-y-14 md:space-y-16">
+          <section>
+            <h1 className="mb-4 font-semibold text-white">People</h1>
+            <p className="max-w-2xl text-base text-muted-foreground md:text-lg">
+              Good work is rarely the result of one person. It comes from people who care enough to challenge ideas, raise standards, and contribute in meaningful ways. The Unit carries the work forward every day. The Alliance stands with us.
+            </p>
+          </section>
 
-        <PeopleSection title="The Unit" people={[...leadershipTeam, ...talentPartners]} clickable />
-        <PeopleSection title="The Alliance" people={industryPartners} clickable />
+          <PeopleSection title="The Unit" people={[...leadershipTeam, ...talentPartners]} clickable />
+          <PeopleSection title="The Alliance" people={industryPartners} clickable />
+        </div>
       </main>
 
       <SiteFooter />
