@@ -17,6 +17,7 @@ const interactiveSelector = [
 export function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null)
   const dotRef = useRef<HTMLDivElement>(null)
+  const rippleRef = useRef<HTMLDivElement>(null)
   const position = useRef({ x: 0, y: 0 })
   const target = useRef({ x: 0, y: 0 })
   const frame = useRef<number | null>(null)
@@ -75,9 +76,22 @@ export function CustomCursor() {
       }
     }
 
-    const down = () => setPressed(true)
-    const up = () => setPressed(false)
+    const down = (event: PointerEvent) => {
+      setPressed(true)
+      if (rippleRef.current) {
+        rippleRef.current.style.left = `${event.clientX}px`
+        rippleRef.current.style.top = `${event.clientY}px`
+        rippleRef.current.animate(
+          [
+            { opacity: 0.32, transform: "translate(-50%, -50%) scale(0.35)" },
+            { opacity: 0, transform: "translate(-50%, -50%) scale(1.45)" }
+          ],
+          { duration: 420, easing: "ease-out" }
+        )
+      }
+    }
 
+    const up = () => setPressed(false)
     const leave = () => {
       cursorRef.current?.removeAttribute("data-visible")
       dotRef.current?.removeAttribute("data-visible")
@@ -107,6 +121,7 @@ export function CustomCursor() {
     <>
       <div ref={cursorRef} className="premium-cursor" data-active={active} data-pressed={pressed} aria-hidden="true" />
       <div ref={dotRef} className="premium-cursor-dot" data-active={active} aria-hidden="true" />
+      <div ref={rippleRef} className="premium-cursor-ripple" aria-hidden="true" />
     </>
   )
 }
