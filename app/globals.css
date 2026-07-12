@@ -3,6 +3,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* single source of truth for tokens — the old file defined --primary
+   twice (a dead grey #e8e8e4 here, then a real violet #8b6dff further
+   down that silently won). that's gone: violet is the primary now,
+   declared once, so nobody editing this file gets misled again. */
 :root {
   --background: #050608;
   --foreground: #ffffff;
@@ -10,35 +14,39 @@
   --card-foreground: #f6f6f4;
   --popover: #0b0f14;
   --popover-foreground: #f6f6f4;
-  --primary: #e8e8e4;
-  --primary-foreground: #050608;
+  --primary: #8b6dff;
+  --primary-foreground: #ffffff;
   --secondary: #121820;
   --secondary-foreground: #f2f2ef;
   --muted: #121820;
   --muted-foreground: #a8aaa7;
-  --accent: #8f918d;
-  --accent-foreground: #050608;
+  --accent: #7c5cff;
+  --accent-foreground: #ffffff;
   --destructive: #a8aaa7;
   --destructive-foreground: #050608;
   --border: rgba(255, 255, 255, 0.14);
   --input: rgba(255, 255, 255, 0.2);
-  --ring: #e8e8e4;
+  --ring: #8b6dff;
   --radius: 0;
-  --chart-1: #e8e8e4;
+  --chart-1: #8b6dff;
   --chart-2: #8f918d;
   --chart-3: #a8aaa7;
   --chart-4: #ffffff;
   --chart-5: #6d6f6b;
   --sidebar: #0b0f14;
   --sidebar-foreground: #f6f6f4;
-  --sidebar-primary: #e8e8e4;
-  --sidebar-primary-foreground: #050608;
+  --sidebar-primary: #8b6dff;
+  --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #121820;
   --sidebar-accent-foreground: #f2f2ef;
   --sidebar-border: rgba(255, 255, 255, 0.14);
-  --sidebar-ring: #e8e8e4;
+  --sidebar-ring: #8b6dff;
 }
 
+/* kept in sync with :root on purpose — theme-provider.tsx exists in
+   the repo but is never mounted, so .dark never actually applies
+   today. if someone wires it up later, it won't regress to the old
+   grey palette. */
 .dark {
   --background: #050608;
   --foreground: #ffffff;
@@ -46,32 +54,32 @@
   --card-foreground: #f6f6f4;
   --popover: #0b0f14;
   --popover-foreground: #f6f6f4;
-  --primary: #e8e8e4;
-  --primary-foreground: #050608;
+  --primary: #8b6dff;
+  --primary-foreground: #ffffff;
   --secondary: #121820;
   --secondary-foreground: #f2f2ef;
   --muted: #121820;
   --muted-foreground: #a8aaa7;
-  --accent: #8f918d;
-  --accent-foreground: #050608;
+  --accent: #7c5cff;
+  --accent-foreground: #ffffff;
   --destructive: #a8aaa7;
   --destructive-foreground: #050608;
   --border: rgba(255, 255, 255, 0.14);
   --input: rgba(255, 255, 255, 0.2);
-  --ring: #e8e8e4;
-  --chart-1: #e8e8e4;
+  --ring: #8b6dff;
+  --chart-1: #8b6dff;
   --chart-2: #8f918d;
   --chart-3: #a8aaa7;
   --chart-4: #ffffff;
   --chart-5: #6d6f6b;
   --sidebar: #0b0f14;
   --sidebar-foreground: #f6f6f4;
-  --sidebar-primary: #e8e8e4;
-  --sidebar-primary-foreground: #050608;
+  --sidebar-primary: #8b6dff;
+  --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #121820;
   --sidebar-accent-foreground: #f2f2ef;
   --sidebar-border: rgba(255, 255, 255, 0.14);
-  --sidebar-ring: #e8e8e4;
+  --sidebar-ring: #8b6dff;
 }
 
 @theme inline {
@@ -114,6 +122,73 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* ============================================================
+   scrollbar — rinnegan chakra thread
+   static and quiet at rest on purpose: a scrollbar gets glanced
+   at constantly (people judge "how much page is left" from its
+   shape), so it stays a plain glowing bar by default. the
+   crackle only shows up on hover/active drag — i.e. the moment
+   someone is actually looking at it — never during ordinary
+   wheel/keyboard scrolling. reduced-motion turns the flicker off
+   entirely and falls back to a static glow.
+   note: webkit scrollbar pseudo-elements only reliably support
+   background/border/box-shadow, not clip-path, so the "jagged"
+   feel comes from the flicker rhythm rather than a literal
+   jagged shape — that part wouldn't render consistently.
+   ============================================================ */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(139, 109, 255, 0.5) #08080d;
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08080d;
+}
+
+::-webkit-scrollbar-corner {
+  background: #08080d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(139, 109, 255, 0.6), rgba(124, 92, 255, 0.35));
+  border: 1px solid rgba(139, 109, 255, 0.28);
+  border-radius: 0;
+  box-shadow: 0 0 5px rgba(139, 109, 255, 0.28);
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #9a82ff, #7c5cff);
+  border-color: rgba(167, 139, 255, 0.6);
+  animation: chakra-flicker 1.3s ease-in-out infinite;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(180deg, #b6a3ff, #8b6dff);
+  border-color: rgba(182, 163, 255, 0.75);
+  animation: chakra-flicker 0.45s ease-in-out infinite;
+}
+
+@keyframes chakra-flicker {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(139, 109, 255, 0.55), 0 0 22px rgba(124, 92, 255, 0.25);
+  }
+  45% {
+    box-shadow: 0 0 17px rgba(167, 139, 255, 0.72), 0 0 30px rgba(139, 109, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 8px rgba(139, 109, 255, 0.35), 0 0 14px rgba(124, 92, 255, 0.16);
+  }
+  55% {
+    box-shadow: 0 0 17px rgba(167, 139, 255, 0.72), 0 0 30px rgba(139, 109, 255, 0.4);
+  }
 }
 
 @layer base {
@@ -215,8 +290,11 @@
   .brand-section,
   .yc-section {
     margin-bottom: 72px;
-    border-top: 1px solid var(--border);
     padding-top: 24px;
+    background-image: linear-gradient(90deg, rgba(139, 109, 255, 0.55), rgba(139, 109, 255, 0.05) 45%, transparent 75%);
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    background-position: top left;
   }
 
   .brand-section > h2,
@@ -340,6 +418,7 @@
   .essay-prose blockquote {
     margin: 2.4rem 0;
     border-left: 2px solid var(--primary);
+    box-shadow: -6px 0 16px -8px rgba(139, 109, 255, 0.35);
     padding-left: 1.5rem;
     color: rgba(244, 247, 251, 0.9);
     font-style: italic;
@@ -347,16 +426,6 @@
 }
 
 @layer base {
-  :root {
-    --primary: #8b6dff;
-    --primary-foreground: #ffffff;
-    --accent: #7c5cff;
-    --accent-foreground: #ffffff;
-    --ring: #8b6dff;
-    --sidebar-primary: #8b6dff;
-    --sidebar-ring: #8b6dff;
-  }
-
   body {
     background:
       radial-gradient(circle at 18% 0%, rgba(124, 92, 255, 0.13), transparent 30rem),
@@ -421,6 +490,8 @@
   input[type="button"]:active,
   input[type="submit"]:active {
     transform: translateY(0);
+    border-color: rgba(167, 139, 255, 0.8);
+    box-shadow: 0 0 0 1px rgba(167, 139, 255, 0.3), 0 0 26px rgba(139, 109, 255, 0.4), 0 0 46px rgba(124, 92, 255, 0.2);
   }
 
   input:not([type="file"]),
@@ -438,11 +509,6 @@
 }
 
 @layer components {
-  .yc-section,
-  .brand-section {
-    border-top-color: rgba(139, 109, 255, 0.18);
-  }
-
   a[class*="border"],
   article[class*="border"],
   section[class*="border"],
@@ -453,13 +519,19 @@
     transition-timing-function: ease-out;
   }
 
+  /* susanoo-style layered aura: inner rim + outer bloom, instead of
+     one flat shadow. still a single hover transition, just reads
+     as a chakra shell instead of a generic card lift. */
   a[class*="border"]:hover,
   article[class*="border"]:hover,
   section[class*="border"]:hover,
   div[class*="border"][class*="bg-white"]:hover {
     transform: translateY(-2px);
     border-color: rgba(139, 109, 255, 0.48);
-    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28), 0 0 34px rgba(124, 92, 255, 0.12);
+    box-shadow:
+      0 0 0 1px rgba(139, 109, 255, 0.16),
+      0 24px 70px rgba(0, 0, 0, 0.28),
+      0 0 34px rgba(124, 92, 255, 0.12);
   }
 
   .section-kicker,
@@ -625,6 +697,12 @@
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
   }
+
+  ::-webkit-scrollbar-thumb:hover,
+  ::-webkit-scrollbar-thumb:active {
+    animation: none;
+    box-shadow: 0 0 5px rgba(139, 109, 255, 0.28);
+  }
 }
 
 @layer components {
@@ -703,6 +781,7 @@
   .book-prose blockquote {
     margin: 3rem 0;
     border-left: 2px solid rgba(139, 109, 255, 0.72);
+    box-shadow: -6px 0 16px -8px rgba(139, 109, 255, 0.4);
     padding: 0.3rem 0 0.3rem 1.6rem;
     color: rgba(255, 255, 255, 0.9);
     font-style: italic;
