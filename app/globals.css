@@ -39,50 +39,6 @@
   --sidebar-ring: #e8e8e4;
 }
 
-.premium-cursor {
-  position: fixed
-  top: 0
-  left: 0
-  width: 10px
-  height: 10px
-  border-radius: 50%
-  background-color: transparent
-  border: 1px solid #1a1a1a
-  pointer-events: none
-  z-index: 9999
-  box-shadow: inset 0 0 0 2px #e53935
-  transition: transform 0.1s ease, box-shadow 0.1s ease, border-color 0.1s ease
-}
-
-.premium-cursor[data-active="true"] {
-  border-color: #7e57c2
-  box-shadow: inset 0 0 0 1px #1a1a1a, inset 0 0 0 2px #9575cd, 0 0 0 1px #1a1a1a, 0 0 0 2px #7e57c2
-  transform: translate(-50%, -50%) scale(1.1) !important
-}
-
-.premium-cursor-dot {
-  position: fixed
-  top: 0
-  left: 0
-  width: 3px
-  height: 3px
-  border-radius: 50%
-  background-color: #1a1a1a
-  pointer-events: none
-  z-index: 10000
-}
-
-.premium-cursor-ripple {
-  position: fixed
-  border-radius: 50%
-  background-color: transparent
-  border: 1px solid #7e57c2
-  pointer-events: none
-  z-index: 9998
-  width: 24px
-  height: 24px
-  transform: translate(-50%, -50%)
-}
 .dark {
   --background: #050608;
   --foreground: #ffffff;
@@ -523,66 +479,61 @@
   [contenteditable="true"] {
     cursor: text;
   }
-
-  .premium-cursor,
-  .premium-cursor-dot,
-  .premium-cursor-ripple {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 2147483647;
-    pointer-events: none;
-    opacity: 0;
-    will-change: transform, opacity;
+  
+  body { 
+    cursor: auto; 
   }
-
-  .premium-cursor[data-visible="true"],
-  .premium-cursor-dot[data-visible="true"] {
-    opacity: 1;
+  
+  a,
+  button,
+  summary,
+  [role="button"] { 
+    cursor: none; 
   }
 
   .premium-cursor {
-    width: 34px;
-    height: 34px;
-    border: 1px solid rgba(139, 109, 255, 0.42);
-    border-radius: 999px;
-    background: radial-gradient(circle, rgba(139, 109, 255, 0.12), transparent 62%);
-    box-shadow: 0 0 24px rgba(124, 92, 255, 0.2);
-    transition: width 200ms ease-out, height 200ms ease-out, border-color 200ms ease-out, box-shadow 200ms ease-out, opacity 200ms ease-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #1a1a1a;
+    pointer-events: none;
+    z-index: 9999;
+    box-shadow: inset 0 0 0 2px #e53935;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, border-color 0.1s ease;
   }
 
   .premium-cursor[data-active="true"] {
-    width: 46px;
-    height: 46px;
-    border-color: rgba(139, 109, 255, 0.72);
-    box-shadow: 0 0 34px rgba(124, 92, 255, 0.34), inset 0 0 18px rgba(139, 109, 255, 0.08);
-  }
-
-  .premium-cursor[data-pressed="true"] {
-    width: 30px;
-    height: 30px;
+    border-color: #7e57c2;
+    box-shadow: inset 0 0 0 1px #1a1a1a, inset 0 0 0 2px #9575cd, 0 0 0 1px #1a1a1a, 0 0 0 2px #7e57c2;
+    transform: translate(-50%, -50%) scale(1.1) !important;
   }
 
   .premium-cursor-dot {
-    width: 4px;
-    height: 4px;
-    border-radius: 999px;
-    background: #b9a9ff;
-    box-shadow: 0 0 12px rgba(139, 109, 255, 0.7);
-    transition: opacity 200ms ease-out, width 200ms ease-out, height 200ms ease-out;
-  }
-
-  .premium-cursor-dot[data-active="true"] {
-    width: 5px;
-    height: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #1a1a1a;
+    pointer-events: none;
+    z-index: 10000;
   }
 
   .premium-cursor-ripple {
-    width: 48px;
-    height: 48px;
-    border: 1px solid rgba(139, 109, 255, 0.42);
-    border-radius: 999px;
-    transform: translate(-50%, -50%) scale(0.35);
+    position: fixed;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #7e57c2;
+    pointer-events: none;
+    z-index: 9998;
+    width: 24px;
+    height: 24px;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -595,7 +546,6 @@
     animation-iteration-count: 1 !important;
   }
 }
-
 
 @layer components {
   .book-shell {
@@ -737,12 +687,4 @@
     color: #fff;
     font-weight: 600;
   }
-}
-
-@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  body { cursor: auto; }
-  a,
-  button,
-  summary,
-  [role="button"] { cursor: none; }
 }
