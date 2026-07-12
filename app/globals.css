@@ -532,7 +532,6 @@
     transform: translate(-50%, -50%);
   }
 }
-}
 
 @media (prefers-reduced-motion: reduce) {
   *,
