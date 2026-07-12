@@ -497,7 +497,7 @@
     cursor: text;
   }
 
-  /* Outer ring — Sharingan by default, Rinnegan on hover */
+  /* Base cursor — Sharingan by default */
   .premium-cursor {
     position: fixed;
     top: 0;
@@ -505,9 +505,7 @@
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    background:
-      radial-gradient(circle at center, transparent 0%, transparent 55%, #1a1a1a 56%, #1a1a1a 60%, transparent 61%),
-      #e53935;
+    background: #e53935;
     border: 2px solid #7a0000;
     pointer-events: none;
     z-index: 9999;
@@ -520,7 +518,7 @@
       box-shadow 0.25s ease;
   }
 
-  /* Sharingan tomoe — three comma marks around the pupil */
+  /* Sharingan tomoe (three dots orbiting the pupil) */
   .premium-cursor::before {
     content: "";
     position: absolute;
@@ -537,33 +535,6 @@
     animation-duration: 1.2s;
   }
 
-  /* Hover state on interactive elements — Rinnegan */
-  .premium-cursor[data-active="true"] {
-    width: 26px;
-    height: 26px;
-    background:
-      radial-gradient(circle at center, transparent 0%, transparent 50%, #1a1a1a 51%, #1a1a1a 56%, transparent 57%),
-      #b39ddb;
-    border-color: #4a2f7a;
-    box-shadow:
-      0 0 10px rgba(179, 157, 219, 0.8),
-      0 0 18px rgba(126, 87, 194, 0.5);
-  }
-
-  /* Rinnegan concentric ripple rings replace the tomoe */
-  .premium-cursor[data-active="true"]::before {
-    background-image: none;
-    background:
-      repeating-radial-gradient(
-        circle at center,
-        transparent 0,
-        transparent 3px,
-        rgba(74, 47, 122, 0.55) 4px,
-        transparent 5px
-      );
-    animation: none;
-  }
-
   @keyframes sharingan-spin {
     from {
       transform: rotate(0deg);
@@ -571,6 +542,45 @@
     to {
       transform: rotate(360deg);
     }
+  }
+
+  /* Rinnegan hover state — pale lavender iris */
+  .premium-cursor[data-active="true"] {
+    width: 26px;
+    height: 26px;
+    background: #d4c9e8;
+    border-color: #2e1f4a;
+    box-shadow:
+      0 0 10px rgba(179, 157, 219, 0.8),
+      0 0 18px rgba(126, 87, 194, 0.5);
+  }
+
+  /* Kill the Sharingan tomoe on hover */
+  .premium-cursor[data-active="true"]::before {
+    background-image: none;
+    animation: none;
+  }
+
+  /* Concentric rings drawn with hard-edged box-shadow, not blurry gradients */
+  .premium-cursor[data-active="true"]::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    transform: translate(-50%, -50%);
+    box-shadow:
+      0 0 0 1px #d4c9e8,
+      0 0 0 2px #2e1f4a,
+      0 0 0 4px #d4c9e8,
+      0 0 0 5px #2e1f4a,
+      0 0 0 7px #d4c9e8,
+      0 0 0 8px #2e1f4a,
+      0 0 0 10px #d4c9e8,
+      0 0 0 11px #2e1f4a;
   }
 
   /* Pupil */
@@ -588,7 +598,7 @@
   }
 
   .premium-cursor-dot[data-active="true"] {
-    background-color: #2a1a3a;
+    background-color: #1a1a1a;
   }
 
   /* Click ripple */
@@ -600,7 +610,7 @@
     height: 24px;
     border-radius: 50%;
     background-color: transparent;
-    border: 1px solid #7e57c2;
+    border: 1px solid #2e1f4a;
     pointer-events: none;
     z-index: 9998;
     transform: translate(-50%, -50%);
