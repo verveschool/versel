@@ -1,29 +1,27 @@
 ---
 title: "Becoming dangerous"
-description: "You become dangerous when the frameworks are automatic. You stop selling and start diagnosing. You recognize quality immediately. You move faster because you are not thinking through every step. You close more because you are not desperate. Mastery is learn, apply, bomb, get feedback, adjust, and repeat until the work becomes invisible."
+description: "There is a point where you stop trying to close deals, and deals just start trying to close you."
 order: "17"
-part: "Operator manual"
-ctaLabel: "Talk to Duggal"
-ctaHref: "https://wa.me/917042873035"
+part: "Mastery"
 ---
 
-There is a point where you stop trying to close deals and you start recognizing that deals are trying to close you.
+There's a point where you stop trying to close deals and you start recognizing that deals are trying to close you.
 
-You have practiced the frameworks so much that they are automatic. You are asking the right questions without thinking. You are building certainties without a script. You are moving people from no to yes without pushing.
+You've practiced the frameworks so much that they're automatic. You're asking the right questions without thinking. You're building certainties without a script. You're moving people from no to yes without pushing.
 
-You are dangerous because you are effortless.
+You're dangerous because you're effortless.
 
 Most people can sense when someone is trying hard. They can sense the desperation. They can sense the technique.
 
-When you are dangerous, you are not trying hard. You are just good. You are just flowing.
+When you're dangerous, you're not trying hard. You're just good. You're just flowing.
 
-The best closers I have ever met do not feel like closers at all.
+The best closers I've ever met don't feel like closers at all.
 
 They feel like guides. They feel like friends who understand your problem and know how to help. They feel like someone you want to work with.
 
-That is what happens when you have practiced enough to be unconsciously competent.
+That's what happens when you've practiced enough to be unconscious competent.
 
-Here is what changes when you reach that level.
+Here's what changes when you reach that level.
 
 First, you stop selling.
 
@@ -35,22 +33,26 @@ You know in the first 90 seconds whether this person is going to buy. You know w
 
 Third, you move faster.
 
-Because you are not thinking through each step, you are not slowing down. You are not over explaining. You are just asking and listening and moving forward.
+Because you're not thinking through each step, you're not slowing down. You're not over explaining. You're just asking and listening and moving forward.
 
 Fourth, you close more deals.
 
-Because you are not trying to convince, you are not sounding desperate, and people want to work with you.
+Because you're not trying to convince, you're not sounding desperate, people want to work with you.
 
-Fifth, you build a reputation.
+And fifth, you build a reputation.
 
-People start talking about you. People start asking for you specifically. People want to buy from you because they have heard that you are good.
+People start talking about you. People start asking for you specifically. People want to buy from you because they've heard that you're good.
 
 That reputation is worth more than any sales technique because it does the selling for you before you even get on the phone.
 
-Becoming dangerous is not about learning more. It is about practicing until what you have learned becomes invisible.
+Becoming dangerous is not about learning more. It's about practicing until what you've learned becomes invisible.
+
+It's about doing the thing so many times that it's no longer a thing. It's just how you operate.
 
 The path to mastery is always the same. Learn the framework. Apply it. Bomb. Get feedback. Adjust. Do it again.
 
-Repeat until it is automatic. Then repeat until you do not even think about it.
+Repeat until it's automatic.
 
-That is dangerous.
+Then repeat until you don't even think about it.
+
+That's dangerous.
