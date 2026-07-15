@@ -56,11 +56,11 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
           </Link>
           <header className="mb-16 border-b border-white/10 pb-12">
             <div className="mb-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-white/45">
-              <span>chapter {chapter.chapterNumber}</span>
+              <span>Ch {chapter.chapterNumber}</span>
               <span aria-hidden="true">·</span>
-              <span>{chapter.part}</span>
+              <span>Hope Is the Enemy</span>
               <span aria-hidden="true">·</span>
-              <span>{chapter.readingTime}</span>
+              <span>{chapter.readingTime.replace(' read', '')}</span>
             </div>
             <h1 className="mb-8 max-w-[12ch] text-balance font-serif text-white">{chapter.title}</h1>
             <p className="max-w-2xl text-xl leading-9 text-white/68">{chapter.description}</p>
