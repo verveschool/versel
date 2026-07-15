@@ -1,28 +1,54 @@
 ---
-title: "The first ninety days of a sales hire"
-description: "A practical view of the early ramp window, from manager signal to candidate behaviors that predict durable performance."
+title: "The first 90 days of a sales hire"
+description: "A practical view of the early months, from manager signals to behaviors that predict long term performance."
 date: "2026-04-12"
-category: "Sales ramp"
+category: "Sales"
 author: "verveschool"
-tags: ["onboarding", "sales", "management", "ramp"]
+tags: ["sales", "management", "onboarding"]
 ---
 
-The first ninety days are not just a probationary window. They are the clearest view a company gets into whether its hiring process selected for the right traits.
+Most companies think the first 90 days are there to evaluate a new hire.
 
-## Days one through thirty
+I think they are there to evaluate the hiring process.
 
-The first month should make effort legible. Managers should see calendar discipline, clear notes, thoughtful questions, and a willingness to rehearse without ego.
+People rarely become someone else after they join. You simply see more of who they already are.
 
-A new sales hire who asks better questions every week is usually becoming safer to trust with real pipeline.
+The first month is mostly habits.
 
-## Days thirty through sixty
+- They prepare.
+- They take useful notes.
+- They ask better questions each week.
+- They practice without defending every mistake.
 
-The middle of ramp reveals whether the hire can turn feedback into a personal operating system. This is where vague enthusiasm either becomes consistent behavior or starts to fade.
+None of these produce revenue on day one.
 
-Look for evidence that they can identify their own bottlenecks. The strongest reps are not merely receptive to coaching; they begin to pre-diagnose what they need next.
+Together they predict whether someone improves.
 
-## Days sixty through ninety
+The next 30 days answer a different question.
 
-By the end of the window, managers should be able to separate activity from progress. Booked meetings, qualified conversations, and clean handoffs matter, but so does the quality of judgment behind them.
+What happens after feedback?
 
-The ninety-day mark should produce a decision: expand responsibility, adjust the role, or admit that the signal is not strong enough. Clarity is the point.
+Most people enjoy receiving advice. Fewer change what they do the next day.
+
+The strongest salespeople start finding their own mistakes before someone points them out. They arrive with specific questions because they already know where they are getting stuck.
+
+The final 30 days are less about effort and more about judgment.
+
+- Which opportunities do they spend time on?
+- Do they know why they lost a conversation?
+- Can they explain what they will do differently next time?
+- Are they becoming more selective or simply busier?
+
+Activity becomes less useful as a signal.
+
+Judgment becomes more useful.
+
+By the end of 90 days, the decision is rarely difficult.
+
+- Give them more responsibility.
+- Find a role that fits them better.
+- Or accept that the hiring process saw something that was never there.
+
+The first 90 days do not change people.
+
+They make them easier to see.
