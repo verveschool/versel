@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+\import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { BookKeyboardShortcuts, BookProgressBar, BookSidebar } from "@/components/book-reader-controls"
@@ -67,16 +67,6 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
           </header>
 
           <MarkdownRenderer content={chapter.content} className="book-prose" />
-
-          <section className="mt-20 rounded-lg border border-primary/40 bg-primary/[0.1] p-8 shadow-[0_8px_32px_rgba(139,109,255,0.12)]">
-            <h2 className="mb-4 font-serif text-2xl text-white">Use this chapter on the next call.</h2>
-            <p className="mb-6 text-white/68">
-              The book is the map. The call is the terrain. Take the framework into a real conversation, then review what happened with operator-level honesty.
-            </p>
-            <Link href={chapter.ctaHref} className="text-sm font-semibold uppercase tracking-[0.24em] text-primary transition-colors hover:text-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
-              {chapter.ctaLabel} →
-            </Link>
-          </section>
         </article>
 
         <nav className="mx-auto mt-12 grid max-w-[72ch] gap-4 md:grid-cols-2" aria-label="chapter navigation">
