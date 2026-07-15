@@ -3,8 +3,6 @@ title: "Preface"
 description: "I started selling because I had no other choice. Here is how I went from broke to building a sales talent fund and teaching hundreds how to operate."
 order: "1"
 part: "The foundations"
-ctaLabel: "Talk to an Operator"
-ctaHref: "https://wa.me/917042873035"
 ---
 
 I started selling because I had no other choice.
