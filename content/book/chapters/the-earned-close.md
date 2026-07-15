@@ -3,8 +3,6 @@ title: "The earned close"
 description: "The close is an accumulation, not an event. Here is how to ask for the commitment without flinching."
 order: "14"
 part: "The close"
-ctaLabel: "Talk to an Operator"
-ctaHref: "https://wa.me/917042873035"
 ---
 
 A close is not an event. It's an accumulation.
