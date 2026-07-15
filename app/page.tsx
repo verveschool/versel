@@ -12,20 +12,20 @@ const filterSteps = [
 ]
 
 export const metadata: Metadata = {
-  title: "VerveSchool - Hire sincere talent that can connect and sell",
+  title: "VerveSchool — Hire sincere talent that can connect and sell",
   description:
     "VerveSchool helps companies hire customer-facing talent through an active scout network. Fast sourcing, role fit matching, and 60-day replacement coverage.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "VerveSchool - Hire sincere talent that can connect and sell",
+    title: "VerveSchool — Hire sincere talent that can connect and sell",
     description:
       "VerveSchool helps companies hire customer-facing talent through an active scout network. Fast sourcing, role fit matching, and 60-day replacement coverage.",
     url: "/",
   },
   twitter: {
-    title: "VerveSchool - Hire sincere talent that can connect and sell",
+    title: "VerveSchool — Hire sincere talent that can connect and sell",
     description:
       "VerveSchool helps companies hire customer-facing talent through an active scout network. Fast sourcing, role fit matching, and 60-day replacement coverage.",
   },
