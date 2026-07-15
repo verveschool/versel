@@ -50,7 +50,7 @@ export default function WritingPage() {
             <h1 className="mb-8 font-serif text-[clamp(1.76rem,1.35rem+1.49vw,2.48rem)] text-white">
               Essays
             </h1>
-            <p className="yc-text-block text-lg leading-8 text-white/70">
+            <p className="text-lg leading-8 text-white/70">
               Operating notes for founders, sales leaders, and anyone who wants to think more deeply about hiring, sales, and the work behind them.
             </p>
           </section>
@@ -89,25 +89,6 @@ export default function WritingPage() {
           ) : null}
 
           <WritingFilter essays={remainingPieces} allTags={allTags} />
-
-          <section className="mt-24">
-            <h2 className="mb-6 font-serif text-2xl text-white">
-              Ideas grow when they are shared.
-            </h2>
-
-            <div className="yc-text-block">
-              <p className="mb-10">
-                If something you have read raises a question, challenges your thinking, or opens a new line of thought, I would be glad to hear from you.
-              </p>
-
-              <Link
-                href="https://wa.me/917042873035"
-                className="text-sm font-semibold text-primary transition-colors hover:text-white"
-              >
-                Chat with Duggal →
-              </Link>
-            </div>
-          </section>
         </div>
       </main>
 
