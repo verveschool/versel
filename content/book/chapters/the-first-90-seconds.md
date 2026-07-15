@@ -1,27 +1,25 @@
 ---
 title: "The first 90 seconds"
-description: "The first 90 seconds decide whether you are worth listening to. Establish why you are talking, set a clear frame, and get permission to ask questions. Say who you are, reference the topic they checked for earlier, and explain that you want to understand their situation properly so you do not waste their time. Frame the call as a consultation instead of a chase."
+description: "You have exactly one and a half minutes to prove you are an authority instead of a beggar. Do not waste it."
 order: "5"
-part: "Operator manual"
-ctaLabel: "Talk to Duggal"
-ctaHref: "https://wa.me/917042873035"
+part: "The mechanics"
 ---
 
-In that time, the person on the other end of the phone is making a decision about whether you are worth their time.
+In that time, the person on the other end of the phone is making a decision about whether you're worth their time.
 
-They are assessing three things.
+They're assessing three things.
 
-First. Do you seem like you know what you are talking about? Not false confidence. Expertise. Have you dealt with people in their situation? Do you understand the landscape?
+First. Do you seem like you know what you're talking about? Not false confidence. Expertise. Have you dealt with people in their situation? Do you understand the landscape?
 
-Second. Are you here to help me or extract from me? Are you trying to understand them or convince them? They sense this through dozens of micro signals.
+Second. Are you here to help me or extract from me? Are you trying to understand them or are you trying to convince them? They sense this through dozens of micro signals.
 
-Third. Is this worth my time? They are tired. They are skeptical. They have other things to do. Give them one reason to think this is worth fifteen minutes.
+Third. Is this worth my time? They're tired. They're skeptical. They have other things to do. Give them one reason to think this is worth fifteen minutes.
 
 The biggest mistake is trying to be impressive.
 
 You try to sound polished. You try to prove yourself. You launch into benefits.
 
-All of this is wrong. It communicates that you are here to convince them of something rather than understand them.
+All of this is wrong. It communicates that you're here to convince them of something rather than understand them.
 
 The opening needs to do exactly three things.
 
@@ -37,30 +35,34 @@ They say yes.
 
 Notice what this does.
 
-You do not call it a cold call. You do not remind them that they do not know you. You assume context. You sound like someone continuing a process they started.
+You do not call it a cold call. You do not remind them that they do not know you. You assume context. You sound like someone continuing a process they started. That feels normal in India.
 
-You are still setting the frame that this is a consultation, asking for permission to question them, and showing you are fine if it is not a fit.
+You are still doing three things.
+
+Setting the frame that this is a consultation.
+
+Asking for permission to question them.
+
+Showing you are fine if it is not a fit.
 
 After the frame, you ask your first question.
 
-"So what has been going on with [the thing they are dealing with]?" or "What is your biggest headache with [the area you solve for]?"
+"So what's been going on with [the thing they're dealing with]?" Or "What's your biggest headache with [the area you solve for]?"
 
 Be specific. A vague question gets a vague answer.
 
 When they answer, you listen. You do not interrupt. You do not plan your next pitch. You sincerely listen.
 
-Since they cannot see you nodding, use sounds to show you are tracking. "Hmm." "Mhmm." "Got it." "Okay."
-
-These small acknowledgments tell them you are present.
+Since they cannot see you nodding, use sounds to show you are tracking. "Hmm." "Mhmm." "Got it." "Okay." These small acknowledgments tell them you are present.
 
 This is where personal certainty starts to form. They can feel whether you are taking in what they are saying or waiting for your turn to talk.
 
-After they answer, you validate. "That sounds frustrating" or "Yes, that is a problem I see a lot."
+After they answer, you validate. "That sounds frustrating" or "Yes, that's a problem I see a lot."
 
-Then you ask a follow up. "What has that been costing you?" or "What have you tried so far to fix it?"
+Then you ask a follow up. "What's that been costing you?" or "What have you tried so far to fix it?"
 
 By the end of 90 seconds, you need to know three things.
 
 First. Do they have a problem you can solve? Second. Are they someone you want to work with? Third. What do they care about underneath the surface?
 
-The opening is not about impressing. It is about setting a frame where an honest conversation can happen.
+The opening is not about impressing. It's about setting a frame where an honest conversation can happen.
