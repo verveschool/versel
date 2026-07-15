@@ -1,62 +1,50 @@
 ---
 title: "Painting what's possible"
-description: "Before you close, help them see themselves as the person they could become. Return to the gap they identified, name the current state, then describe the future state with vivid detail—the role, the income, the conversations, the confidence, and the respect. When they can see themselves as the transformed person, they are not deciding whether to buy. They are deciding whether to move toward that version of themselves."
+description: "You have to make them feel the future before you can ask them for the money."
 order: "12"
-part: "Operator manual"
-ctaLabel: "Talk to Duggal"
-ctaHref: "https://wa.me/917042873035"
+part: "The mechanics"
 ---
 
-Before you close, paint the future.
+Before you ask someone to close, you have to paint them a picture.
 
-This is where most salespeople fail. They build all the certainties. They have the logic. They have the facts. And then they just ask if the person wants to move forward.
+You have to make them see themselves in a different situation. You have to make them feel what it would be like to have solved this problem.
 
-That is not enough.
+This is called future pacing and it's one of the most underrated parts of the close.
 
-You need to help them imagine what it feels like to be the person on the other side of this decision.
+When you paint the future, you're not just describing benefits.
 
-Return to the gap they identified.
+You're helping them imagine a version of themselves that's possible if they take action.
 
-"You said you have been in sales for two years and you are stuck at 15 LPA. You said you want to be a founder someday but right now you feel like you do not have the skills or the network. You said you are tired of making decisions based on what pays bills instead of what builds your future. That is what you told me, right?"
+You're anchoring them to that vision.
 
-They say yes.
+Then when you ask for the close, they're not deciding whether to buy. They're deciding whether to move toward the person they just imagined.
 
-Now name the current state.
+Here's how you do it.
 
-"So right now you wake up, you go to your job, you do your work, you come home. You are stuck in a cycle. You are making decent money but you do not feel like you are building anything. You do not feel like you are becoming someone. You feel like you are just surviving."
+Go back to the gap they identified.
 
-Let that land.
+Remind them what the current state is.
+
+"So where you are now is stuck. You're making thirty thousand a month. You're not growing. You're repeating the same conversations over and over. You don't feel like you're building anything."
+
+Let that sink in.
 
 Then paint the future state.
 
-"Now imagine this. Six months from now, you are working at a growth stage startup. You are not an employee. You are operating like a co-founder. You are in the room when decisions get made. You are seeing how real founders think. You are learning by being inside it, not reading about it.
+"Here's what happens after the program. You land a business development associate role at a company. Good company, venture backed, scaling. You're making eighty thousand a month. You're having different conversations. You're closing deals. You're learning. You're building something. You go home at night and you don't feel like you wasted the day. Your parents ask you what you do and you tell them and they're proud. That feeling changes everything about how you see yourself."
 
-Your income goes from 15 to 40. You can finally breathe. You can finally think about something other than the next month's rent.
+You're not rushing through this.
 
-You are around people who are building. Their energy rubs off on you. You start seeing possibilities you did not see before.
+You're letting them sit with it.
 
-In a year, you are the person founders call when they need help with go-to-market. You have become someone who matters in their world.
+You're painting it vividly.
 
-In two years, you have the skills and the network to start something yourself. You are not guessing anymore. You have been inside real businesses. You have seen what works and what does not.
+Sensory details matter.
 
-That is the trajectory you are on if you do this."
+"Imagine the first time you close a deal. Imagine telling your parents. Imagine checking your bank account and seeing money you earned. Imagine walking into a room knowing you're not the least experienced person there. That confidence spreads to every part of your life."
 
-Paint the details.
+Now they're not thinking about the program. They're thinking about the person they could become.
 
-The role. What do they actually do every day?
+That's the power of painting the future.
 
-The income. What does that enable?
-
-The conversations. Who are they talking to now?
-
-The confidence. How different do they feel?
-
-The respect. What do people think of them now?
-
-The vision.
-
-When they can see themselves as the transformed person, they stop thinking about price. They stop thinking about objections. They stop thinking about whether this is for them.
-
-They are just thinking about whether they are ready to become that person.
-
-And most people are. Because most people are not actually afraid of change. They are afraid of being left behind.
+It's not about your product. It's about their transformation.
