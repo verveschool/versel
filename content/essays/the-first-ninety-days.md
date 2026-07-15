@@ -1,7 +1,7 @@
 ---
 title: "The first 90 days of a sales hire"
 description: "A practical view of the early months, from manager signals to behaviors that predict long term performance."
-date: "2026-04-12"
+date: "2026-07-15"
 category: "Sales"
 author: "verveschool"
 tags: ["sales", "management", "onboarding"]
