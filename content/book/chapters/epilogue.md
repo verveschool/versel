@@ -3,8 +3,6 @@ title: "Epilogue"
 description: "The VerveSchool standard for operators who refuse to settle for fine."
 order: "19"
 part: "Operator manual"
-ctaLabel: "Talk to an Operator"
-ctaHref: "https://wa.me/917042873035"
 ---
 
 This is the standard we hold at VerveSchool.
