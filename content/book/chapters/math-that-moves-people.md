@@ -1,17 +1,13 @@
 ---
 title: "Math that moves people"
-description: "Price is what you pay once. Cost is what you pay over time for making a bad choice. Reframe the calculation using their exact numbers. If they earn thirty thousand and the role creates eighty thousand, the difference is fifty thousand every month. Waiting four months costs two lakh, meaning doing nothing can cost the entire program price while leaving them with nothing. The cost of waiting is not zero."
+description: "How to reframe a painful price tag into the massive unacceptable cost of doing absolutely nothing."
 order: "13"
-part: "Operator manual"
-ctaLabel: "Talk to Duggal"
-ctaHref: "https://wa.me/917042873035"
+part: "The mechanics"
 ---
 
 Before you ask for the close, you must reframe their entire calculation.
 
-From price to cost.
-
-Because if they only think about price, they think about sticker shock.
+From price to cost. Because if they only think about price, they think about sticker shock.
 
 If they think about cost, they think about what staying the same costs them.
 
@@ -19,15 +15,15 @@ Price is what you pay once.
 
 Cost is what you pay over time for making a bad choice.
 
-The iPhone versus cheap Android analogy destroys price objections.
+The iPhone vs cheap Android analogy is the one that destroys price objections.
 
-"An iPhone costs eighty thousand rupees. A cheap Android costs twenty thousand rupees. So the iPhone price is higher.
+"An iPhone costs 80 thousand rupees. A cheap Android costs 20 thousand rupees. So the iPhone price is higher.
 
-But here is what happens.
+But here's what happens.
 
 The cheap Android is slow. It crashes. The battery dies. You replace the charger. Then the screen cracks. Then the motherboard fails.
 
-By the end of three years, you have spent on repairs what you would have spent on the iPhone.
+By the end of three years, you've spent on repairs what you would have spent on the iPhone.
 
 Except the iPhone still works perfectly. The Android is dead.
 
@@ -37,13 +33,15 @@ The prospect suddenly sees it.
 
 Price and cost are not the same thing.
 
+The opportunity cost kill shot.
+
 But the analogy is not enough.
 
 You need the math that moves people.
 
 "The price of this program is two lakh rupees.
 
-That is not a small number. That stings. I am not going to lie to you and say it does not.
+That's not a small number. That stings. I am not going to lie to you and say it does not.
 
 But let me show you the cost.
 
@@ -61,13 +59,15 @@ So the cost of waiting is not zero. The cost of waiting is the money you are lea
 
 Now, knowing that, can you afford the cost of staying where you are?"
 
-This math is devastating because it is true.
+This math is devastating because it's true.
 
 It forces them to calculate the cost of inaction.
 
 It forces them to realize that not deciding is a decision. And that decision is costing them money.
 
-Use the exact numbers. Use their current salary. Use the salary they will make.
+Use the exact numbers.
+
+Use their current salary. Use the salary they will make.
 
 Let them do the math in their head. Do not tell them the answer.
 
@@ -75,4 +75,10 @@ Make them see it.
 
 Then paint the future.
 
-But they have already done the math. They already know the cost of staying. Now the future is not aspirational. It is inevitable.
+Paint what it feels like to be making eighty thousand a month.
+
+Paint what that freedom looks like. Paint the confidence. Paint the respect.
+
+But they have already done the math.
+
+They already know the cost of staying. Now the future is not aspirational. It is inevitable.
