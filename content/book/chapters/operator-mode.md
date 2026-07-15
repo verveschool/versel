@@ -1,10 +1,8 @@
 ---
 title: "Operator mode"
-description: "Most people think persuasion is a mysterious genetic gift. They are completely wrong. Here is the exact mechanical framework to master it."
+description: "Persuasion is not some mysterious talent. It is a mechanical skill. Here is exactly how to master it."
 order: "18"
-part: "Operator manual"
-ctaLabel: "Talk to an Operator"
-ctaHref: "https://wa.me/917042873035"
+part: "Mastery"
 ---
 
 By the time you finish this book and apply it, persuasion will feel like a skill to you.
