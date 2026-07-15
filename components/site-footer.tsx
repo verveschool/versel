@@ -2,19 +2,22 @@ import Link from "next/link"
 
 const companyLinks = [
   { href: "/about", label: "Candidates" },
-  { href: "/partners", label: "Hiring partners" },
+  { href: "/partners", label: "Partners" },
   { href: "/people", label: "People" },
 ]
 
 const resourceLinks = [
-  { href: "/writing", label: "Essays" },
+  { href: "/essays", label: "Essays" },
   { href: "/book", label: "Book" },
 ]
 
 const contactLinks = [
   { href: "mailto:talent@verveschool.com", label: "talent@verveschool.com" },
   { href: "https://wa.me/917042873035", label: "+91 70653 14693", external: true },
-  { href: "/terms", label: "Terms" },
+]
+
+const legalLinks = [
+  { href: "/terms", label: "Terms of Use" },
   { href: "/privacy", label: "Privacy Policy" },
 ]
 
@@ -27,7 +30,9 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 gap-10 text-[13px] leading-6 text-foreground/62 md:grid-cols-2 lg:grid-cols-4">
           <section className="space-y-3">
             <p className="text-base font-medium leading-6 text-foreground">VerveSchool</p>
-            <p className="text-sm leading-6 text-foreground/60">The world moves for those who do.</p>
+            <p className="text-sm leading-6 text-foreground/60">
+              The world moves for those who do.
+            </p>
           </section>
 
           <nav aria-label="Company links" className="space-y-3">
@@ -36,7 +41,11 @@ export function SiteFooter() {
             </p>
             <div className="flex flex-col items-start gap-2.5">
               {companyLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="transition-colors hover:text-foreground">
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="transition-colors hover:text-foreground"
+                >
                   {link.label}
                 </Link>
               ))}
@@ -49,7 +58,11 @@ export function SiteFooter() {
             </p>
             <div className="flex flex-col items-start gap-2.5">
               {resourceLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="transition-colors hover:text-foreground">
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="transition-colors hover:text-foreground"
+                >
                   {link.label}
                 </Link>
               ))}
@@ -73,18 +86,38 @@ export function SiteFooter() {
                     {link.label}
                   </a>
                 ) : (
-                  <Link key={link.href} href={link.href} className="transition-colors hover:text-foreground">
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="transition-colors hover:text-foreground"
+                  >
                     {link.label}
                   </Link>
                 ),
               )}
-              <address className="not-italic text-foreground/58">{footerAddress}</address>
+              <address className="not-italic text-foreground/58">
+                {footerAddress}
+              </address>
             </div>
           </section>
         </div>
 
-        <div className="mt-8 border-t border-[rgba(219,231,243,0.16)] pt-4">
-          <p className="text-xs leading-5 text-foreground/50">© 2026 JIRAIYA EDUCATION LLP</p>
+        <div className="mt-8 flex flex-col gap-3 border-t border-[rgba(219,231,243,0.16)] pt-4 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-xs leading-5 text-foreground/50">
+            © 2026 JIRAIYA EDUCATION LLP
+          </p>
+
+          <div className="flex items-center gap-4 text-xs leading-5">
+            {legalLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-foreground/50 transition-colors hover:text-foreground"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
