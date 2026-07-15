@@ -16,8 +16,6 @@ export type BookChapterFrontmatter = {
   description: string
   order: string
   part: string
-  ctaLabel: string
-  ctaHref: string
 }
 
 export type BookChapter = BookChapterFrontmatter & {
@@ -72,7 +70,7 @@ export function getBookChapterBySlug(slug: string): BookChapter {
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data, content } = parseMarkdownFrontmatter<BookChapterFrontmatter>({
     source: fileContents,
-    requiredFields: ["title", "description", "order", "part", "ctaLabel", "ctaHref"],
+    requiredFields: ["title", "description", "order", "part"],
     missingFrontmatterMessage: "Book content files must begin with frontmatter.",
     fileLabel: slug,
   })
@@ -88,8 +86,6 @@ export function getBookChapterBySlug(slug: string): BookChapter {
     description: data.description,
     order: data.order,
     part: data.part,
-    ctaLabel: data.ctaLabel,
-    ctaHref: data.ctaHref,
     slug,
     content,
     readingTime: calculateReadingTime(content),
