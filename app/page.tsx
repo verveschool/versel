@@ -74,7 +74,7 @@ const exploreLinks = [
     cta: "Explore →",
   },
   {
-    href: "/writing",
+    href: "/essays",
     title: "Essays",
     description: "Essays on hiring, sales, communication, and building organizations that last.",
     cta: "Read →",
