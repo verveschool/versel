@@ -8,6 +8,13 @@
    down that silently won). that's gone: violet is the primary now,
    declared once, so nobody editing this file gets misled again. */
 :root {
+  /* kusanagi steel — a cold, precise counterpoint to the violet glow.
+     reserved for thin, hard-edged lines only (a blade's edge, not a
+     blur), so it reads as a deliberate contrast, not a second accent
+     color competing with the primary. */
+  --steel: #dce8ff;
+  --steel-dim: rgba(220, 232, 255, 0.4);
+
   --background: #050608;
   --foreground: #ffffff;
   --card: #0b0f14;
@@ -157,7 +164,9 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, rgba(139, 109, 255, 0.6), rgba(124, 92, 255, 0.35));
+  background:
+    linear-gradient(90deg, transparent 45%, rgba(220, 232, 255, 0.55) 50%, transparent 55%),
+    linear-gradient(180deg, rgba(139, 109, 255, 0.6), rgba(124, 92, 255, 0.35));
   border: 1px solid rgba(139, 109, 255, 0.28);
   border-radius: 0;
   box-shadow: 0 0 5px rgba(139, 109, 255, 0.28);
@@ -445,8 +454,8 @@
   }
 
   ::selection {
-    background: rgba(139, 109, 255, 0.34);
-    color: #ffffff;
+    background: rgba(151, 138, 255, 0.34);
+    color: #f4f8ff;
   }
 
   a,
@@ -491,7 +500,7 @@
   input[type="submit"]:active {
     transform: translateY(0);
     border-color: rgba(167, 139, 255, 0.8);
-    box-shadow: 0 0 0 1px rgba(167, 139, 255, 0.3), 0 0 26px rgba(139, 109, 255, 0.4), 0 0 46px rgba(124, 92, 255, 0.2);
+    box-shadow: 0 0 0 1px rgba(220, 232, 255, 0.7), 0 0 26px rgba(139, 109, 255, 0.4), 0 0 46px rgba(124, 92, 255, 0.2);
   }
 
   input:not([type="file"]),
@@ -504,7 +513,7 @@
   textarea:focus,
   select:focus {
     border-color: rgba(139, 109, 255, 0.72);
-    box-shadow: inset 0 0 24px rgba(124, 92, 255, 0.08), 0 0 0 1px rgba(139, 109, 255, 0.42), 0 0 0 5px rgba(139, 109, 255, 0.11);
+    box-shadow: inset 0 0 24px rgba(124, 92, 255, 0.08), 0 0 0 1px rgba(220, 232, 255, 0.55), 0 0 0 5px rgba(139, 109, 255, 0.11);
   }
 }
 
@@ -718,6 +727,7 @@
     z-index: -2;
     pointer-events: none;
     background:
+      linear-gradient(115deg, transparent 44%, rgba(220, 232, 255, 0.035) 49.7%, rgba(220, 232, 255, 0.05) 50%, rgba(220, 232, 255, 0.035) 50.3%, transparent 56%),
       radial-gradient(circle at 18% 10%, rgba(139, 109, 255, 0.12), transparent 26rem),
       radial-gradient(circle at 88% 18%, rgba(124, 92, 255, 0.07), transparent 22rem),
       #000;
