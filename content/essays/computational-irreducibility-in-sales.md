@@ -18,6 +18,7 @@ Why this matters. Stephen Wolfram showed that complex systems have no shortcuts.
 The founder who runs more conversations doesn’t get luckier. They simply compute further along the irreducible path. They discover signals others never see.
 
 How this is won:
+
 - Treat profiles as prompts, not answers.
 - Make the calls.
 - Track booked meetings and next steps.
