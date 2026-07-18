@@ -13,14 +13,28 @@ tags: ["leadership", "scaling"]
 
 1 to 10: obsession takes over. Doing more becomes the default.
 
-You built this by being everywhere. By not waiting. By not stepping back. Those moves start costing you.
+You built this by being everywhere. By not waiting. By not stepping back. 
 
-You step in everywhere and people stop taking action on their own. You step out too much and standards drop.
+Those moves start costing you.
 
-So the question changes. Where do you interfere? Who gets in. What good looks like. Which decisions cannot be wrong twice.
+You step in everywhere and people stop taking action on their own. 
 
-If you miss those points, you won’t notice at first. Then things start going wrong. If you hold them, everything else can be fine and still improve.
+You step out too much and standards drop.
+
+So the question changes. 
+
+Where do you interfere? Who gets in. What good looks like. 
+
+Which decisions cannot be wrong twice.
+
+If you miss those points, you won’t notice at first. 
+
+Then things start going wrong. 
+
+If you hold them, everything else can be fine and still improve.
 
 You are stepping back so what you built can stand on its own.
 
-Scale is not less involvement. It is choosing the few places that set direction for everything else.
+Scale is not less involvement. 
+
+It is choosing the few places that set direction for everything else.
