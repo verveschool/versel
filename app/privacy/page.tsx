@@ -56,35 +56,37 @@ export default function PrivacyPage() {
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,_rgba(127,139,153,0.16),_transparent_30%),linear-gradient(180deg,_#050608_0%,_#0b0f14_52%,_#050608_100%)]" />
       <SiteHeader />
 
-      <main className="yc-container py-16 md:py-24">
-        <section className="max-w-4xl">
-          <p className="section-kicker mb-4">Legal</p>
-          <h1 className="max-w-3xl font-semibold text-white">Privacy Policy</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-            This policy explains how VerveSchool handles information from candidates, hiring partners, and website visitors.
-          </p>
-          <p className="mt-4 text-sm text-white/45">Last updated: May 31, 2026</p>
-        </section>
+      <main className="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
+        <div className="mx-auto w-full max-w-[760px]">
+          <section>
+            <p className="section-kicker mb-4">Legal</p>
+            <h1 className="max-w-3xl font-semibold text-white">Privacy Policy</h1>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
+              This policy explains how VerveSchool handles information from candidates, hiring partners, and website visitors.
+            </p>
+            <p className="mt-4 text-sm text-white/45">Last updated: May 31, 2026</p>
+          </section>
 
-        <div className="mt-16 max-w-4xl space-y-10">
-          {sections.map((section) => (
-            <section key={section.title} className="border-t border-white/10 pt-8">
-              <h2 className="text-2xl font-semibold text-white">{section.title}</h2>
-              <p className="mt-4 max-w-3xl text-base leading-8 text-white/68">{section.body}</p>
-            </section>
-          ))}
+          <div className="mt-16 space-y-10">
+            {sections.map((section) => (
+              <section key={section.title} className="border-t border-white/10 pt-8">
+                <h2 className="text-2xl font-semibold text-white">{section.title}</h2>
+                <p className="mt-4 max-w-3xl text-base leading-8 text-white/68">{section.body}</p>
+              </section>
+            ))}
+          </div>
+
+          <section className="mt-16 border border-white/10 bg-white/[0.02] p-8">
+            <h2 className="text-2xl font-semibold text-white">Contact us</h2>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-white/70">
+              For privacy questions or requests, contact us at{" "}
+              <a href="mailto:talent@verveschool.com" className="text-primary transition-colors hover:text-white">
+                talent@verveschool.com
+              </a>
+              .
+            </p>
+          </section>
         </div>
-
-        <section className="mt-16 max-w-4xl border border-white/10 bg-white/[0.02] p-8">
-          <h2 className="text-2xl font-semibold text-white">Contact us</h2>
-          <p className="mt-4 max-w-3xl text-base leading-8 text-white/70">
-            For privacy questions or requests, contact us at{" "}
-            <a href="mailto:talent@verveschool.com" className="text-primary transition-colors hover:text-white">
-              talent@verveschool.com
-            </a>
-            .
-          </p>
-        </section>
       </main>
 
       <SiteFooter />
