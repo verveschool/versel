@@ -5,29 +5,29 @@ import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 
 const filterSteps = [
-  "Source candidates through active talent scouts",
-  "Filter for sincerity, communication, and role fit",
+  "Actively identify qualified candidates",
+  "Assess communication, sincerity, and role fit",
   "Align shortlisted candidates with partner requirements",
   "Provide replacement coverage if a hire does not work out",
 ]
 
 export const metadata: Metadata = {
-  title: "VerveSchool — Hire sincere talent that can connect and sell",
+  title: "VerveSchool | Hire better customer facing talent",
   description:
-    "VerveSchool helps companies hire customer-facing talent through an active scout network. Fast sourcing, role fit matching, and 60-day replacement coverage.",
+    "VerveSchool helps companies hire better customer facing talent by introducing qualified, pre-screened candidates matched to their hiring requirements.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "VerveSchool — Hire sincere talent that can connect and sell",
+    title: "VerveSchool | Hire better customer facing talent",
     description:
-      "VerveSchool helps companies hire customer-facing talent through an active scout network. Fast sourcing, role fit matching, and 60-day replacement coverage.",
+      "VerveSchool helps companies hire better customer facing talent by introducing qualified, pre-screened candidates matched to their hiring requirements.",
     url: "/",
   },
   twitter: {
-    title: "VerveSchool — Hire sincere talent that can connect and sell",
+    title: "VerveSchool | Hire better customer facing talent",
     description:
-      "VerveSchool helps companies hire customer-facing talent through an active scout network. Fast sourcing, role fit matching, and 60-day replacement coverage.",
+      "VerveSchool helps companies hire better customer facing talent by introducing qualified, pre-screened candidates matched to their hiring requirements.",
   },
 }
 
@@ -64,7 +64,7 @@ const exploreLinks = [
     href: "/partners",
     title: "Hiring partners",
     description:
-      "Hire customer-facing talent through an active scout network built for speed, role alignment, and replacement coverage.",
+      "Everything you need to know before hiring through VerveSchool.",
     cta: "Explore →",
   },
   {
@@ -76,14 +76,14 @@ const exploreLinks = [
   {
     href: "/essays",
     title: "Essays",
-    description: "Essays on hiring, sales, communication, and building organizations that last.",
+    description: "Read essays on hiring, sales, communication, and building organizations.",
     cta: "Read →",
   },
   {
     href: "/book",
-    title: "Book",
+    title: "Hope Is the Enemy",
     description:
-      "An ongoing book capturing the philosophy behind communication, sales, hiring, and building exceptional customer-facing teams.",
+      "How to sell, persuade, and communicate without begging, hoping, or chasing people.",
     cta: "Read →",
   },
   {
@@ -103,9 +103,9 @@ export default function HomePage() {
       <main className="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
         <section className="mb-24 grid items-center gap-12 lg:grid-cols-[1.16fr_0.84fr]">
           <div>
-            <h1 className="max-w-4xl font-semibold text-white">Hire talent that can sell.</h1>
+            <h1 className="max-w-4xl font-semibold text-white">Hire better customer facing talent.</h1>
             <p className="mt-6 max-w-3xl text-base text-muted-foreground md:text-lg">
-              VerveSchool helps companies hire customer-facing talent through an active scout network built for speed and long-term fit.
+              We don't wait for applications. We actively identify, assess, and introduce candidates matched to your hiring requirements.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Link
