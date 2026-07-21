@@ -62,10 +62,16 @@ const leadershipTeam: PersonCard[] = [
     image: "/people/meehika-singh.jpg",
     linkedin: "https://www.linkedin.com/in/meehika-singh-ab490b282/",
   },
+  {
+    name: "Hadia Rehman",
+    subtitle: "Founder's Office",
+    image: "/people/hadia-rehman.jpg",
+    linkedin: "https://www.linkedin.com/in/hadia-r-7065723b2/",
+  },
+  
 ]
 
 const talentPartners: PersonCard[] = [
-  { name: "Khushi Soni", subtitle: "Talent Operations", image: "/people/khushi-soni.jpg", linkedin: "https://www.linkedin.com/in/khushi-soni-a66761231", },
   { name: "Nafisha Israr", subtitle: "Talent Operations", image: "/people/nafisha-israr.jpg", linkedin: "https://www.linkedin.com/in/nafisha-israr-2255ab383", },
   { name: "Garima Gandhi", subtitle: "Talent Operations", image: "/people/garima-gandhi.jpg", linkedin: "https://www.linkedin.com/in/garima-gandhi222", },
   { name: "Diya Ravani", subtitle: "Talent Operations", image: "/people/diya-ravani.jpg", linkedin: "https://www.linkedin.com/in/diya-ravani-4b27ab243", },
