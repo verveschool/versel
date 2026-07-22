@@ -34,13 +34,13 @@ export const metadata: Metadata = {
 const leadershipTeam: PersonCard[] = [
   {
     name: "A. Duggal",
-    subtitle: "Co-Founder",
+    subtitle: "Co-founder",
     image: "/people/a-duggal.jpg",
     linkedin: "https://www.linkedin.com/in/okduggal/",
   },
   {
     name: "Faraz Arif",
-    subtitle: "Co-Founder",
+    subtitle: "Co-founder",
     image: "/people/faraz-arif.jpg",
     linkedin: "https://www.linkedin.com/in/arif-faraz/",
   },
