@@ -2,8 +2,8 @@
 title: "Hiring is About Predicting Growth"
 description: "Why the best hires are often the ones with the most room to grow."
 date: "2026-07-15"
-category: "Hiring Philosophy"
-author: "VerveSchool"
+category: "Hiring"
+author: "A. Duggal"
 tags: ["hiring", "sales", "talent-selection", "early-career"]
 ---
 
