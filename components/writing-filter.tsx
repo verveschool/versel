@@ -24,11 +24,11 @@ const VISIBLE_TAG_LIMIT = 12
 export function WritingFilter({ essays, allTags }: WritingFilterProps) {
   const [query, setQuery] = useState("")
   const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set())
-  const [selectedAuthors, setSelectedAuthors] = useState<Set<string>>(new Set())
+  const [selectedCategories, setSelectedCategories] = useState<Set<string>>(new Set())
   const [showAllTags, setShowAllTags] = useState(false)
 
-  const authorsSet = new Set(essays.map((essay) => essay.author))
-  const allAuthors = Array.from(authorsSet).sort()
+  const categoriesSet = new Set(essays.map((essay) => essay.category))
+  const allCategories = Array.from(categoriesSet).sort()
 
   const visibleTags = showAllTags ? allTags : allTags.slice(0, VISIBLE_TAG_LIMIT)
   const hiddenTagCount = allTags.length - visibleTags.length
@@ -44,10 +44,10 @@ export function WritingFilter({ essays, allTags }: WritingFilterProps) {
       const matchesTags =
         selectedTags.size === 0 ||
         (Array.isArray(essay.tags) && essay.tags.some((tag) => selectedTags.has(tag)))
-      const matchesAuthor = selectedAuthors.size === 0 || selectedAuthors.has(essay.author)
-      return matchesQuery && matchesTags && matchesAuthor
+      const matchesCategory = selectedCategories.size === 0 || selectedCategories.has(essay.category)
+      return matchesQuery && matchesTags && matchesCategory
     })
-  }, [essays, query, selectedTags, selectedAuthors])
+  }, [essays, query, selectedTags, selectedCategories])
 
   const toggleTag = (tag: string) => {
     const newTags = new Set(selectedTags)
@@ -59,23 +59,23 @@ export function WritingFilter({ essays, allTags }: WritingFilterProps) {
     setSelectedTags(newTags)
   }
 
-  const toggleAuthor = (author: string) => {
-    const newAuthors = new Set(selectedAuthors)
-    if (newAuthors.has(author)) {
-      newAuthors.delete(author)
+  const toggleCategory = (category: string) => {
+    const newCategories = new Set(selectedCategories)
+    if (newCategories.has(category)) {
+      newCategories.delete(category)
     } else {
-      newAuthors.add(author)
+      newCategories.add(category)
     }
-    setSelectedAuthors(newAuthors)
+    setSelectedCategories(newCategories)
   }
 
   const clearFilters = () => {
     setQuery("")
     setSelectedTags(new Set())
-    setSelectedAuthors(new Set())
+    setSelectedCategories(new Set())
   }
 
-  const hasActiveFilters = query.trim().length > 0 || selectedTags.size > 0 || selectedAuthors.size > 0
+  const hasActiveFilters = query.trim().length > 0 || selectedTags.size > 0 || selectedCategories.size > 0
 
   return (
     <section className="mt-24">
@@ -148,17 +148,17 @@ export function WritingFilter({ essays, allTags }: WritingFilterProps) {
           </div>
         )}
 
-        {/* Author Filter */}
-        {allAuthors.length > 1 && (
+        {/* Category Filter */}
+        {allCategories.length > 1 && (
           <div>
-            <p className="mb-3 text-xs font-medium text-white/45">Filter by author</p>
+            <p className="mb-3 text-xs font-medium text-white/45">Filter by category</p>
             <div className="flex flex-wrap gap-2">
-              {allAuthors.map((author) => {
-                const isSelected = selectedAuthors.has(author)
+              {allCategories.map((category) => {
+                const isSelected = selectedCategories.has(category)
                 return (
                   <button
-                    key={author}
-                    onClick={() => toggleAuthor(author)}
+                    key={category}
+                    onClick={() => toggleCategory(category)}
                     aria-pressed={isSelected}
                     className={`rounded-full px-4 py-2 text-xs font-medium transition-all cursor-pointer ${
                       isSelected
@@ -166,7 +166,7 @@ export function WritingFilter({ essays, allTags }: WritingFilterProps) {
                         : "border border-primary/30 text-white/70 hover:border-primary/60 hover:text-white bg-primary/[0.05]"
                     }`}
                   >
-                    {author}
+                    {category}
                   </button>
                 )
               })}
