@@ -19,15 +19,25 @@ export const metadata: Metadata = {
     canonical: "/people",
   },
   openGraph: {
-    title: "People",
+    title: "People | VerveSchool",
     description:
       "Meet the VerveSchool leadership, talent partners, and industry advisors helping candidates and hiring teams build better sales outcomes.",
     url: "/people",
+    images: [
+      {
+        url: "/social.png",
+        width: 1200,
+        height: 600,
+        alt: "VerveSchool",
+      },
+    ],
   },
   twitter: {
-    title: "People",
+    card: "summary_large_image",
+    title: "People | VerveSchool",
     description:
       "Meet the VerveSchool leadership, talent partners, and industry advisors helping candidates and hiring teams build better sales outcomes.",
+    images: ["/social.png"],
   },
 }
 
