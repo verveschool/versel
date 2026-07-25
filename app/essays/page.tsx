@@ -17,14 +17,23 @@ export const metadata: Metadata = {
     description:
       "Read VerveSchool essays on sales hiring, early-career talent development, and practical operating notes for growth teams.",
     url: "/essays",
+    images: [
+      {
+        url: "/social.png",
+        width: 1200,
+        height: 600,
+        alt: "VerveSchool",
+      },
+    ],
   },
   twitter: {
+    card: "summary_large_image",
     title: "Essays",
     description:
       "Read VerveSchool essays on sales hiring, early-career talent development, and practical operating notes for growth teams.",
+    images: ["/social.png"],
   },
 }
-
 export default function EssaysPage() {
   const pieces = getAllWriting()
 
