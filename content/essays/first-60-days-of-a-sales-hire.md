@@ -3,7 +3,7 @@ title: "The First 60 Days of a Sales Hire"
 description: "Why repeated behavior reveals more than first impressions."
 date: "2026-07-14"
 category: "Sales"
-author: "VerveSchool"
+author: "A. Duggal"
 tags: ["sales", "management", "onboarding"]
 ---
 
