@@ -1,38 +1,62 @@
 ---
 title: "Sales Targets Lower Performance"
-description: "How VerveSchool approaches sales and incentives."
+description: "Why sales targets change behavior more than they measure it."
 date: "2026-03-29"
 category: "Sales"
 author: "A. Duggal"
 tags: ["sales", "incentives"]
 ---
 
-Sales targets don’t measure performance. They lower it.
+Sales targets don't just measure performance.
+
+They change it.
 
 Mid-month tells you everything.
 
-One person hits 80% by the 15th. 
+One salesperson reaches 80% by the 15th.
 
-Before slowing down, lulled into thinking he’s safe.
+They slow down.
 
-Another sits at 15% on the 20th. 
+Not because they're lazy.
 
-So he starts forcing it. 
+Because the incentive changed.
 
-Rushed calls, premature closes, steps skipped. 
+Another is at 15% on the 20th.
 
-Or he calls it a reset, waits for next month. 
+Now every call feels urgent.
 
-Enough to stay safe, enough to keep going.
+Discovery gets rushed.
 
-Both are rational. That’s the system. 
+The close comes too early.
 
-And management defends it. Because targets are easy. 
+Or they quietly decide the month is already lost.
 
-A number becomes the definition of good. 
+Neither person is behaving irrationally.
 
-It feels like control. But the work stays unseen.
+They're responding to the system.
 
-How the call goes. Where it breaks. 
+That's what targets do.
 
-No one looks.
+They don't simply measure performance.
+
+They shape it.
+
+Managers like targets because they're visible.
+
+The work that creates them isn't.
+
+A dashboard tells you who closed.
+
+It doesn't tell you why.
+
+How the call went.
+
+Where trust was lost.
+
+Which question uncovered the real objection.
+
+Or why another prospect bought.
+
+The target tells you where you ended.
+
+The process tells you how to get there again.
