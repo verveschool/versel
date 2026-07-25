@@ -1,36 +1,52 @@
 ---
 title: "Effort vs. Value"
-description: "The market does not reward how hard your day was. It rewards results."
+description: "The market measures what you produce, not how hard it felt."
 date: "2026-03-23"
 category: "Career"
 author: "A. Duggal"
 tags: ["career", "value creation"]
 ---
 
-No one cares how hard your day was. Not your boss.
+Most people judge a day by how hard they worked.
 
-Not your clients. Not the people you’re trying to impress.
+The market doesn't.
 
-You can be tired. Frustrated.
+A customer doesn't pay more because something exhausted you.
 
-Stuck. None of that pays you.
+They pay because it solved a problem.
 
-You are either creating value. Or you are invisible.
+This is easy to forget.
 
-Most people stay in that middle zone: Busy, replaceable, going nowhere.
+Work feels valuable while you're doing it.
 
-Then they wonder why nothing changes. Nothing changes because you didn’t.
+Value is only created when someone else finds it useful.
 
-If you want different results, change the metric. Stop tracking effort.
+That's why effort and results often diverge.
 
-Track output. What did you produce today that someone would pay for?
+You can spend twelve hours on something nobody wants.
 
-If the answer is nothing, that’s your answer. Good.
+Or thirty minutes on something people can't stop using.
 
-Now fix it tomorrow. Do it again tomorrow.
+The second creates more value.
 
-And the next. And the next.
+Many careers stall because people optimize for being busy.
 
-The market does not reward effort. It rewards results and people it cannot ignore.
+Busyness is visible.
 
-The world moves for those who do. Don’t you dare settle for fine.
+Value usually isn't, until someone is willing to pay for it.
+
+A better question at the end of each day is simple.
+
+What did I produce today that someone would actually value?
+
+If the answer is "nothing," that's not failure.
+
+It's feedback.
+
+Tomorrow, spend less time measuring effort.
+
+Spend more time creating something another person would miss if it disappeared.
+
+Markets don't reward how hard your day was.
+
+They reward the value you leave behind.
