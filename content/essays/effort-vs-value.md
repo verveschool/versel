@@ -25,7 +25,7 @@ That's why effort and results often diverge.
 
 You can spend twelve hours on something nobody wants.
 
-Or thirty minutes on something people can't stop using.
+Or 30 minutes on something people can't stop using.
 
 The second creates more value.
 
