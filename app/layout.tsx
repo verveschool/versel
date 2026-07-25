@@ -4,6 +4,7 @@ import Script from "next/script"
 import { Analytics } from "@vercel/analytics/next"
 import { CustomCursor } from "@/components/custom-cursor"
 import "./globals.css"
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.verveschool.com"),
   title: {
@@ -22,10 +23,10 @@ export const metadata: Metadata = {
     url: "/",
     images: [
       {
-        url: "/logo.png",
+        url: "/social.png",
         width: 1200,
-        height: 630,
-        alt: "VerveSchool logo",
+        height: 600,
+        alt: "VerveSchool",
       },
     ],
   },
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     title: "VerveSchool",
     description:
       "VerveSchool filters, tests, and backs early-career sales talent for hiring partners who need sharper signal, faster shortlists, and replacement-backed confidence.",
-    images: ["/logo.png"],
+    images: ["/social.png"],
   },
   robots: {
     index: true,
@@ -55,8 +56,6 @@ export const metadata: Metadata = {
     apple: [{ url: "/favicon.png", type: "image/png" }],
   },
 }
-
-
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
