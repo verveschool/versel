@@ -1,56 +1,60 @@
 ---
 title: "The Scale Trap"
-description: "Why the moves that got you to ten employees break at one hundred."
+description: "Why the habits that help you build a company eventually hold it back."
 date: "2026-04-27"
 category: "Leadership"
 author: "A. Duggal"
 tags: ["leadership", "scaling"]
 ---
 
-10 → 100 is where the moves that made you win start working against you.
+The habits that help you build a company are often the ones that stop it from growing.
 
-0 → 1: you do it yourself.
+0 → 1.
 
-Whatever it takes.
+Do everything yourself.
 
-1 → 10: obsession takes over.
+1 → 10.
 
-Doing more becomes the default.
+You jump into sales, hiring, product, support, and fundraising.
 
-You built this by being everywhere.
+Speed matters more than structure.
 
-By not waiting.
+The company succeeds because you're involved in almost everything.
 
-By not stepping back.
+10 → 100.
 
-Those moves start costing you.
+Those same habits become liabilities.
 
-You step in everywhere.
+If you're involved in every decision, the company slows down.
 
-People stop taking action on their own.
+If you're involved in none of them, standards drift.
 
-You step out too much.
+The challenge isn't doing less.
 
-Standards drop.
+It's deciding where your involvement matters most.
 
-So the question changes.
+Every company has a handful of decisions that shape everything else.
 
-Where do you interfere?
+Who gets hired.
 
-Who gets in.
+What quality looks like.
 
-What good looks like.
+How customers are treated.
 
-Which decisions cannot be wrong twice.
+Which problems deserve attention first.
 
-If you miss those points, you won't notice at first.
+Those decisions deserve your attention.
 
-Then things start going wrong.
+Everything else should happen without you.
 
-If you hold them, everything else can be fine and still improve.
+0 → 10.
 
-You are stepping back so what you built can stand on its own.
+The company depends on you making decisions.
 
-Scale is not less involvement.
+10 → 100.
 
-It is choosing the few places that set direction for everything else.
+It depends on everyone else making the right ones.
+
+Early on, your job is to make decisions.
+
+Later, your job is to build a company that can make them without you.
