@@ -4,22 +4,32 @@ import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 
 export const metadata: Metadata = {
-  title: "Terms",
+  title: "Terms of Use",
   description:
     "Review the terms that govern use of VerveSchool's website, hiring partner conversations, and candidate support resources.",
   alternates: {
     canonical: "/terms",
   },
   openGraph: {
-    title: "Terms",
+    title: "Terms of Use | VerveSchool",
     description:
       "Review the terms that govern use of VerveSchool's website, hiring partner conversations, and candidate support resources.",
     url: "/terms",
+    images: [
+      {
+        url: "/social.png",
+        width: 1200,
+        height: 600,
+        alt: "VerveSchool",
+      },
+    ],
   },
   twitter: {
-    title: "Terms",
+    card: "summary_large_image",
+    title: "Terms of Use | VerveSchool",
     description:
       "Review the terms that govern use of VerveSchool's website, hiring partner conversations, and candidate support resources.",
+    images: ["/social.png"],
   },
 }
 
