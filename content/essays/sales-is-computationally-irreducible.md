@@ -1,60 +1,78 @@
 ---
 title: "Sales is Computationally Irreducible"
-description: "Why you can't predict a close without running the process."
+description: "Why you can't predict a close without running the actual process."
 date: "2025-12-28"
 category: "Sales"
 author: "A. Duggal"
 tags: ["sales", "systems thinking"]
 ---
 
-Sales is computationally irreducible.
+Most founders think they can predict a sale before it happens.
 
-You can't predict a close from a lead score or a LinkedIn profile.
+They look at a LinkedIn profile, a lead score, or the first few minutes of a conversation and decide whether the deal is likely to close.
 
-Those are compressed signals, not the full computation.
+More often than not, they're wrong.
 
-The only way to know is to run the process.
+The reason is that sales is computationally irreducible.
 
-You have to have the conversation.
+Stephen Wolfram coined the term to describe systems whose outcomes can't be predicted without letting the process unfold.
 
-Stephen Wolfram showed that complex systems have no shortcuts.
+There is no shortcut.
 
-Markets.
+The computation is the only path to the answer.
 
-Minds.
+Sales works the same way.
 
-Buying decisions.
+A buying decision doesn't come from a few visible signals.
 
-No formula reaches the outcome faster than executing every step.
+It emerges from dozens of interactions that only happen during the conversation.
 
-The founder who runs more conversations.
+You can't compress those interactions into a score.
 
-Doesn't get luckier. They simply compute further along the irreducible path.
+The only way to know whether someone will buy is to talk to them.
 
-They discover signals others never see.
+This is why founders who have more customer conversations usually outperform founders who spend more time analyzing dashboards.
 
-## How this is won
+They aren't guessing better.
 
-- Treat profiles as prompts, not answers.
-- Make the calls.
-- Track booked meetings and next steps.
-- Build tight feedback loops.
-- Don't always trust gut feel.
+They're computing further.
 
-Iterate on the questions you ask, not the stories you tell.
+Every call updates their understanding of the market.
 
-Lies and fluff corrupt the signal and destroy learning.
+Some prospects who looked perfect never buy.
 
-Scale the process that generates data, not the data itself.
+Others who seemed unpromising become customers.
 
-Playbooks become valuable when tested at volume.
+That's information you can't get any other way.
 
-Until you run them at scale, they remain theory.
+So treat profiles as starting points, not conclusions.
 
-Clever scripts don't win.
+Make the calls.
 
-The discipline to run more iterations, and learn faster, does.
+Track the outcomes.
 
-Stop scoring deals in the abstract.
+Build tight feedback loops.
 
-The world moves for those who do.
+Improve the questions you ask more than the stories you tell.
+
+Questions uncover reality.
+
+Stories only matter after you understand it.
+
+Keep your inputs clean.
+
+Optimistic notes and vague CRM updates don't create knowledge.
+
+They create noise.
+
+The same is true of playbooks.
+
+A script isn't useful because it sounds clever.
+
+It's useful because it survives hundreds of conversations.
+
+Volume turns opinions into evidence.
+
+If sales is computationally irreducible, conversations aren't a cost of selling.
+
+They are the computation itself.
