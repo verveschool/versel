@@ -11,13 +11,23 @@ export const metadata: Metadata = {
     canonical: "/book",
   },
   openGraph: {
-    title: "Book",
+    title: "Book | VerveSchool",
     description: "Read Hope Is the Enemy, A. Duggal’s VerveSchool field guide on closing with certainty, integrity, and operator-level execution.",
     url: "/book",
+    images: [
+      {
+        url: "/social.png",
+        width: 1200,
+        height: 600,
+        alt: "VerveSchool",
+      },
+    ],
   },
   twitter: {
-    title: "Book",
+    card: "summary_large_image",
+    title: "Book | VerveSchool",
     description: "Read Hope Is the Enemy, A. Duggal’s VerveSchool field guide on closing with certainty, integrity, and operator-level execution.",
+    images: ["/social.png"],
   },
 }
 
