@@ -2,9 +2,9 @@
 title: "Why Most People Resist Growth"
 description: "What years in edtech taught me about human behavior."
 date: "2026-01-26"
-categories: ["Career", "Leadership"]
+category: "Career"
 author: "A. Duggal"
-tags: ["growth", "coaching", "decision-making"]
+tags: ["growth", "coaching", "decision-making", "leadership"]
 ---
 
 Most people do not want growth.
