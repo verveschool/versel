@@ -7,17 +7,13 @@ author: "A. Duggal"
 tags: {"sales", "outreach"}
 ---
 
-Most people optimize the first message for information.
-
-The best salespeople optimize it for a reply.
-
-I get 10 to 15 cold LinkedIn messages every week.
-
-Most fail before I even read them.
+Most cold outreach fails before it's even read.
 
 Not because the offer is bad.
 
 Because the message asks for too much attention.
+
+I get 10 to 15 cold LinkedIn messages every week.
 
 Three paragraphs.
 
@@ -30,8 +26,6 @@ A calendar link.
 The sender spent twenty minutes writing it.
 
 I spent two seconds deciding it wasn't worth reading.
-
-That's the asymmetry.
 
 The sender is thinking about their message.
 
@@ -55,10 +49,6 @@ Relevant.
 
 Easy to answer.
 
-The first message isn't supposed to close the deal.
+The first message isn't there to explain.
 
-It isn't supposed to explain everything.
-
-It has one job.
-
-Make replying feel easier than ignoring.
+It's there to make replying easier than ignoring.
