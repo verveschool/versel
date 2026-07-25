@@ -1,68 +1,36 @@
 ---
 title: "Effort vs. Value"
-description: "The market doesn't reward how hard your day was. It rewards results."
+description: "The market does not reward how hard your day was. It rewards results."
 date: "2026-03-23"
 category: "Career"
 author: "A. Duggal"
 tags: ["career", "value creation"]
 ---
 
-No one cares how hard your day was.
+No one cares how hard your day was. Not your boss.
 
-Not your boss.
+Not your clients. Not the people you’re trying to impress.
 
-Not your clients.
+You can be tired. Frustrated.
 
-Not the people you're trying to impress.
+Stuck. None of that pays you.
 
-You can be tired.
+You are either creating value. Or you are invisible.
 
-Frustrated.
+Most people stay in that middle zone: Busy, replaceable, going nowhere.
 
-Stuck.
+Then they wonder why nothing changes. Nothing changes because you didn’t.
 
-None of that pays you.
+If you want different results, change the metric. Stop tracking effort.
 
-You are either creating value.
+Track output. What did you produce today that someone would pay for?
 
-Or you are invisible.
+If the answer is nothing, that’s your answer. Good.
 
-Most people stay in that middle zone.
+Now fix it tomorrow. Do it again tomorrow.
 
-Busy.
+And the next. And the next.
 
-Replaceable.
+The market does not reward effort. It rewards results and people it cannot ignore.
 
-Going nowhere.
-
-Then they wonder why nothing changes.
-
-Nothing changes because you didn't.
-
-If you want different results, change the metric.
-
-Stop tracking effort.
-
-Track output.
-
-What did you produce today that someone would pay for?
-
-If the answer is nothing, that's your answer.
-
-Good.
-
-Now fix it tomorrow.
-
-Do it again tomorrow.
-
-And the next.
-
-And the next.
-
-The market doesn't reward effort.
-
-It rewards results and people it cannot ignore.
-
-The world moves for those who do.
-
-Don't settle for fine.
+The world moves for those who do. Don’t you dare settle for fine.
