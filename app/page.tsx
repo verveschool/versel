@@ -32,10 +32,10 @@ export const metadata: Metadata = {
 }
 
 const metrics = [
-  { value: "10%", label: "Fee on CTC" },
-  { value: "60", label: "Days of replacement coverage" },
-  { value: "5+", label: "Candidates ready to interview" },
   { value: "₹0", label: "Upfront fees" },
+  { value: "60 Days", label: "Replacement coverage" },
+  { value: "10%", label: "Fee on annual CTC" },
+  { value: "11k+", label: "Talent pool" },
 ]
 
 const hiringPartners = [
