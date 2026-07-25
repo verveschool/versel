@@ -11,15 +11,25 @@ export const metadata: Metadata = {
     canonical: "/privacy",
   },
   openGraph: {
-    title: "Privacy Policy",
+    title: "Privacy Policy | VerveSchool",
     description:
       "Learn how VerveSchool collects, uses, and protects information shared by candidates, hiring partners, and website visitors.",
     url: "/privacy",
+    images: [
+      {
+        url: "/social.png",
+        width: 1200,
+        height: 600,
+        alt: "VerveSchool",
+      },
+    ],
   },
   twitter: {
-    title: "Privacy Policy",
+    card: "summary_large_image",
+    title: "Privacy Policy | VerveSchool",
     description:
       "Learn how VerveSchool collects, uses, and protects information shared by candidates, hiring partners, and website visitors.",
+    images: ["/social.png"],
   },
 }
 
