@@ -23,11 +23,21 @@ export const metadata: Metadata = {
     description:
       "VerveSchool helps companies hire better customer facing talent by introducing qualified, pre-screened candidates matched to their hiring requirements.",
     url: "/",
+    images: [
+      {
+        url: "/social.png",
+        width: 1200,
+        height: 600,
+        alt: "VerveSchool",
+      },
+    ],
   },
   twitter: {
+    card: "summary_large_image",
     title: "VerveSchool | Hire better customer facing talent",
     description:
       "VerveSchool helps companies hire better customer facing talent by introducing qualified, pre-screened candidates matched to their hiring requirements.",
+    images: ["/social.png"],
   },
 }
 
