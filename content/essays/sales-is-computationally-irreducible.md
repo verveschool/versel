@@ -9,7 +9,7 @@ tags: ["sales", "systems thinking"]
 
 Most founders think they can predict a sale before it happens.
 
-They look at a LinkedIn profile, a lead score, or the first few minutes of a conversation and decide whether the deal is likely to close.
+They look at a LinkedIn profile, a lead score, or the first few minutes of a conversation and decide whether the deal will close.
 
 More often than not, they're wrong.
 
@@ -29,15 +29,15 @@ It emerges from dozens of interactions that only happen during the conversation.
 
 You can't compress those interactions into a score.
 
-The only way to know whether someone will buy is to talk to them.
+The only way to know whether someone will buy is to have the conversation.
 
-This is why founders who have more customer conversations usually outperform founders who spend more time analyzing dashboards.
+This is why founders who spend more time talking to customers often outperform founders who spend more time analyzing dashboards.
 
 They aren't guessing better.
 
 They're computing further.
 
-Every call updates their understanding of the market.
+Every conversation updates their understanding of the market.
 
 Some prospects who looked perfect never buy.
 
@@ -45,7 +45,7 @@ Others who seemed unpromising become customers.
 
 That's information you can't get any other way.
 
-So treat profiles as starting points, not conclusions.
+Treat profiles as starting points, not conclusions.
 
 Make the calls.
 
@@ -67,9 +67,9 @@ They create noise.
 
 The same is true of playbooks.
 
-A script isn't useful because it sounds clever.
+A script isn't valuable because it sounds clever.
 
-It's useful because it survives hundreds of conversations.
+It's valuable because it survives hundreds of conversations.
 
 Volume turns opinions into evidence.
 
