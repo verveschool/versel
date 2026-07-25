@@ -2,7 +2,7 @@
 title: "Why Most People Resist Growth"
 description: "What years in edtech taught me about human behavior."
 date: "2026-01-26"
-category: "Psychology"
+category: "Career"
 author: "A. Duggal"
 tags: ["psychology", "growth mindset"]
 ---
