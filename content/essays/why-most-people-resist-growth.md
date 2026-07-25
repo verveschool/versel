@@ -2,9 +2,9 @@
 title: "Why Most People Resist Growth"
 description: "What years in edtech taught me about human behavior."
 date: "2026-01-26"
-category: "Career"
+categories: ["Career", "Leadership"]
 author: "A. Duggal"
-tags: ["psychology", "growth mindset"]
+tags: ["growth", "coaching", "decision-making"]
 ---
 
 Most people do not want growth.
@@ -19,12 +19,12 @@ Help people move.
 
 But most people are not stuck because they cannot move.
 
-They are stuck because they do not want to.
+They are stuck because they have not decided to.
 
 It usually shows up in one of two ways.
 
-- I am not good enough yet.
-- This work is beneath me.
+- "I'm not good enough yet."
+- "This work is beneath me."
 
 Different words.
 
@@ -34,19 +34,13 @@ Same ending.
 
 The hard part is accepting that you cannot help someone who has not decided to change.
 
-You can share advice.
+You can offer every opportunity.
 
-Tools.
-
-Time.
-
-Chances.
-
-It does not matter.
+You cannot make the decision for them.
 
 Until they decide, everything sounds good and changes nothing.
 
-If you are leading a team or building something, stop pushing people who have not chosen to move.
+If you're leading a team or building something, stop pushing people who have not chosen to move.
 
 If they want it, help them.
 
