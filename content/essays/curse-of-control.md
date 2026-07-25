@@ -1,6 +1,6 @@
 ---
-title: "The Scale Trap"
-description: "Why the habits that help you build a company eventually hold it back."
+title: "The Curse of Control"
+description: "How founders become the bottleneck without realizing it."
 date: "2026-04-27"
 category: "Leadership"
 author: "A. Duggal"
