@@ -171,18 +171,18 @@ export default function PartnersPage() {
             <div className="yc-text-block mb-8">
               <h3>1. Share role details</h3>
               <p>Share role details, compensation, location, hiring targets, and expectations.</p>
+              
+              <h3>2. Receive shortlisted candidates</h3>
+              <p>Receive role aligned candidates sourced and screened for the role.</p>
 
-              <h3>2. Identify candidates</h3>
-              <p>Relevant candidates are identified and engaged across the market.</p>
+              <h3>3. Interview shortlisted candidates</h3>
+              <p>Interview shortlisted candidates and assess their fit for the role.</p>
 
-              <h3>3. Evaluate candidates</h3>
-              <p>Candidates are screened for communication, coachability, and role fit.</p>
+              <h3>4. Make the hiring decision</h3>
+              <p>Select the candidate who best fits your team.</p>
 
-              <h3>4. Interview shortlisted candidates</h3>
-              <p>Interview shortlisted candidates and assess fit for the role.</p>
-
-              <h3>5. Make the hiring decision</h3>
-              <p>Make hiring decisions and continue building your team.</p>
+              <h3>5. Onboard your new hire</h3>
+              <p>Complete onboarding and welcome your new team member.</p>
             </div>
           </section>
 
@@ -198,7 +198,7 @@ export default function PartnersPage() {
                 <li>Role-aligned candidates</li>
                 <li>Reduced sourcing burden</li>
                 <li>Support for high-volume hiring</li>
-                <li>Replacement coverage included</li>
+                <li>Replacement guarantee</li>
               </ul>
             </div>
           </section>
@@ -213,8 +213,8 @@ export default function PartnersPage() {
               <ul className="space-y-3">
                 <li>10% fee on fixed annual CTC</li>
                 <li>₹0 upfront hiring fees</li>
-                <li>Net 30 + 7 payment terms</li>
-                <li>60-day replacement coverage</li>
+                <li>Net 30 payment terms</li>
+                <li>90 day replacement guarantee</li>
               </ul>
             </div>
           </section>
