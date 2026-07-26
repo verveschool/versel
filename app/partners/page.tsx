@@ -211,8 +211,8 @@ export default function PartnersPage() {
             <h2>Commercial terms</h2>
             <div className="yc-text-block mb-8">
               <ul className="space-y-3">
-                <li>10% fee on fixed annual CTC</li>
                 <li>₹0 upfront hiring fees</li>
+                <li>10% fee on fixed annual CTC</li>
                 <li>Net 30 payment terms</li>
                 <li>90 day replacement guarantee</li>
               </ul>
