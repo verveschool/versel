@@ -43,11 +43,10 @@ export const metadata: Metadata = {
 
 const metrics = [
   { value: "₹0", label: "Upfront fees" },
-  { value: "60 Days", label: "Replacement coverage" },
   { value: "10%", label: "Fee on annual CTC" },
-  { value: "11k+", label: "Talent pool" },
+  { value: "90 Day", label: "Replacement guarantee" },
 ]
-
+  
 const hiringPartners = [
   { name: "Prepca", src: "/logos/prepca.png", className: "h-10 w-auto" },
   { name: "Infinity Learn", src: "/logos/infinity-learn.png", className: "h-10 w-auto" },
