@@ -82,12 +82,13 @@ const leadershipTeam: PersonCard[] = [
 ]
 
 const talentPartners: PersonCard[] = [
-  { name: "Nafisha Israr", subtitle: "Talent Operations", image: "/people/nafisha-israr.jpg", linkedin: "https://www.linkedin.com/in/nafisha-israr-2255ab383", },
+  
   { name: "Garima Gandhi", subtitle: "Talent Operations", image: "/people/garima-gandhi.jpg", linkedin: "https://www.linkedin.com/in/garima-gandhi222", },
-  { name: "Diya Ravani", subtitle: "Talent Operations", image: "/people/diya-ravani.jpg", linkedin: "https://www.linkedin.com/in/diya-ravani-4b27ab243", },
-  { name: "Zubda Sajda", subtitle: "Talent Operations", image: "/people/zubda-sajda.jpg", linkedin: "https://www.linkedin.com/in/zubda-sajda-2bb200116", },
-  { name: "Gopika K.", subtitle: "Talent Operations", image: "/people/gopika-k.jpg", linkedin: "https://www.linkedin.com/in/gopika-k-057285230", },
   { name: "Shahida Arif", subtitle: "Talent Operations", image: "/people/shahida-arif.jpg", linkedin: "https://www.linkedin.com/in/shahida-p-a-", },
+  { name: "Tamanna Jain", subtitle: "Talent Operations", image: "/people/tamanna-jain.jpeg", linkedin: "https://www.linkedin.com/in/tamanna-jain-176341411", },
+  { name: "Upashna Khawas", subtitle: "Talent Operations", image: "/people/upashna-khawas.jpeg", linkedin: "https://www.linkedin.com/in/upashna-khawas-aa0851414/", },
+  { name: "Zubda Sajda", subtitle: "Talent Operations", image: "/people/zubda-sajda.jpg", linkedin: "https://www.linkedin.com/in/zubda-sajda-2bb200116", },
+  { name: "Nafisha Israr", subtitle: "Talent Operations", image: "/people/nafisha-israr.jpg", linkedin: "https://www.linkedin.com/in/nafisha-israr-2255ab383", },
 ]
 
 const industryPartners: PersonCard[] = [
@@ -162,6 +163,24 @@ const industryPartners: PersonCard[] = [
     subtitle: "Co-founder, SkilloVilla",
     image: "/people/ronak-agarwal.jpg",
     linkedin: "https://www.linkedin.com/in/ronak-agrawal-88066432",
+  },
+  {
+    name: "Mrinal Anand",
+    subtitle: "Business Head, Interview Lift",
+    image: "/people/mrinal-anand.jpeg",
+    linkedin: "https://www.linkedin.com/in/mrinalanand238",
+  },
+  {
+    name: "Madhan Kumar",
+    subtitle: "AGM, Infinity Learn",
+    image: "/people/madhan-kumar.jpeg",
+    linkedin: "https://www.linkedin.com/in/madhan-kumar-gupta-5067b0120",
+  },
+  {
+    name: "Gaurav Mittal",
+    subtitle: "Co-founder, Karma Miles",
+    image: "/people/gaurav-mittal.jpeg",
+    linkedin: "https://www.linkedin.com/in/gvmittal",
   },
 ]
 
