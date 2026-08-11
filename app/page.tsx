@@ -56,10 +56,14 @@ const hiringPartners = [
   { name: "Scaler", src: "/logos/scaler.png", className: "h-10 w-auto" },
   { name: "SkilloVilla", src: "/logos/skillovilla.png", className: "h-10 w-auto" },
   { name: "AccioJob", src: "/logos/acciojob.png", className: "h-10 w-auto" },
-  { name: "Leverage Edu", src: "/logos/leverage-edu.png", className: "h-10 w-auto" },
-  { name: "BrightCHAMPS", src: "/logos/brightchamps.png", className: "h-10 w-auto" },
   { name: "University Living", src: "/logos/university-living.png", className: "h-10 w-auto" },
   { name: "Career Launcher", src: "/logos/career-launcher.png", className: "h-10 w-auto" },
+  { name: "Leverage Edu", src: "/logos/leverage-edu.png", className: "h-10 w-auto" },
+  { name: "BrightCHAMPS", src: "/logos/brightchamps.png", className: "h-10 w-auto" },
+  { name: "Academically Global", src: "/logos/academically-global.png", className: "h-10 w-auto" },
+  { name: "Project Studio", src: "/logos/project-studio.png", className: "h-10 w-auto" },
+  { name: "Interview Lift", src: "/logos/interview-lift.png", className: "h-10 w-auto" },
+  { name: "Karma Miles", src: "/logos/karma-miles.png", className: "h-10 w-auto" },
 ]
 
 const exploreLinks = [
