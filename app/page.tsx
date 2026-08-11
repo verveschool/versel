@@ -48,21 +48,22 @@ const metrics = [
 ]
   
 const hiringPartners = [
-  { name: "Prepca", src: "/logos/prepca.png", className: "h-10 w-auto" },
-  { name: "Infinity Learn", src: "/logos/infinity-learn.png", className: "h-10 w-auto" },
   { name: "Vedantu", src: "/logos/vedantu.png", className: "h-10 w-auto" },
+  { name: "Infinity Learn", src: "/logos/infinity-learn.png", className: "h-10 w-auto" },
+  { name: "BrightCHAMPS", src: "/logos/brightchamps.png", className: "h-10 w-auto" },
+  { name: "Career Launcher", src: "/logos/career-launcher.png", className: "h-10 w-auto" },
+  { name: "Prepca", src: "/logos/prepca.png", className: "h-10 w-auto" },
+  { name: "Academically Global", src: "/logos/academically-global.png", className: "h-10 w-auto" },
+  { name: "Scaler", src: "/logos/scaler.png", className: "h-10 w-auto" },
   { name: "AlmaBetter", src: "/logos/almabetter.png", className: "h-10 w-auto" },
   { name: "Crio.Do", src: "/logos/crio-do.png", className: "h-10 w-auto" },
-  { name: "Scaler", src: "/logos/scaler.png", className: "h-10 w-auto" },
   { name: "SkilloVilla", src: "/logos/skillovilla.png", className: "h-10 w-auto" },
   { name: "AccioJob", src: "/logos/acciojob.png", className: "h-10 w-auto" },
-  { name: "University Living", src: "/logos/university-living.png", className: "h-10 w-auto" },
-  { name: "Career Launcher", src: "/logos/career-launcher.png", className: "h-10 w-auto" },
-  { name: "Leverage Edu", src: "/logos/leverage-edu.png", className: "h-10 w-auto" },
-  { name: "BrightCHAMPS", src: "/logos/brightchamps.png", className: "h-10 w-auto" },
-  { name: "Academically Global", src: "/logos/academically-global.png", className: "h-10 w-auto" },
-  { name: "Project Studio", src: "/logos/project-studio.png", className: "h-10 w-auto" },
   { name: "Interview Lift", src: "/logos/interview-lift.png", className: "h-10 w-auto" },
+  { name: "Leverage Careers", src: "/logos/leverage-edu.png", className: "h-10 w-auto" },
+  { name: "UC Global Study", src: "/logos/uc-global-study.png", className: "h-10 w-auto" },
+  { name: "University Living", src: "/logos/university-living.png", className: "h-10 w-auto" },
+  { name: "Project Studio", src: "/logos/project-studio.png", className: "h-10 w-auto" },
   { name: "Karma Miles", src: "/logos/karma-miles.png", className: "h-10 w-auto" },
 ]
 
