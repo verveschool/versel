@@ -63,6 +63,7 @@ const hiringPartners = [
   { name: "Leverage Careers", src: "/logos/leverage-edu.png", className: "h-10 w-auto" },
   { name: "UC Global Study", src: "/logos/uc-global-study.png", className: "h-10 w-auto" },
   { name: "University Living", src: "/logos/university-living.png", className: "h-10 w-auto" },
+  { name: "HearthAway", src: "/logos/hearthaway.png", className: "h-10 w-auto" },
   { name: "Project Studio", src: "/logos/project-studio.png", className: "h-10 w-auto" },
   { name: "Karma Miles", src: "/logos/karma-miles.png", className: "h-10 w-auto" },
 ]
