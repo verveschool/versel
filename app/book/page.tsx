@@ -3,6 +3,7 @@ import Link from "next/link"
 import { getAllBookChapters, getBookLanding } from "@/lib/book"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld"
 
 export const metadata: Metadata = {
   title: "Book",
@@ -37,6 +38,13 @@ export default function BookPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <BreadcrumbJsonLd
+        id="book-breadcrumb-json-ld"
+        items={[
+          { name: "Home", url: "https://www.verveschool.com/" },
+          { name: "Book", url: "https://www.verveschool.com/book" },
+        ]}
+      />
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,_rgba(127,139,153,0.16),_transparent_30%),linear-gradient(180deg,_#050608_0%,_#0b0f14_52%,_#050608_100%)]" />
       <SiteHeader />
 

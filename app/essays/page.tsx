@@ -4,6 +4,7 @@ import { getAllWriting } from "@/lib/writing"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { WritingFilter } from "@/components/writing-filter"
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld"
 
 export const metadata: Metadata = {
   title: "Essays",
@@ -37,16 +38,15 @@ export const metadata: Metadata = {
 export default function EssaysPage() {
   const pieces = getAllWriting()
 
-  const tagsSet = new Set<string>()
-  pieces.forEach((piece) => {
-    if (piece.tags && Array.isArray(piece.tags)) {
-      piece.tags.forEach((tag) => tagsSet.add(tag))
-    }
-  })
-  const allTags = Array.from(tagsSet).sort()
-
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <BreadcrumbJsonLd
+        id="essays-breadcrumb-json-ld"
+        items={[
+          { name: "Home", url: "https://www.verveschool.com/" },
+          { name: "Essays", url: "https://www.verveschool.com/essays" },
+        ]}
+      />
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(127,139,153,0.18),_transparent_32%),linear-gradient(180deg,_#050608_0%,_#0b0f14_52%,_#050608_100%)]" />
       <SiteHeader />
 
@@ -61,7 +61,7 @@ export default function EssaysPage() {
             </p>
           </section>
 
-          <WritingFilter essays={pieces} allTags={allTags} />
+          <WritingFilter essays={pieces} />
         </div>
       </main>
 

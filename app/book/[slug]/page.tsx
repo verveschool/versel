@@ -4,6 +4,7 @@ import { notFound } from "next/navigation"
 import { BookKeyboardShortcuts, BookProgressBar, BookSidebar } from "@/components/book-reader-controls"
 import { getAdjacentBookChapters, getAllBookChapters, getBookChapterBySlug, getBookChapterSlugs } from "@/lib/book"
 import { MarkdownRenderer } from "@/lib/markdown"
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld"
 
 type BookChapterPageProps = {
   params: Promise<{
@@ -45,6 +46,14 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
 
   return (
     <div className="book-shell min-h-screen bg-black text-white">
+      <BreadcrumbJsonLd
+        id="book-chapter-breadcrumb-json-ld"
+        items={[
+          { name: "Home", url: "https://www.verveschool.com/" },
+          { name: "Book", url: "https://www.verveschool.com/book" },
+          { name: chapter.title, url: `https://www.verveschool.com/book/${chapter.slug}` },
+        ]}
+      />
       <BookProgressBar />
       <BookKeyboardShortcuts previousHref={previousHref} nextHref={nextHref} />
       <BookSidebar chapters={chapters} activeSlug={chapter.slug} />
