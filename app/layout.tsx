@@ -78,6 +78,45 @@ const organizationJsonLd = {
   ],
 }
 
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "VerveSchool",
+  url: "https://www.verveschool.com",
+  publisher: {
+    "@type": "Organization",
+    name: organizationJsonLd.name,
+    url: organizationJsonLd.url,
+  },
+  hasPart: [
+    {
+      "@type": "SiteNavigationElement",
+      name: "Candidates",
+      url: "https://www.verveschool.com/about",
+    },
+    {
+      "@type": "SiteNavigationElement",
+      name: "Hiring partners",
+      url: "https://www.verveschool.com/partners",
+    },
+    {
+      "@type": "SiteNavigationElement",
+      name: "People",
+      url: "https://www.verveschool.com/people",
+    },
+    {
+      "@type": "SiteNavigationElement",
+      name: "Essays",
+      url: "https://www.verveschool.com/essays",
+    },
+    {
+      "@type": "SiteNavigationElement",
+      name: "Book",
+      url: "https://www.verveschool.com/book",
+    },
+  ],
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -90,6 +129,11 @@ export default function RootLayout({
           id="organization-jsonld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <Script
+          id="website-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         {children}
         <CustomCursor />
