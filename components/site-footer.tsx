@@ -36,7 +36,7 @@ export function SiteFooter() {
           </section>
 
           <nav aria-label="Company links" className="space-y-3">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/40">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/60">
               Company
             </p>
             <div className="flex flex-col items-start gap-2.5">
@@ -53,7 +53,7 @@ export function SiteFooter() {
           </nav>
 
           <nav aria-label="Resource links" className="space-y-3">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/40">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/60">
               Resources
             </p>
             <div className="flex flex-col items-start gap-2.5">
@@ -70,7 +70,7 @@ export function SiteFooter() {
           </nav>
 
           <section className="space-y-3">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/40">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/60">
               Contact
             </p>
             <div className="flex flex-col items-start gap-2.5">
