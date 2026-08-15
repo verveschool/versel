@@ -8,7 +8,7 @@ const companyLinks = [
 
 const resourceLinks = [
   { href: "/essays", label: "Essays" },
-  { href: "/book", label: "Book" },
+  { href: "/book", label: "Hope Is the Enemy" },
 ]
 
 const contactLinks = [
