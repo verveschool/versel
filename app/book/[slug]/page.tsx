@@ -1,10 +1,21 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Script from "next/script"
 import { notFound } from "next/navigation"
 import { BookKeyboardShortcuts, BookProgressBar, BookSidebar } from "@/components/book-reader-controls"
 import { getAdjacentBookChapters, getAllBookChapters, getBookChapterBySlug, getBookChapterSlugs } from "@/lib/book"
 import { MarkdownRenderer } from "@/lib/markdown"
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld"
+
+const siteUrl = "https://www.verveschool.com"
+const bookName = "Hope Is the Enemy"
+
+const publisherJsonLd = {
+  "@type": "Organization",
+  name: "VerveSchool",
+  url: siteUrl,
+  logo: `${siteUrl}/logo.png`,
+}
 
 type BookChapterPageProps = {
   params: Promise<{
@@ -39,6 +50,22 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
   if (!getBookChapterSlugs().includes(slug)) notFound()
 
   const chapter = getBookChapterBySlug(slug)
+  const canonicalUrl = `${siteUrl}/book/${chapter.slug}`
+  const chapterJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Chapter",
+    name: chapter.title,
+    headline: chapter.title,
+    description: chapter.description,
+    position: Number(chapter.order),
+    url: canonicalUrl,
+    mainEntityOfPage: canonicalUrl,
+    isPartOf: {
+      "@type": "Book",
+      name: bookName,
+    },
+    publisher: publisherJsonLd,
+  }
   const chapters = getAllBookChapters()
   const { previousChapter, nextChapter } = getAdjacentBookChapters(slug)
   const previousHref = previousChapter ? `/book/${previousChapter.slug}` : "/book"
@@ -53,6 +80,10 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
           { name: "Book", url: "https://www.verveschool.com/book" },
           { name: chapter.title, url: `https://www.verveschool.com/book/${chapter.slug}` },
         ]}
+      <Script
+        id={`book-chapter-jsonld-${chapter.slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(chapterJsonLd) }}
       />
       <BookProgressBar />
       <BookKeyboardShortcuts previousHref={previousHref} nextHref={nextHref} />

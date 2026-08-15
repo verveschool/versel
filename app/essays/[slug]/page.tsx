@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Script from "next/script"
 import { notFound } from "next/navigation"
 import { formatWritingDate, getAllWriting, getWritingBySlug, getWritingSlugs } from "@/lib/writing"
 import { MarkdownRenderer } from "@/lib/markdown"
@@ -7,6 +8,16 @@ import { MarkdownRenderer } from "@/lib/markdown"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld"
+
+const siteUrl = "https://www.verveschool.com"
+
+const publisherJsonLd = {
+  "@type": "Organization",
+  name: "VerveSchool",
+  url: siteUrl,
+  logo: `${siteUrl}/logo.png`,
+}
+
 type EssayPageProps = {
   params: Promise<{
     slug: string
@@ -53,6 +64,22 @@ export default async function EssayPage({ params }: EssayPageProps) {
   }
 
   const piece = getWritingBySlug(slug)
+  const canonicalUrl = `${siteUrl}/essays/${piece.slug}`
+  const essayJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: piece.title,
+    description: piece.description,
+    author: {
+      "@type": "Person",
+      name: piece.author,
+    },
+    datePublished: piece.date,
+    url: canonicalUrl,
+    mainEntityOfPage: canonicalUrl,
+    publisher: publisherJsonLd,
+    image: `${siteUrl}/social.png`,
+  }
   const relatedPieces = getAllWriting().filter((relatedPiece) => relatedPiece.slug !== piece.slug).slice(0, 2)
 
   return (
@@ -67,6 +94,11 @@ export default async function EssayPage({ params }: EssayPageProps) {
       />
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_20%_0%,_rgba(127,139,153,0.16),_transparent_30%),linear-gradient(180deg,_#050608_0%,_#0b0f14_48%,_#050608_100%)]" />
       <SiteHeader />
+      <Script
+        id={`essay-jsonld-${piece.slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(essayJsonLd) }}
+      />
 
       <main className="yc-container py-16 md:py-24">
         <article className="mx-auto max-w-3xl">
