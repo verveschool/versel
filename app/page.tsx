@@ -12,16 +12,16 @@ const filterSteps = [
 ]
 
 export const metadata: Metadata = {
-  title: "VerveSchool | Hire better customer facing talent",
+  title: "VerveSchool | Hire better customer-facing talent",
   description:
-    "VerveSchool helps companies hire better customer facing talent by introducing qualified, pre-screened candidates matched to their hiring requirements.",
+    "VerveSchool helps companies hire better customer-facing talent by introducing qualified, pre-screened candidates matched to their hiring requirements.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "VerveSchool | Hire better customer facing talent",
+    title: "VerveSchool | Hire better customer-facing talent",
     description:
-      "VerveSchool helps companies hire better customer facing talent by introducing qualified, pre-screened candidates matched to their hiring requirements.",
+      "VerveSchool helps companies hire better customer-facing talent by introducing qualified, pre-screened candidates matched to their hiring requirements.",
     url: "/",
     images: [
       {
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "VerveSchool | Hire better customer facing talent",
+    title: "VerveSchool | Hire better customer-facing talent",
     description:
-      "VerveSchool helps companies hire better customer facing talent by introducing qualified, pre-screened candidates matched to their hiring requirements.",
+      "VerveSchool helps companies hire better customer-facing talent by introducing qualified, pre-screened candidates matched to their hiring requirements.",
     images: ["/social.png"],
   },
 }
@@ -118,7 +118,7 @@ export default function HomePage() {
       <main className="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
         <section className="mb-24 grid items-center gap-12 lg:grid-cols-[1.16fr_0.84fr]">
           <div>
-            <h1 className="max-w-4xl font-semibold text-white">Hire better customer facing talent.</h1>
+            <h1 className="max-w-4xl font-semibold text-white">Hire better customer-facing talent.</h1>
             <p className="mt-6 max-w-3xl text-base text-muted-foreground md:text-lg">
               We don't wait for applications. We actively identify, assess, and introduce candidates matched to your hiring requirements.
             </p>
