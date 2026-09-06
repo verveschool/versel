@@ -1,7 +1,7 @@
 ---
 title: "Hope Is the Enemy"
 subtitle: "How to Stop Begging, Start Operating, and Become Dangerous"
-description: "A first-edition VerveSchool field guide by A. Duggal on moving people from no to yes without begging, hoping, or performing like a desperate salesperson."
+description: "Learn how to move people from no to yes without performing like a desperate salesperson."
 author: "A. Duggal"
 ---
 
