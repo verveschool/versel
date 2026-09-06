@@ -42,9 +42,9 @@ export const metadata: Metadata = {
 }
 
 const metrics = [
-  { value: "₹0", label: "Upfront fees" },
-  { value: "10%", label: "Fee on annual CTC" },
-  { value: "90 Day", label: "Replacement guarantee" },
+  { value: "10%", label: "Placement fee" },
+  { value: "Net 30", label: "Payments terms" },
+  { value: "90 days", label: "Replacement guarantee" },
 ]
   
 const hiringPartners = [
