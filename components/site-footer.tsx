@@ -21,7 +21,7 @@ const legalLinks = [
   { href: "/privacy", label: "Privacy Policy" },
 ]
 
-const footerAddress = "20, H-1/A, Sector 63, Noida, UP 201301"
+const footerAddress = "20, H-1/A, Sec 63, Noida 201301"
 
 export function SiteFooter() {
   return (
