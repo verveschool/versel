@@ -1,6 +1,6 @@
 ---
 title: "Hope Is the Enemy"
-subtitle: "How to Stop Begging, Start Operating, and Become Dangerous"
+subtitle: "Stop Begging, Start Operating, and Become Dangerous"
 description: "Learn how to move people from no to yes without performing like a desperate salesperson."
 author: "A. Duggal"
 ---
