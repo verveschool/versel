@@ -5,14 +5,14 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 
 export const metadata: Metadata = {
-  title: "Book",
-  description: "Read Hope Is the Enemy, A. Duggal’s VerveSchool field guide on closing with certainty, integrity, and operator-level execution.",
+  title: "Hope Is the Enemy by A. Duggal",
+  description: "Learn how to move people from no to yes without performing like a desperate salesperson.",
   alternates: {
     canonical: "/book",
   },
   openGraph: {
-    title: "Book | VerveSchool",
-    description: "Read Hope Is the Enemy, A. Duggal’s VerveSchool field guide on closing with certainty, integrity, and operator-level execution.",
+  title: "Hope Is the Enemy by A. Duggal",
+  description: "Learn how to move people from no to yes without performing like a desperate salesperson.",
     url: "/book",
     images: [
       {
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Book | VerveSchool",
-    description: "Read Hope Is the Enemy, A. Duggal’s VerveSchool field guide on closing with certainty, integrity, and operator-level execution.",
+  title: "Hope Is the Enemy by A. Duggal",
+  description: "Learn how to move people from no to yes without performing like a desperate salesperson.",
     images: ["/social.png"],
   },
 }
