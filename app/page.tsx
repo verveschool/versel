@@ -145,8 +145,12 @@ export default function HomePage() {
                   key={metric.label}
                   className="flex items-end justify-between border-b border-primary/15 pb-5 last:border-b-0 last:pb-0"
                 >
-                  <span className="text-4xl font-semibold tracking-[-0.025em] text-white">{metric.value}</span>
-                  <span className="max-w-36 text-right text-[12px] leading-5 text-white/60">{metric.label}</span>
+                  <span className="text-4xl font-semibold tracking-[-0.025em] text-white">
+                    {metric.value}
+                  </span>
+                  <span className="max-w-40 text-right text-sm leading-5 text-white/65">
+                    {metric.label}
+                  </span>
                 </div>
               ))}
             </div>
