@@ -60,7 +60,7 @@ const hiringPartners = [
   { name: "SkilloVilla", src: "/logos/skillovilla.png", className: "h-10 w-auto" },
   { name: "AccioJob", src: "/logos/acciojob.png", className: "h-10 w-auto" },
   { name: "Interview Lift", src: "/logos/interview-lift.png", className: "h-10 w-auto" },
-  { name: "Leverage Careers", src: "/logos/leverage-edu.png", className: "h-10 w-auto" },
+  { name: "Successcribe", src: "/logos/successcribe.png", className: "h-10 w-auto" },
   { name: "UC Global Study", src: "/logos/uc-global-study.png", className: "h-10 w-auto" },
   { name: "University Living", src: "/logos/university-living.png", className: "h-10 w-auto" },
   { name: "HearthAway", src: "/logos/hearthaway.png", className: "h-10 w-auto" },
