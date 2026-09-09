@@ -70,7 +70,7 @@ const hiringPartners = [
 
 const exploreLinks = [
   {
-    href: "/about",
+    href: "/candidates",
     title: "Candidates",
     description: "Apply for customer-facing roles with companies that value communication, ownership, and long-term growth.",
     cta: "Explore →",
