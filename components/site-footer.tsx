@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 const companyLinks = [
-  { href: "/about", label: "Candidates" },
+  { href: "/candidates", label: "Candidates" },
   { href: "/partners", label: "Partners" },
   { href: "/people", label: "People" },
 ]
@@ -13,7 +13,7 @@ const resourceLinks = [
 
 const contactLinks = [
   { href: "mailto:talent@verveschool.com", label: "talent@verveschool.com" },
-  { href: "https://wa.me/917042873035", label: "+91 70653 14693", external: true },
+  { href: "https://wa.me/917042873035", label: "+91 70428 73035", external: true },
 ]
 
 const legalLinks = [
