@@ -25,7 +25,7 @@ const faqs: FaqItem[] = [
       "No. We actively hire freshers. What matters is sincere intent, clear communication, and willingness to learn fast. Freshers usually start between 4 and 8 LPA, with uncapped incentives.",
   },
   {
-    question: "What about remote work?",
+    question: "What candidates remote work?",
     answer:
       "Most roles are in office or require regular office presence. Customer facing roles are usually structured this way. We can discuss flexibility during the process.",
   },
@@ -47,7 +47,7 @@ const faqs: FaqItem[] = [
   {
     question: "How do you select candidates?",
     answer:
-      "We assess communication skills, intent, consistency, and coachability through a scout call. It is not about resume keywords. It is about whether you are serious and ready to grow.",
+      "We assess communication skills, intent, consistency, and coachability through a scout call. It is not candidates resume keywords. It is candidates whether you are serious and ready to grow.",
   },
 ]
 
@@ -169,7 +169,7 @@ export default function CandidatesPage() {
               <div className="mt-8 space-y-4 text-lg leading-8 text-foreground/68">
                 <p>
                   Communication over credentials. Consistency under pressure. Ownership of outcomes. Coachability.
-                  If you can speak clearly, stay composed when things get hard, and keep your word, you already have the base we care about.
+                  If you can speak clearly, stay composed when things get hard, and keep your word, you already have the base we care candidates.
                 </p>
               </div>
             </section>
