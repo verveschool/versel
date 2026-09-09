@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description:
     "Apply for customer-facing roles with companies that value communication, ownership, and long-term growth.",
   alternates: {
-    canonical: "/about",
+    canonical: "/candidates",
   },
   openGraph: {
     title: "Candidates | VerveSchool",
     description:
       "Apply for customer-facing roles with companies that value communication, ownership, and long-term growth.",
-    url: "/about",
+    url: "/candidates",
     images: [
       {
         url: "/social.png",
@@ -31,6 +31,6 @@ export const metadata: Metadata = {
   },
 }
 
-export default function AboutLayout({ children }: { children: ReactNode }) {
+export default function Layout({ children }: { children: ReactNode }) {
   return children
 }
