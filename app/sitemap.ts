@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: absoluteUrl("/about"),
+      url: absoluteUrl("/candidates"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
