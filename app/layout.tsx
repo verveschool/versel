@@ -92,7 +92,7 @@ const websiteJsonLd = {
     {
       "@type": "SiteNavigationElement",
       name: "Candidates",
-      url: "https://www.verveschool.com/about",
+      url: "https://www.verveschool.com/candidates",
     },
     {
       "@type": "SiteNavigationElement",
