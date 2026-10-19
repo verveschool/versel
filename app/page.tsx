@@ -12,31 +12,31 @@ const filterSteps = [
 ]
 
 export const metadata: Metadata = {
-  title: "VerveSchool | Hire better customer-facing talent",
+  title: "Verveschool | Hire better customer-facing talent",
   description:
-    "VerveSchool helps companies hire better customer-facing talent by introducing qualified, pre-screened candidates matched to their hiring requirements.",
+    "Verveschool helps companies hire better customer-facing talent by introducing qualified, pre-screened candidates matched to their hiring requirements.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "VerveSchool | Hire better customer-facing talent",
+    title: "Verveschool | Hire better customer-facing talent",
     description:
-      "VerveSchool helps companies hire better customer-facing talent by introducing qualified, pre-screened candidates matched to their hiring requirements.",
+      "Verveschool helps companies hire better customer-facing talent by introducing qualified, pre-screened candidates matched to their hiring requirements.",
     url: "/",
     images: [
       {
         url: "/social.png",
         width: 1200,
         height: 600,
-        alt: "VerveSchool",
+        alt: "Verveschool",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "VerveSchool | Hire better customer-facing talent",
+    title: "Verveschool | Hire better customer-facing talent",
     description:
-      "VerveSchool helps companies hire better customer-facing talent by introducing qualified, pre-screened candidates matched to their hiring requirements.",
+      "Verveschool helps companies hire better customer-facing talent by introducing qualified, pre-screened candidates matched to their hiring requirements.",
     images: ["/social.png"],
   },
 }
@@ -79,13 +79,13 @@ const exploreLinks = [
     href: "/partners",
     title: "Hiring partners",
     description:
-      "Everything you need to know before hiring through VerveSchool.",
+      "Everything you need to know before hiring through Verveschool.",
     cta: "Explore →",
   },
   {
     href: "/people",
     title: "People",
-    description: "Meet the people building VerveSchool and the principles guiding every hiring decision.",
+    description: "Meet the people building Verveschool and the principles guiding every hiring decision.",
     cta: "Explore →",
   },
   {
@@ -177,7 +177,7 @@ export default function HomePage() {
 
         <section className="yc-section grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <div>
-            <h2 className="font-semibold text-white">How VerveSchool Works</h2>
+            <h2 className="font-semibold text-white">How Verveschool Works</h2>
             <p className="mt-6 max-w-xl leading-8 text-white/65">
               Share your hiring requirements. We take it from there.
             </p>
@@ -197,7 +197,7 @@ export default function HomePage() {
         </section>
 
         <section className="yc-section mb-0">
-          <h2 className="mb-8 font-semibold text-white">Explore VerveSchool</h2>
+          <h2 className="mb-8 font-semibold text-white">Explore Verveschool</h2>
 
           <div className="grid gap-4 md:grid-cols-2">
             {exploreLinks.map((item) => {

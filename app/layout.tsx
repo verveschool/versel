@@ -8,17 +8,17 @@ import "./globals.css"
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.verveschool.com"),
   title: {
-    default: "VerveSchool",
-    template: "%s | VerveSchool",
+    default: "Verveschool",
+    template: "%s | Verveschool",
   },
-  description: "VerveSchool filters, tests, and backs early-career sales talent for hiring partners who need sharper signal, faster shortlists, and replacement-backed confidence.",
+  description: "Verveschool filters, tests, and backs early-career sales talent for hiring partners who need sharper signal, faster shortlists, and replacement-backed confidence.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "VerveSchool",
+    title: "Verveschool",
     description:
-      "VerveSchool filters, tests, and backs early-career sales talent for hiring partners who need sharper signal, faster shortlists, and replacement-backed confidence.",
+      "Verveschool filters, tests, and backs early-career sales talent for hiring partners who need sharper signal, faster shortlists, and replacement-backed confidence.",
     type: "website",
     url: "/",
     images: [
@@ -26,15 +26,15 @@ export const metadata: Metadata = {
         url: "/social.png",
         width: 1200,
         height: 600,
-        alt: "VerveSchool",
+        alt: "Verveschool",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "VerveSchool",
+    title: "Verveschool",
     description:
-      "VerveSchool filters, tests, and backs early-career sales talent for hiring partners who need sharper signal, faster shortlists, and replacement-backed confidence.",
+      "Verveschool filters, tests, and backs early-career sales talent for hiring partners who need sharper signal, faster shortlists, and replacement-backed confidence.",
     images: ["/social.png"],
   },
   robots: {
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "VerveSchool",
+  name: "Verveschool",
   url: "https://www.verveschool.com",
   logo: "https://www.verveschool.com/logo.png",
   email: "talent@verveschool.com",
@@ -81,7 +81,7 @@ const organizationJsonLd = {
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "VerveSchool",
+  name: "Verveschool",
   url: "https://www.verveschool.com",
   publisher: {
     "@type": "Organization",

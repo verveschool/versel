@@ -6,29 +6,29 @@ import { SiteHeader } from "@/components/site-header"
 export const metadata: Metadata = {
   title: "Terms of Use",
   description:
-    "Review the terms that govern use of VerveSchool's website, hiring partner conversations, and candidate support resources.",
+    "Review the terms that govern use of Verveschool's website, hiring partner conversations, and candidate support resources.",
   alternates: {
     canonical: "/terms",
   },
   openGraph: {
-    title: "Terms of Use | VerveSchool",
+    title: "Terms of Use | Verveschool",
     description:
-      "Review the terms that govern use of VerveSchool's website, hiring partner conversations, and candidate support resources.",
+      "Review the terms that govern use of Verveschool's website, hiring partner conversations, and candidate support resources.",
     url: "/terms",
     images: [
       {
         url: "/social.png",
         width: 1200,
         height: 600,
-        alt: "VerveSchool",
+        alt: "Verveschool",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terms of Use | VerveSchool",
+    title: "Terms of Use | Verveschool",
     description:
-      "Review the terms that govern use of VerveSchool's website, hiring partner conversations, and candidate support resources.",
+      "Review the terms that govern use of Verveschool's website, hiring partner conversations, and candidate support resources.",
     images: ["/social.png"],
   },
 }
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 const sections = [
   {
     title: "Use of this website",
-    body: "The VerveSchool website shares information about our talent scouting, hiring partner support, essays, and related resources. You agree to use the website only for lawful purposes and not to interfere with its operation, security, or availability.",
+    body: "The Verveschool website shares information about our talent scouting, hiring partner support, essays, and related resources. You agree to use the website only for lawful purposes and not to interfere with its operation, security, or availability.",
   },
   {
     title: "Candidate and partner conversations",
@@ -48,7 +48,7 @@ const sections = [
   },
   {
     title: "Content and intellectual property",
-    body: "Website copy, essays, design, logos, and other materials are owned by VerveSchool or used with permission. You may not copy, republish, or commercially exploit our content without prior written consent, except where permitted by law.",
+    body: "Website copy, essays, design, logos, and other materials are owned by Verveschool or used with permission. You may not copy, republish, or commercially exploit our content without prior written consent, except where permitted by law.",
   },
   {
     title: "No professional advice",
@@ -72,7 +72,7 @@ export default function TermsPage() {
             <p className="section-kicker mb-4">Legal</p>
             <h1 className="max-w-3xl font-semibold text-white">Terms</h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-              These terms explain the basic rules for using VerveSchool's website and starting conversations with us.
+              These terms explain the basic rules for using Verveschool's website and starting conversations with us.
             </p>
             <p className="mt-4 text-sm text-white/45">Last updated: May 31, 2026</p>
           </section>

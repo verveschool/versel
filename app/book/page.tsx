@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         url: "/social.png",
         width: 1200,
         height: 600,
-        alt: "VerveSchool",
+        alt: "Verveschool",
       },
     ],
   },

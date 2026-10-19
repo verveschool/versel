@@ -6,29 +6,29 @@ import { SiteHeader } from "@/components/site-header"
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Learn how VerveSchool collects, uses, and protects information shared by candidates, hiring partners, and website visitors.",
+    "Learn how Verveschool collects, uses, and protects information shared by candidates, hiring partners, and website visitors.",
   alternates: {
     canonical: "/privacy",
   },
   openGraph: {
-    title: "Privacy Policy | VerveSchool",
+    title: "Privacy Policy | Verveschool",
     description:
-      "Learn how VerveSchool collects, uses, and protects information shared by candidates, hiring partners, and website visitors.",
+      "Learn how Verveschool collects, uses, and protects information shared by candidates, hiring partners, and website visitors.",
     url: "/privacy",
     images: [
       {
         url: "/social.png",
         width: 1200,
         height: 600,
-        alt: "VerveSchool",
+        alt: "Verveschool",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Privacy Policy | VerveSchool",
+    title: "Privacy Policy | Verveschool",
     description:
-      "Learn how VerveSchool collects, uses, and protects information shared by candidates, hiring partners, and website visitors.",
+      "Learn how Verveschool collects, uses, and protects information shared by candidates, hiring partners, and website visitors.",
     images: ["/social.png"],
   },
 }
@@ -40,7 +40,7 @@ const sections = [
   },
   {
     title: "How we use information",
-    body: "We use information to respond to inquiries, evaluate candidate fit, coordinate partner opportunities, operate hiring support, improve our website, and communicate updates related to VerveSchool's services.",
+    body: "We use information to respond to inquiries, evaluate candidate fit, coordinate partner opportunities, operate hiring support, improve our website, and communicate updates related to Verveschool's services.",
   },
   {
     title: "Sharing information",
@@ -72,7 +72,7 @@ export default function PrivacyPage() {
             <p className="section-kicker mb-4">Legal</p>
             <h1 className="max-w-3xl font-semibold text-white">Privacy Policy</h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-              This policy explains how VerveSchool handles information from candidates, hiring partners, and website visitors.
+              This policy explains how Verveschool handles information from candidates, hiring partners, and website visitors.
             </p>
             <p className="mt-4 text-sm text-white/45">Last updated: May 31, 2026</p>
           </section>

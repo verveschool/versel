@@ -77,7 +77,7 @@ export default function PartnersPage() {
           <section className="mb-24">
             <h1 className="mb-4 font-semibold">Hiring Partners</h1>
             <p className="max-w-2xl text-base text-muted-foreground md:text-lg">
-              VerveSchool helps companies hire for sales, business development, counselling, customer success, support, and other customer-facing roles. We extend your hiring team by sourcing, screening, and presenting role-aligned candidates, so your team spends less time searching and more time hiring.
+              Verveschool helps companies hire for sales, business development, counselling, customer success, support, and other customer-facing roles. We extend your hiring team by sourcing, screening, and presenting role-aligned candidates, so your team spends less time searching and more time hiring.
             </p>
           </section>
 
@@ -123,7 +123,7 @@ export default function PartnersPage() {
                 Open roles stay open longer. Hiring teams spend more time searching for candidates. Hiring momentum becomes harder to maintain.
               </p>
               <p>
-                VerveSchool helps companies maintain a consistent flow of role-aligned candidates by acting as an extension of their hiring function.
+                Verveschool helps companies maintain a consistent flow of role-aligned candidates by acting as an extension of their hiring function.
               </p>
             </div>
           </section>
@@ -133,7 +133,7 @@ export default function PartnersPage() {
             className="yc-section"
             style={{ scrollMarginTop: `${headerOffset + 20}px` }}
           >
-            <h2>How VerveSchool helps</h2>
+            <h2>How Verveschool helps</h2>
             <div className="yc-text-block mb-8">
               <p className="mb-6">
                 Our scout network actively identifies, engages, and qualifies candidates before they enter your hiring process.

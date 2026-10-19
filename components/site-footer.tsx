@@ -29,7 +29,7 @@ export function SiteFooter() {
       <div className="yc-container py-10 md:py-12">
         <div className="grid grid-cols-1 gap-10 text-[13px] leading-6 text-foreground/62 md:grid-cols-2 lg:grid-cols-4">
           <section className="space-y-3">
-            <p className="text-base font-medium leading-6 text-foreground">VerveSchool</p>
+            <p className="text-base font-medium leading-6 text-foreground">Verveschool</p>
             <p className="text-sm leading-6 text-foreground/60">
               The world moves for those who do.
             </p>
