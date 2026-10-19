@@ -11,7 +11,7 @@ const bookName = "Hope Is the Enemy"
 
 const publisherJsonLd = {
   "@type": "Organization",
-  name: "VerveSchool",
+  name: "Verveschool",
   url: siteUrl,
   logo: `${siteUrl}/logo.png`,
 }

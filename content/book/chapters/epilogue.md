@@ -1,11 +1,11 @@
 ---
 title: "Epilogue"
-description: "The VerveSchool standard for operators who refuse to settle for fine."
+description: "The Verveschool standard for operators who refuse to settle for fine."
 order: "19"
 part: "Operator manual"
 ---
 
-This is the standard we hold at VerveSchool.
+This is the standard we hold at Verveschool.
 
 It's not about being the most likeable. It's about caring enough to push people to be better than they think they can be.
 

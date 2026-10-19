@@ -8,21 +8,21 @@ import { WritingFilter } from "@/components/writing-filter"
 export const metadata: Metadata = {
   title: "Essays",
   description:
-    "Read VerveSchool essays on sales hiring, early-career talent development, and practical operating notes for growth teams.",
+    "Read Verveschool essays on sales hiring, early-career talent development, and practical operating notes for growth teams.",
   alternates: {
     canonical: "/essays",
   },
   openGraph: {
     title: "Essays",
     description:
-      "Read VerveSchool essays on sales hiring, early-career talent development, and practical operating notes for growth teams.",
+      "Read Verveschool essays on sales hiring, early-career talent development, and practical operating notes for growth teams.",
     url: "/essays",
     images: [
       {
         url: "/social.png",
         width: 1200,
         height: 600,
-        alt: "VerveSchool",
+        alt: "Verveschool",
       },
     ],
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Essays",
     description:
-      "Read VerveSchool essays on sales hiring, early-career talent development, and practical operating notes for growth teams.",
+      "Read Verveschool essays on sales hiring, early-career talent development, and practical operating notes for growth teams.",
     images: ["/social.png"],
   },
 }

@@ -51,7 +51,7 @@ const faqs: FaqItem[] = [
   },
 ]
 
-const applyMessage = `Hi VerveSchool,
+const applyMessage = `Hi Verveschool,
 
 I would like to apply for customer facing roles.
 
@@ -117,7 +117,7 @@ export default function CandidatesPage() {
             </h1>
 
             <p className="mt-8 max-w-2xl text-lg leading-8 text-white/65 md:text-xl md:leading-9">
-              VerveSchool connects sincere, ambitious people with high growth companies building strong customer facing teams.
+              Verveschool connects sincere, ambitious people with high growth companies building strong customer facing teams.
               We handle matching, support, and replacement coverage so you can focus on doing great work.
             </p>
 

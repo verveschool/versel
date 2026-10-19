@@ -33,7 +33,7 @@ How people buy.
 
 How people make decisions. What moves them. What stops them. What makes them trust you.
 
-This book is the distillation of what I learned and what I've taught to hundreds of people at VerveSchool.
+This book is the distillation of what I learned and what I've taught to hundreds of people at Verveschool.
 
 It's the mechanics of moving someone from no to yes. The frameworks that work. The language that moves people. The mistakes that kill deals.
 

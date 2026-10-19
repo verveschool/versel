@@ -14,29 +14,29 @@ type PersonCard = {
 export const metadata: Metadata = {
   title: "People",
   description:
-    "Meet the VerveSchool leadership, talent partners, and industry advisors helping candidates and hiring teams build better sales outcomes.",
+    "Meet the Verveschool leadership, talent partners, and industry advisors helping candidates and hiring teams build better sales outcomes.",
   alternates: {
     canonical: "/people",
   },
   openGraph: {
-    title: "People | VerveSchool",
+    title: "People | Verveschool",
     description:
-      "Meet the VerveSchool leadership, talent partners, and industry advisors helping candidates and hiring teams build better sales outcomes.",
+      "Meet the Verveschool leadership, talent partners, and industry advisors helping candidates and hiring teams build better sales outcomes.",
     url: "/people",
     images: [
       {
         url: "/social.png",
         width: 1200,
         height: 600,
-        alt: "VerveSchool",
+        alt: "Verveschool",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "People | VerveSchool",
+    title: "People | Verveschool",
     description:
-      "Meet the VerveSchool leadership, talent partners, and industry advisors helping candidates and hiring teams build better sales outcomes.",
+      "Meet the Verveschool leadership, talent partners, and industry advisors helping candidates and hiring teams build better sales outcomes.",
     images: ["/social.png"],
   },
 }

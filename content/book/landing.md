@@ -7,9 +7,9 @@ author: "A. Duggal"
 
 Most people don't want information. They want confirmation. They want to believe effort alone will change their outcomes. It will not.
 
-The methods in this ebook are the ones we use at VerveSchool to move people from no to yes. It is a map, the call is the terrain, and results depend on decision and execution.
+The methods in this ebook are the ones we use at Verveschool to move people from no to yes. It is a map, the call is the terrain, and results depend on decision and execution.
 
-VerveSchool  
+Verveschool  
 www.verveschool.com
 
 The world moves for those who do.

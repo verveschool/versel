@@ -12,7 +12,7 @@ const siteUrl = "https://www.verveschool.com"
 
 const publisherJsonLd = {
   "@type": "Organization",
-  name: "VerveSchool",
+  name: "Verveschool",
   url: siteUrl,
   logo: `${siteUrl}/logo.png`,
 }

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     canonical: "/candidates",
   },
   openGraph: {
-    title: "Candidates | VerveSchool",
+    title: "Candidates | Verveschool",
     description:
       "Apply for customer-facing roles with companies that value communication, ownership, and long-term growth.",
     url: "/candidates",
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
         url: "/social.png",
         width: 1200,
         height: 600,
-        alt: "VerveSchool",
+        alt: "Verveschool",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Candidates | VerveSchool",
+    title: "Candidates | Verveschool",
     description:
       "Apply for customer-facing roles with companies that value communication, ownership, and long-term growth.",
     images: ["/social.png"],
