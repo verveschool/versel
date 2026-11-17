@@ -211,7 +211,7 @@ function ProfileCard({
     <>
       <div className="mx-auto aspect-square w-28 overflow-hidden rounded-lg sm:w-32 md:w-36">
         {person.image ? (
-          <img src={person.image} alt={`${person.name} photo`} className="h-full w-full object-cover" />
+          <img src={person.image} alt={`${person.name} photo`} className="h-full w-full object-cover" width={144} height={144} loading="lazy" />
         ) : (
           <div className="flex h-full w-full items-center justify-center">
             <span className="rounded-md bg-white/5 px-3 py-1.5 text-sm font-medium tracking-[-0.01em] text-white/70">
@@ -232,6 +232,7 @@ function ProfileCard({
     return (
       <Link
         href={person.linkedin}
+        aria-label={`${person.name}, ${person.subtitle} — view profile`}
         target="_blank"
         rel="noopener noreferrer"
         className={`${className} block opacity-95 transition hover:opacity-100`.trim()}
@@ -267,10 +268,10 @@ function PeopleSection({
 
 export default function PeoplePage() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="people-page min-h-screen bg-background text-foreground">
       <SiteHeader />
 
-      <main className="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
+      <main id="main-content" tabIndex={-1} className="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
         <div className="mx-auto w-full max-w-[760px] space-y-14 md:space-y-16">
           <section>
             <h1 className="mb-4 font-semibold text-white">People</h1>

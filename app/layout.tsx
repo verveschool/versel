@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     default: "Verveschool",
     template: "%s | Verveschool",
   },
-  description: "Verveschool filters, tests, and backs early-career sales talent for hiring partners who need sharper signal, faster shortlists, and replacement-backed confidence.",
+  description: "Verveschool partners with companies and educational institutions on workforce planning, talent identification, candidate assessment, hiring coordination and employee support.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Verveschool",
     description:
-      "Verveschool filters, tests, and backs early-career sales talent for hiring partners who need sharper signal, faster shortlists, and replacement-backed confidence.",
+      "Verveschool partners with companies and educational institutions on workforce planning, talent identification, candidate assessment, hiring coordination and employee support.",
     type: "website",
     url: "/",
     images: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Verveschool",
     description:
-      "Verveschool filters, tests, and backs early-career sales talent for hiring partners who need sharper signal, faster shortlists, and replacement-backed confidence.",
+      "Verveschool partners with companies and educational institutions on workforce planning, talent identification, candidate assessment, hiring coordination and employee support.",
     images: ["/social.png"],
   },
   robots: {
@@ -64,7 +64,7 @@ const organizationJsonLd = {
   url: "https://www.verveschool.com",
   logo: "https://www.verveschool.com/logo.png",
   email: "talent@verveschool.com",
-  telephone: "+91 81304 30683",
+  telephone: "+91 70428 73035",
   address: {
     "@type": "PostalAddress",
     streetAddress: "20 H 1A, Sector 63",
@@ -74,7 +74,7 @@ const organizationJsonLd = {
   },
   sameAs: [
     "https://www.linkedin.com/company/verveschool",
-    "https://wa.me/917065314693",
+    "https://wa.me/917042873035",
   ],
 }
 
@@ -135,6 +135,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
+        <a className="skip-link" href="#main-content">Skip to content</a>
         {children}
         <CustomCursor />
         <Analytics />

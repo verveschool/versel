@@ -2,7 +2,7 @@ import Link from "next/link"
 
 const companyLinks = [
   { href: "/candidates", label: "Candidates" },
-  { href: "/partners", label: "Partners" },
+  { href: "/partners", label: "Hiring Partners" },
   { href: "/people", label: "People" },
 ]
 
