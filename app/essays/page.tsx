@@ -41,8 +41,8 @@ export default function EssaysPage() {
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
 
-      <main id="main-content" tabIndex={-1} className="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
-        <div className="mx-auto w-full max-w-[760px]">
+      <main id="main-content" tabIndex={-1} className="standard-main">
+        <div className="w-full">
           <section className="mb-16">
             <h1 className="mb-8 font-serif text-[clamp(1.76rem,1.35rem+1.49vw,2.48rem)] text-white">
               Essays

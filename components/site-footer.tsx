@@ -9,6 +9,7 @@ const companyLinks = [
 const resourceLinks = [
   { href: "/essays", label: "Essays" },
   { href: "/book", label: "Hope Is the Enemy" },
+  { href: "/workspace", label: "Workspace" },
 ]
 
 const contactLinks = [
@@ -25,7 +26,7 @@ const footerAddress = "20, H-1/A, Sec 63, Noida 201301"
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-[rgba(219,231,243,0.16)] bg-background">
+    <footer className="bg-card">
       <div className="yc-container py-10 md:py-12">
         <div className="grid grid-cols-1 gap-10 text-[13px] leading-6 text-foreground/62 md:grid-cols-2 lg:grid-cols-4">
           <section className="space-y-3">
@@ -102,7 +103,7 @@ export function SiteFooter() {
           </section>
         </div>
 
-        <div className="mt-8 flex flex-col gap-3 border-t border-[rgba(219,231,243,0.16)] pt-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col gap-3 pt-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs leading-5 text-foreground/50">
             © 2026 JIRAIYA EDUCATION LLP
           </p>

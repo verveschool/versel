@@ -1,25 +1,9 @@
-"use client"
-
-import { useEffect, useMemo, useState } from "react"
 import Link from "next/link"
+
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 
-type FaqItem = {
-  question: string
-  answer: string
-}
-
-const sectionNav = [
-  { id: "how-this-works", label: "How this works" },
-  { id: "who-we-look-for", label: "Who we look for" },
-  { id: "what-we-value", label: "What we value" },
-  { id: "roles", label: "Roles" },
-  { id: "after-applying", label: "After applying" },
-  { id: "faq", label: "FAQ" },
-] as const
-
-const faqs: FaqItem[] = [
+const faqs = [
   {
     question: "Do I need previous experience?",
     answer:
@@ -31,11 +15,6 @@ const faqs: FaqItem[] = [
       "Most roles are in-office or require regular office presence. Customer facing roles are usually structured this way. We can discuss flexibility during the process.",
   },
   {
-    question: "How long does the hiring process take?",
-    answer:
-      "Timelines depend on the role, assessment and employer’s interview process. Your talent scout will explain the next steps when a suitable opportunity is available.",
-  },
-  {
     question: "Do you provide support after I join?",
     answer:
       "Yes. We stay in touch as you settle into your role, offering a human point of contact for role clarity and the transition. The support available depends on your situation and the role.",
@@ -44,11 +23,6 @@ const faqs: FaqItem[] = [
     question: "What if a role does not work out?",
     answer:
       "Speak with your talent scout about what is not working. We can discuss your situation and relevant opportunities. Employer replacement coverage is a separate commercial arrangement; it is not a promise of another role.",
-  },
-  {
-    question: "How do you select candidates?",
-    answer:
-      "We assess communication skills, intent, consistency, and coachability through a scout call. We look beyond resume keywords to understand whether you are serious, ready to grow and aligned with the role.",
   },
 ]
 
@@ -66,194 +40,85 @@ Why do you think you would do well in a customer-facing role?`
 
 const applyHref = `https://wa.me/917042873035?text=${encodeURIComponent(applyMessage)}`
 
-function useActiveSection(sectionIds: string[]) {
-  const [activeSection, setActiveSection] = useState(sectionIds[0] ?? "")
-
-  useEffect(() => {
-    const elements = sectionIds
-      .map((id) => document.querySelector<HTMLElement>(`[data-section="${id}"]`))
-      .filter((el): el is HTMLElement => Boolean(el))
-
-    if (!elements.length) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
-
-        if (visible?.target instanceof HTMLElement) {
-          setActiveSection(visible.target.dataset.section ?? sectionIds[0] ?? "")
-        }
-      },
-      {
-        root: null,
-        rootMargin: "-20% 0px -65% 0px",
-        threshold: [0.1, 0.25, 0.5, 0.75],
-      }
-    )
-
-    elements.forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
-  }, [sectionIds])
-
-  return activeSection
-}
+const stages = [
+  {
+    title: "Application review",
+    description: "Our talent team reviews your details against current hiring requirements. If there is a suitable match, a scout will contact you.",
+  },
+  {
+    title: "Scout conversation",
+    description: "Your scout discusses your expectations and looks at communication, consistency, and how your experience or interests fit the role.",
+  },
+  {
+    title: "Employer introduction",
+    description: "When there is a fit, we introduce you to the hiring team. The employer conducts interviews and makes the final decision. Timelines vary by role and employer.",
+  },
+]
 
 export default function CandidatesPage() {
-  const sectionIds = useMemo(() => sectionNav.map((item) => item.id), [])
-  const activeSection = useActiveSection(sectionIds)
-
   return (
-    <div className="candidate-page min-h-screen bg-background text-foreground">
-
+    <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
-
-      <main id="main-content" tabIndex={-1} className="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
-        <div className="mx-auto w-full max-w-[760px]">
-          <section className="mb-24">
-            <h1 className="max-w-4xl font-semibold text-foreground">
-              Find your next customer-facing role.
-            </h1>
-
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-white/65 md:text-xl md:leading-9">
-              We work with people who communicate clearly, stay composed under pressure, and keep their word.
-              We help you understand the opportunity, prepare for conversations and navigate the transition into a new role.
-            </p>
-
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a
-                href={applyHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="verve-primary upgrade-button"
-              >
-                Apply on WhatsApp
-              </a>
-              <a
-                href="https://wa.me/917042873035"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-[13px] font-semibold tracking-normal text-white transition hover:border-primary/50 hover:bg-primary/10 hover:text-primary"
-              >
-                Chat with Duggal
-              </a>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground">WhatsApp opens a draft you can review before sending.</p>
-          </section>
-
-          <nav className="section-links" aria-label="Candidates sections">{sectionNav.map((item) => <a key={item.id} href={`#${item.id}`} aria-current={activeSection === item.id ? "location" : undefined}>{item.label}</a>)}</nav>
-
-          <div className="space-y-20">
-            <section id="how-this-works" data-section="how-this-works" className="border-t border-white/10 pt-16">
-              <h2 className="font-semibold text-foreground">How this works</h2>
-              <div className="mt-8 space-y-4 text-lg leading-8 text-foreground/68">
-                <p>Speak to a talent scout.</p>
-                <p>Get evaluated on communication, intent, and consistency.</p>
-                <p>Receive partner role matching based on real fit.</p>
-                <p>Interview with teams where you have upside.</p>
-                <p>Get post-selection support once you join.</p>
-                <p>Meet our in-office community that helps you settle in.</p>
-              </div>
-            </section>
-
-            <section id="who-we-look-for" data-section="who-we-look-for" className="border-t border-white/10 pt-16">
-              <h2 className="font-semibold text-foreground">Who we look for</h2>
-              <div className="mt-8 space-y-4 text-lg leading-8 text-foreground/68">
-                <p>
-                  We look for sincere, ambitious people who can speak with customers, handle pressure, and want to move fast.
-                  Clear English, serious intent, and willingness to work in-office matter more than years of experience.
-                </p>
-              </div>
-            </section>
-
-            <section id="what-we-value" data-section="what-we-value" className="border-t border-white/10 pt-16">
-              <h2 className="font-semibold text-foreground">What we value</h2>
-              <div className="mt-8 space-y-4 text-lg leading-8 text-foreground/68">
-                <p>
-                  Communication over credentials. Consistency under pressure. Ownership of outcomes. Coachability.
-                  If you can speak clearly, stay composed when things get hard, and keep your word, you already have the foundation we care about.
-                </p>
-              </div>
-            </section>
-
-            <section id="roles" data-section="roles" className="border-t border-white/10 pt-16">
-              <h2 className="font-semibold text-foreground">Roles</h2>
-              <div className="mt-8 space-y-4 text-lg leading-8 text-foreground/68">
-                <p>
-                  Sales, business development, customer success, counselling, and support roles across high-growth companies.
-                  We work with companies like Scaler, Vedantu, PrepCA, and Infinity Learn. Roles range from entry level for freshers
-                  to experienced positions. Compensation, incentives and requirements vary by employer and role.
-                </p>
-              </div>
-            </section>
-
-            <section id="after-applying" data-section="after-applying" className="border-t border-white/10 pt-16">
-              <h2 className="font-semibold text-foreground">After applying</h2>
-              <div className="mt-8 space-y-4 text-lg leading-8 text-foreground/68">
-                <p>
-                  Our talent team reviews applications against current hiring requirements. If there is a suitable match, a scout will contact you to understand your communication, expectations and role alignment before introducing relevant opportunities. Review and interview timelines vary.
-                </p>
-                <p>
-                  We may share relevant information with the organisation involved in your hiring process. Read our{" "}
-                  <Link className="text-primary underline" href="/privacy">Privacy Policy</Link>{" "}
-                  for details, or email{" "}
-                  <a className="text-primary underline" href="mailto:talent@verveschool.com">talent@verveschool.com</a>{" "}
-                  to request a correction.
-                </p>
-              </div>
-            </section>
+      <main id="main-content" tabIndex={-1} className="upgrade-main candidate-page">
+        <header className="candidate-intro">
+          <h1>Find your next customer-facing role.</h1>
+          <p className="page-lede">
+            Explore opportunities in sales, business development, customer success, counselling, and support.
+            We work with both freshers and experienced candidates.
+          </p>
+          <div className="upgrade-actions">
+            <a className="verve-primary upgrade-button" href={applyHref}>Apply on WhatsApp <span aria-hidden="true">↗</span></a>
+            <a className="upgrade-text-link" href="#after-applying">What happens next</a>
           </div>
+        </header>
 
-          <section
-            id="faq" data-section="faq"
-            className="mt-24 rounded-xl border border-border bg-card px-6 py-8 md:px-8 md:py-10"
-          >
-            <h2 className="mb-12 font-semibold text-foreground">Frequently asked questions</h2>
-
-            <div className="grid max-w-3xl gap-4">
-              {faqs.map((faq) => (
-                <details key={faq.question} className="group cursor-pointer">
-                  <summary className="editorial-link flex list-none items-center justify-between px-4 py-4 font-medium text-foreground">
-                    <span>{faq.question}</span>
-                    <svg
-                      className="h-5 w-5 flex-shrink-0 text-primary transition group-open:rotate-180"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                    </svg>
-                  </summary>
-                  <p className="mt-3 pb-3 ml-4 pl-2 border-l border-primary/20 leading-7 text-foreground/75">{faq.answer}</p>
-                </details>
-              ))}
-            </div>
+        <div className="candidate-overview upgrade-section">
+          <section id="roles" aria-labelledby="who-we-look-for">
+            <h2 id="who-we-look-for">Who these roles suit</h2>
+            <p id="what-we-value">
+              Clear English, composure under pressure, and willingness to learn matter in this work.
+              Most opportunities involve regular office presence. Requirements, compensation, and incentives vary by employer and role.
+            </p>
           </section>
-
-          <section className="mt-24 border-t border-primary/20 pt-16">
-            <div className="max-w-5xl">
-              <h2 className="max-w-2xl font-semibold text-white">The world moves for those who do</h2>
-              <div className="mt-8 max-w-2xl">
-                <p className="leading-8 text-white/65">
-                  If you communicate well, keep your word, and want to build a career in customer-facing work, we would like
-                  to meet you. Share your application so our talent team can consider you for relevant opportunities.
-                </p>
-                <a
-                  href={applyHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-8 verve-primary upgrade-button"
-                >
-                  Apply on WhatsApp
-                </a>
-              </div>
-            </div>
+          <section id="how-this-works" aria-labelledby="application-title">
+            <h2 id="application-title">What to have ready</h2>
+            <p>
+              WhatsApp opens a draft you can review before sending. It prompts you for your name, city, current role,
+              experience, LinkedIn profile, résumé, and a short note on why customer-facing work suits you.
+            </p>
           </section>
         </div>
-      </main>
 
+        <section id="after-applying" className="upgrade-section" aria-labelledby="after-title">
+          <h2 id="after-title">After you apply</h2>
+          <ol className="candidate-stages">
+            {stages.map((stage) => (
+              <li key={stage.title}>
+                <h3>{stage.title}</h3>
+                <p>{stage.description}</p>
+              </li>
+            ))}
+          </ol>
+          <p className="candidate-followup">
+            For a follow-up or correction, email{" "}
+            <a className="text-primary underline underline-offset-4" href="mailto:talent@verveschool.com">talent@verveschool.com</a>.
+            We may share relevant information with the organisation involved in your hiring process.
+            See our{" "}<Link className="text-primary underline underline-offset-4" href="/privacy">Privacy Policy</Link>{" "}for details.
+          </p>
+        </section>
+
+        <section id="faq" className="upgrade-section candidate-faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Frequently asked questions</h2>
+          <div>
+            {faqs.map((faq) => (
+              <details key={faq.question}>
+                <summary>{faq.question}</summary>
+                <p>{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+      </main>
       <SiteFooter />
     </div>
   )
