@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useMemo, useState } from "react"
+import Link from "next/link"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 
@@ -192,6 +193,13 @@ export default function CandidatesPage() {
               <div className="mt-8 space-y-4 text-lg leading-8 text-foreground/68">
                 <p>
                   Our talent team reviews applications against current hiring requirements. If there is a suitable match, a scout will contact you to understand your communication, expectations and role alignment before introducing relevant opportunities. Review and interview timelines vary.
+                </p>
+                <p>
+                  We may share relevant information with the organisation involved in your hiring process. Read our{" "}
+                  <Link className="text-primary underline" href="/privacy">Privacy Policy</Link>{" "}
+                  for details, or email{" "}
+                  <a className="text-primary underline" href="mailto:talent@verveschool.com">talent@verveschool.com</a>{" "}
+                  to request a correction.
                 </p>
               </div>
             </section>
