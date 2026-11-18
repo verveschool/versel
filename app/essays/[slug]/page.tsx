@@ -84,7 +84,6 @@ export default async function EssayPage({ params }: EssayPageProps) {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_20%_0%,_rgba(127,139,153,0.16),_transparent_30%),linear-gradient(180deg,_#050608_0%,_#0b0f14_48%,_#050608_100%)]" />
       <SiteHeader />
       <Script
         id={`essay-jsonld-${piece.slug}`}

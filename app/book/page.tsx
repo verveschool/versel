@@ -38,7 +38,6 @@ export default function BookPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,_rgba(127,139,153,0.16),_transparent_30%),linear-gradient(180deg,_#050608_0%,_#0b0f14_52%,_#050608_100%)]" />
       <SiteHeader />
 
       <main id="main-content" tabIndex={-1} className="yc-container py-24 md:py-32">
@@ -49,17 +48,15 @@ export default function BookPage() {
           <p className="mb-4 text-sm text-muted-foreground">by {book.author}</p>
           <p className="mb-8 text-lg leading-8 text-primary">{book?.subtitle}</p>
           <p className="text-lg leading-8 text-white/70">{book?.description}</p>
+          {chapters[0] && (
+            <Link href={`/book/${chapters[0].slug}`} className="verve-primary upgrade-button mt-6">Start reading</Link>
+          )}
           <div className="mt-10 border-t border-white/10 pt-8"><MarkdownRenderer content={book.introduction} /></div>
         </section>
 
         <section className="mx-auto mt-16 max-w-[760px] md:mt-24">
           <div className="mb-12 flex items-end justify-between gap-6">
-            <h2 className="font-serif text-2xl text-white">Start the book.</h2>
-            {chapters.length > 0 && chapters[0]?.slug && (
-              <Link href={`/book/${chapters[0].slug}`} className="hidden text-sm uppercase tracking-[0.22em] text-primary transition-colors hover:text-white md:block">
-                begin reading {"->"}
-              </Link>
-            )}
+            <h2 className="font-serif text-2xl text-white">Chapters</h2>
           </div>
 
           <div className="grid gap-4 border-t border-primary/25">
@@ -67,7 +64,7 @@ export default function BookPage() {
               <Link 
                 key={chapter.slug} 
                 href={`/book/${chapter.slug}`} 
-                className="group rounded-lg border border-primary/25 bg-primary/[0.05] px-6 py-8 shadow-[0_2px_8px_rgba(139,109,255,0.06)] transition-all hover:border-primary/50 hover:bg-primary/[0.1] hover:shadow-[0_8px_24px_rgba(139,109,255,0.12)]"
+                className="editorial-link group px-6 py-8"
               >
                 <p className="mb-3 text-sm font-semibold text-primary">Chapter {chapter.chapterNumber}</p>
                 <h3 className="mb-4 font-serif text-2xl text-white transition-colors group-hover:text-primary">

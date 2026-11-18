@@ -1,9 +1,7 @@
 "use client"
 
-import { usePathname } from "next/navigation"
-
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 type ChapterLink = {
   slug: string
@@ -49,15 +47,11 @@ export function BookKeyboardShortcuts({ previousHref, nextHref }: Pick<BookReade
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
       const target = event.target as HTMLElement | null
-      const isTyping = target?.matches("input, textarea, select, [contenteditable='true']")
-      if (event.metaKey || event.ctrlKey || event.altKey || event.shiftKey || isTyping) return
+      const isInteractive = target?.closest("a, button, input, textarea, select, [contenteditable]")
+      if (event.metaKey || event.ctrlKey || event.altKey || event.shiftKey || event.defaultPrevented || isInteractive || window.getSelection()?.toString()) return
 
       if (event.key === "ArrowLeft" && previousHref) window.location.href = previousHref
       if (event.key === "ArrowRight" && nextHref) window.location.href = nextHref
-      if (event.key === "Home") {
-        event.preventDefault()
-        window.location.href = "/book"
-      }
     }
 
     window.addEventListener("keydown", onKeyDown)
@@ -69,19 +63,23 @@ export function BookKeyboardShortcuts({ previousHref, nextHref }: Pick<BookReade
 
 export function BookSidebar({ chapters, activeSlug }: Pick<BookReaderControlsProps, "chapters" | "activeSlug">) {
   const [open, setOpen] = useState(false)
-  const pathname = usePathname()
-  useEffect(() => {
-    const closeOnEscape = (event: KeyboardEvent) => { if (event.key === "Escape") { setOpen(false); document.getElementById("book-menu-button")?.focus() } }
-    window.addEventListener("keydown", closeOnEscape)
-    return () => window.removeEventListener("keydown", closeOnEscape)
-  }, [pathname])
+  const menuButton = useRef<HTMLButtonElement>(null)
 
   return (
-    <>
+    <div
+      onBlur={(event) => {
+        if (open && !event.currentTarget.contains(event.relatedTarget)) setOpen(false)
+      }}
+      onKeyDown={(event) => {
+        if (event.key !== "Escape" || !open) return
+        setOpen(false)
+        menuButton.current?.focus()
+      }}
+    >
       <button
-        id="book-menu-button"
+        ref={menuButton}
         type="button"
-        className="fixed left-4 top-4 z-40 inline-flex items-center gap-2 border border-white/15 bg-black/90 px-3 py-2 text-sm text-white/85 backdrop-blur md:hidden"
+        className="fixed left-4 top-4 z-40 inline-flex items-center gap-2 min-h-11 border border-input bg-popover px-3 py-2 text-sm text-foreground md:hidden"
         aria-expanded={open}
         aria-controls="book-sidebar"
         onClick={() => setOpen((value) => !value)}
@@ -91,7 +89,7 @@ export function BookSidebar({ chapters, activeSlug }: Pick<BookReaderControlsPro
       </button>
       <aside
         id="book-sidebar"
-        className={`book-sidebar ${open ? "visible" : "invisible md:visible"} fixed bottom-0 left-0 top-0 z-30 w-[min(20rem,86vw)] overflow-y-auto border-r border-white/10 bg-black px-5 py-24 transition-transform duration-200 ease-out md:translate-x-0 ${
+        className={`book-sidebar ${open ? "visible" : "invisible md:visible"} fixed bottom-0 left-0 top-0 z-30 w-[min(20rem,86vw)] overflow-y-auto border-r border-border bg-popover px-5 py-24 transition-transform duration-200 ease-out md:translate-x-0 ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
         aria-label="Book chapters"
@@ -122,7 +120,7 @@ export function BookSidebar({ chapters, activeSlug }: Pick<BookReaderControlsPro
           })}
         </nav>
       </aside>
-      {open ? <button className="fixed inset-0 z-20 bg-black/70 md:hidden" aria-label="Close chapters" onClick={() => setOpen(false)} /> : null}
-    </>
+      {open ? <div className="fixed inset-0 z-20 bg-black/70 md:hidden" aria-hidden="true" onClick={() => { setOpen(false); menuButton.current?.focus() }} /> : null}
+    </div>
   )
 }

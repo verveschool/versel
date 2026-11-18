@@ -54,7 +54,7 @@ export function WritingFilter({ essays }: WritingFilterProps) {
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Search essays..."
-            className="w-full rounded-lg border border-primary/25 bg-primary/[0.04] px-4 py-3 text-sm text-white placeholder:text-muted-foreground outline-none transition-colors focus:border-primary/60"
+            className="public-control w-full rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground"
           />
 
           <label className="sr-only" htmlFor="essay-category">
@@ -64,7 +64,7 @@ export function WritingFilter({ essays }: WritingFilterProps) {
             id="essay-category"
             value={category}
             onChange={(event) => setCategory(event.target.value)}
-            className="border border-primary/25 bg-background px-4 py-3 text-sm text-white"
+            className="public-control px-4 py-3 text-sm text-foreground"
           >
             <option value="">All categories</option>
             {categories.map((item) => (
@@ -89,11 +89,11 @@ export function WritingFilter({ essays }: WritingFilterProps) {
             <Link
               key={piece.slug}
               href={`/essays/${piece.slug}`}
-              className="group flex flex-col rounded border border-primary/25 p-6 transition-all duration-200 hover:border-primary hover:bg-primary/20 hover:shadow-[0_12px_48px_rgba(139,109,255,0.2)] hover:outline hover:outline-2 hover:outline-white/20"
+              className="editorial-link group flex flex-col p-6"
             >
-              <h3 className="mb-3 font-serif text-lg text-white transition-colors group-hover:text-primary md:text-xl">
+              <h2 className="mb-3 font-serif text-lg text-white transition-colors group-hover:text-primary md:text-xl">
                 {piece.title}
-              </h3>
+              </h2>
 
               <p className="mb-4 flex-1 leading-7 text-white/70">
                 {piece.description}
@@ -112,8 +112,11 @@ export function WritingFilter({ essays }: WritingFilterProps) {
           ))}
         </div>
       ) : (
-        <div className="rounded-lg border border-primary/20 bg-primary/[0.03] px-6 py-12 text-center">
-          <p className="text-white/60">No essays found matching your search.</p>
+        <div className="rounded-lg border border-border bg-card px-6 py-12 text-center">
+          <p className="text-muted-foreground">No essays match these filters.</p>
+          <button className="upgrade-text-link mt-2" type="button" onClick={() => { setQuery(""); setCategory(""); document.getElementById("essay-search")?.focus(); }}>
+            Clear filters
+          </button>
         </div>
       )}
     </section>

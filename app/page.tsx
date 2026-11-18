@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { PartnerLogos } from "@/components/partner-logos";
 import { HiringProcess } from "@/components/hiring-process";
 import { supportedFunctions } from "@/lib/hiring";
 
@@ -79,22 +78,18 @@ export default function HomePage() {
         <section className="home-intro">
           <p className="brand-statement">The world moves for those who do.</p>
           <h1>
-            Building a committed team involves more than filling vacancies.
+            Build a committed team.
           </h1>
           <div className="home-intro-detail">
             <p>
-              Verveschool partners with companies and educational institutions
-              to help them plan their workforce and find the right talent.
+              Verveschool helps companies and educational institutions plan their workforce and find the right people.
             </p>
             <p>
-              We understand requirements, actively identify suitable people, and
-              evaluate them through assessments and human conversations.
-              Alongside our focus on customer-facing talent, we support business
-              and academic functions.
+              We source and assess talent for customer-facing, business and academic roles, and stay in touch after people join.
             </p>
             <div className="upgrade-actions">
-              <Link className="upgrade-button" href="/partners">
-                Explore Hiring Partners <span aria-hidden="true">↗</span>
+              <Link className="verve-primary upgrade-button" href="/partners">
+                Explore hiring services <span aria-hidden="true">→</span>
               </Link>
               <Link className="upgrade-text-link" href="/candidates">
                 Find your next role <span aria-hidden="true">→</span>
@@ -102,7 +97,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        <section className="upgrade-section" aria-labelledby="functions-title">
+        <section className="upgrade-section home-functions" aria-labelledby="functions-title">
           <div className="section-intro">
             <h2 id="functions-title">People who move the work forward.</h2>
             <p>
@@ -113,7 +108,9 @@ export default function HomePage() {
           <p className="supported-functions">
             {supportedFunctions.join(" · ")}
           </p>
-          <PartnerLogos />
+          <Link className="upgrade-text-link" href="/partners#who-we-work-with">
+            See who we work with <span aria-hidden="true">→</span>
+          </Link>
         </section>
         <section className="upgrade-section" aria-labelledby="process-title">
           <div className="section-intro">

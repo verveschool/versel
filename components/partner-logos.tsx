@@ -38,19 +38,17 @@ function LogoList({ partners }: { partners: typeof hiringPartners }) {
   );
 }
 
-export function PartnerLogos({ featured = false }: { featured?: boolean }) {
+export function PartnerLogos() {
   return (
     <>
-      <LogoList partners={featured ? featuredPartners : hiringPartners} />
-      {featured && (
-        <details className="additional-partners">
-          <summary>
-            More organisations we’ve worked with{" "}
-            <span>({additionalPartners.length})</span>
-          </summary>
-          <LogoList partners={additionalPartners} />
-        </details>
-      )}
+      <LogoList partners={featuredPartners} />
+      <details className="additional-partners">
+        <summary>
+          More organisations we’ve worked with{" "}
+          <span>({additionalPartners.length})</span>
+        </summary>
+        <LogoList partners={additionalPartners} />
+      </details>
     </>
   );
 }
