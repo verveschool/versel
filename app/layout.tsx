@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata } from "next"
 import Script from "next/script"
 import { Analytics } from "@vercel/analytics/next"
-import { CustomCursor } from "@/components/custom-cursor"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -137,7 +136,6 @@ export default function RootLayout({
         />
         <a className="skip-link" href="#main-content">Skip to content</a>
         {children}
-        <CustomCursor />
         <Analytics />
       </body>
     </html>

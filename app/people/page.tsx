@@ -135,12 +135,6 @@ const industryPartners: PersonCard[] = [
     linkedin: "https://www.linkedin.com/in/nikhilka",
   },
   {
-    name: "Madara Uchiha",
-    subtitle: "Co-founder, Konohagakure",
-    image: "/people/madara-uchiha.jpg",
-    linkedin: "https://en.wikipedia.org/wiki/Madara_Uchiha",
-  },
-  {
     name: "Yashwardhan Burad",
     subtitle: "Co-founder, AccioJob",
     image: "/people/yashwardhan-burad.jpg",
@@ -276,7 +270,7 @@ export default function PeoplePage() {
           <section>
             <h1 className="mb-4 font-semibold text-white">People</h1>
             <p className="max-w-2xl text-base text-muted-foreground md:text-lg">
-              Good work is rarely the result of one person. It comes from people who care enough to challenge ideas, raise standards, and contribute in meaningful ways. The Unit carries the work forward every day. The Alliance stands with us.
+              Good work is rarely the result of one person. It comes from people who care enough to challenge ideas, raise standards, and contribute in meaningful ways. The Unit is our team. The Alliance brings together people across the industries we work with.
             </p>
           </section>
 

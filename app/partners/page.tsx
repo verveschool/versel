@@ -28,7 +28,10 @@ export default function PartnersPage() {
           <p className="supported-functions">
             {supportedFunctions.join(" · ")}
           </p>
-          <PartnerLogos featured />
+          <div className="upgrade-actions">
+            <a className="verve-primary upgrade-button" href="#next-steps">Start a conversation</a>
+            <a className="upgrade-text-link" href="#commercial-terms">Review commercial terms</a>
+          </div>
         </section>
         <nav className="section-links" aria-label="Hiring Partners sections">
           {sections.map(([id, label]) => (
@@ -93,14 +96,18 @@ export default function PartnersPage() {
             </p>
           </div>
         </section>
+        <section className="upgrade-section" aria-labelledby="past-work-title">
+          <h2 id="past-work-title">Organisations we’ve worked with</h2>
+          <PartnerLogos />
+        </section>
         <section id="next-steps" className="upgrade-section partner-cta">
           <h2>The world moves for those who do.</h2>
           <p>
             Tell us about the roles, capabilities and people your organisation
             needs. We’ll begin by understanding the work.
           </p>
-          <a className="upgrade-button" href="https://wa.me/917042873035">
-            Chat with Duggal <span aria-hidden="true">↗</span>
+          <a className="verve-primary upgrade-button" href="https://wa.me/917042873035">
+            Chat with Duggal on WhatsApp <span aria-hidden="true">↗︎</span>
           </a>
         </section>
       </main>

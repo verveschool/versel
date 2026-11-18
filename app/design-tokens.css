@@ -1,0 +1,52 @@
+/* Verveschool shared web tokens. Keep the public site and demo copies in sync. */
+:root {
+  color-scheme: dark;
+  --verve-canvas: #141416;
+  --verve-surface: #1b1b1f;
+  --verve-elevated: #232329;
+  --verve-hover: #2b2b33;
+  --verve-text: #f5f5f7;
+  --verve-secondary: #a1a1aa;
+  --verve-muted: #9696a0;
+  --verve-divider: rgb(255 255 255 / 12%);
+  --verve-control-border: #777781;
+  --verve-accent-ink: #bdaaff;
+  --verve-action: #6b46d3;
+  --verve-action-hover: #7049d8;
+  --verve-action-pressed: #5935b4;
+  --verve-action-disabled: #584482;
+  --verve-on-action: #ffffff;
+  --verve-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --verve-unit: 4px;
+  --verve-radius: 8px;
+  --verve-radius-overlay: 12px;
+  --verve-overlay-shadow: 0 8px 24px rgb(0 0 0 / 20%);
+  --verve-quick: 140ms ease-out;
+  --verve-focus: 2px solid var(--verve-accent-ink);
+  --verve-focus-offset: 3px;
+}
+
+:where(.verve-primary) {
+  background: var(--verve-action);
+  color: var(--verve-on-action);
+  border: 1px solid var(--verve-accent-ink);
+  border-radius: var(--verve-radius);
+  transition: background-color var(--verve-quick), border-color var(--verve-quick);
+}
+
+.verve-primary:is(:hover, :active, :focus-visible, :disabled, [aria-disabled="true"], [aria-busy="true"]) {
+  color: var(--verve-on-action);
+}
+
+.verve-primary:hover { background: var(--verve-action-hover); }
+.verve-primary:active { background: var(--verve-action-pressed); }
+
+.verve-primary:is(:disabled, [aria-disabled="true"]) {
+  background: var(--verve-action-disabled);
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .verve-primary { transition: none; }
+}

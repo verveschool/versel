@@ -22,10 +22,10 @@ export function SiteHeader() {
   const menuButton = useRef<HTMLButtonElement>(null)
 
   return (
-    <header onKeyDown={(event) => { if (event.key === "Escape" && mobileMenuOpen) { setMobileMenuOpen(false); menuButton.current?.focus() } }} className="sticky top-0 z-50 border-b border-primary/15 bg-background/85 shadow-[0_1px_24px_rgba(124,92,255,0.08)] backdrop-blur-xl">
+    <header onKeyDown={(event) => { if (event.key === "Escape" && mobileMenuOpen) { setMobileMenuOpen(false); menuButton.current?.focus() } }} className="sticky top-0 z-50 border-b border-border bg-background">
       <div className="yc-container py-4 md:py-5">
         <nav className="relative flex items-center justify-between gap-10" aria-label="Primary navigation">
-          <Link href="/" className="inline-flex items-center transition-opacity hover:opacity-75" aria-label="Verveschool home">
+          <Link href="/" className="inline-flex min-h-11 min-w-11 items-center justify-center transition-opacity hover:opacity-75" aria-label="Verveschool home">
             <img src="/logo.png" alt="Verveschool logo" className="h-8 w-auto md:h-10" />
           </Link>
 
@@ -37,7 +37,7 @@ export function SiteHeader() {
                   key={link.href}
                   aria-current={active ? "page" : undefined}
                   href={link.href}
-                  className={`relative transition-colors after:absolute after:-bottom-2 after:left-0 after:h-px after:bg-primary after:shadow-[0_0_14px_rgba(139,109,255,0.65)] after:transition-all after:duration-200 after:ease-out hover:text-primary hover:after:w-full ${active ? "text-primary after:w-full" : "text-foreground/65 after:w-0"}`}
+                  className={`relative inline-flex min-h-11 items-center transition-colors after:absolute after:bottom-1 after:left-0 after:h-px after:bg-primary hover:text-primary hover:after:w-full ${active ? "text-primary after:w-full" : "text-foreground/65 after:w-0"}`}
                 >
                   {link.label}
                 </Link>
@@ -53,7 +53,7 @@ export function SiteHeader() {
               aria-controls="mobile-nav-menu"
               aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
               onClick={() => setMobileMenuOpen((open) => !open)}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-none border border-white/20 bg-background/85 text-foreground transition-all duration-200 hover:bg-white/12 active:scale-[0.97] active:bg-white/20"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-input bg-card text-foreground hover:bg-accent"
             >
               <span className="sr-only">Open menu</span>
               <div className="flex flex-col gap-1.5">
@@ -72,10 +72,10 @@ export function SiteHeader() {
 
           <div
             id="mobile-nav-menu"
-            className={`absolute right-0 top-full mt-3 w-60 border border-white/15 bg-background/90 p-3 shadow-2xl backdrop-blur-2xl transition-all duration-200 ease-out md:hidden ${
+            className={`absolute right-0 top-full mt-3 w-60 rounded-xl border border-border bg-popover p-3 shadow-[var(--verve-overlay-shadow)] transition duration-150 ease-out md:hidden ${
               mobileMenuOpen
                 ? "pointer-events-auto translate-y-0 opacity-100"
-                : "pointer-events-none -translate-y-1 opacity-0"
+                : "invisible pointer-events-none -translate-y-1 opacity-0"
             }`}
             aria-hidden={!mobileMenuOpen}
           >
@@ -90,7 +90,7 @@ export function SiteHeader() {
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
                     className={`flex min-h-11 items-center px-3 text-foreground transition-all duration-150 hover:bg-white/12 active:scale-[0.99] active:bg-white/20 ${
-                      active ? "border-l border-primary/70 bg-primary/10 text-primary shadow-[inset_10px_0_24px_rgba(124,92,255,0.08)]" : "text-foreground/75"
+                      active ? "border-l border-primary bg-accent text-primary" : "text-foreground/75"
                     }`}
                   >
                     {link.label}

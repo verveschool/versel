@@ -105,7 +105,6 @@ export default function CandidatesPage() {
 
   return (
     <div className="candidate-page min-h-screen bg-background text-foreground">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_18%_0%,rgba(219,231,243,0.12),transparent_30%),linear-gradient(180deg,#050608_0%,#0b0f14_54%,#050608_100%)]" />
 
       <SiteHeader />
 
@@ -113,11 +112,11 @@ export default function CandidatesPage() {
         <div className="mx-auto w-full max-w-[760px]">
           <section className="mb-24">
             <h1 className="max-w-4xl font-semibold text-foreground">
-              If you can communicate, stay composed under pressure, and keep your word, we would like to meet you.
+              Find your next customer-facing role.
             </h1>
 
             <p className="mt-8 max-w-2xl text-lg leading-8 text-white/65 md:text-xl md:leading-9">
-              Verveschool connects sincere, ambitious people with high-growth companies building strong customer-facing teams.
+              We work with people who communicate clearly, stay composed under pressure, and keep their word.
               We help you understand the opportunity, prepare for conversations and navigate the transition into a new role.
             </p>
 
@@ -126,9 +125,9 @@ export default function CandidatesPage() {
                 href={applyHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full border border-primary bg-primary px-6 py-3 text-[13px] font-semibold tracking-normal text-background shadow-[0_12px_34px_rgba(139,109,255,0.22)] transition hover:shadow-[0_16px_48px_rgba(139,109,255,0.34)] hover:brightness-110"
+                className="verve-primary upgrade-button"
               >
-                Apply now
+                Apply on WhatsApp
               </a>
               <a
                 href="https://wa.me/917042873035"
@@ -139,6 +138,7 @@ export default function CandidatesPage() {
                 Chat with Duggal
               </a>
             </div>
+            <p className="mt-4 text-sm text-muted-foreground">WhatsApp opens a draft you can review before sending.</p>
           </section>
 
           <nav className="section-links" aria-label="Candidates sections">{sectionNav.map((item) => <a key={item.id} href={`#${item.id}`} aria-current={activeSection === item.id ? "location" : undefined}>{item.label}</a>)}</nav>
@@ -199,14 +199,14 @@ export default function CandidatesPage() {
 
           <section
             id="faq" data-section="faq"
-            className="mt-24 rounded-2xl border border-primary/30 bg-primary/[0.06] px-6 py-8 shadow-[0_8px_32px_rgba(139,109,255,0.12)] md:px-8 md:py-10"
+            className="mt-24 rounded-xl border border-border bg-card px-6 py-8 md:px-8 md:py-10"
           >
             <h2 className="mb-12 font-semibold text-foreground">Frequently asked questions</h2>
 
             <div className="grid max-w-3xl gap-4">
               {faqs.map((faq) => (
                 <details key={faq.question} className="group cursor-pointer">
-                  <summary className="flex list-none items-center justify-between rounded-lg border border-primary/20 bg-primary/[0.03] px-4 py-4 font-medium text-foreground shadow-[0_2px_8px_rgba(139,109,255,0.06)] transition hover:border-primary/40 hover:bg-primary/[0.08] hover:shadow-[0_6px_20px_rgba(139,109,255,0.12)]">
+                  <summary className="editorial-link flex list-none items-center justify-between px-4 py-4 font-medium text-foreground">
                     <span>{faq.question}</span>
                     <svg
                       className="h-5 w-5 flex-shrink-0 text-primary transition group-open:rotate-180"
@@ -236,9 +236,9 @@ export default function CandidatesPage() {
                   href={applyHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-8 inline-flex items-center justify-center rounded-full border border-primary bg-primary px-6 py-3 text-[13px] font-semibold tracking-normal text-background shadow-[0_12px_34px_rgba(139,109,255,0.22)] transition hover:shadow-[0_16px_48px_rgba(139,109,255,0.34)] hover:brightness-110"
+                  className="mt-8 verve-primary upgrade-button"
                 >
-                  Apply now
+                  Apply on WhatsApp
                 </a>
               </div>
             </div>
