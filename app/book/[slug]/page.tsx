@@ -82,11 +82,11 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
       <BookSidebar chapters={chapters} activeSlug={chapter.slug} />
 
       <main id="main-content" tabIndex={-1} className="book-reading-main px-5 py-24 md:ml-80 md:px-12 lg:px-16">
-        <article className="mx-auto max-w-[72ch]">
+        <article className="reading-column">
           <Link href="/book" className="mb-12 inline-flex text-sm text-white/50 transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
             ← chapter list
           </Link>
-          <header className="mb-16 border-b border-white/10 pb-12">
+          <header className="mb-12">
             <div className="mb-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
               <span>Ch {chapter.chapterNumber}</span>
               <span aria-hidden="true">·</span>
@@ -94,14 +94,14 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
               <span aria-hidden="true">·</span>
               <span>{chapter.readingTime.replace(' read', '')}</span>
             </div>
-            <h1 className="mb-8 max-w-[12ch] text-balance font-serif text-white">{chapter.title}</h1>
+            <h1 className="mb-8 max-w-[24ch] text-balance font-serif text-white">{chapter.title}</h1>
             <p className="max-w-2xl text-xl leading-9 text-white/68">{chapter.description}</p>
           </header>
 
           <MarkdownRenderer content={chapter.content} className="book-prose" />
         </article>
 
-        <nav className="mx-auto mt-12 grid max-w-[72ch] gap-4 md:grid-cols-2" aria-label="chapter navigation">
+        <nav className="reading-column mt-12 grid gap-4 md:grid-cols-2" aria-label="chapter navigation">
           <Link href={previousHref} className="editorial-link group p-6 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
             <p className="mb-3 text-sm font-semibold text-primary">← {previousChapter ? "previous" : "overview"}</p>
             <h2 className="font-serif text-lg text-white transition-colors group-hover:text-primary">{previousChapter?.title ?? "Book landing"}</h2>

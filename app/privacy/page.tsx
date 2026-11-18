@@ -65,8 +65,8 @@ export default function PrivacyPage() {
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
 
-      <main id="main-content" tabIndex={-1} className="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
-        <div className="mx-auto w-full max-w-[760px]">
+      <main id="main-content" tabIndex={-1} className="standard-main">
+        <div className="reading-column">
           <section>
             <p className="section-kicker mb-4">Legal</p>
             <h1 className="max-w-3xl font-semibold text-white">Privacy Policy</h1>
@@ -78,14 +78,14 @@ export default function PrivacyPage() {
 
           <div className="mt-16 space-y-10">
             {sections.map((section) => (
-              <section key={section.title} className="border-t border-white/10 pt-8">
+              <section key={section.title}>
                 <h2 className="text-2xl font-semibold text-white">{section.title}</h2>
                 <p className="mt-4 max-w-3xl text-base leading-8 text-white/68">{section.body}</p>
               </section>
             ))}
           </div>
 
-          <section className="mt-16 border border-white/10 bg-white/[0.02] p-8">
+          <section className="mt-12 rounded-lg bg-card p-6">
             <h2 className="text-2xl font-semibold text-white">Contact us</h2>
             <p className="mt-4 max-w-3xl text-base leading-8 text-white/70">
               For privacy questions or requests, contact us at{" "}

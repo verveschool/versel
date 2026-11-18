@@ -79,7 +79,7 @@ export function SiteHeader() {
             }`}
             aria-hidden={!mobileMenuOpen}
           >
-            <div className="flex flex-col gap-1.5 border-l border-white/10 pl-2 text-sm">
+            <div className="flex flex-col gap-1.5 text-sm">
               {navLinks.map((link) => {
                 const active = isActivePath(pathname, link.href)
                 return (

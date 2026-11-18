@@ -40,8 +40,8 @@ export default function BookPage() {
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
 
-      <main id="main-content" tabIndex={-1} className="yc-container py-24 md:py-32">
-        <section className="mx-auto max-w-[760px]">
+      <main id="main-content" tabIndex={-1} className="standard-main">
+        <section className="reading-column">
           <h1 className="mb-6 font-serif text-[clamp(1.76rem,1.35rem+1.49vw,2.48rem)] text-white">
             {book?.title || "Book"}
           </h1>
@@ -51,15 +51,15 @@ export default function BookPage() {
           {chapters[0] && (
             <Link href={`/book/${chapters[0].slug}`} className="verve-primary upgrade-button mt-6">Start reading</Link>
           )}
-          <div className="mt-10 border-t border-white/10 pt-8"><MarkdownRenderer content={book.introduction} /></div>
+          <div className="mt-12"><MarkdownRenderer content={book.introduction} /></div>
         </section>
 
-        <section className="mx-auto mt-16 max-w-[760px] md:mt-24">
+        <section className="reading-column mt-12 md:mt-16">
           <div className="mb-12 flex items-end justify-between gap-6">
             <h2 className="font-serif text-2xl text-white">Chapters</h2>
           </div>
 
-          <div className="grid gap-4 border-t border-primary/25">
+          <div className="grid gap-4">
             {chapters.map((chapter) => (
               <Link 
                 key={chapter.slug} 

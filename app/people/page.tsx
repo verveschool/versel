@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 
 import { SiteFooter } from "@/components/site-footer"
@@ -8,6 +9,7 @@ type PersonCard = {
   name: string
   subtitle: string
   image?: string
+  focalPoint?: string
   linkedin?: string
 }
 
@@ -188,97 +190,60 @@ function initialsFromName(name: string) {
     .toUpperCase()
 }
 
-function ProfileCard({
-  person,
-  clickable = false,
-  className = "",
-}: {
-  person: PersonCard
-  clickable?: boolean
-  className?: string
-}) {
-  const articleClassName =
-    "rounded-xl border border-white/10 bg-transparent p-4 text-center transition-all duration-200 hover:-translate-y-1 hover:border-white/50"
-  const standaloneArticleClassName = `${className} ${articleClassName}`.trim()
-
-  const content = (
-    <>
-      <div className="mx-auto aspect-square w-28 overflow-hidden rounded-lg sm:w-32 md:w-36">
-        {person.image ? (
-          <img src={person.image} alt={`${person.name} photo`} className="h-full w-full object-cover" width={144} height={144} loading="lazy" />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center">
-            <span className="rounded-md bg-white/5 px-3 py-1.5 text-sm font-medium tracking-[-0.01em] text-white/70">
-              {initialsFromName(person.name)}
-            </span>
-          </div>
-        )}
-      </div>
-
-      <div className="mt-3 space-y-1.5 px-0.5">
-        <p className="text-[15px] font-medium leading-5 tracking-[-0.01em] text-white">{person.name}</p>
-        <p className="text-sm leading-5 text-white/65">{person.subtitle}</p>
-      </div>
-    </>
-  )
-
-  if (clickable && person.linkedin) {
-    return (
-      <Link
-        href={person.linkedin}
-        aria-label={`${person.name}, ${person.subtitle} — view profile`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`${className} block opacity-95 transition hover:opacity-100`.trim()}
-      >
-        <article className={articleClassName}>{content}</article>
-      </Link>
-    )
-  }
-
-  return <article className={standaloneArticleClassName}>{content}</article>
-}
-
-function PeopleSection({
-  title,
-  people,
-  clickable = false,
-}: {
-  title: string
-  people: PersonCard[]
-  clickable?: boolean
-}) {
+function PeopleGroup({ title, people }: { title: string; people: PersonCard[] }) {
   return (
-    <section className="space-y-6 md:space-y-7">
-      <h2>{title}</h2>
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-5">
+    <div>
+      <h3 className="people-group-title">{title}</h3>
+      <ul className="people-grid">
         {people.map((person) => (
-          <ProfileCard key={`${title}-${person.name}`} person={person} clickable={clickable} />
+          <li key={person.name}>
+            <article>
+              <div className="portrait">
+                {person.image ? (
+                  <Image
+                    src={person.image}
+                    alt=""
+                    fill
+                    sizes="(max-width: 480px) 44vw, (max-width: 740px) 29vw, (max-width: 992px) 22vw, 190px"
+                    style={{ objectPosition: person.focalPoint ?? "center" }}
+                  />
+                ) : <span aria-hidden="true">{initialsFromName(person.name)}</span>}
+              </div>
+              <h4>
+                {person.linkedin ? (
+                  <Link href={person.linkedin} target="_blank" rel="noopener noreferrer">
+                    {person.name}<span className="sr-only"> on LinkedIn</span> <span aria-hidden="true">↗</span>
+                  </Link>
+                ) : person.name}
+              </h4>
+              <p>{person.subtitle}</p>
+            </article>
+          </li>
         ))}
-      </div>
-    </section>
+      </ul>
+    </div>
   )
 }
 
 export default function PeoplePage() {
   return (
-    <div className="people-page min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
-
-      <main id="main-content" tabIndex={-1} className="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
-        <div className="mx-auto w-full max-w-[760px] space-y-14 md:space-y-16">
-          <section>
-            <h1 className="mb-4 font-semibold text-white">People</h1>
-            <p className="max-w-2xl text-base text-muted-foreground md:text-lg">
-              Good work is rarely the result of one person. It comes from people who care enough to challenge ideas, raise standards, and contribute in meaningful ways. The Unit is our team. The Alliance brings together people across the industries we work with.
-            </p>
-          </section>
-
-          <PeopleSection title="The Unit" people={[...leadershipTeam, ...talentPartners]} clickable />
-          <PeopleSection title="The Alliance" people={industryPartners} clickable />
-        </div>
+      <main id="main-content" tabIndex={-1} className="upgrade-main people-page">
+        <header>
+          <h1>People</h1>
+          <p className="page-lede">Meet the Verveschool team and people from the industries we work with.</p>
+        </header>
+        <section className="upgrade-section people-section" aria-labelledby="unit-title">
+          <h2 id="unit-title">The Unit</h2>
+          <PeopleGroup title="Leadership and Founder’s Office" people={leadershipTeam} />
+          <PeopleGroup title="Talent Operations" people={talentPartners} />
+        </section>
+        <section className="upgrade-section people-section" aria-labelledby="alliance-title">
+          <h2 id="alliance-title">The Alliance</h2>
+          <PeopleGroup title="Industry partners" people={industryPartners} />
+        </section>
       </main>
-
       <SiteFooter />
     </div>
   )
