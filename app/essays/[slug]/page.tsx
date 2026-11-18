@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: EssayPageProps): Promise<Meta
   const piece = getWritingBySlug(slug)
 
   return {
-    title: `${piece.title} | verveschool`,
+    title: piece.title,
     description: piece.description,
     authors: [{ name: piece.author }],
     alternates: {
@@ -49,6 +49,7 @@ export async function generateMetadata({ params }: EssayPageProps): Promise<Meta
       title: piece.title,
       description: piece.description,
       type: "article",
+      url: `/essays/${piece.slug}`,
       publishedTime: piece.date,
       authors: [piece.author],
     },
@@ -91,7 +92,7 @@ export default async function EssayPage({ params }: EssayPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(essayJsonLd) }}
       />
 
-      <main className="yc-container py-16 md:py-24">
+      <main id="main-content" tabIndex={-1} className="yc-container py-16 md:py-24">
         <article className="mx-auto max-w-3xl">
           <Link href="/essays" className="mb-10 inline-flex text-sm text-white/55 transition-colors hover:text-primary">
             ← all essays
@@ -99,7 +100,7 @@ export default async function EssayPage({ params }: EssayPageProps) {
           <header className="mb-14 border-b border-white/10 pb-10">
             <h1 className="mb-8 font-serif text-white">{piece.title}</h1>
             <p className="mb-8 text-lg leading-8 text-white/70">{piece.description}</p>
-            <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-white/45">
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground">
               <span>{formatWritingDate(piece.date)}</span>
               <span aria-hidden="true">·</span>
               <span>{piece.readingTime}</span>

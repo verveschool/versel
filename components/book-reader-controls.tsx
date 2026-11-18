@@ -1,5 +1,7 @@
 "use client"
 
+import { usePathname } from "next/navigation"
+
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
@@ -67,10 +69,17 @@ export function BookKeyboardShortcuts({ previousHref, nextHref }: Pick<BookReade
 
 export function BookSidebar({ chapters, activeSlug }: Pick<BookReaderControlsProps, "chapters" | "activeSlug">) {
   const [open, setOpen] = useState(false)
+  const pathname = usePathname()
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => { if (event.key === "Escape") { setOpen(false); document.getElementById("book-menu-button")?.focus() } }
+    window.addEventListener("keydown", closeOnEscape)
+    return () => window.removeEventListener("keydown", closeOnEscape)
+  }, [pathname])
 
   return (
     <>
       <button
+        id="book-menu-button"
         type="button"
         className="fixed left-4 top-4 z-40 inline-flex items-center gap-2 border border-white/15 bg-black/90 px-3 py-2 text-sm text-white/85 backdrop-blur md:hidden"
         aria-expanded={open}
@@ -82,12 +91,12 @@ export function BookSidebar({ chapters, activeSlug }: Pick<BookReaderControlsPro
       </button>
       <aside
         id="book-sidebar"
-        className={`book-sidebar fixed bottom-0 left-0 top-0 z-30 w-[min(20rem,86vw)] overflow-y-auto border-r border-white/10 bg-black px-5 py-24 transition-transform duration-200 ease-out md:translate-x-0 ${
+        className={`book-sidebar ${open ? "visible" : "invisible md:visible"} fixed bottom-0 left-0 top-0 z-30 w-[min(20rem,86vw)] overflow-y-auto border-r border-white/10 bg-black px-5 py-24 transition-transform duration-200 ease-out md:translate-x-0 ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
         aria-label="Book chapters"
       >
-        <Link href="/book" className="mb-8 block text-xs uppercase tracking-[0.24em] text-white/45 hover:text-primary">
+        <Link href="/book" className="mb-8 block text-sm text-muted-foreground hover:text-primary">
           Book overview
         </Link>
         <nav className="space-y-2 pb-8">
@@ -101,13 +110,13 @@ export function BookSidebar({ chapters, activeSlug }: Pick<BookReaderControlsPro
                 className={`group relative block border-l px-4 py-3 transition duration-200 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary ${
                   active
                     ? "border-primary bg-primary/10 text-white"
-                    : "border-white/10 text-white/58 hover:border-primary/70 hover:bg-white/[0.035] hover:text-white"
+                    : "border-white/10 text-white/70 hover:border-primary/70 hover:bg-white/[0.035] hover:text-white"
                 }`}
                 onClick={() => setOpen(false)}
               >
                 <span className="mb-1 block text-xs text-primary">{chapter.chapterNumber}</span>
                 <span className="block text-sm leading-5">{chapter.title}</span>
-                <span className="mt-1 block text-xs text-white/35">{chapter.readingTime}</span>
+                <span className="mt-1 block text-xs text-muted-foreground">{chapter.readingTime}</span>
               </Link>
             )
           })}

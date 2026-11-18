@@ -66,7 +66,7 @@ export default function PrivacyPage() {
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,_rgba(127,139,153,0.16),_transparent_30%),linear-gradient(180deg,_#050608_0%,_#0b0f14_52%,_#050608_100%)]" />
       <SiteHeader />
 
-      <main className="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
+      <main id="main-content" tabIndex={-1} className="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
         <div className="mx-auto w-full max-w-[760px]">
           <section>
             <p className="section-kicker mb-4">Legal</p>

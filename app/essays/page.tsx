@@ -37,20 +37,12 @@ export const metadata: Metadata = {
 export default function EssaysPage() {
   const pieces = getAllWriting()
 
-  const tagsSet = new Set<string>()
-  pieces.forEach((piece) => {
-    if (piece.tags && Array.isArray(piece.tags)) {
-      piece.tags.forEach((tag) => tagsSet.add(tag))
-    }
-  })
-  const allTags = Array.from(tagsSet).sort()
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(127,139,153,0.18),_transparent_32%),linear-gradient(180deg,_#050608_0%,_#0b0f14_52%,_#050608_100%)]" />
       <SiteHeader />
 
-      <main className="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
+      <main id="main-content" tabIndex={-1} className="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
         <div className="mx-auto w-full max-w-[760px]">
           <section className="mb-16">
             <h1 className="mb-8 font-serif text-[clamp(1.76rem,1.35rem+1.49vw,2.48rem)] text-white">
@@ -61,7 +53,7 @@ export default function EssaysPage() {
             </p>
           </section>
 
-          <WritingFilter essays={pieces} allTags={allTags} />
+          <WritingFilter essays={pieces} />
         </div>
       </main>
 

@@ -2,16 +2,16 @@ import type { ReactNode } from "react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Partners",
+  title: "Hiring Partners",
   description:
-    "See how Verveschool supports hiring partners with mandate-led scouting, structured candidate filtering, and 60-day replacement coverage.",
+    "See how Verveschool supports hiring partners with workforce planning, talent sourcing, candidate assessment, hiring coordination and continuing employee support.",
   alternates: {
     canonical: "/partners",
   },
   openGraph: {
-    title: "Partners | Verveschool",
+    title: "Hiring Partners | Verveschool",
     description:
-      "See how Verveschool supports hiring partners with mandate-led scouting, structured candidate filtering, and 60-day replacement coverage.",
+      "See how Verveschool supports hiring partners with workforce planning, talent sourcing, candidate assessment, hiring coordination and continuing employee support.",
     url: "/partners",
     images: [
       {
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Partners | Verveschool",
+    title: "Hiring Partners | Verveschool",
     description:
-      "See how Verveschool supports hiring partners with mandate-led scouting, structured candidate filtering, and 60-day replacement coverage.",
+      "See how Verveschool supports hiring partners with workforce planning, talent sourcing, candidate assessment, hiring coordination and continuing employee support.",
     images: ["/social.png"],
   },
 }

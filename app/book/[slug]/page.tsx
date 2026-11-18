@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: BookChapterPageProps): Promis
     title: `${chapter.title} | Hope Is the Enemy`,
     description: chapter.description,
     alternates: { canonical: `/book/${chapter.slug}` },
-    openGraph: { title: chapter.title, description: chapter.description, type: "article" },
+    openGraph: { title: chapter.title, description: chapter.description, type: "article", url: `/book/${chapter.slug}` },
   }
 }
 
@@ -81,13 +81,13 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
       <BookKeyboardShortcuts previousHref={previousHref} nextHref={nextHref} />
       <BookSidebar chapters={chapters} activeSlug={chapter.slug} />
 
-      <main className="book-reading-main px-5 py-24 md:ml-80 md:px-12 lg:px-16">
+      <main id="main-content" tabIndex={-1} className="book-reading-main px-5 py-24 md:ml-80 md:px-12 lg:px-16">
         <article className="mx-auto max-w-[72ch] animate-in fade-in slide-in-from-bottom-3 duration-300">
           <Link href="/book" className="mb-12 inline-flex text-sm text-white/50 transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
             ← chapter list
           </Link>
           <header className="mb-16 border-b border-white/10 pb-12">
-            <div className="mb-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-white/45">
+            <div className="mb-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
               <span>Ch {chapter.chapterNumber}</span>
               <span aria-hidden="true">·</span>
               <span>Hope Is the Enemy</span>
@@ -113,7 +113,7 @@ export default async function BookChapterPage({ params }: BookChapterPageProps) 
               <h2 className="font-serif text-lg text-white transition-colors group-hover:text-primary">{nextChapter.title}</h2>
             </Link>
           ) : (
-            <Link href="/about#contact" className="group rounded-lg border border-primary/25 bg-primary/[0.05] p-6 text-right shadow-[0_2px_8px_rgba(139,109,255,0.06)] transition-all duration-200 ease-out hover:-translate-y-1 hover:border-primary/50 hover:bg-primary/[0.1] hover:shadow-[0_8px_24px_rgba(139,109,255,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
+            <Link href="https://wa.me/917042873035" className="group rounded-lg border border-primary/25 bg-primary/[0.05] p-6 text-right shadow-[0_2px_8px_rgba(139,109,255,0.06)] transition-all duration-200 ease-out hover:-translate-y-1 hover:border-primary/50 hover:bg-primary/[0.1] hover:shadow-[0_8px_24px_rgba(139,109,255,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
               <p className="mb-3 text-sm font-semibold text-primary">finished →</p>
               <h2 className="font-serif text-lg text-white transition-colors group-hover:text-primary">Become dangerous</h2>
             </Link>

@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { getAllBookChapters, getBookLanding } from "@/lib/book"
 import { SiteHeader } from "@/components/site-header"
+import { MarkdownRenderer } from "@/lib/markdown"
 import { SiteFooter } from "@/components/site-footer"
 
 export const metadata: Metadata = {
@@ -40,13 +41,15 @@ export default function BookPage() {
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,_rgba(127,139,153,0.16),_transparent_30%),linear-gradient(180deg,_#050608_0%,_#0b0f14_52%,_#050608_100%)]" />
       <SiteHeader />
 
-      <main className="yc-container py-24 md:py-32">
+      <main id="main-content" tabIndex={-1} className="yc-container py-24 md:py-32">
         <section className="mx-auto max-w-[760px]">
           <h1 className="mb-6 font-serif text-[clamp(1.76rem,1.35rem+1.49vw,2.48rem)] text-white">
             {book?.title || "Book"}
           </h1>
+          <p className="mb-4 text-sm text-muted-foreground">by {book.author}</p>
           <p className="mb-8 text-lg leading-8 text-primary">{book?.subtitle}</p>
           <p className="text-lg leading-8 text-white/70">{book?.description}</p>
+          <div className="mt-10 border-t border-white/10 pt-8"><MarkdownRenderer content={book.introduction} /></div>
         </section>
 
         <section className="mx-auto mt-16 max-w-[760px] md:mt-24">
